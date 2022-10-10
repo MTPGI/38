@@ -1,0 +1,2715 @@
+<!-- License CC BY-SA 4.0 Ann MB - ann-mb.carrd.co -->
+<!DOCTYPE html>
+<html lang="fr-FR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+		<meta name="googlebot" content="noindex" />
+		<meta name="robots" content="none" />
+		<meta name="author" content="Ann MB" />
+		<meta name="description" content="Annuaire, cartographie et agenda associatif militant, institutionnel, médical, sportif et culturel à destination des femmes et des LGBTQI+" />
+		<meta name="color-scheme" content="dark light" />
+		<meta name="referrer" content="no-referrer" />
+		<link rel="icon" href="img/favicon.png" type="image/png" />
+		<!--<link rel="next" href="https://4nnm8.github.io/mtpgi38/agenda/index.html" />-->
+		<link rel="next" href="https://4nnm8.github.io/mtpgi38/carte/index.html" />
+		<link rel="stylesheet" href="initial.css" />
+		<link rel="stylesheet" href="style.css" />
+		<!--<link rel="stylesheet" href="agenda/cal-small.css" />-->
+		<link rel="stylesheet" href="carte/style.css" />
+		<noscript><style>nav{display: none}</style></noscript>
+		<title>Ressources MTPGI 38</title>
+	</head>
+	<body>
+		<div id="container">
+			<header id="top">
+				<h1>
+					<span class="sr-only">Ressources féministe et MTPGI de Grenoble et de l'Isère</span>
+					<img src="img/logo.png" alt="Logo" />
+				</h1>
+			</header>
+			<nav>
+				<div>
+					<i class="fa fa-search"></i>
+					<label for="categories" class="sr-only">Choix d'une catégories pour restreindre les résultats</label>
+					<select size="1" id="categories" name="categories">
+						<option value="">PAR CATÉGORIE (en construction)</option>
+						<option value="asso">Associations</option>
+						<option value="cont">Contraception</option>
+						<option value="cult">Culturel / Artistique</option>
+						<option value="dmst">Dépistage MST / IST</option>
+						<option value="drag">Drag king/queen/queer</option>
+						<option value="righ">Droits, Justice</option>
+						<option value="educ">Éducation</option>
+						<option value="work">Emploi</option>
+						<option value="evnt">Évènements</option>
+						<option value="fami">Famille</option>
+						<option value="femi">Féminisme</option>
+						<option value="host">Hébergement</option>
+						<option value="inst">Institution</option>
+						<option value="ivg">IVG</option>
+						<option value="phon">Ligne téléphonique</option>
+						<option value="lgbt">LGBTQI+</option>
+						<option value="matr">Maternité</option>
+						<option value="mine">Mineur&middot;es et Enfants</option>
+						<option value="pmi">Protection Maternelle Infantile (PMI)</option>
+						<option value="acti">Politique / activisme / militantisme</option>
+						<option value="rese">Réseaux sociaux</option>
+						<option value="heal">
+							Santé<!--(sauf soignant&middot;es)-->
+						</option>
+						<!--<optgroup label="Soignant&middot;es &#x276F;"><option value="care">Voir tou&middot;te&middot;s</option><option value="derm">Dermatologue</option><option value="gene">Généraliste</option><option value="ggyn">Généraliste spé. gynéco</option><option value="gyne">Gynécologue</option><option value="hypn">Hypnothérapeute</option><option value="infi">Infirmier&middot;e</option><option value="orth">Orthophoniste / Vocologiste</option><option value="psyi">Psychiatre</option><option value="psyo">Psychologue</option><option value="safe">Sage-Femme</option><option value="sexo">Sexologue</option><option value="soph">Sophrologue</option></optgroup>-->
+						<option value="sprt">Sport</option>
+						<option value="tran">Transidentité</option>
+						<option value="ptds">Travail du sexe</option>
+						<option value="aggr">Violences, agressions</option>
+					</select>
+				</div>
+				<div>
+					<i class="fa fa-building"></i>
+					<label for="city" class="sr-only">Choix d'une ville pour restreindre les résultats</label>
+					<select id="city" name="city">
+						<option value="">PAR VILLE</option>
+						<option value="027">Barraux</option>
+						<option value="034">Beaurepaire</option>
+						<option value="052">Bourg-d'Oisans</option>
+						<option value="053">Bourgoin-Jallieu</option>
+						<!--<option value="057">Bresson</option>
+							<option value="059">Brié-et-Angonnes</option>
+							<option value="068">Champagnier</option>
+							<option value="071">Champ-sur-Drac</option>
+							<option value="111">Claix</option>
+							<option value="126">Corenc</option>-->
+						<option value="130">La Côte-Saint-André</option>
+						<option value="138">Crémieu</option>
+						<option value="140">Crolles</option>
+						<!--<option value="150">Domène</option>-->
+						<option value="151">Échirolles</option>
+						<option value="158">Eybens</option>
+						<option value="169">Fontaine</option>
+						<option value="170">Fontanil-Cornillon</option>
+						<option value="179">Gières</option>
+						<option value="185">Grenoble</option>
+						<!--<option value="187">Le Gua</option>
+							<option value="188">Herbeys</option>
+							<option value="200">Jarrie</option>-->
+						<option value="226">Mens</option>
+						<option value="229">Meylan</option>
+						<!--<option value="235">Miribel-Lanchâtre</option>
+							<option value="252">Montchaboud</option>
+							<option value="258">Mont-Saint-Martin</option>-->
+						<option value="226">Mens</option>
+						<option value="229">Meylan</option>
+						<option value="242">Monestier de Clermont</option>
+						<!--<option value="271">Murianette</option>
+							<option value="277">Notre-Dame-de-Commiers</option>
+							<option value="279">Notre-Dame-de-Mésage</option>
+							<option value="281">Noyarey</option>
+							<option value="309">Poisat</option>-->
+						<option value="315">Le Pont de Beauvoisin</option>
+						<option value="316">Pont-de-Chéruy</option>
+						<option value="317">Le Pont-de-Claix</option>
+						<!--<option value="325">Proveysieux</option>
+							<option value="328">Quaix-en-Chartreuse</option>
+							<option value="364">Saint-Barthélemy-de-Séchilienne</option>-->
+						<option value="269">La Mure</option>
+						<option value="314">Pontcharra</option>
+						<option value="319">Pont-en-Royans</option>
+						<option value="344">Roussillon</option>
+						<option value="382">Saint-Égrève</option>
+						<option value="397">Saint-Ismier</option>
+						<!--<option value="388">Saint-Georges-de-Commiers</option>-->
+						<option value="412">Saint-Laurent-du-Pont</option>
+						<option value="416">Saint-Marcellin</option>
+						<option value="421">Saint-Martin-d'Hères</option>
+						<!--<option value="423">Saint-Martin-le-Vinoux</option>
+							<option value="436">Saint-Paul-de-Varces</option>
+							<option value="445">Saint-Pierre-de-Mésage</option>
+							<option value="471">Le Sappey-en-Chartreuse</option>
+							<option value="472">Sarcenas</option>
+							<option value="474">Sassenage</option>
+							<option value="478">Séchilienne</option>
+							<option value="485">Seyssinet-Pariset</option>
+						-->	<option value="486">Seyssins</option>
+						<option value="509">La Tour du Pin</option>
+						<option value="516">La Tronche</option>
+						<option value="517">Tullins</option>
+						<!--<option value="524">Varces-Allières-et-Risset</option>
+							<option value="528">Vaulnaveys-le-Bas</option>
+							<option value="529">Vaulnaveys-le-Haut</option>
+							<option value="533">Venon</option>
+							<option value="540">Veurey-Voroize</option>-->
+						<option value="544">Vienne</option>
+						<option value="545">Vif</option>
+						<option value="547">Villard-Bonnot</option>
+						<option value="548">Villard-de-Lans</option>
+						<option value="553">Villefontaine</option>
+						<option value="562">Vizille</option>
+						<option value="563">Voiron</option>
+					</select>
+				</div>
+				<div id="az-go">
+					<i class="fa fa-az-sort"></i>
+					<label for="alph" class="sr-only">Aller directement à une lettre de l'alphabet</label>
+					<select id="alph" name="alph">
+						<option value="">ABC&#x2026;</option>
+						<option value="a">A</option>
+						<option value="b">B</option>
+						<option value="c">C</option>
+						<option value="d">D</option>
+						<option value="e">E</option>
+						<option value="f">F</option>
+						<option value="g">G</option>
+						<option value="i">I</option>
+						<option value="m">M</option>
+						<option value="n">N</option>
+						<option value="o">O</option>
+						<option value="p">P</option>
+						<option value="q">Q</option>
+						<option value="r">R</option>
+						<option value="s">S</option>
+						<option value="t">T</option>
+						<option value="u">U</option>
+						<option value="v">V</option>
+					</select>
+				</div>
+				<!--<div>
+					<i class="fa fa-map-signs"></i>
+					<a href="carte/" title="">Cartographie</a>
+				</div>-->
+				<!--<div>
+					<i class="fa fa-cal"></i>
+					<a href="agenda/" title="" id="agenda">Agenda<span id="incoming"></span>
+					</a></div>-->
+				<div>
+					<i class="fa fa-info"></i>
+					<a href="#" id="contact">À propos</a>
+					<div class="box" id="contact-box">
+						<a href="https://ann-mb.carrd.co" rel="external noreferrer">
+						<i class="fa fa-user"></i> Mon site personnel</a>
+						<br/>
+						<a href="https://framaforms.org/users/annmb/contact" rel="external noreferrer contact">
+						<i class="fa fa-mail"></i> Formulaire de contact</a>
+						<br/>
+						<a href="https://github.com/4nnm8/mtpgi38" rel="external noreferrer">
+						<i class="fa fa-gh"></i> Page GitHub du projet</a>
+						<br/>
+						<a href="https://www.paypal.com/donate/?hosted_button_id=92U2DGNUVUNTA" rel="external noreferrer">
+						<i class="fa fa-pp"></i> Dons PayPal</a>
+						<br/> Licence&nbsp;<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" rel="external noreferrer" title="License Creative Commons">
+						<i class="fa fa-cc"></i>&nbsp;BY-SA&nbsp;4.0</a>
+						<br/>
+						<br/> Dernière mise-à-jour : 09/10/2022
+					</div>
+				</div>
+			</nav>
+			<div id="numbr"></div>
+			<main>
+				<!--<article data-hashtag="185">
+					<h2>À Jeu Égal</h2>
+					<h3>Association des Lesbiennes, Gays, Bi, Trans et Intergenres de Grenoble.</h3>
+					<div class="num"><a href="tel:+33782393341">07 82 39 33 41</a></div>
+					<div class="mail"><a href="mailto:contact@ajeuegal.org">contact@ajeuegal.org</a></div>
+					<div class="web"><a href="https://ajeuegal.jimdofree.com/" rel="external noreferrer">ajeuegal.jimdofree.com</a></div>
+					<div class="loc">
+					  <a href="geo:45.182338,5.720978" class="tomap" rel="external sidebar noreferrer">8 rue Sergent Bobillot<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
+					  <span class="TC">C</span> Foch Férié<br/>
+					  <span class="C3">C3</span> Marceau - Jardin des Vallons<br/>
+					  <span class="P25">25</span> Colonel Dumont
+					</a></div>
+					<div class="time">
+					  <b>Permanences d’accueil - écoute :</b> Les 2<sup>ème</sup> et 4<sup>ème</sup> jeudi du mois, de 19h à 20h30<br/>
+					  <br/>
+					  <b>Soirées conviviales :</b> Les jeudis à partir de 20h30, au local ou en extérieur (consulter le programme des soirées sur le site ou sur Facebook)
+					</div>
+					<div class="info">
+					   À Jeu Égal est une association LGBTI de Grenoble, qui rassemble des lesbiennes, gays, bisexuel-le-s, transgenres et intergenres et toute personne se sentant concernée par les différences de sexualités et d’attirances ainsi que les questions de genre, personnellement ou dans son entourage. L’association s’oriente autour de différents pôles : la convivialité l’écoute par des personnes qualifiées le militantisme
+					</div>
+					</article>
+
+					-->
+				<article data-hashtag="asso" id="a">
+					<h2>AFEI<br/>(Association des Femmes Élues de l’Isère)</h2>
+					<h3>Promotion de la parité en politique.</h3>
+					<div class="num"><a href="tel:+33612345678">06 12 34 56 78</a></div>
+					<div class="num"><a href="tel:+33476631056">04 76 63 10 56</a></div>
+					<div class="mail"><a href="mailto:contact@afei38.fr">contact@afei38.fr</a></div>
+					<div class="web"><a href="https://www.afei38.fr/" rel="external noreferrer">www.afei38.fr</a></div>
+					<div class="loc">
+						<a href="geo:45.189459,5.735359" class="tomap" rel="external sidebar noreferrer">2 ter rue Joseph Fourier<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.189459,5.735359" rel="external noreferrer">
+						<span class="P16">16</span> Mutualité<br/>
+						<span class="P15">15</span> Bir Hakeim<br/>
+						<span class="TA">A</span> Verdun - Préfecture<br/>
+						<span class="TC">C</span> <span class="TE">E</span> <span class="C1">C1</span> Grenoble Hôtel de Ville<br/>
+						<span class="TB">B</span> Sainte-Claire - Les Halles
+						</a></div>
+				</article>
+
+				<article data-hashtag="asso 185 educ">
+					<h2>AFFDU<br/>(Association Française des Femmes Diplômées de l’Université)</h2>
+					<h3>Regroupement de femmes diplômées ayant pour vocation de défendre l'égalité ainsi que l'accès à l'éducation.</h3>
+					<div class="mail"><a href="mailto:affdu-grenoble@int-evry.fr">affdu-grenoble@int-evry.fr</a></div>
+					<div class="web"><a href="https://www.associationdesfemmesdiplomees.fr/" rel="external noreferrer">www.associationdesfemmesdiplomees.fr</a></div>
+				</article>
+
+				<article data-hashtag="acti femi">
+					<h2>AG Féministe 38</h2>
+					<h3>Regroupement d'associations, collectifs, syndicats, partis et individus autour des dates du 25 novembre (Journée internationale pour l'élimination de la violence faites aux femmes) et du 8 mars (Journée internationale pour le droit des femmes).</h3>
+					<div class="ig"><a href="https://www.instagram.com/agfeministe_38" rel="external noreferrer">@agfeministe_38</a></div>
+					<div class="info">
+						<img src="img/1.gif" alt="Plus d'informations">
+						En non-mixité femmes et minorités de genre.
+					</div>
+				</article>
+
+				<!--<article data-hashtag="185">
+					<h2>Ahwahnee / Le 106</h2>
+					<h3>Squat de vie et d’activités.</h3>
+					<div class="mail"><a href="mailto:monokeros@riseup.net">monokeros@riseup.net</a></div>
+					<div class="loc">
+					  <a href="geo:45.173269,5.720649" class="tomap" rel="external sidebar noreferrer">106 rue des Alliés<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.173269,5.720649" rel="external noreferrer">
+					  <span class="C5">C5</span> Marché d'Intérêt National<br/>
+					  <span class="P16">16</span>
+					  <span class="C3">C3</span> Sallingrad-Alliés<br/>
+					  <span class="TE">E</span> Alliés
+					</a></div>
+					<div class="info">
+					   Repas, concerts, projections, débats...<br/>Héberge l'atelier vélo <q>Le Petit Rayon</q></div>
+					</article>
+-->
+				<article data-hashtag="185 heal dmst asso cont">
+					<h2>AIDES Grenoble – CAARUD</h2>
+					<h3>Lieux d'écoute, de parole et de prévention sur le SIDA et sur les infections sexuellement transmissibles ; informations IVG.</h3>
+					<div class="num"><a href="tel:+33476472037">04 76 47 20 37</a></div>
+					<div class="mail"><a href="mailto:grenoble@aides.org">grenoble@aides.org</a></div>
+					<div class="web"><a href="https://www.solidarites-grenoble.fr/acteur/296/958-aides.htm" rel="external noreferrer">www.solidarites-grenoble.fr/acteur/296/958-aides.htm</a></div>
+					<div class="fb"><a href="https://www.facebook.com/aidesgrenoble38" rel="external noreferrer">@aidesgrenoble38</a></div>
+					<div class="ig"><a href="https://www.instagram.com/aidesgrenoble" rel="external noreferrer">@aidesgrenoble</a></div>
+					<div class="loc">
+						<a href="geo:45.182338,5.720978" class="tomap" rel="external sidebar noreferrer">8 rue sergent Bobillot<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
+						<span class="TC">C</span> Foch Férié<br/>
+						<span class="C3">C3</span> Marceau - Jardin des Vallons<br/>
+						<span class="P25">25</span> Colonel Dumont
+						</a></div>
+					<div class="time">
+						<ul>
+							<li>Lundi et vendredi : de 14h00 à 16h30</li>
+							<li>Mercredi : de 17h00 à 20h00</li>
+							<li>Jeudi : de 16h30 à 19h30</li>
+						</ul>
+					</div>
+				</article>
+
+				<article data-hashtag="053 ">
+					<h2>ALPA</h2>
+					<h3>toutes violences faites aux femmes		Hébergement et accueil de jour</h3>
+					<div class="num"><a href="tel:+33474439767">04 74 43 97 67</a></div>
+					<div class="num"><a href="tel:+33437035733">04 37 03 57 33</a></div>
+					<div class="web"><a href="https://alpa.fondation-boissel.fr/" rel="external noreferrer">alpa.fondation-boissel.fr</a></div>
+					<div class="loc">Fondation Georges Boissel<br/>38300 BOURGOIN JALLIEU</div>
+				</article>
+
+				<article data-hashtag="185 ptds">
+					<h2>L’Amicale du Nid</h2>
+					<h3>Aller vers les personnes en situation de prostitution, accompagnement global et spécifique vers la sortie de la prostitution et l’insertion sociale de recherche, de prévention et de formation sur la question de la prostitution de lutte contre le système prostitutionnel. Elle défend les droits des femmes et s’inscrit dans le refus de toute forme de discrimination, d’homophobie, de transphobie, de racisme et de sexisme.</h3>
+					<div class="num"><a href="tel:+33476430166">04 76 43 01 66</a></div>
+					<div class="mail"><a href="mailto:amicaledunidisere@wanadoo.fr">amicaledunidisere@wanadoo.fr</a></div>
+					<div class="web"><a href="https://amicaledunid.org/isere/" rel="external noreferrer">amicaledunid.org/isere</a></div>
+					<div class="loc">
+						<a href="geo:45.190028,5.728965" class="tomap" rel="external sidebar noreferrer">9 rue Raoul Blanchard<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.190028,5.728965" rel="external noreferrer">
+						<span class="TA">A</span>
+						<span class="TB">B</span> Hubert Dubedout - Maison du Tourisme
+						</a></div>
+					<div class="time">
+						<ul>
+							<li>Sur rendez-vous : du mardi après-midi au vendredi matin</li>
+							<li>Sans rendez-vous : les mardis de 9h30 à 12h00</li>
+						</ul>
+					</div>
+				</article>
+
+				<article data-hashtag="acti 185 aggr sprt femi">
+					<h2>Ancrage (ex ASSPA)</h2>
+					<h3>Association de prévention des violences proposant des stages d'autodéfense.</h3>
+					<div class="num"><a href="tel:+33695668470">06 95 66 84 70</a></div>
+					<div class="num"><a href="tel:+33784883194">07 84 88 31 94</a></div>
+					<div class="mail"><a href="mailto:contact@ancrage-autodefense.fr">contact@ancrage-autodefense.fr</a></div>
+					<div class="fb"><a href="https://www.facebook.com/prevention.des.violences" rel="external noreferrer">@prevention.des.violences</a></div>
+					<div class="loc">
+						<a href="geo:45.184601,5.724440" class="tomap" rel="external sidebar noreferrer">Maison des Associations<br/>6 rue Berthe de Boissieux<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184601,5.724440" rel="external noreferrer">
+						<span class="P16">16</span> Caserne de Bonne<br/>
+						<span class="P12">12</span> <span class="C3">C3</span> Championnet<br/>
+						<span class="TC">C</span> Gustave Rivet
+						</a></div>
+					<div class="time">
+						Mardi, mercredi et jeudi de 10h00 à 17h00
+					</div>
+				</article>
+
+				<article data-hashtag="185 asso fami lgbt">
+					<h2>APGL 38<br/>(Association des Parents et futurs parents Gays et Lesbiens)</h2>
+					<h3>Association pour les familles homoparentales. Organisation d'activités d'information et de partage d'expériences.</h3>
+					<div class="mail"><a href="mailto:grenoble@apgl.fr">grenoble@apgl.fr</a></div>
+					<div class="web"><a href="https://www.apgl.fr/" rel="external noreferrer">www.apgl.fr</a></div>
+					<div class="fb"><a href="https://www.facebook.com/apgl1" rel="external noreferrer">@apgl1</a></div>
+					<div class="tw"><a href="https://www.twitter.com/apgl1" rel="external noreferrer">@apgl1</a></div>
+					<div class="yt"><a href="https://www.youtube.com/AssociationAPGL" rel="external noreferrer">Association APGL</a></div>
+					<div class="loc">
+						<a href="geo:45.182338,5.720978" class="tomap" rel="external sidebar noreferrer">8 rue Sergent Bobillot<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
+						<span class="TC">C</span> Foch Férié<br/>
+						<span class="C3">C3</span> Marceau - Jardin des Vallons<br/>
+						<span class="P25">25</span> Colonel Dumont
+						</a></div>
+					<div class="time">
+						Sur rendez-vous
+					</div>
+					<div class="info">
+						Propose des activités d'information, de partage d'expériences et des services de professionnels
+						pour les familles homoparentales, leurs enfants et les futurs homoparents. Elle œuvre pour la
+						reconnaissance légale de l’Homoparentalité, en France et à l‘international et a pour objectif
+						principal de faire cesser les discriminations dont les familles et leurs enfants sont les
+						premières victimes.
+					</div>
+				</article>
+
+				<article data-hashtag="185 asso educ">
+					<h2>APMST<br/>(Association pour la Parité dans les Métiers Scientifiques et Techniques)</h2>
+					<h3>Promouvoir la culture scientifique et technique auprès des filles et des garçons.</h3>
+					<div class="mail"><a href="mailto:apmst@grenoble.cnrs.fr">apmst@grenoble.cnrs.fr</a></div>
+					<div class="mail"><a href="mailto:info@parite-science.fr">info@parite-science.fr</a></div>
+					<div class="loc">
+						<a href="geo:45.203864,5.700169" class="tomap" rel="external sidebar noreferrer">25 avenue des Martyrs<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.203864,5.700169" rel="external noreferrer">
+						<span class="P22">22</span> <span class="TB">B</span> <span class="F54">54</span> Oxford
+						</a></div>
+					<div class="loc">
+						<b>Siège social</b><br/>
+						LNCMI CNRS<br/>BP 166<br/>38042 Grenoble Cedex 9
+					</div>
+				</article>
+
+				<article data-hashtag="185 ptds">
+					<h2>L'Appart – ALTHEA</h2>
+					<h3>Accueille les personnes prostituées ou victime de la traite des êtres humains à des fins de prostitution, mineure ou majeure. Accompagnement, information, hébergement, information juridique.</h3>
+					<div class="num"><a href="tel:+33476431406">04 76 43 14 06</a></div>
+					<div class="num"><a href="tel:+33476541350">04 76 54 13 50</a></div>
+					<div class="num"><a href="tel:+33476519220">04 76 51 92 20</a></div>
+					<div class="mail"><a href="mailto:service.appart@althea38.org">service.appart@althea38.org</a></div>
+					<div class="mail"><a href="mailto:avaussenat@althea38.org">avaussenat@althea38.org</a></div>
+					<div class="mail"><a href="mailto:contact@althea38.org">contact@althea38.org</a></div>
+					<div class="mail"><a href="mailto:equipeoasis38@althea38.org">equipeoasis38@althea38.org</a></div>
+					<div class="web"><a href="https://althea38.org/" rel="external noreferrer">althea38.org</a></div>
+					<div class="loc">
+						<span class="doubt">Doute sur l'adresse correcte</span>
+						<a href="geo:45.193429,5.732938" class="tomap" rel="external sidebar noreferrer">
+							8 rue du Vieux Temple<br/>38000 GRENOBLE
+				  	</a><br/></br>
+						<a href="geo:45.186242,5.711307" class="tomap" rel="external sidebar noreferrer">
+							36 Rue Henri le Châtelier<br/>38000 GRENOBLE
+				  	</a>
+				</div><!--
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.193429,5.732938" rel="external noreferrer">
+						<span class="TB">B</span>	<span class="F62">62</span>	<span class="P16">16</span> Notre-Dame – Musée<br/>
+					</a></div>-->
+					<div class="time">Du lundi au vendredi de 9h à 12h et de 14h à 17h</div>
+					<div class="info">
+						<ul>
+							<li>10 places au 115</li>
+							<li>5 places SIAO</li>
+							<li>2 places ACSE</li>
+							<li>1 place dédiée prostitution</li>
+						</ul>
+					</div>
+				</article>
+
+				<article data-hashtag="">
+					<h2>APRESS - FRANCE VICTIMES 38</h2>
+					<h3>Activités : information | information juridique</h3>
+					<div class="num"><a href="tel:+33474535813">04 74 53 58 13</a></div>
+					<div class="num"><a href="tel:+33474855866">04 74 85 58 66</a></div>
+					<div class="mail"><a href="mailto:contact@fv38apress.fr">contact@fv38apress.fr</a></div>
+					<div class="mail"><a href="mailto:apress.asso@wanadoo.fr">apress.asso@wanadoo.fr</a></div>
+					<div class="web"><a href="https://francevictimes38.com/" rel="external noreferrer">francevictimes38.com</a></div>
+					<div class="fb"><a href="https://www.facebook.com/FranceVictimes" rel="external noreferrer">FranceVictimes</a></div>
+					<div class="tw"><a href="https://twitter.com/FranceVictimes" rel="external noreferrer">@FranceVictimes</a></div>
+					<div class="yt"><a href="https://www.youtube.com/user/INAVEM08VICTIMES" rel="external noreferrer"> France Victimes</a></div>
+					<div class="loc">
+						<span class="doubt">Doute sur l'adresse correcte</span>
+						<a href="geo:45.523478,4.876058" class="tomap" rel="external sidebar noreferrer">43 rue Victor Hugo, 38200 VIENNE</a><br/>
+						<a href="geo:45.526581,4.874325" class="tomap" rel="external sidebar noreferrer">28-30 rue des Clercs, 38200 VIENNE</a>
+			      <p>Autres permanences : Vienne, Villefontaine, L'Isle d'Abeau, Roussillon, Chasse-sur-Rhône, Ampuis.</p>
+				  </div>
+					<div class="time">Du lundi au vendredi : de 9h00 à 17h00</div>
+				</article>
+
+				<article data-hashtag="work asso">
+					<h2>L'Autre cercle</h2>
+					<h3>Association de lutte contre les discriminations liées à l’orientation sexuelle et à l’identité de genre dans le monde du travail.</h3>
+					<div class="num"><a href="tel:+33680284467">06 80 28 44 67</a></div>
+					<div class="mail"><a href="mailto:info.rhonealpes@autrecercle.org">info.rhonealpes@autrecercle.org</a></div>
+					<div class="web"><a href="https://www.autrecercle.org/region/rhone-alpes" rel="external noreferrer">www.autrecercle.org/region/rhone-alpes</a></div>
+					<div class="fb"><a href="https://www.facebook.com/autrecercle.rhonealpes" rel="external noreferrer">@autrecercle.rhonealpes</a></div>
+					<div class="tw"><a href="https://www.twitter.com/autrecerclera" rel="external noreferrer">@autrecerclera</a></div>
+				</article>
+
+				<article data-hashtag="185 acti cult femi" id="b">
+					<h2>La <u>B</u>AF</h2>
+					<h3>Médiathèque sur les genres et les sexualités.</h3>
+					<div class="mail"><a href="mailto:biblio-feministe@gresille.org">biblio-feministe@gresille.org</a></div>
+					<div class="mail"><a href="mailto:labaf@gresille.org">labaf@gresille.org</a></div>
+					<div class="web"><a href="https://labaf.org/" rel="external noreferrer">labaf.org</a></div>
+					<div class="loc">
+						<a href="geo:45.171684,5.724073" class="tomap" rel="external sidebar noreferrer">2 chemin des Alpins<br/>38000 GRENOBLE</a>
+					</div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.171684,5.724073" rel="external noreferrer">
+						<span class="C5">C5</span> Stalingrad-Alliés<br/>
+						<span class="C3">C3</span> <span class="P16">16</span> Eugène Sue<br/>
+						<span class="TA">A</span> Malherbe<br/>
+						<span class="TE">E</span> Alliés
+						</a></div>
+					<div class="time">
+						Tous les samedi, en général, de 15h à 18h (sauf en juillet et août)
+					</div>
+				</article>
+
+				<article data-hashtag="185">
+					<h2>Balance ton bar Grenoble</h2>
+					<h3>Reçoit et partage des témoignages d’agressions au sein des bars.</h3>
+					<div class="mail"><a href="mailto:balancetonbargrenoble@gmail.com">balancetonbargrenoble@gmail.com</a></div>
+					<div class="web"><a href="https://balancetonbar.com/" rel="external noreferrer">balancetonbar.com</a></div>
+					<div class="ig"><a href="https://www.instagram.com/balance_ton_bar_grenoble" rel="external noreferrer">@balance_ton_bar_grenoble</a></div>
+				</article>
+
+				<article data-hashtag="185 heal">
+					<h2>Bien-être pour elles</h2>
+					<h3>Écoute, soutien, accompagnement individuel de femmes en grande précarité vers l’autonomie et la sécurité alimentaire et physique.</h3>
+					<div class="num"><a href="tel:+33611447125">06 11 44 71 25</a></div>
+					<div class="mail"><a href="mailto:bienetrepourelles@gmail.com">bienetrepourelles@gmail.com</a></div>
+					<div class="web"><a href="https://www.bienetrepourelles.fr" rel="external noreferrer">www.bienetrepourelles.fr</a></div>
+					<div class="loc">
+						<a href="geo:45.173248,5.711259" class="tomap" rel="external sidebar noreferrer">23 ter rue Anatole France<br/>38100 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.173248,5.711259" rel="external noreferrer">
+						<span class="C5">C5</span> Lys Rouge<br/>
+						<span class="TE">E</span> Alliés
+					</a></div>
+				</article>
+
+				<article data-hashtag="185 heal">
+					<h2>Bien naître et grandir</h2>
+					<h3>Association de parents. Informer, former et échanger sur la naissance, l’accouchement, la parentalité, le maternage proximal et la santé holistique.</h3>
+					<div class="num"><a href="tel:+33656897487">06 56 89 74 87</a></div>
+					<div class="mail"><a href="mailto:contactbng38@gmail.com">contactbng38@gmail.com</a></div>
+					<div class="web"><a href="http://bien-naitre-et-grandir.com/" rel="external noreferrer">bien-naitre-et-grandir.com</a></div>
+					<div class="fb"><a href="https://www.facebook.com/BienNaitreEtGrandir" rel="external noreferrer">@BienNaitreEtGrandir</a></div>
+					<div class="tw"><a href="https://www.twitter.com/Bgrandir" rel="external noreferrer">@Bgrandir</a></div>
+					<div class="loc"><a href="geo:45.188419,5.737459" class="tomap" rel="external sidebar noreferrer">
+						MNEI<br/>5 place Bir Hakeim<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.188419,5.737459" rel="external noreferrer">
+						<span class="P15">15</span> Bir Hakeim<br/>
+						<span class="TC">C</span>	<span class="C1">C1</span> Grenoble Hôtel de Ville
+					</a></div>
+				</article>
+
+				<article data-hashtag="asso 185">
+					<h2>Bon Sang !</h2>
+					<h3>Faire évoluer les mœurs autour des règles. Ateliers de confection de protection périodiques, jeux et sensibilisation dans les collèges.</h3>
+					<div class="num"><a href="tel:+33646815272">06 46 81 52 72</a></div>
+					<div class="mail"><a href="mailto:bon.sang.asso@gmail.com">bon.sang.asso@gmail.com</a></div>
+					<div class="web"><a href="https://linktr.ee/Bon.Sang.asso" rel="external noreferrer">linktr.ee/Bon.Sang.asso</a></div>
+					<div class="fb"><a href="https://www.facebook.com/bon.sang.asso" rel="external noreferrer">@bon.sang.asso</a></div>
+					<div class="ig"><a href="https://www.instagram.com/bon.sang.asso" rel="external noreferrer">@bon.sang.asso</a></div>
+					<div class="loc"><a href="geo:45.183975,5.705998" class="tomap" rel="external sidebar noreferrer">
+						21 Rue Boucher de Perthes<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.183975,5.705998" rel="external noreferrer">
+						<span class="C5">C5</span> Cémoi<br/>
+						<span class="TA">A</span> Berriat-Le Magasin<br/>
+						<span class="TC">C</span>	<span class="P26">26</span> Vallier-Catane
+					</a></div>
+					<div class="info">
+						<ul>
+							<li> Parlons précarité et santé menstruelles</li>
+							<li> Jeux de sensibilisation</li>
+							<li> Ateliers couture</li>
+						</ul>
+					</div>
+				</article>
+
+				<article data-hashtag="185 righ aggr">
+					<h2>Bureau d'aide aux victimes</h2>
+					<h3>Grenoble</h3>
+					<div class="num"><a href="tel:+33438212121">04 38 21 21 21</a></div>
+					<div class="loc"><a href="geo:45.191019,5.711454" class="tomap" rel="external sidebar noreferrer">TGI de Grenoble<br/>place Firmin Gautier<br/>38000 GRENOBLE</a></div>
+					<hr/>
+					<h3>Bourgoin Jallieu</h3>
+					<div class="num"><a href="tel:+33469152980">04 69 15 29 80</a></div>
+					<div class="loc"><a href="geo:45.586774,5.276608" class="tomap" rel="external sidebar noreferrer">10 rue du Tribunal<br/>38300 BOURGOIN JALLIEU</a></div>
+          <hr/>
+					<h3>Vienne</h3>
+					<div class="num"><a href="tel:+33474788181">04 74 78 81 81</a></div>
+					<div class="loc"><a href="geo:45.525749,4.874042" class="tomap" rel="external sidebar noreferrer">16 place Charles de Gaulle<br/>38200 Vienne</a></div>
+
+
+				</article>
+
+				<article data-hashtag="185 aggr asso" id="c">
+					<h2>Ça déménage en Isère</h2>
+					<h3>Mise à disposition de meubles pour personnes sans ressources, notamment les femmes victimes de violences conjugales.</h3>
+					<div class="num"><a href="tel:+33672150608">06 72 15 06 08</a></div>
+					<div class="mail"><a href="mailto:contact@cademenage.org">contact@cademenage.org</a></div>
+					<div class="mail"><a href="mailto:cademenage@mailo.fr">cademenage@mailo.fr</a></div>
+					<div class="web"><a href="https://asso.cademenage.org" rel="external noreferrer">asso.cademenage.org</a></div>
+					<div class="fb"><a href="https://www.facebook.com/people/%C3%87a-d%C3%A9m%C3%A9nage-en-Is%C3%A8re/100067506548797/" rel="external noreferrer">Ça déménage en Isère</a></div>
+					<div class="ig"><a href="https://www.instagram.com/association_ca_demenage/" rel="external noreferrer">@association_ca_demenage</a></div>
+					<div class="yt"><a href="https://www.youtube.com/channel/UCevhJXzYqC-FkW9ygUALKzA" rel="external noreferrer">Association ça déménage en Isère</a></div>
+					<div class="loc">
+						<a href="geo:45.160950,5.712524" class="tomap" rel="external sidebar noreferrer">93 bis rue Général Mangin<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.160950,5.712524" rel="external noreferrer">
+						<span class="P16">16</span> Les Essarts<br/>
+						<span class="C2">C2</span> <span class="P25">25</span> Marielle Franco - Rondeau<br/>
+						<span class="P12">12</span> Verlaine
+						</a></div>
+				</article>
+
+				<article data-hashtag="185 544 053 heal">
+					<h2>CeGIDD<br/>(Centre Gratuit d'Information, de Dépistage et de Diagnostic)</h2>
+					<h3>Prévention, dépistage et diagnostic des hépatites et des infections sexuellement transmissibles.</h3>
+					<div class="web"><a href="https://www.isere.fr/sante" rel="external noreferrer">www.isere.fr/sante</a></div>
+					<hr/>
+					<h4>Grenoble - Centre départemental de Santé</h4>
+					<div class="num"><a href="tel:+33476121285">04 76 12 12 85</a></div>
+					<div class="loc">
+						<a href="geo:45.181731,5.730450" class="tomap" rel="external sidebar noreferrer">23 avenue Albert 1<sup>er</sup> de Belgique<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.181731,5.730450" rel="external noreferrer">
+						<span class="TA">A</span> Albert 1<sup>er</sup> de Belgique<br/>
+						<span class="TC">C</span>
+						<span class="P16">16</span> Gustave Rivet
+						</a></div>
+					<div class="time">
+						Du lundi au vendredi : de 08h30 à 12h30 et de 13h30 à 17h00
+					</div>
+					<hr/>
+					<h4>Vienne</h4>
+					<div class="num"><a href="tel:+33481340050">04 81 34 00 50</a></div>
+					<div class="loc">
+						<a href="geo:45.527767,4.879736" class="tomap" rel="external sidebar noreferrer">10 rue Albert Thomas<br/>38200 VIENNE</a></div>
+					<div class="time">
+						<ul>
+							<li>Sans rendez-vous : mardi de 9h à 13h30, jeudi de 17h à 18h30</li>
+							<li>sur rendez-vous : jeudi et vendredi de 15h à 17h</li>
+						</ul>
+					</div>
+					<hr/>
+					<h4>Bourgoin-Jallieu - Maison de Territoire de la Porte des Alpes</h4>
+					<div class="num"><a href="tel:+33426730508">04 26 73 05 08</a></div>
+					<div class="loc">
+						<a href="geo:45.593398,5.274745" class="tomap" rel="external sidebar noreferrer">Maison de Territoire de la Porte des Alpes<br/>18 avenue Frédéric Dard<br/>38300 BOURGOIN-JALLIEU</a></div>
+					<div class="time">
+						<ul>
+							<li>Sans rendez-vous : mercredi de 9h à 11h30</li>
+							<li>Sur rendez-vous : lundi de 14h à 18h, mercredi de 12h à 14h, vendredi de 11h à 14h</li>
+						</ul>
+					</div>
+				</article>
+
+				<article data-hashtag="185">
+					<h2>Centre de santé Baladins-Géants</h2>
+					<h3>Médecine généraliste et soins infirmiers sans dépassement d'honoraires.</h3>
+					<div class="num"><a href="tel:+33476221452">04 76 22 14 52</a></div>
+					<div class="web"><a href="https://www.agecsa.fr/nos-5-centres-de-sante/centre-de-sante-geants/" rel="external noreferrer">www.agecsa.fr/nos-5-centres-de-sante/centre-de-sante-geants</a></div>
+					<div class="loc">
+						<a href="geo:45.162266,5.738991" class="tomap" rel="external sidebar noreferrer">64 Place des Géants<br/>38100 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.527767,4.879736" rel="external noreferrer">
+						<span class="P12">12</span> Les Géants<br/>
+						<span class="C6">C6</span> Raymond Chanas
+						</a></div>
+					<div class="time">
+						<ul>
+							<li>Du lundi au vendredi : de 08h30 à 12:30 et de 14h00 à 19h00</li>
+							<li>Le samedi : de 09h00 à 12h00</li>
+						</ul>
+					</div>
+				</article>
+
+				<article data-hashtag="185">
+					<h2>Centre LGBTI de Grenoble</h2>
+					<h3>Collectif d'associations qui lutte pour l'égalité des droits, la visibilité des luttes, et contre l'exclusion et la discrimination envers les personnes LGBTI.</h3>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33630446332">06 30 44 63 32</a></div>
+					<div class="mail"><a href="mailto:contact@centrelgbti-grenoble.org">contact@centrelgbti-grenoble.org</a></div>
+					<div class="web"><a href="https://www.centrelgbti-grenoble.org/" rel="external noreferrer">www.centrelgbti-grenoble.org</a></div>
+					<div class="fb"><a href="https://www.facebook.com/CentreLGBTIGrenoble" rel="external noreferrer">@CentreLGBTIGrenoble</a></div>
+					<div class="ig"><a href="https://www.instagram.com/centre_lgbti_grenoble" rel="external noreferrer">@centre_lgbti_grenoble</a></div>
+					<div class="tw"><a href="https://www.twitter.com/CentreLGBTI38" rel="external noreferrer">@CentreLGBTI38</a></div>
+					<div class="loc">
+						<a href="geo:45.182338,5.720978" class="tomap" rel="external sidebar noreferrer">8 rue sergent Bobillot<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
+						<span class="TC">C</span> Foch Férié<br/>
+						<span class="C3">C3</span> Marceau - Jardin des Vallons<br/>
+						<span class="P25">25</span> Colonel Dumont
+						</a></div>
+					<div class="info">
+						  Regroupe les associations À jeu égal, ALG les Voies d'Elles, APGL 38, Contact 38, Free Sons, Grenoble Fiertés, Grrrnoble Bear, Rando Rhône-Alpes, RITA, Le Refuge, SOS homophobie.
+					</div>
+				</article>
+
+				<!--- ??? AJOUTER COORDONNEES GEO -->
+				<article data-hashtag="heal 052 170 416 545 130 151 185 421 548 140 269 516 562 314 517 563 169 412">
+					<h2>Centres Médicaux Psychologiques (CMP)</h2>
+					<h3>Institutions médicales proposant généralement des parcours de soin psychiatriques, psychologiques et infirmiers gratuits.</h3>
+					<hr/>
+					<h4>Bourg-d'Oisans</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">HLM <q>Prè des Roches</q> - Bâtiment A<br/>276 rue de Belledonne<br/>38520  BOURG-D'OISANS</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33476802286">04 76 80 22 86</a></div>
+					<div class="time"><img src="img/1.gif" alt="Horaires">Ouvert du mardi au jeudi de 9h à 17h</div>
+					<hr/>
+					<h4>Fontanil-Cornillon - Thérèse Lempérière</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">Le hameau des Poètes<br/>7 allée Charles Baudelaire<br/>38120  LE FONTANIL-CORNILLON</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588755">04 56 58 87 55</a></div>
+					<div class="time"><img src="img/1.gif" alt="Horaires">Ouvert tous les jours de 9h à 17h</div>
+					<hr/>
+					<h4>Saint-Marcellin</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">4 avenue Jules David<br/>38160 SAINT-MARCELLIN</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588280">04 56 58 82 80</a></div>
+					<div class="time"><img src="img/1.gif" alt="Horaires">Ouvert tous les jours de 9h à 17h</div>
+					<hr/>
+					<h4>Vif</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">10 rue du Breuil<br/>38450 VIF</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588225">04 56 58 82 25</a></div>
+					<div class="time"><img src="img/1.gif" alt="Horaires">Ouvert tous les jours sauf le mercredi de 9h à 17h</div>
+					<hr/>
+					<h4>La Côte-Saint-André</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">70 rue Henry Gérard<br/>38260 LA CÔTE-SAINT-ANDRÉ</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588840">04 56 58 88 40</a></div>
+					<div class="time"><img src="img/1.gif" alt="Horaires">Ouvert tous les jours de 9h à 17h</div>
+					<hr/>
+					<h4>Grenoble - Les marronniers</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">7 rue des Colibris<br/>38100 GRENOBLE</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588880">04 56 58 88 80</a></div>
+					<hr/>
+					<h4>Grenoble - Bonnafé</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">37 rue de Turenne<br/>38000 GRENOBLE</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588320">04 56 58 83 20</a></div>
+					<hr/>
+					<h4>Grenoble - Lantéri Laura</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">1 rue Dubois Fontanelle<br/>38100 GRENOBLE</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588230">04 56 58 82 30</a></div>
+					<hr/>
+					<h4>Saint-Martin-d'Hères - Dolto</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">19 rue Jacques Anquetil<br/>38400 SAINT-MARTIN-D'HÈRES</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588470">04 56 58 84 70</a></div>
+					<hr/>
+					<h4>Villard-de-Lans</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">150 impasse de Meillarot<br/>38250 VILLARD-DE-LANS</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588460">04 56 58 84 60</a></div>
+					<div class="time"><img src="img/1.gif" alt="Horaires">Ouvert tous les lundis, mardis et vendredis de 9h à 17h</div>
+					<hr/>
+					<h4>Crolles</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">Espace Belle étoile<br/>93 rue Henri Fabre<br/>38920 CROLLES</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588290">04 56 58 82 90</a></div>
+					<hr/>
+					<h4>La Mure</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">1 bis rue de Thénevaux<br/>38350 LA MURE</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588400">04 56 58 84 00</a></div>
+					<div class="time"><img src="img/1.gif" alt="Horaires">Ouvert tous les jours de 9h à 17h</div>
+					<hr/>
+					<h4>La Tronche - CMP Saint-Eynard</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">Immeuble Le Manhattan<br/>24 boulevard de la Chantourne<br/>38700 LA TRONCHE</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588375">04 56 58 83 75</a></div>
+					<hr/>
+					<h4>Vizille</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">111 rue du Général de Gaulle<br/>38220 VIZILLE</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588360">04 56 58 83 60</a></div>
+					<div class="time"><img src="img/1.gif" alt="Horaires">Ouvert tous jours 9h à 17h</div>
+					<hr/>
+					<h4>Échirolles - Les Oréades</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">33 rue de Normandie Niemen<br/>38130 ÉCHIROLLES</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588300">04 56 58 83 00</a></div>
+					<div class="time"><img src="img/1.gif" alt="Horaires">Ouvert tous les jours de 9h à 17h</div>
+					<hr/>
+					<h4>Pontcharra</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">440 avenue de la Gare<br/>38530 PONTCHARRA</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588900">04 56 58 89 00</a></div>
+					<div class="time"><img src="img/1.gif" alt="Horaires">Ouvert tous les jours de 9h à 17h</div>
+					<hr/>
+					<h4>Tullins - <q>Pavillon Parménie</q></h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">2<sup>ème</sup> étage<br/>1 place Gambetta<br/>38210 TULLINS</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588770">04 56 58 87 70</a></div>
+					<div class="time"><img src="img/1.gif" alt="Horaires">Ouvert tous les jours de 9h à 17h</div>
+					<hr/>
+					<h4>Voiron - <q>Les jardins du consul</q></h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">35 rue Sermorens<br/>38500 VOIRON</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33476677040">04 76 67 70 40</a></div>
+					<div class="time"><img src="img/1.gif" alt="Horaires">Ouvert tous les jours de 9h à 17h</div>
+					<hr/>
+					<h4>Fontaine - Escanglon</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">17 rue Professeur Esclangon<br/>38600 FONTAINE</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33476264282">04 76 26 42 82</a></div>
+					<div class="time"><img src="img/1.gif" alt="Horaires">Ouvert tous les jours de 9h à 17h</div>
+					<hr/>
+					<h4>Saint-Laurent-du-Pont</h4>
+					<div class="loc"><a href="geo:" class="tomap" rel="external sidebar noreferrer">1 rue Charles Berty<br/>38380 SAINT-LAURENT-DU-PONT</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33456588910">04 56 58 89 10</a></div>
+					<div class="time"><img src="img/1.gif" alt="Horaires">Ouvert tous les jours de 9h à 17h</div>
+				</article>
+
+				<article data-hashtag="053 185 169 317 185 151 421 185 052 421 229 516 heal">
+					<h2>Centres de planification départementaux</h2>
+					<h3>Conseiller&middot;es et médecins vous écoutent et vous informent sur tout&middot;es sur les questions liées à la vie sexuelle et affective (contraception, grossesse, l’avortement, ITS, difficultés conjugales, adolescence...).</h3>
+					<hr/>
+					<h4>Grenoble Interquartier - Abbaye-Jouhaux</h4>
+					<div class="loc">
+						<a href="geo:45.179510,5.744926" class="tomap" rel="external sidebar noreferrer">Maison des Habitants Abbaye<br/>1 place de la commune de 1871<br/>38100 GRENOBLE</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33476542627">04 76 54 26 27</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.179510,5.744926" rel="external noreferrer">
+						<span class="C5">C5</span> Saint-Augustin<br/>
+						<span class="P13">13</span> Suzanne Noël - Les Bains
+						</a></div>
+					<hr/>
+					<h4>Grenoble - Mistral Eaux-Claires</h4>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33476214041">04 76 21 40 41</a></div>
+					<div class="loc">
+						<a href="geo:45.172581,5.703899" class="tomap" rel="external sidebar noreferrer"> 82 rue Anatole France<br/>38100 GRENOBLE</a></div>
+					<hr/>
+					<h4>Grenoble - Prémol</h4>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33476090028">04 76 09 00 28</a></div>
+					<div class="loc">
+						<a href="geo:45.163403,5.727504" class="tomap" rel="external sidebar noreferrer"> 7 rue Henry Duhamel<br/>38100 GRENOBLE	</a></div>
+					<hr/>
+					<h4>Grenoble - Teisseire Malherbe</h4>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33476254963">04 76 25 49 63</a></div>
+					<div class="loc">
+						<a href="geo:45.171364,5.739484" class="tomap" rel="external sidebar noreferrer"> 110 Avenue Jean Perrot<br/>38100 GRENOBLE</a></div>
+					<hr/>
+					<h4>Grenoble - Vieux Temple</h4>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33476546753">04 76 54 67 53</a></div>
+					<div class="loc">
+						<a href="geo:45.193553,5.733709" class="tomap" rel="external sidebar noreferrer"> 2 rue du Vieux Temple<br/>38000 GRENOBLE</a></div>
+					<hr/>
+					<h4>Bourgoin Jallieu</h4>
+					<div class="num"><a href="tel:+33474283022">04 74 28 30 22</a></div>
+					<div class="web"><a href="https://www.isere.fr/centre-de-planification" rel="external noreferrer">www.isere.fr/centre-de-planification</a></div>
+					<div class="loc">
+						<a href="geo:45.589936,5.2769" class="tomap" rel="external sidebar noreferrer">14 place Albert Schweitzer<br/>38300 BOURGOIN JALLIEU</a></div>
+					<hr/>
+					<h4>Centres de planification et de consultation prénatale - Grenoble</h4>
+					<div class="num"><a href="tel:+33476121287">04 76 12 12 87</a></div>
+					<div class="loc">
+						<a href="geo:45.181817,5.730485" class="tomap" rel="external sidebar noreferrer">23 avenue Albert 1<sup>er</sup> de Belgique<br/>38100 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.589936,5.2769" rel="external noreferrer">
+						<span class="TA">A</span> Albert 1<sup>er</sup> de Belgique<br/>
+						<span class="TC">C</span>
+						<span class="P16">16</span> Gustave Rivet
+						</a></div>
+					<hr/>
+					<h4>Fontaine</h4>
+					<div class="num"><a href="tel:+33476269740">04 76 26 97 40</a></div>
+					<div class="loc">
+						<a href="geo:45.196871,5.684416" class="tomap" rel="external sidebar noreferrer">11 place des Écrins<br/>38600 FONTAINE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.196871,5.684416" rel="external noreferrer">
+						<span class="P19">19</span> Les Écrins<br/>
+						<span class="C6">C6</span> Charmettes<br/>
+						<span class="TA">A</span> Charles Michels
+						</a></div>
+					<hr/>
+					<h4>Pont de Claix</h4>
+					<div class="num"><a href="tel:+33476298650">04 76 29 86 50</a></div>
+					<div class="loc">
+						<a href="geo:45.127919,5.697414" class="tomap" rel="external sidebar noreferrer">27 avenue Antoine Girard<br/>38800 LE PONT DE CLAIX</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.127919,5.697414" rel="external noreferrer">
+						<span class="P25">25</span> Irène Joliot-Curie<br/>
+						<span class="F64">64</span> Marianne
+						</a></div>
+					<hr/>
+					<h4>Service de santé inter-universitaire - Grenoble</h4>
+					<div class="num"><a href="tel:+33476575090">04 76 57 50 90</a></div>
+					<div class="loc">
+						<a href="geo:45.191801,5.717774" class="tomap" rel="external sidebar noreferrer">2<sup>ème</sup> étage<br/>5 rue d'Arsonval<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.191801,5.717774" rel="external noreferrer">
+						<span class="TA">A</span>	<span class="TB">B</span>	<span class="P26">26</span> Gares<br/>
+						<span class="C1">C1</span> Félix Viallet
+						</a></div>
+					<div class="time">Par téléphone de 9h à 10h et de 14h à 15h</div>
+					<hr/>
+					<h4>Échirolles – Eybens</h4>
+					<div class="num"><a href="tel:+33476593769">04 76 59 37 69</a></div>
+					<div class="loc">
+						<a href="geo:45.156887,5.718845" class="tomap" rel="external sidebar noreferrer">12-14 avenue des États Généraux<br/>38130 ÉCHIROLLES</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.156887,5.718845" rel="external noreferrer">
+						<span class="C6">C6</span> <span class="TA">A</span> Essarts – La Butte
+					</a></div>
+					<hr/>
+					<h4>Saint-Martin-d’Hères</h4>
+					<div class="num"><a href="tel:+33476607459">04 76 60 74 59</a></div>
+					<div class="loc">
+						<a href="geo:45.183099,5.752367" class="tomap" rel="external sidebar noreferrer">5 rue Anatole France<br/>38400 SAINT-MARTIN-D'HÈRES</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.183099,5.752367" rel="external noreferrer">
+						<span class="P14">14</span>	<span class="TD">D</span> Maison Communale<br/>
+						<span class="P12">12</span> Grand Châtelet
+					</a></div>
+					<hr/>
+					<h4>Clinique Mutualiste - Grenoble</h4>
+					<div class="num"><a href="tel:+33476707059">04 76 70 70 59</a></div>
+					<div class="web"><a href="https://www.ghm-grenoble.fr/Maternite-Vos-consultations-prenatales.113.0.html" rel="external noreferrer">www.ghm-grenoble.fr/Maternite-Vos-consultations-prenatales.113.0.html</a></div>
+					<div class="fb"><a href="https://www.facebook.com/materniteghm" rel="external noreferrer">@materniteghm</a></div>
+					<div class="loc">
+						<a href="geo:45.181036,5.710161" class="tomap" rel="external sidebar noreferrer">8 rue du Docteur Calmette<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.181036,5.710161" rel="external noreferrer">
+						<span class="P12">12</span> Groupe Hospitalier Mutualiste<br/>
+						<span class="TC">C</span> Vallier – Docteur Calmette<br/>
+						<span class="P26">26</span> Vallier – Catane
+						</a></div>
+					<hr/>
+					<h4>Bourg d'Oisans</h4>
+					<div class="num"><a href="tel:+33476792269">04 76 79 22 69</a></div>
+					<div class="num"><a href="tel:+33640753938">06 40 75 39 38</a></div>
+					<div class="loc">
+						<a href="geo:45.056959,6.028826" class="tomap" rel="external sidebar noreferrer">Maison médicale – 1<sup>er</sup> étage<br/>44 avenue Jean-Baptiste Gautier<br/>38520 BOURG D’OISANS</a></div>
+					<hr/>
+					<h4>Centre de santé inter-universitaire - Saint-Martin-d’Hères</h4>
+					<div class="num"><a href="tel:+33476824070">04 76 82 40 70</a></div>
+					<div class="loc">
+						<a href="geo:45.193078,5.75947" class="tomap" rel="external sidebar noreferrer">180 rue de la Piscine<br/>38400 SAINT MARTIN D'HÈRES</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.056959,6.028826" rel="external noreferrer">
+						<span class="TB">B</span> <span class="TD">D</span> Les Taillées – Universités<br/>
+						<span class="TC">C</span> <span class="TE">E</span> Hector Berlioz - Universités
+						</a></div>
+					<div class="time">Par téléphone de 9h à 10h et de 14h à 15h</div>
+					<hr/>
+					<h4>Le Douze - Centre de planification de Meylan</h4>
+					<div class="num"><a href="tel:+33476900636">04 76 90 06 36</a></div>
+					<div class="loc">
+						<a href="geo:45.208553,5.763187" class="tomap" rel="external sidebar noreferrer">12 rue des Ayguinards<br/>38240 MEYLAN</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.208553,5.763187" rel="external noreferrer">
+						<span class="P13">13</span>	<span class="F42">42</span> Place de la Louisiane<br/>
+						<span class="C1">C1</span> Aiguinards-Hexagone
+					</a></div>
+					<hr/>
+					<h4>La Tronche</h4>
+					<div class="num"><a href="tel:+33776765410">07 76 76 54 10</a></div>
+					<div class="loc"><a href="geo:45.202666,5.741533" class="tomap" rel="external sidebar noreferrer">
+						Hôpital Couple Enfant<br/>avenue Maquis Du Gresivaudan<br/>38700 LA TRONCHE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.202666,5.741533" rel="external noreferrer">
+						<span class="P13">13</span>	<span class="TB">B</span> La Tronche Hôpital
+					</a></div>
+					<hr/>
+					<h4>Grenoble - GHM <q>le 8</q></h4>
+					<div class="loc">
+						<a href="geo:45.1810022,5.7100825" class="tomap" rel="external sidebar noreferrer">8 rue Docteur Calmette <br /> 38028 GRENOBLE </a></div>
+					<div class="num"><a href="tel:+33476707024">04 76 70 70 24</a></div>
+					<hr/>
+					<h4>La Mure </h4>
+					<div class="loc">
+						<a href="geo:44.9054843,5.794126" class="tomap" rel="external sidebar noreferrer">En face de l'Hôpital <br />63A rue des Alpes <br /> 38350 LA MURE </a></div>
+					<div class="num"><a href="tel:+33476814704">04 76 81 47 04</a></div>
+					<hr/>
+					<h4>Tour du Pin</h4>
+					<div class="loc">
+						<a href="geo:45.5681001,5.4404733" class="tomap" rel="external sidebar noreferrer">Immeuble pré-cateland <br />41 A boulevard Victor Hugo <br /> 38110 LA TOUR DU PIN </a></div>
+					<div class="num"><a href="tel:+33476975344">04 76 97 53 44</a></div>
+					<hr/>
+					<h4>La Tronche </h4>
+					<div class="loc">
+						<a href="geo:45.2022503,5.7416657" class="tomap" rel="external sidebar noreferrer">Rez-de-Chaussée <br />Hôpital Couple-Enfant <br />CHU de Grenoble <br /> 38700 LA TRONCHE </a></div>
+					<div class="num"><a href="tel:+33476765410">04 76 76 54 10</a></div>
+					<hr/>
+					<h4>Mens (Permanence)</h4>
+					<div class="loc">
+						<a href="geo:44.8155025,5.7508588" class="tomap" rel="external sidebar noreferrer">Locaux de MIXAGES <br />rue du Docteur Senebier <br /> 38710 MENS </a></div>
+					<div class="num"><a href="tel:+33476814704">04 76 81 47 04</a> (CPEF de La Mure)
+					</div>
+					<div class="num"><a href="tel:+33649990343">06 49 99 03 43</a></div>
+					<hr/>
+					<h4>Monestier de Clermont (Permanence)</h4>
+					<div class="loc">
+						<a href="geo:44.9143822,5.6283238" class="tomap" rel="external sidebar noreferrer">Centre socio-culturel intercommunal le Granjou <br />13 chemin des Chambons <br /> 38650 MONESTIER DE CLERMONT </a></div>
+					<div class="num"><a href="tel:+33476298650">04 76 29 86 50</a> (CPEF Pont de Claix)
+					</div>
+					<hr/>
+					<h4>Agathe - Pontcharra</h4>
+					<div class="loc">
+						<a href="geo:45.4320285,6.0207771" class="tomap" rel="external sidebar noreferrer">33 avenue de la gare <br /> 38530 PONTCHARRA </a></div>
+					<div class="num"><a href="tel:+33476978100">04 76 97 81 00</a></div>
+					<hr/>
+					<h4>Le Pont de Beauvoisin</h4>
+					<div class="loc">
+						<a href="geo:45.5387387,5.6647208" class="tomap" rel="external sidebar noreferrer">Centre Hospitalier Yves Touraine <br />Locaux du centre périnatal <br />rue Lieutenant Richard <br /> 38480 LE PONT DE BEAUVOISIN </a></div>
+					<div class="num"><a href="tel:+33476327854">04 76 32 78 54</a></div>
+					<hr/>
+					<h4>Pont de Chéruy</h4>
+					<div class="loc">
+						<a href="geo:45.7493424,5.1800142" class="tomap" rel="external sidebar noreferrer">66 rue de la République <br /> 38230 PONT DE CHÉRUY </a></div>
+					<div class="num"><a href="tel:+33472939075">04 72 93 90 75</a></div>
+					<hr/>
+					<h4>Pont de Claix</h4>
+					<div class="loc">
+						<a href="geo:45.1278656,5.6976287" class="tomap" rel="external sidebar noreferrer">27 avenue Antoine Girard <br /> 38800 PONT DE CLAIX </a></div>
+					<div class="num"><a href="tel:+33476298650">04 76 29 86 50</a></div>
+					<hr/>
+					<h4>Roussillon</h4>
+					<div class="loc">
+						<a href="geo:45.3656659,4.8055803" class="tomap" rel="external sidebar noreferrer">24bis avenue Jean Jaurès <br /> 38150 ROUSSILLON </a></div>
+					<div class="num"><a href="tel:+33474865562">04 74 86 55 62</a></div>
+					<hr/>
+					<h4>Saint-Marcellin</h4>
+					<div class="loc">
+						<a href="geo:45.1524243,5.3225557" class="tomap" rel="external sidebar noreferrer">Centre hospitalier de Saint-Marcellin <br />1 avenue Félix Faure <br /> 38160 SAINT-MARCELLIN </a></div>
+					<div class="num"><a href="tel:+33476646524">04 76 64 65 24</a></div>
+					<div class="num"><a href="tel:+33476646520">04 76 64 65 20</a></div>
+					<hr/>
+					<h4>Saint-Martin-d'Hères – Universités</h4>
+					<div class="loc">
+						<a href="geo:45.1931443,5.7599308" class="tomap" rel="external sidebar noreferrer">Centre de santé inter-universitaire de Grenoble <br />180 rue de la piscine <br /> 38400 SAINT-MARTIN-D'HÈRES </a></div>
+					<div class="num"><a href="tel:+33476824070">04 76 82 40 70</a></div>
+					<hr/>
+					<h4>Saint-Martin-d'Hères</h4>
+					<div class="loc">
+						<a href="geo:45.1834467,5.7522325" class="tomap" rel="external sidebar noreferrer">5 rue Anatole France <br /> 38400 SAINT-MARTIN-D'HÈRES </a></div>
+					<div class="num"><a href="tel:+33476607459">04 76 60 74 59</a></div>
+					<hr/>
+					<h4>Vienne - Centre Hospitalier</h4>
+					<div class="loc">
+						<a href="geo:45.5337267,4.8797643" class="tomap" rel="external sidebar noreferrer">Centre Hospitalier Lucien Hussel <br />Mont Salomon <br /> 38200 VIENNE </a></div>
+					<div class="num"><a href="tel:+33474313386">04 74 31 33 86</a></div>
+					<hr/>
+					<h4>Vienne - Quartier Saint-Martin</h4>
+					<div class="loc">
+						<a href="geo:45.5277735,4.8797651" class="tomap" rel="external sidebar noreferrer">10 rue Albert Thomas <br /> 38200 VIENNE </a></div>
+					<div class="num"><a href="tel:+33481340052">04 81 34 00 52</a> (le mercredi)
+					</div>
+					<hr/>
+					<h4>Villard de Lans</h4>
+					<div class="loc">
+						<a href="geo:45.0747271,5.5557732" class="tomap" rel="external sidebar noreferrer">Maison du territoire <br />150 impasse Meillarot <br /> 38250 VILLARD DE LANS </a></div>
+					<div class="num"><a href="tel:+33631449031">06 31 44 90 31</a></div>
+					<div class="num"><a href="tel:+33476269740">04 76 26 97 40</a> (CPEF de Fontaine)
+					</div>
+					<hr/>
+					<h4>Vizille</h4>
+					<div class="loc">
+						<a href="geo:45.0834614,5.7737201" class="tomap" rel="external sidebar noreferrer">Maison médicale de garde <br />rue du 19 mars 1962 <br /> 38220 VIZILLE </a></div>
+					<div class="num"><a href="tel:+33476298650">04 76 29 86 50</a> (CPEF Pont de Claix)
+					</div>
+					<hr/>
+					<h4>Voiron</h4>
+					<div class="loc">
+						<a href="geo:45.3648293,5.5939776" class="tomap" rel="external sidebar noreferrer">Immeuble le Centre Gare <br />6 avenue des frères Tardy <br /> 38500 VOIRON </a></div>
+					<div class="num"><a href="tel:+33476057256">04 76 05 72 56</a></div>
+					<hr/>
+					<h4>La Côte Saint-André</h4>
+					<div class="loc">
+						<a href="geo:45.393492,5.265568" class="tomap" rel="external sidebar noreferrer">3 avenue de verdun <br /> 38260 LA CÔTE SAINT ANDRÉ </a></div>
+					<div class="num"><a href="tel:+33675274175">06 75 27 41 75</a></div>
+				</article>
+
+				<article data-hashtag="185 cult">
+					<h2>La Chorageuse</h2>
+					<h3>Chorale féministe.</h3>
+					<div class="mail"><a href="mailto:chorageuse@riseup.net">chorageuse@riseup.net</a></div>
+					<div class="web"><a href="https://chorageuse.noblogs.org/" rel="external noreferrer">chorageuse.noblogs.org</a></div>
+					<div class="loc">
+						<a href="geo:45.188058,5.710936" class="tomap" rel="external sidebar noreferrer">38 rue d’Alembert<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.188058,5.710936" rel="external noreferrer">
+						<span class="TA">A</span>
+						<span class="TB">B</span> Saint-Bruno<br/>
+						<span class="P12">12</span> Saint-Bruno
+						</a></div>
+					<div class="time">
+						Séances tous les dimanches à 18h.<br/>Accueil des nouvelleaux chaque 1<sup>er</sup> dimanche du mois à 18h.
+					</div>
+				</article>
+
+				<article data-hashtag="185 righ fami">
+					<h2>CIDFF<br/>(Centre d'Information sur les Droits des Femmes et des Familles)</h2>
+					<h3>Centre d'Information sur les Droits des Femmes et des Familles de l'Isère ; lutte contre les violences sexistes, soutien à la parentalité.</h3>
+					<div class="num"><a href="tel:+33978084748">09 78 08 47 48</a></div>
+					<div class="num"><a href="tel:+33476541435">04 76 54 14 35</a></div>
+					<div class="mail"><a href="mailto:contact@cidff38.com">contact@cidff38.com</a></div>
+					<div class="mail"><a href="mailto:cidff.contact@cidff-id.fr">cidff.contact@cidff-id.fr</a></div>
+					<div class="web"><a href="https://rhonearcalpin-interdepartemental.cidff.info/" rel="external noreferrer">rhonearcalpin-interdepartemental.cidff.info</a></div>
+					<div class="fb"><a href="https://www.facebook.com/Cidff-38-563439737156575/" rel="external noreferrer">Cidff 38</a></div>
+					<div class="loc">
+						<a href="geo:45.190028,5.728965" class="tomap" rel="external sidebar noreferrer">9 rue Raoul Blanchard<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.190028,5.728965" rel="external noreferrer">
+						<span class="TA">A</span>
+						<span class="TB">B</span> Hubert Dubedout - Maison du Tourisme
+						</a></div>
+					<div class="time">
+						 Du Lundi au Vendredi : de 9h00 à 12h00 et de 13h00 à 17h00
+					</div>
+					<div class="info">
+						 Un lieu d'accueil et d'informations gratuit pour tout public et plus particulièrement les femmes. Il a une mission d'intérêt général confiée par l'état. Permanences Grenoble Maison des Associations 6, rue Berthe de Boissieux. Cité des Familles 3 rue de Belgrade
+					</div>
+				</article>
+
+				<article data-hashtag="185">
+					<h2>Le coin des LGBT Grenoble</h2>
+					<h3>Informations militantes, groupe Discord, petites annonces.</h3>
+					<div class="ig"><a href="https://www.instagram.com/lecoindeslgbt.grenoble" rel="external noreferrer">@lecoindeslgbt.grenoble</a></div>
+				</article>
+
+				<article data-hashtag="185">
+					<h2>Collages Féministes Grenoble</h2>
+					<h3>Collectif intersectionnel de collages urbains.</h3>
+					<div class="ig"><a href="https://www.instagram.com/collages_feministes_grenoble" rel="external noreferrer">@collages_feministes_grenoble</a></div>
+				</article>
+
+				<article data-hashtag="185 cult">
+					<h2>Collectif Samovar</h2>
+					<h3>Collectif LGBTQIA+ féministe favorisant l’expression artistique dans la bienveillance.</h3>
+					<div class="ig"><a href="https://www.instagram.com/collectif.samovar" rel="external noreferrer">@collectif.samovar</a></div>
+				</article>
+
+				<article data-hashtag="185 femi acti">
+					<h2>Commission Féministe du Campus de Grenoble</h2>
+					<div class="fb"><a href="https://www.facebook.com/commisionfeministe38" rel="external noreferrer">@commisionfeministe38</a></div>
+				</article>
+
+				<article data-hashtag="185 acti lgbt asso">
+					<h2>Contact 38</h2>
+					<h3>Dialogue entre les parents, les lesbiennes, gays, bi et trans, leurs familles, ami&middot;es et le milieu scolaire.</h3>
+					<div class="num"><a href="tel:+33805696464">08 05 69 64 64</a> (ligne d'écoute)
+					</div>
+					<div class="num"><a href="tel:+33476171470">04 76 17 14 70</a></div>
+					<div class="mail"><a href="mailto:38@asso-contact.org">38@asso-contact.org</a></div>
+					<div class="web"><a href="http://www.asso-contact.org/38/" rel="external noreferrer">www.asso-contact.org/38</a></div>
+					<div class="fb"><a href="https://www.facebook.com/contact.isere" rel="external noreferrer">@contact.isere</a></div>
+					<div class="loc">
+						<a href="geo:45.182338,5.720978" class="tomap" rel="external sidebar noreferrer">
+							8 rue sergent Bobillot<br/>38000 GRENOBLE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
+						<span class="TC">C</span> Foch Férié<br/>
+						<span class="C3">C3</span> Marceau - Jardin des Vallons<br/>
+						<span class="P25">25</span> Colonel Dumont
+						</a></div>
+					<div class="time">
+						Tous les vendredis soirs de 18h30 à 19h30
+					</div>
+				</article>
+
+				<article data-hashtag="185 heal dmst">
+					<h2>COREVIH Arc Alpin</h2>
+					<h3>Comité de coordination régional de la lutte contre les infections sexuellement transmissibles et le VIH. Regroupe et coordonne les acteur&middot;ices de la prévention, du dépistage, de la promotion de la santé, du soin et de l'accompagnement.</h3>
+					<div class="num"><a href="tel:+33"></a></div>
+					<div class="mail"><a href="mailto:coreviharcalpin@chu-grenoble.fr">coreviharcalpin@chu-grenoble.fr</a></div>
+					<div class="web"><a href="https://www.alpesansida.fr" rel="external noreferrer">www.alpesansida.fr</a></div>
+					<div class="fb"><a href="https://www.facebook.com/coreviharcalpin" rel="external noreferrer">@coreviharcalpin</a></div>
+					<div class="tw"><a href="https://www.twitter.com/COREVIH_Alpin" rel="external noreferrer">@COREVIH_Alpin</a></div>
+					<div class="yt"><a href="https://www.youtube.com/channel/UCQXA8x4R2CrqUf07p8bhy_Q" rel="external noreferrer">COREVIH Arc Alpin Alpes sans sida</a></div>
+					<!---
+						CHU GRENOBLE - Hôpital de Jour
+						38043 GRENOBLE
+						       <div class="loc">
+						         <a href="geo:45.182338,5.720978" class="tomap" rel="external sidebar noreferrer">8 rue sergent Bobillot<br/>38000 GRENOBLE</a>
+						       </div>
+						       <div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
+						         <span class="TC">C</span> Foch Férié<br/>
+						         <span class="C3">C3</span> Marceau - Jardin des Vallons<br/>
+						         <span class="P25">25</span> Colonel Dumont
+						         </a>
+						       </div>
+						       <div class="time">
+						         Tous les vendredis soirs de 18h30 à 19h30
+						       </div>-->
+				</article>
+
+				<article data-hashtag="185">
+					<h2>La Cyclique / Vélorution féministe Grenoble</h2>
+					<div class="desc"></div>
+					<div class="mail"><a href="mailto:cyclique@clavette-gre.org">cyclique@clavette-gre.org</a></div>
+					<div class="fb"><a href="https://www.facebook.com/Velorutionfeministegrenoble" rel="external noreferrer">@Velorutionfeministegrenoble</a></div>
+					<div class="loc">
+						<a href="geo:45.188058,5.710936" class="tomap" rel="external sidebar noreferrer">38 rue d'Alembert<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.188058,5.710936" rel="external noreferrer">
+						<span class="TA">A</span>
+						<span class="TB">B</span>
+						<span class="P12">12</span>	Saint-Bruno
+						</a></div>
+					<div class="info">
+						 Atelier sans homme cisgenre. Un espace d’auto-réparation entre femmes, trans, intergenres, ou personnes s’auto-identifiant différemment mais autrement qu’un homme cisgenre*. Pendant les permanences, on se dépoussière de nos stéréotypes genrés, on se remonte les manches et on met les mains dans le cambouis pour réparer nos biclous !
+					</div>
+				</article>
+
+				<article data-hashtag="cult" id="d">
+					<h2>Dalidark</h2>
+					<h3>Promouvoir la musique et autres créations réalisées par des femmes, lesbiennes ou trans.</h3>
+					<div class="mail"><a href="mailto:dalidark@gresille.org">dalidark@gresille.org</a></div>
+					<div class="info">
+						 Dalidark est un collectif qui a pour but de promouvoir la musique et autres créations réalisées par des femmes, lesbiennes ou trans. Dalidark propose régulièrément des événements, musicaux, projections de films, dans ce but. Les soirées organisées peuvent être mixtes ou non-mixtes suivant les thèmes abordés. Le collectif est lui non-mixte, afin de faciliter une auto-organisation et des moments d'échange entre femmes, lesbiennes et trans, et limiter ainsi les rapports de domination liés aux genres en son sein.
+					</div>
+				</article>
+
+				<article data-hashtag="righ inst 185">
+					<h2><img src="img/1.gif" class="pers" alt="Icône de femme">Isabelle JAHIER-DETON</h2>
+					<h3>Déléguée Départementale aux Droits des Femmes et à l'Égalité de l'Isère (DDDFE).</h3>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33457386513">04 57 38 65 13</a></div>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33612685150">06 12 68 51 50</a></div>
+					<div class="mail"><img src="img/1.gif" alt="Adresse e-mail"><a href="mailto:isabelle.jahier-deton@isere.gouv.fr">isabelle.jahier-deton@isere.gouv.fr</a></div>
+					<div class="loc"><img src="img/1.gif" alt="Adresse"><a href="geo:45.191822,5.735199" class="tomap" rel="external sidebar noreferrer">DDCS<br/>Cité administrative – Bâtiment 2<br/>1 rue Joseph Chanrion<br/>38000 GRENOBLE</a></div>
+					<div class="bus">
+						<img src="img/1.gif" alt="Accès en bus">
+						<a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.191822,5.735199" rel="external noreferrer">
+						<span class="P16">13</span> <span class="P23">16</span> Mutualité<br/>
+						<span class="TB">B</span> Notre-Dame - Musée
+						</a></div>
+				</article>
+
+				<article data-hashtag="cult">
+					<h2>DégenréE</h2>
+					<h3>Émission de radio féministe.</h3>
+					<div class="num"><a href="tel:+33456528520">04 56 52 85 20</a> (Radio Campus)
+					</div>
+					<div class="mail"><a href="mailto:degenree@pimienta.org">degenree@pimienta.org</a></div>
+					<div class="web"><a href="https://campusgrenoble.org/series/degenree/" rel="external noreferrer">campusgrenoble.org/series/degenree</a></div>
+					<div class="web"><a href="https://www.radiorageuses.net/spip.php?auteur3" rel="external noreferrer">www.radiorageuses.net/spip.php?auteur3</a></div>
+					<div class="loc">
+						<a href="geo:45.191087,5.767673" class="tomap" rel="external sidebar noreferrer">Espace Vie Étudiante (EVE)<br/>701 avenue centrale<br/>38402 SAINT-MARTIN-D'HÈRES</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.191087,5.767673" rel="external noreferrer">
+						<span class="TB">B</span>
+						<span class="TC">C</span>
+						<span class="TD">D</span>
+						<span class="TE">E</span> Gabriel Fauré<br/>
+						<span class="C7">C7</span>
+						<span class="P23">23</span> Bibliothèques Universitaires
+						</a></div>
+					<div class="time">
+						Sur Radio Campus Grenoble (90.8 FM) de 19h à 20h un jeudi sur deux
+					</div>
+				</article>
+
+				<article data-hashtag="185">
+					<h2>Déviations</h2>
+					<h3>Association grenobloise par et pour des personnes déviantes de genre, trans, inter, NB, trav.</h3>
+					<div class="mail"><a href="mailto:deviations@gresille.org">deviations@gresille.org</a></div>
+					<div class="web"><a href="https://deviations.noblogs.org/" rel="external noreferrer">deviations.noblogs.org</a></div>
+					<div class="web"><a href="https://linktr.ee/deviationsgrenoble" rel="external noreferrer">linktr.ee/deviationsgrenoble</a></div>
+					<div class="ig"><a href="https://www.instagram.com/deviationsgrenoble" rel="external noreferrer">@deviationsgrenoble</a></div>
+					<div class="loc">
+						<a href="geo:45.182338,5.720978" class="tomap" rel="external sidebar noreferrer">8 rue sergent Bobillot<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
+						<span class="TC">C</span> Foch Férié<br/>
+						<span class="C3">C3</span> Marceau - Jardin des Vallons<br/>
+						<span class="P25">25</span> Colonel Dumont
+						</a></div>
+					<div class="info">
+						 Association grenobloise par et pour des personnes déviantes de genre, trans, inter, NB, trav …
+					</div>
+				</article>
+
+				<article data-hashtag="185 " id="e">
+					<h2>Les Égales</h2>
+					<h3>Promouvoir les droits des femmes et valoriser les femmes qui ont un parcours singulier, dans le passé et dans la société actuelle.</h3>
+					<div class="mail"><a href="mailto:contact@lesegales.fr">contact@lesegales.fr</a></div>
+					<div class="mail"><a href="mailto:les.egales38@orange.fr">les.egales38@orange.fr</a></div>
+					<div class="web"><a href="https://www.lesegales.fr/les-egales" rel="external noreferrer">www.lesegales.fr/les-egales</a></div>
+					<div class="fb"><a href="https://www.facebook.com/Les-Egales-103385174536630" rel="external noreferrer">Les Égales</a></div>
+					<div class="loc">
+						<a href="geo:45.182734,5.711362" class="tomap" rel="external sidebar noreferrer">94 bis rue Abbé Grégoire<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182734,5.711362" rel="external noreferrer">
+						<span class="P12">12</span> Abbé Grégoire<br/>
+						<span class="TC">C</span> <span class="P26">26</span> Vallier - Docteur Calmette
+						</a></div>
+				</article>
+
+				<article data-hashtag="185 421">
+					<h2>En tout genre</h2>
+					<h3>Association féministe et LGBTI+ de Sciences Po.</h3>
+					<div class="mail"><a href="mailto:contact-entoutgenre@iepg.fr">contact-entoutgenre@iepg.fr</a></div>
+					<div class="web"><a href="https://entoutgenre.wordpress.com/" rel="external noreferrer">entoutgenre.wordpress.com</a></div>
+					<div class="web"><a href="https://linktr.ee/entoutgenregrenoble" rel="external noreferrer">linktr.ee/entoutgenregrenoble</a></div>
+					<div class="fb"><a href="https://www.facebook.com/EnToutGenreGrenoble" rel="external noreferrer">@EnToutGenreGrenoble</a></div>
+					<div class="ig"><a href="https://www.instagram.com/entoutgenregrenoble" rel="external noreferrer">@entoutgenregrenoble</a></div>
+					<div class="tw"><a href="https://www.twitter.com/genre_en" rel="external noreferrer">@genre_en</a></div>
+					<div class="loc">
+						<a href="geo:45.191097,5.770018" class="tomap" rel="external sidebar noreferrer">1030 Av. Centrale<br/>38400 SAINT-MARTIN-D'HÈRES</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.191097,5.770018" rel="external noreferrer">
+						<span class="P23">23</span>
+						<span class="C5">C5</span>
+						<span class="C7">C7</span>
+						<span class="TB">B</span>
+						<span class="TC">C</span> Bibliothèques Universitaires
+						</a></div>
+					<div class="info">
+						 Fait vivre le débat sur la place des femmes et des sexualités dans la société
+					</div>
+				</article>
+
+				<article data-hashtag="">
+					<h2>L'envolée féminine (ADATE)</h2>
+					<h3>	Action d’accompagnement à l’insertion professionnelle des femmes et de lutte contre les discriminations ethniques et genre. Elle a pour objectif de permettre à un public de femmes, souvent issues de l’immigration et éloignées aussi bien de l’emploi que des modalités d’accompagnement classiques, de travailler à ce retour à l’emploi en s’appuyant sur leur développement personnel.	</h3>
+					<div class="num"><a href="tel:+33458176500">04 58 17 65 00</a></div>
+					<div class="mail"><a href="mailto:insertion@adate.org">insertion@adate.org</a></div>
+					<div class="web"><a href="http://www.adate.org/developpement-local/envolee_feminine/" rel="external noreferrer">www.adate.org/developpement-local/envolee_feminine</a></div>
+					<div class="loc"><a href="geo:45.172038,5.724057" class="tomap" rel="external sidebar noreferrer">96 rue de Stalingrad<br/>38100 GRENOBLE</a></div>
+				</article>
+
+				<article data-hashtag="185 cult" id="f">
+					<h2>Les <u>F</u>ées Rosses</h2>
+					<h3>Promouvoir les pratiques artistiques, culturelles et de transformations sociales dans une démarche d'éducation populaire.</h3>
+					<div class="num"><a href="tel:+33652337889">06 52 33 78 89</a></div>
+					<div class="mail"><a href="mailto:contact@lesfeesrosses.org">contact@lesfeesrosses.org</a></div>
+					<div class="web"><a href="https://lesfeesrosses.org/" rel="external noreferrer">lesfeesrosses.org</a></div>
+					<div class="loc">
+						<a href="geo:45.183975,5.705998" class="tomap" rel="external sidebar noreferrer">21 Rue Boucher de Perthes<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.183975,5.705998" rel="external noreferrer">
+						<span class="C5">C5</span> Cémoi<br/>
+						<span class="TA">A</span> Berriat-Le Magasin<br/>
+						<span class="TC">C</span>
+						<span class="P26">26</span> Vallier-Catane
+						</a></div>
+				</article>
+
+				<article data-hashtag="185 host">
+					<h2>Femmes SDF</h2>
+					<h3>Agit aux côtés des femmes en errance et en précarité. Accompagnement, écoute, information juridique...</h3>
+					<div class="num"><a href="tel:+33476703529">04 76 70 35 29</a></div>
+					<div class="mail"><a href="mailto:femmessdf@orange.fr">femmessdf@orange.fr</a></div>
+					<div class="web"><a href="http://association-femmessdf.fr" rel="external noreferrer">association-femmessdf.fr</a></div>
+					<div class="fb"><a href="https://www.facebook.com/femmessdf" rel="external noreferrer">@femmessdf</a></div>
+					<div class="loc">
+						<a href="geo:45.185851,5.732805" class="tomap" rel="external sidebar noreferrer">Local des femmes<br/>16 Boulevard Jean Pain<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.185851,5.732805" rel="external noreferrer">
+						<span class="TA">A</span>
+						<span class="TC">C</span>
+						<span class="C4">C4</span>
+						<span class="P13">13</span> Chavant<br/>
+						</a></div>
+					<div class="time">
+						<ul>
+							<li>Accueil : Lundi, mercredi et vendredi de 10h30 à 17h00</li>
+							<li>Accompagnement individuel : Mardi de 14h00 à 17h00</li>
+							<li>Projets collectifs : Jeudi de 14h00 à 17h00</li>
+						</ul>
+					</div>
+					<div class="info">
+						 L’association Femmes SDF, a pour objectif de faire changer le regard porté sur les femmes en errance, et ainsi, avec le temps, de faire changer le regard qu’elles portent sur elles-mêmes. Elle mène pour cela, dans une démarche de recherche-action, différentes actions de sensibilisation (films, pièce de théâtre...). L’action de l’association repose sur l’implication des femmes concernées et un accompagnement au quotidien. Depuis 2010, l'association gère le Local des femmes. Le Local des femmes est un espace d'accueil de jour et de convivialité pour les femmes en situation de grande précarité. Ce lieu leur offre plusieurs services : douches, chambre avec lit, produits cosmétiques, préparation de repas collectifs, lieu social, accompagnement dans les démarches, implication dans la vie du lieu...
+					</div>
+				</article>
+
+				<article data-hashtag="">
+					<h2>FERE<br/>(Femme et Renouveau Économique)</h2>
+					<h3>	Chaire de recherche hébergée au sein de la Fondation Grenoble École de Management (GEM), sous l’égide de la Fondation de France.	</h3>
+					<div class="num"><a href="tel:+33476706060">04 76 70 60 60</a></div>
+					<div class="web"><a href="http://renouveau-economique-entrepreneuriat-feminin.fr/" rel="external noreferrer">renouveau-economique-entrepreneuriat-feminin.fr</a></div>
+					<div class="tw"><a href="https://twitter.com/LeLoarne" rel="external noreferrer">@LeLoarne</a></div>
+					<div class="loc"><a href="geo:45.189718,5.713461" class="tomap" rel="external sidebar noreferrer">12 rue Pierre Sémard<br/>38000 GRENOBLE</a></div>
+				</article>
+
+				<article data-hashtag="asso psyo righ aggr 185">
+					<h2>France Victimes Grenoble (ex-AIV)</h2>
+					<h3>Association judiciaire d'Aide aux Victimes.
+						Apporter un soutien moral, psychologique et juridique aux victimes de délit, d'agressions ou de violences.
+						Lieux d'écoute et de parole.
+					</h3>
+					<div class="num"><a href="tel:+33476462737">04 76 46 27 37</a></div>
+					<div class="num"><a href="tel:+33476465519">04 76 46 55 19</a></div>
+					<div class="mail"><a href="mailto:secretariat.aiv@orange.fr">secretariat.aiv@orange.fr</a></div>
+					<div class="mail"><a href="mailto:aide.victimes@aiv-grenoble.org">aide.victimes@aiv-grenoble.org</a></div>
+					<div class="web"><a href="http://www.aiv-grenoble.org" rel="external noreferrer">www.aiv-grenoble.org</a></div>
+					<div class="web"><a href="https://www.france-victimes.fr/index.php" rel="external noreferrer">www.france-victimes.fr</a></div>
+					<div class="loc"><a href="geo:45.181527,5.719535" class="tomap" rel="external sidebar noreferrer">Immeuble le Mercure<br/>4<sup>ème</sup> étage<br/>26, rue Colonel Dumont<br/>38000 GRENOBLE (accès handicap)</a></div>
+					<div class="info"><span class="doubt">Informations à compléter</span></div>
+					<!--Pour prendre rendez-vous : Du mardi au vendredi de 9h à 12h et de 14h à 17h
+					Lundi de 14h à 17h
+					Bureau d'Aide aux Victimes - bureau 352
+					ouvert du lundi au vendredi de 09h à 12h et de 13h30 à 17h
+					VIOLENCES / Je subis des violences : qui peut m'aider?
+					Pour tous
+					Pour prendre rendez-vous : Du mardi au vendredi de 9h à 12h et de 14h à 17h
+					Lundi de 14h à 17h
+					L’association d’Aide et d’Information aux Victimes (AIV) effectue des permanences à l’hôtel de police et dans les commissariats de secteur  :
+					Hôtel de Police  : du lundi au vendredi de 09h à 12h et 13h30 à 17h,
+					Fontaine  : tous les lundis de 14h à 17h,
+					Échirolles : tous les mercredis de 10h à 12h,
+					Saint Martin d’Hères  : tous les jeudis de 14h à 17h,
+					La maison de la justice et du droit Immeuble le Polynome, 25 Avenue de Constantine 38100 Grenoble : tous les lundis et mardis de 09h à 12h
+					Le Palais de justice bureau 352 place Firmin Gautier 38019 Grenoble : du lundi au vendredi de 09h à 12h et 13h30 à 17h.
+					L’association est également joignable au
+					<div class="num"><a href="tel:+33476462737">04 76 46 27 37</a></div>
+					du lundi au vendredi de 9h à 17h.
+					Les services de l'AIV sont strictement confidentiels et indépendants du dépôt de plainte.
+					Vous pourrez également être orienté vers la psychologue de la police nationale présente à l'hôtel de police du lundi au vendredi de 9h à 17h.
+
+					43 rue Victor Hugo
+					38200 Vienne
+					Tél : 04 74 53 58 13
+					courriel : contact@fv38apress.fr
+
+					Bureau d'Aide aux victimes
+					Tribunal de Grande Instance de Vienne
+					16 place Charles de Gaulle
+					38200 VIENNE
+					Tél : 04 74 85 58 66
+					courriel : contact@fv38apress.fr
+
+					Maison de Justice et du Droit de Villefontaine
+					place du 11 novembre
+					38090 Villefontaine
+					(tous les mercredis après midi et jeudis)
+
+					CCAS de L'Isle D'Abeau
+					14 promenade des Baldaquins
+					3080 L'Isle d'Abeau
+					(tous les mercredis)
+
+					Mairie de Roussillon
+					place de l'Edit
+					38550 Roussillon
+					(tous les mardis après midi et vendredis)-->
+				</article>
+
+				<article data-hashtag="185 cult lgbt"><!--OK-->
+					<h2>Freesons</h2>
+					<h3>La chorale lesbiennes, gay, bi, trans, intersexe et hétéro-friendly.</h3>
+					<div class="mail"><a href="mailto:chorale.freesons.lgbtih@gmail.com">chorale.freesons.lgbtih@gmail.com</a></div>
+					<div class="web"><a href="http://chorale-freesons.wixsite.com" rel="external noreferrer">chorale-freesons.wixsite.com</a></div>
+					<div class="fb"><a href="https://www.facebook.com/Freesons.chorale.lgbtih" rel="external noreferrer">@Freesons.chorale.lgbtih</a></div>
+					<div class="loc">
+						<a href="geo:45.182338,5.720978" class="tomap" rel="external sidebar noreferrer">
+							8 rue sergent Bobillot<br/>38000 GRENOBLE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
+						<span class="TC">C</span> Foch Férié<br/>
+						<span class="C3">C3</span> Marceau - Jardin des Vallons<br/>
+						<span class="P25">25</span> Colonel Dumont
+					</a></div>
+					<div class="time">Tous les mercredis de 19h30 à 21h30</div>
+					<div class="info">Une chorale LGBTI et Hétéro-friendly dans une ambiance conviviale. Répertoire très varié : de la Renaissance à la variété contemporaine, à quatre voix.</div>
+				</article>
+
+				<article data-hashtag="516 fami educ" id="g"><!-- OK -->
+					<h2>Grandir Égaux</h2>
+					<h3>Accompagner les parents et professionnel&middot;les qui souhaitent éduquer des enfants libres et égaux – quelque soit leur sexe ou leur genre – du plus jeune âge à l’adolescence.</h3>
+					<div class="mail"><a href="mailto:noemie@grandiregaux.fr">noemie@grandiregaux.fr</a></div>
+					<div class="web"><a href="https://grandiregaux.fr/" rel="external noreferrer">grandiregaux.fr</a></div>
+					<div class="fb"><a href="https://www.facebook.com/grandiregaux/" rel="external noreferrer">@grandiregaux</a></div>
+					<div class="loc">Chemin Fortuné Ferrini<br/>38700 LA TRONCHE</div>
+				</article>
+
+				<article data-hashtag="185 lgbt cult acti"><!-- OK -->
+					<h2>Grenoble Fiertés</h2>
+					<h3>Organisation d'événements culturels, militants et festifs autour des thématiques LGBTI, dont la marche des fiertés.</h3>
+					<div class="mail"><a href="mailto:contact@grenoble-fiertes.com">contact@grenoble-fiertes.com</a></div>
+					<div class="web"><a href="http://grenoble-pride-festival.fr" rel="external noreferrer">grenoble-pride-festival.fr</a></div>
+					<div class="fb"><a href="https://www.facebook.com/GrenoblePride" rel="external noreferrer">@GrenoblePride</a></div>
+					<div class="ig"><a href="https://www.instagram.com/grenoblepride" rel="external noreferrer">@grenoblepride</a></div>
+					<div class="tw"><a href="https://www.twitter.com/GrenoblePride" rel="external noreferrer">@GrenoblePride</a></div>
+					<div class="loc">
+						<a href="geo:45.182338,5.720978" class="tomap" rel="external sidebar noreferrer">8 rue sergent Bobillot<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
+						<span class="TC">C</span> Foch Férié<br/>
+						<span class="C3">C3</span> Marceau - Jardin des Vallons<br/>
+						<span class="P25">25</span> Colonel Dumont
+					</a></div>
+				</article>
+
+				<article data-hashtag="185 aggr femi rese"><!-- OK -->
+					<h2>Grenoble sans relou</h2>
+					<h3>Lutte contre le harcèlement de rue</h3>
+					<div class="mail"><a href="mailto:grenoblesansrelou@gmail.com">grenoblesansrelou@gmail.com</a></div>
+					<div class="fb"><a href="https://www.facebook.com/GrenobleSansRelou" rel="external noreferrer">@GrenobleSansRelou</a></div>
+				</article>
+
+				<article data-hashtag="185 asso lgbt"><!-- OK -->
+					<h2>Grrrnoble Bear Association</h2>
+					<h3>Bears de Grenoble et leurs amis, partager des sorties (restaurants, soirées bars, séjours, etc).</h3>
+					<div class="mail"><a href="mailto:grrrnoble.bear.association@gmail.com">grrrnoble.bear.association@gmail.com</a></div>
+					<div class="fb"><a href="https://www.facebook.com/GRRRnoble" rel="external noreferrer">@GRRRnoble</a></div>
+					<div class="tw"><a href="https://www.twitter.com/grrrnoblebear" rel="external noreferrer">@grrrnoblebear</a></div>
+					<div class="loc">
+						<a href="geo:45.182338,5.720978" class="tomap" rel="external sidebar noreferrer">
+							8 rue sergent Bobillot<br/>38000 GRENOBLE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
+						<span class="TC">C</span> Foch Férié<br/>
+						<span class="C3">C3</span> Marceau - Jardin des Vallons<br/>
+						<span class="P25">25</span> Colonel Dumont
+					</a></div>
+				</article>
+
+				<article data-hashtag="185 421 femi lgbt acti asso educ" id="i" ><!-- OK -->
+					<h2>INPulse & Adelphie</h2>
+					<h3>Association étudiante LGBT+ des écoles d’ingénieurs de l'INP.</h3>
+					<div class="mail"><a href="mailto:asso.inpulse@gmail.com">asso.inpulse@gmail.com</a></div>
+					<div class="fb"><a href="https://www.facebook.com/INPulsePage" rel="external noreferrer">@INPulsePage</a></div>
+					<div class="ig"><a href="https://www.instagram.com/assoinpulse" rel="external noreferrer">@assoinpulse</a></div>
+					<hr/>
+					<h4>Adelphie - Branche féministe de l'association</h4>
+					<div class="mail"><a href="mailto:adelphieinpulse@gmail.com">adelphieinpulse@gmail.com</a></div>
+					<div class="fb"><a href="https://www.facebook.com/inpulseadelphie" rel="external noreferrer">@inpulseadelphie</a></div>
+					<div class="ig"><a href="https://www.instagram.com/adelphieinpulse" rel="external noreferrer">@adelphieinpulse</a></div>
+				</article>
+
+				<article data-hashtag="053 aggr righ"><!-- OK -->
+					<h2>ISIS Nord-Isère</h2>
+					<h3>Un soutien juridique & psychologique pour toutes les victimes, y compris de violences faites aux femmes.</h3>
+					<div class="num"><a href="tel:+33474192430">04 74 19 24 30</a></div>
+					<div class="mail"><a href="mailto:isis.nordisere@orange.fr">isis.nordisere@orange.fr</a></div>
+					<div class="mail"><a href="mailto:isis.administratif@orange.fr">isis.administratif@orange.fr</a></div>
+					<div class="web"><a href="https://isisnordisere.wordpress.com/" rel="external noreferrer">isisnordisere.wordpress.com</a></div>
+					<div class="loc">
+						<a href="geo:45.586774,5.276608" class="tomap" rel="external sidebar noreferrer">
+							TJ de Bourgoin-Jallieu<br/>33 rue du tribunal<br/>38300 BOURGOIN-JALLIEU
+					</a></div>
+					<div class="time">Du lundi au vendredi de 9h à 17h sur rendez-vous</div>
+				</article>
+
+				<article data-hashtag="185 host aggr fami"><!-- A CONTACTER POUR BONNES COORDONNEES -->
+					<h2>Issue de secours – RIALTO SOS Femmes 38<br/>(Société Saint-Vincent-de-Paul)</h2>
+					<h3>Informations, conseils et orientation pour les femmes victimes de violence. Hébergement avec ou sans enfants.</h3>
+					<div class="num"><a href="tel:+33603495036">06 03 49 50 36</a></div>
+					<div class="num"><a href="tel:+33476700205">04 76 70 02 05</a></div>
+					<div class="num"><a href="tel:+33476700143">04 76 70 01 43</a></div>
+					<div class="mail"><a href="mailto:rialto@hotmail.fr">rialto@hotmail.fr</a></div>
+					<div class="mail"><a href="mailto:issuedesecours38@orange.fr">issuedesecours38@orange.fr</a></div>
+					<div class="web"><a href="https://www.ssvp.fr/reseau/issue-de-secours/presentation/" rel="external noreferrer">www.ssvp.fr/reseau/issue-de-secours/presentation</a></div>
+					<div class="fb"><a href="https://www.facebook.com/SocieteDeSaintVincentDePaulFrance" rel="external noreferrer">@SocieteDeSaintVincentDePaulFrance</a></div>
+					<div class="ig"><a href="https://www.instagram.com/ssvpfrance" rel="external noreferrer">@ssvpfrance</a></div>
+					<div class="tw"><a href="https://www.twitter.com/ssvpfrance" rel="external noreferrer">@ssvpfrance</a></div>
+					<div class="yt"><a href="https://www.youtube.com/channel/UCPorlvgCNj-CZE_c7p73Vrw/" rel="external noreferrer">La Société de Saint-Vincent-de-Paul</a></div>
+					<div class="loc">
+						<a href="geo:45.169829,5.712224" class="tomap" rel="external sidebar noreferrer">
+							106 cours de la Libération<br/>38100 GRENOBLE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.169829,5.712224" rel="external noreferrer">
+						<span class="TE">E</span>	<span class="C2">C2</span> <span class="P25">25</span> Louise Michel
+					</a></div>
+					<div class="time">Du lundi au vendredi de 10h à 17h</div>
+					<div class="info">Depuis 2009, Issue de secours a ouvert 7 places à destination des femmes victimes de violences conjugales et de leurs enfants. Elles peuvent alors trouver un logement sans danger, ainsi qu'un accompagnement spécialisé (soutien, aide juridictionnelle, accompagnement dans les démarches, travail avec les enfants...). Ces appartements sont gérés par l'association Solidarité Femmes. Depuis 2009 encre, Issue de secours met à disposition de 4 studios adaptés aux personnes handicapées.</div>
+				</article>
+
+				<article data-hashtag="phon heal ivg cont aggr dmst lgbt" id="l"><!-- OK -->
+					<h2><img src="img/1.gif" class="num" alt="Ligne d'écoute"> Ligne nationale <q>Sexualités, Contraception, IVG</q></h2>
+					<h3>Écoute, information et orientation en fonction des besoins en matière de sexualités, contraception, avortement, violences, dépistages IST-SIDA et orientation sexuelle.</h3>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33800081111">0800 08 11 11</a></div>
+					<div class="web"><img src="img/1.gif" alt="Site internet"><a href="https://www.planning-familial.org/" rel="external noreferrer">www.planning-familial.org</a></div>
+					<div class="time"><img src="img/1.gif" alt="Horaires"> du lundi au samedi de 9h à 20h</div>
+					<div class="info"><img src="img/1.gif" alt="Plus d'informations"> appels anonymes et gratuits</div>
+				</article>
+
+				<article data-hashtag="femi righ 185 asso 140 397 544 563"><!-- OK -->
+					<h2>La Ligue des Droits de l'Homme</h2>
+					<h3>Défense des droits des citoyen&middot;nes (atteintes aux droits des étranger&middot;es, aux droits des femmes, lutte contre le racisme et toutes les discriminations).</h3>
+					<div class="web"><img src="img/1.gif" alt="Site internet"><a href="https://www.ldh-france.org/" rel="external noreferrer">www.ldh-france.org</a></div>
+					<hr/>
+					<h4>Grenoble Métropole</h4>
+					<div class="num"><a href="tel:+33476569044">04 76 56 90 44</a></div>
+					<div class="mail"><a href="mailto:grenoblemetropole@ldh-france.org">grenoblemetropole@ldh-france.org</a></div>
+					<div class="mail"><a href="mailto:ldh-grenoble@orange.fr">ldh-grenoble@orange.fr</a></div>
+					<div class="fb"><a href="https://www.facebook.com/GrenobleLDH/" rel="external noreferrer">@GrenobleLDH</a></div>
+					<div class="loc">
+						<a href="geo:45.184583,5.724417" class="tomap" rel="external sidebar noreferrer">
+							Maison des associations<br/>Bureau 120, 1<sup>er</sup> étage<br/>6 rue Berthe de Boissieux<br/>38000 GRENOBLE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184583,5.724417" rel="external noreferrer">
+						<span class="P16">16</span> Caserne de Bonne<br/>
+						<span class="P12">12</span>	<span class="C3">C3</span> Championnet<br/>
+						<span class="TC">C</span> Gustave Rivet
+						</a></div>
+					<div class="time"><img src="img/1.gif" alt="Horaires">Permanence d'accueil et d'orientation : le jeudi de 17h à 19h </div>
+					<hr/>
+					<h4>Crolles Grésivaudan</h4>
+					<div class="mail"><a href="mailto:crollesgresivaudan@ldh-france.org">crollesgresivaudan@ldh-france.org</a></div>
+					<div class="loc">BP 26<br/>38330 SAINT-ISMIER</div>
+					<hr/>
+					<h4>Voiron</h4>
+					<div class="num"><img src="img/1.gif" alt="Numéro de téléphone"><a href="tel:+33663097981">06 63 09 79 81</a></div>
+					<div class="mail"><a href="mailto:voiron@ldh-france.org">voiron@ldh-france.org</a></div>
+					<div class="loc">
+						<a href="geo:45.367372,5.594826" class="tomap" rel="external sidebar noreferrer">
+							Maison des associations<br/>2 place de Stalingrad<br/>38500 VOIRON
+					</a></div>
+					<hr/>
+					<h4>Vienne Condrieu-Agglomération</h4>
+					<div class="loc"><a href="geo:45.520468,4.867772" class="tomap" rel="external sidebar noreferrer">
+							MJC<br/>2 rue Laurent Florentin<br/>38200 VIENNE
+					  </a></div>
+					<div class="mail"><a href="mailto:vienne@ldh-france.org">vienne@ldh-france.org</a></div>
+				</article>
+
+				<article data-hashtag="185 heal matr" id="m"><!-- OK -->
+					<h2>La <u>M</u>aison</h2>
+					<h3>Maison de naissance. Accoucher naturellement, en en étant suivi de manière globale par la même sage-femme.</h3>
+					<div class="num"><a href="tel:+33476707059">04 76 70 70 59</a></div>
+					<div class="mail"><a href="mailto:lamaisongrenoble@gmail.com">lamaisongrenoble@gmail.com</a></div>
+					<div class="web"><a href="https://www.lamaisongrenoble.com/" rel="external noreferrer">www.lamaisongrenoble.com</a></div>
+					<div class="fb"><a href="https://www.facebook.com/lamaisongrenoble" rel="external noreferrer">@lamaisongrenoble</a></div>
+					<div class="loc"><a href="geo:45.181198,5.710091" class="tomap" rel="external sidebar noreferrer">
+							Clinique mutualiste<br/>8 rue du Docteur Calmette<br/>38000 GRENOBLE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.181198,5.710091" rel="external noreferrer">
+						<span class="P12">12</span> Groupe Hospitalier Mutualiste<br/>
+						<span class="TC">C</span> Vallier – Docteur Calmette<br/>
+						<span class="P26">26</span> Vallier – Catane
+						</a></div>
+				</article>
+
+				<article data-hashtag="heal fami pmi 185 034 544 138 269 052 053 416 226 509 548 563">
+					<h2>Maisons du Département</h2>
+					<h3>Consultations médicales pour les jeunes enfants (PMI), prévention médicale, dépistage des handicaps, aides aux familles...</h3>
+					<div class="web"><a href="https://www.isere.fr/maisons-du-departement" rel="external sidebar noreferrer">www.isere.fr/maisons-du-departement</a></div>
+					<hr/>
+					<h4>Maison du Département - Agglomération Grenobloise</h4>
+					<div class="num"><a href="tel:+33457384400">04 57 38 44 00</a></div>
+					<div class="loc">
+						<a href="geo:45.184389,5.712707" class="tomap" rel="external sidebar noreferrer">32 rue de New-York CS 60097 <br/>38000 GRENOBLE
+						</a></div>
+					<div class="time">Du lundi au vendredi de 08h30 à 12h30 et de 13h30 à 17h30</div>
+					<hr/>
+					<h4>Maison du Département - BIÈVRE-VALLOIRE</h4>
+					<div class="num"><a href="tel:+33437022480">04 37 02 24 80</a></div>
+					<div class="loc"><a href="geo:45.337924,5.050656" class="tomap" rel="external sidebar noreferrer">
+						Rue de la Guillotière <br/>38270 BEAUREPAIRE<br/>
+					</a></div>
+					<div class="time">Du lundi au vendredi de 08h30 à 12h30 et de 13h30 à 17h30</div>
+					<hr/>
+					<h4>Maison du Département - Grésivaudan</h4>
+					<div class="num"><a href="tel:+33456581600">04 56 58 16 00</a></div>
+					<div class="loc"><a href="geo:45.434713,6.000427" class="tomap" rel="external sidebar noreferrer">
+						53 Route de Barraux <br/>38530 BARRAUX<br/>
+					</a></div>
+					<div class="time">Du lundi au vendredi de 08h30 à 12h30 et de 13h30 à 17h30</div>
+					<hr/>
+					<h4>Maison du Département - Haut-Rhône-Dauphinois</h4>
+					<div class="num"><a href="tel:+33474186560">04 74 18 65 60</a></div>
+					<div class="loc">
+						<a href="geo:45.724455,5.238126" class="tomap" rel="external sidebar noreferrer">45 Impasse de l’Ancienne Gare <br/>38460 CRÉMIEU<br/>
+						</a></div>
+					<div class="time">
+						Du lundi au vendredi de 08h30 à 12h30 et de 13h30 à 17h30
+					</div>
+					<hr/>
+					<h4>Maison du Département - Isère Rhodanienne</h4>
+					<div class="num"><a href="tel:+33474879300">04 74 87 93 00</a></div>
+					<div class="loc"><a href="geo:45.514283,4.861475" class="tomap" rel="external sidebar noreferrer">
+						3 Quai Frédéric Mistral <br/>38200 VIENNE<br/>
+					</a></div>
+					<div class="time">Du lundi au vendredi de 08h15 à 12h30 et de 13h15 à 17h00</div>
+					<hr/>
+					<h4>Maison du Département - Matheysine</h4>
+					<div class="num"><a href="tel:+33457481111">04 57 48 11 11</a></div>
+					<div class="loc"><a href="geo:44.913387,5.782967" class="tomap" rel="external sidebar noreferrer">
+						rue du Pont de la Maladière <br/>38350 LA MURE<br/>
+					</a></div>
+					<div class="time">Du lundi au vendredi de 08h30 à 12h30 et 13h30 à 17h30</div>
+					<hr/>
+					<h4>Maison du Département - Oisans</h4>
+					<div class="num"><a href="tel:+33476800348">04 76 80 03 48</a></div>
+					<div class="loc"><a href="geo:45.059177,6.028624" class="tomap" rel="external sidebar noreferrer">
+						200 Avenue de la Gare <br/>38520 LE BOURG-D'OISANS<br/>
+					</a></div>
+					<div class="time">Du lundi au vendredi de 08h00 à 12h00 et de 13h30 à 17h30</div>
+					<hr/>
+					<h4>Maison du Département - Porte des Alpes</h4>
+					<div class="num"><a href="tel:+33426730500">04 26 73 05 00</a></div>
+					<div class="loc"><a href="geo:45.593035,5.274703" class="tomap" rel="external sidebar noreferrer">
+							18 Avenue Frédéric Dard <br/>38300 BOURGOIN-JALLIEU<br/>
+					</a></div>
+					<div class="time">Du lundi au vendredi de 08h30 à 12h30 et 13h30 à 17h30</div>
+					<hr/>
+					<h4>Maison du Département - Sud-Grésivaudan</h4>
+					<div class="num"><a href="tel:+33476363838">04 76 36 38 38</a></div>
+					<div class="loc"><a href="geo:45.149265,5.323964" class="tomap" rel="external sidebar noreferrer">
+						avenue Jules David <br/>38160 SAINT-MARCELLIN<br/>
+				  </a></div>
+					<div class="time">Du lundi au vendredi de 08h30 à 12h30 et 13h30 à 17h30</div>
+					<hr/>
+					<h4>Maison du Département - Trièves</h4>
+					<div class="num"><a href="tel:+33480348500">04 80 34 85 00</a></div>
+					<div class="loc"><a href="geo:44.813100,5.749807" class="tomap" rel="external sidebar noreferrer">
+						435 rue du Docteur Senebier<br/>38710 MENS<br/>
+					</a></div>
+					<div class="time">Du lundi au vendredi de 08h00 à 12h30 et 13h30 à 17h00</div>
+					<hr/>
+					<h4>Maison du Département - Vals du Dauphiné</h4>
+					<div class="num"><a href="tel:+33474979698">04 74 97 96 98</a></div>
+					<div class="loc"><a href="geo:45.567269,5.443271" class="tomap" rel="external sidebar noreferrer">
+						2 rue de l'Oiselet, CS70066 <br/>38110 LA TOUR-DU-PIN<br/>
+					</a></div>
+					<div class="time">Du lundi au vendredi de 08h15 à 12h15 et 13h00 à 17h00</div>
+					<hr/>
+					<h4>Maison du Département - Vercors</h4>
+					<div class="num"><a href="tel:+33457384900">04 57 38 49 00</a></div>
+					<div class="loc"><a href="geo:45.074621,5.555652" class="tomap" rel="external sidebar noreferrer">
+						150 impasse de Meillarot <br/>38250 VILLARD-DE-LANS<br/>
+					</a></div>
+					<div class="time">Du lundi au vendredi de 08h00 à 12h00 et 13h30 à 17h30</div>
+					<hr/>
+					<h4>Maison du Département - Voironnais-Chartreuse</h4>
+					<div class="num"><a href="tel:+33457561130">04 57 56 11 30</a></div>
+					<div class="loc"><a href="geo:45.363568,5.593684" class="tomap" rel="external sidebar noreferrer">
+						33 avenue Francois Mitterrand <br/>38500 VOIRON<br/>
+						</a></div>
+					<div class="time">Du lundi au vendredi de 8h30 à 12h30 et de 13h30 à 17h30</div>
+				</article>
+
+				<article data-hashtag="185 psyo heal righ asso fami">
+					<h2><img src="img/1.gif" class="soli" alt="Solidarité"> Maison des Habitant&middot;es</h2>
+					<h3>Les MDH sont des équipements de proximité qui accueillent les résidents d’un secteur dans un cadre convivial pour leur proposer de s'impliquer dans des projets communs et pour leur offrir différentes prestations et activités récurrentes (accueil et accompagnement social, santé, familles, mairie et autres).</h3>
+					<hr/>
+					<h4>Maison des Habitant&middot;es Abbaye (Secteur 5)</h4>
+					<div class="loc">
+						<a href="geo:45.179510,5.744936" class="tomap" rel="external sidebar noreferrer">1 place de la Commune de 1871<br/>38000 GRENOBLE</a></div>
+					<div class="bus">
+						<a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.179510,5.744936" rel="external noreferrer">
+						<span class="C5">C5</span> Saint-Augustin<br/>
+						<span class="P13">13</span> Suzanne Noël - Les Bains<br/>
+						<span class="P12">23</span> Jeanne d'Arc<br/>
+						<span class="TD">D</span>  Édouard Vaillant
+						</a></div>
+					<div class="num"><a href="tel:+33476542627">04 76 54 26 27</a></div>
+					<div class="mail"><a href="mailto:mdh.abbaye-jouhaux@grenoble.fr">mdh.abbaye-jouhaux@grenoble.fr</a></div>
+					<div class="web"><a href="https://www.grenoble.fr/lieu/3021/137-maison-des-habitant-es-abbaye.htm" rel="external noreferrer">www.grenoble.fr/lieu/3021/137-maison-des-habitant-es-abbaye.htm</a></div>
+					<div class="time">
+						<ul>
+							<li>Lundi, mardi, mercredi : de 8h45 à 12h et de 13h30 à 17h30</li>
+							<li>Jeudi : de 8h45 à 12h et de 16h à 17h30</li>
+							<li>Vendredi : de 8h45 à 12h et de 13h30 à 17h </li>
+						</ul>
+					</div>
+					<div class="acc">Rez-de-chaussée, ascenseur, stationnement, WC, personnel formé.</div>
+					<div class="info">
+						<ul>
+							<li>Permanences juridiques avec avocat sur rendez-vous</li>
+							<li>Médiateur pair en santé</li>
+							<li>Consultation planning familial</li>
+							<li>Psychologue</li>
+						</ul>
+					</div>
+					<hr/>
+					<h4>Maison des Habitant&middot;es Anatole France (Secteur 3)</h4>
+					<div class="loc">
+						<a href="geo:45.172520,5.707279" class="tomap" rel="external sidebar noreferrer">68 bis rue Anatole France<br/>38000 GRENOBLE</a></div>
+					<div class="bus">
+						<a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.172520,5.707279" rel="external noreferrer">
+						<span class="C5">C5</span> <span class="P12">12</span> Docteur Schweitzer<br/>
+						<span class="TE">E</span> Alliés
+						</a></div>
+					<div class="num"><a href="tel:+33476205390">04 76 20 53 90</a></div>
+					<div class="mail"><a href="mailto:mdh.anatole-france@grenoble.fr">mdh.anatole-france@grenoble.fr</a></div>
+					<div class="web"><a href="https://www.grenoble.fr/lieu/4900/137-maison-des-habitant-es-anatole-france.htm" rel="external noreferrer">www.grenoble.fr/lieu/4900/137-maison-des-habitant-es-anatole-france.htm</a></div>
+					<div class="time">De 8h30 à 12h et de 13h30 à 17h30 du lundi au vendredi (sauf le jeudi après-midi)</div>
+					<div class="acc">Boucle magnétique à l'accueil, stationnement, rez-de-chaussée, WC.</div>
+					<div class="info">
+						<ul>
+							<li>Permanences juridiques avec avocat</li>
+							<li>Médiateur pair en santé</li>
+							<li>Point Info Santé</li>
+							<li>Infirmière Consultation le jeudi matin sans rendez-vous</li>
+							<li>Confédération Syndicale des Familles Permanence logement, consommation et vie quotidienne. Sur rendez-vous en appelant le <a href="tel:+33620080220">06 20 08 02 20</a></li>
+						</ul>
+						<ul>
+							<li>Le CIDFF (centre d'information sur les droits des femmes et des familles)</li>
+							<li>Des permanences pour être informé sur : Le droit de la familles: divorce, union libre, filiation… , Le droit du travail, Les droits sociaux: sécurité sociale, prestations familiales, Le droit de la consommation, Le droit locatif</li>
+							<li>Permanences à la MDH les mardis matin de 9h à12h. Sur rendez-vous</li>
+						</ul>
+					</div>
+					<hr/>
+					<h4>Maison des Habitant&middot;es Capuche (Secteur 4)</h4>
+					<div class="loc">
+						<a href="geo:45.177276,5.726022" class="tomap" rel="external sidebar noreferrer">58 rue de Stalingrad<br/>38000 GRENOBLE</a></div>
+					<div class="bus">
+						<a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.177276,5.726022" rel="external noreferrer">
+						<span class="C3">C3</span> <span class="P16">16</span> Capuche<br/>
+						<span class="TC">C</span> Foch - Ferrié
+						</a></div>
+					<div class="num"><a href="tel:+33476878074">04 76 87 80 74</a></div>
+					<div class="mail"><a href="mailto:mdh.capuche@grenoble.fr">mdh.capuche@grenoble.fr</a></div>
+					<div class="web"><a href="https://www.grenoble.fr/lieu/405/137-maison-des-habitant-es-centre-ville.htm" rel="external noreferrer">www.grenoble.fr/lieu/405/137-maison-des-habitant-es-centre-ville.htm</a></div>
+					<div class="time">De 8h30 à 12h et de 13h30 à 17h30 du lundi au vendredi (sauf le jeudi après-midi).</div>
+					<div class="acc">Boucle magnétique à l'accueil, stationnement, rez-de-chaussée, WC.</div>
+					<div class="info">
+						<ul>
+							<li>Permanences juridiques avec avocat</li>
+							<li>Conciliateur de justice</li>
+						</ul>
+					</div>
+					<hr/>
+					<h4>Maison des Habitant&middot;es Centre Ville (Secteur 2)</h4>
+					<div class="loc">
+						<a href="geo:45.193678,5.733745" class="tomap" rel="external sidebar noreferrer">2 rue du Vieux Temple<br/>38000 GRENOBLE</a></div>
+					<div class="bus">
+						<a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.193678,5.733745" rel="external noreferrer">
+						<span class="TB">B</span> <span class="P16">16</span> <span class="F62">62</span> Notre-Dame - Musée<br/>
+						</a></div>
+					<div class="num"><a href="tel:+33476546753">04 76 54 67 53</a></div>
+					<div class="mail"><a href="mailto:mdh.centre-ville@grenoble.fr">mdh.centre-ville@grenoble.fr</a></div>
+					<div class="web"><a href="https://www.grenoble.fr/lieu/405/137-maison-des-habitant-es-centre-ville.htm" rel="external noreferrer">www.grenoble.fr/lieu/405/137-maison-des-habitant-es-centre-ville.htm</a></div>
+					<div class="time">
+						<ul>
+							<li>Lundi, mardi, mercredi et vendredi : de 8h30 à 12h et de 13h30 à 17h30</li>
+							<li>Jeudi : de 8h30 à 12h</li>
+						</ul>
+					</div>
+					<div class="acc">
+						 personnel formé, boucle magnétique, rez-de-chaussée, ascenseur, WC.
+					</div>
+					<div class="info">
+						<ul>
+							<li>Permanences juridiques avec avocat</li>
+							<li>Médiateur pair en santé</li>
+							<li>Psychologue</li>
+							<li>Point Info Santé Permanence assurée par une infirmière pour répondre aux questions autour de la santé, le lundi après-midi sans rendez-vous.</li>
+						</ul>
+					</div>
+					<hr/>
+					<h4>Maison des Habitant&middot;es Chorier Berriat (Secteur 1)</h4>
+					<div class="loc">
+						<a href="geo:45.186386,5.711338" class="tomap" rel="external sidebar noreferrer">10 rue Henry Le Chatelier<br/>38000 GRENOBLE</a></div>
+					<div class="bus">
+						<a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.186386,5.711338" rel="external noreferrer">
+						<span class="TA">A</span> <span class="TB">B</span> <span class="P12">12</span> Saint-Bruno<br/>
+						</a></div>
+					<div class="num"><a href="tel:+33476212909">04 76 21 29 09</a></div>
+					<div class="mail"><a href="mailto:mdh.chorier-berriat@grenoble.fr">mdh.chorier-berriat@grenoble.fr</a></div>
+					<div class="web"><a href="https://www.grenoble.fr/lieu/399/137-maison-des-habitant-es-chorier-berriat.htm" rel="external noreferrer">www.grenoble.fr/lieu/399/137-maison-des-habitant-es-chorier-berriat.htm</a></div>
+					<div class="time">
+						<ul>
+							<li>Lundi, mardi, mercredi : de 8h30 à 12h30 et de 13h30 à 18h00</li>
+							<li>Jeudi : de 8h30 à 12h30</li>
+							<li>Vendredi : de 8h30 à 12h30 et de 13h30 à 17h00</li>
+						</ul>
+						<p><b>Horaires pour des démarches administratives :</b></p>
+						<ul>
+							<li>Lundi, mardi, mercredi et vendredi : de 8h30 à 12h30 et de 13h30 à 17h</li>
+							<li>Jeudi : de 8h30 à 12h30</li>
+						</ul>
+						<p><b>Accueil associatif :</b></p>
+						<ul>
+							<li>Lundi, mardi de 9h15 à 12h30</li>
+							<li>Mercredi de 13h30 à 18h (17h30 pendant les vacances)</li>
+							<li>Vendredi de 13h30 à 17h</li>
+						</ul>
+					</div>
+					<div class="acc">
+						 Personnel formé, stationnement, rez-de-chaussée
+					</div>
+					<div class="info">
+						<ul>
+							<li>Permanences juridiques (avocat). Premiers conseils - sur rendez-vous les 2<sup>ème</sup> et 4<sup>ème</sup> vendredis matin du mois (avocat généraliste) - En savoir plus</li>
+							<li>Conciliateur de justice Sur rendez-vous les 1<sup>er</sup> et 3<sup>ème</sup> jeudis matin du mois.</li>
+							<li>Médiateur pair en santé Information et accompagnement pour l'accès aux droits et aux soins</li>
+							<li>Collectif femmes PAF Saint Bruno (Place Aux Femmes)</li>
+						</ul>
+					</div>
+					<hr/>
+					<h4>Maison des Habitant&middot;es du Bois d'Artas (Secteur 2)</h4>
+					<div class="loc">
+						<a href="geo:45.183309,5.721195" class="tomap" rel="external sidebar noreferrer">3 rue Augereau<br/>38000 GRENOBLE</a></div>
+					<div class="bus">
+						<a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.183309,5.721195" rel="external noreferrer">
+						<span class="C3">C3</span> Marceau - Jardin des Vallons<br/>
+						<span class="P12">12</span> Championnet<br/>
+						<span class="P25">25</span> Colonel Dumont<br/>
+						<span class="TC">C</span> Foch - Ferrié
+						</a></div>
+					<div class="num"><a href="tel:+33476170037">04 76 17 00 37</a></div>
+					<div class="mail"><a href="mailto:mdh.bois-dartas@grenoble.fr">mdh.bois-dartas@grenoble.fr</a></div>
+					<div class="web"><a href="https://www.grenoble.fr/lieu/2420/137-maison-des-habitant-es-du-bois-d-artas.htm" rel="external noreferrer">www.grenoble.fr/lieu/2420/137-maison-des-habitant-es-du-bois-d-artas.htm</a></div>
+					<div class="time">
+						 Du lundi au vendredi de 8h30 à 12h et de 14h à 17h30 (sauf le jeudi après-midi)
+					</div>
+					<div class="acc">
+						 Personnel formé, boucle magnétique à l'accueil, stationnement, rez-de-chaussée, WC.
+					</div>
+					<div class="info">
+						<ul>
+							<li>Permanences juridiques avec avocat</li>
+							<li>Collectif femmes Collectif maman solo et Hoche</li>
+						</ul>
+					</div>
+					<hr/>
+					<h4>Maison des Habitant&middot;es Le Patio (Secteur 6)</h4>
+					<div class="loc">
+						<a href="geo:45.163934,5.732640" class="tomap" rel="external sidebar noreferrer">97 galerie de l'Arlequin<br/>38000 GRENOBLE</a></div>
+					<div class="bus">
+						<a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.163934,5.732640" rel="external noreferrer">
+						<span class="TA">A</span> Arlequin
+						</a></div>
+					<div class="num"><a href="tel:+33476229210">04 76 22 92 10</a></div>
+					<div class="mail"><a href="mailto:mdh.lepatio@grenoble.fr">mdh.lepatio@grenoble.fr</a></div>
+					<div class="web"><a href="https://www.grenoble.fr/lieu/395/137-maison-des-habitant-es-le-patio.htm" rel="external noreferrer">www.grenoble.fr/lieu/395/137-maison-des-habitant-es-le-patio.htm</a></div>
+					<div class="time">
+						<b>Ouverture au public du Patio :</b>
+						<ul>
+							<li>Du lundi au vendredi : de 8h15 à 18h</li>
+							<li>Samedi : de 10h à 13h</li>
+						</ul>
+						<p><b>Horaires d'ouverture au public de l'accueil de la Maison des Habitant&middot;es Le Patio :</b></p>
+						<ul>
+							<li>Lundi, mardi, mercredi et vendredi : 8h30 à 12h15 et de 13h30 à 17h30</li>
+							<li>Jeudi : de 8h30 à 12h15</li>
+						</ul>
+						<p>Pour toute démarche administrative, merci de vous présenter au moins 15 minutes avant la fermeture.</p>
+					</div>
+					<div class="acc">
+						 Personnel formé, rez-de-chaussée, ascenseur, signalétique, WC
+					</div>
+					<div class="info">
+						<ul>
+							<li>Permanences juridiques (avocat) 1<sup>er</sup> et 3<sup>ème</sup> lundis du mois de 14h à 16h, sur rendez-vous par l'accueil de la MDH Le patio</li>
+							<li>Psychologue Permanences sur rendez-vous les mardis et mercredis matin et aprés-midi et jeudis après midi</li>
+							<li>Point précarité santé 2<sup>ème</sup> et 4<sup>ème</sup> lundis du mois de 13h30 à 16h30, sur rendez-vous</li>
+						</ul>
+					</div>
+					<hr/>
+					<h4>Maison des Habitant&middot;es les Baladins (Secteur 6)</h4>
+					<div class="loc">
+						<a href="geo:45.162071,5.738440" class="tomap" rel="external sidebar noreferrer">31 place des Géants<br/>38000 GRENOBLE</a></div>
+					<div class="bus">
+						<a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.162071,5.738440" rel="external noreferrer">
+						<span class="P12">12</span> Les Géants<br/>
+						<span class="C4">C4</span> <span class="C6">C6</span> Général de Gaulle
+						</a></div>
+					<div class="num"><a href="tel:+33476333503">04 76 33 35 03</a></div>
+					<div class="mail"><a href="mailto:mdh.baladins@grenoble.fr">mdh.baladins@grenoble.fr</a></div>
+					<div class="web"><a href="https://www.grenoble.fr/lieu/397/137-maison-des-habitant-es-les-baladins.htm" rel="external noreferrer">www.grenoble.fr/lieu/397/137-maison-des-habitant-es-les-baladins.htm</a></div>
+					<div class="time">
+						<ul>
+							<li>Lundi, mardi, mercredi et vendredi : de 9h à 12h et de 13h30 à 17h30</li>
+							<li>Jeudi : 9h à 12h</li>
+						</ul>
+					</div>
+					<div class="acc">Rez-de-chaussée, WC.</div>
+					<div class="info">
+						<ul>
+							<li>Permanences juridiques (avocat) Premiers conseils - Sur rendez-vous le 1<sup>er</sup> et 3<sup>ème</sup> vendredi du mois de 9h à 11h - En savoir plus</li>
+							<li>Médiateur pair en santé Information et accompagnement pour l'accès aux droits et aux soins</li>
+						</ul>
+					</div>
+					<hr/>
+					<h4>Maison des Habitant&middot;es Prémol (Secteur 6)</h4>
+					<div class="loc">
+						<a href="geo:45.163653,5.727776" class="tomap" rel="external sidebar noreferrer">7 rue Henry Duhamel<br/>38000 GRENOBLE</a></div>
+					<div class="bus">
+						<a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.163653,5.727776" rel="external noreferrer">
+						<span class="C3">C3</span> Village Olympique
+						</a></div>
+					<div class="num"><a href="tel:+33476090028">04 76 09 00 28</a></div>
+					<div class="mail"><a href="mailto:mdh.premol@grenoble.fr">mdh.premol@grenoble.fr</a></div>
+					<div class="web"><a href="https://www.grenoble.fr/lieu/403/137-maison-des-habitant-es-premol.htm" rel="external noreferrer">www.grenoble.fr/lieu/403/137-maison-des-habitant-es-premol.htm</a></div>
+					<div class="time">
+						<ul>
+							<li>Lundi, mercredi et vendredi : de 8h30 à 12h et de 14h à 17h30</li>
+							<li>Mardi : de 8h30 à 12h et de 14h à 18h30</li>
+							<li>Jeudi : de 8h30 à 12h</li>
+						</ul>
+					</div>
+					<div class="acc">Personnel formé, boucle magnétique à l'accueil, rez-de-chaussée, WC.</div>
+					<div class="info">
+						<ul>
+							<li>Permanences juridiques (avocat) Premiers conseils - le 1<sup>er</sup> et 3<sup>ème</sup> mercredi du mois de 14h00 à 16h00, sur rendez-vous </li>
+							<li>Médiateur pair en santé Infirmière</li>
+							<li>Psychologue en consultations gratuites sur rendez-vous</li>
+							<li>Infirmière le lundi sans rendez-vous de 9h30 à 12h</li>
+						</ul>
+					</div>
+					<hr/>
+					<h4>Maison des Habitant&middot;es Teisseire - Malherbe (Secteur 5)</h4>
+					<div class="loc">
+						<a href="geo:45.171285,5.738913" class="tomap" rel="external sidebar noreferrer">110 avenue Jean Perrot<br/>38000 GRENOBLE</a></div>
+					<div class="bus">
+						<a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.171285,5.738913" rel="external noreferrer">
+						<span class="C4">C4</span> <span class="C5">C5</span> Teisseire
+						</a></div>
+					<div class="num"><a href="tel:+33476254963">04 76 25 49 63</a></div>
+					<div class="mail"><a href="mailto:mdh.teisseire-malherbe@grenoble.fr">mdh.teisseire-malherbe@grenoble.fr</a></div>
+					<div class="web"><a href="https://www.grenoble.fr/lieu/404/137-maison-des-habitant-es-teisseire-malherbe.htm" rel="external noreferrer">www.grenoble.fr/lieu/404/137-maison-des-habitant-es-teisseire-malherbe.htm</a></div>
+					<div class="time">
+						<ul>
+							<li>Lundi : de 8h45 à 12H15 et de 14h à 18h30</li>
+							<li>Mardi, mercredi : de 8h45 à 12H15 et de 14h à 17h30</li>
+							<li>Jeudi : de 8h45 à 12H15 et de 16h30 à 17h30</li>
+							<li>Vendredi : de 8h45 à 12H15 et de 14h à 17h00</li>
+						</ul>
+					</div>
+					<div class="acc">Personnel formé, ascenseur, boucle magnétique à l'accueil, stationnement, rez-de-chaussée, WC.</div>
+					<div class="info">
+						<ul>
+							<li>Permanences juridiques (avocat)</li>
+							<li>Médiateur pair en santé</li>
+							<li>Psychologue</li>
+							<li>Point Info Santé le jeudi matin de 9h à 12h</li>
+							<li>Collectif femmes  Actions et projets d'habitantes du quartier</li>
+							<li>Le CIDFF (centre d'information sur les droits des femmes et des familles)</li>
+							<li>Des permanences pour être informé sur : Le droit de la familles: divorce, union libre, filiation… , Le droit du travail, Les droits sociaux: sécurité sociale, prestations familiales, Le droit de la consommation, Le droit locatif</li>
+							<li>Permanence à la MDH le 3<sup>ème</sup> jeudi du mois de 9h à 12h sur rendez-vous</li>
+						</ul>
+					</div>
+				</article>
+
+				<article data-hashtag="inst 151">
+					<h2>Maison pour l'égalité Femmes – Hommes</h2>
+					<h3>Informer, sensibiliser et accompagner tous ceux qui souhaitent œuvrer dans la métropole grenobloise pour l'égalité entre les femmes et les hommes.</h3>
+					<div class="num"><a href="tel:+33476595784">04 76 59 57 84</a></div>
+					<div class="web"><a href="https://www.maisonegalitefemmeshommes.fr/" rel="external noreferrer">www.maisonegalitefemmeshommes.fr</a></div>
+					<div class="yt"><a href="https://www.youtube.com/channel/UCFDZRUhM6x_uTsTGLJKDDMA" rel="external noreferrer"> Maison pour l'égalité femmes-hommes</a></div>
+					<div class="loc">
+						<a href="geo:45.156871,5.718811" class="tomap" rel="external sidebar noreferrer">
+							12 avenue des États Généraux<br/>38130 ÉCHIROLLES
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.156871,5.718811" rel="external noreferrer">
+						<span class="TA">A</span> <span class="C6">C6</span> Essarts - La Butte
+					</a></div>
+				</article>
+
+				<article data-hashtag="185 work fami"><!-- OK -->
+					<h2>Mampreneurs Isère</h2>
+					<h3>Construire son propre modèle d'épanouissement entrepreneurial tout en étant mère.</h3>
+					<div class="fb"><a href="https://www.facebook.com/reseaumampreneures/" rel="external noreferrer">@reseaumampreneures</a></div>
+					<div class="ig"><a href="https://www.instagram.com/reseaumampreneures/" rel="external noreferrer">@reseaumampreneures</a></div>
+					<div class="loc"><a href="geo:45.184639,5.72478" class="tomap" rel="external sidebar noreferrer">Maison des associations de Grenoble<br/>6 rue Berthe de Boissieux<br/>38000 GRENOBLE</a></div>
+				</article>
+
+				<article data-hashtag="185 sprt lgbt">
+					<h2>La Mêlée Alpine</h2>
+					<h3>Équipe de rugby LGBTI et hétéro-friendly.</h3>
+					<div class="num"><a href="tel:+33618326359">06 18 32 63 59</a></div>
+					<div class="mail"><a href="mailto:lameleealpine@free.fr">lameleealpine@free.fr</a></div>
+					<div class="web"><a href="http://lameleealpine.free.fr" rel="external noreferrer">lameleealpine.free.fr</a></div>
+					<div class="fb"><a href="https://www.facebook.com/lameleealpine" rel="external noreferrer">@lameleealpine</a></div>
+					<div class="loc">
+						<a href="geo:45.182338,5.720978" class="tomap" rel="external sidebar noreferrer">8 rue sergent Bobillot<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
+						<span class="TC">C</span> Foch Férié<br/>
+						<span class="C3">C3</span> Marceau - Jardin des Vallons<br/>
+						<span class="P25">25</span> Colonel Dumont
+						</a></div>
+					<div class="info">Le but est de pratiquer le rugby dans un cadre refusant toutes discriminations, quelles qu’elles soient. L'équipe entend également donner la possibilité à toute personne (gays, lesbiennes, trans, hétérosexuel-les, mecs ou filles) de découvrir et pratiquer le rugby, quels que soient son niveau et son âge. Les entraînements ont lieu au stade Bachelard.</div>
+				</article>
+
+				<article data-hashtag="185">
+					<h2>Mission égalité de l'Académie de Grenoble</h2>
+					<h3><span class="doubt">Manque informations</span></h3>
+					<div class="loc"><a href="geo:45.188595,5.736734" class="tomap" rel="external sidebar noreferrer">7 place Bir Hakeim<br/>38000 GRENOBLE</a></div>
+					<div class="loc"><a href="geo:45.193587,5.76931" class="tomap" rel="external sidebar noreferrer">110 avenue de la Chimie<br/>38400 SAINT-MARTIN-D'HÈRES</a></div>
+				</article>
+
+				<article data-hashtag="femi asso acti" id="n">
+					<h2>Nous Toustes 38</h2>
+					<h3>Collectif Féministe contre les violences sexistes et sexuelles. Actions, manif, formations, sororité.</h3>
+					<div class="mail"><a href="mailto:noustoutes38@gmail.com">noustoutes38@gmail.com</a></div>
+					<div class="fb"><a href="https://www.facebook.com/NousToutes38" rel="external noreferrer">@NousToutes38</a></div>
+				</article>
+
+				<article data-hashtag="185"><!-- OK -->
+					<h2>OIP<br/>(Observatoire Isérois de la Parité)</h2>
+					<h3>Association œuvrant pour la promotion des femmes en Isère et l’égalité femmes-hommes aux divers plans de la vie en société.</h3>
+					<div class="num"><a href="tel:+33679802142">06 79 80 21 42</a></div>
+					<div class="mail"><a href="mailto:parite-38@parite-38.org">parite-38@parite-38.org</a></div>
+					<div class="web"><a href="https://www.parite-38.org/" rel="external noreferrer">www.parite-38.org</a></div>
+					<div class="loc"><a href="geo:45.184583,5.724417" class="tomap" rel="external sidebar noreferrer">
+						Maison des associations<br/>6 rue Berthe de Boissieux<br/>38000 GRENOBLE
+				  </a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184583,5.724417" rel="external noreferrer">
+						<span class="P16">16</span> Caserne de Bonne<br/>
+						<span class="P12">12</span>	<span class="C3">C3</span> Championnet<br/>
+						<span class="TC">C</span> Gustave Rivet
+					</a></div>
+					<div class="info">
+            <ul>
+						  <li>Réunir des données et études sur les situations respectives des femmes et des hommes dans le département, et notamment sur l'accès des femmes aux responsabilités politique et professionnelle, syndicale et associative,</li>
+						  <li>Diffuser les informations obtenues sur ces sujets,</li>
+							<li>Interpeller les pouvoirs publics les acteurs politiques, économiques et sociaux, pour que les règles actuelles en matière de parité soient appliquées,</li>
+							<li>Soutenir et promouvoir les avancées vers l'égalité.</li>
+					  </ul>
+					</div>
+				</article>
+
+				<article data-hashtag="host 179 185" id="o">
+					<h2>L'<u>O</u>iseau bleu / Relais Ozanam</h2>
+					<h3>Accompagnement, hébergement et insertion pour les publics fragilisés	</h3>
+					<div class="mail"><a href="mailto:contact@oiseaubleu38.fr">contact@oiseaubleu38.fr</a></div>
+					<div class="web"><a href="https://groupementdespossibles.org/le-groupement/oiseau-bleu/" rel="external noreferrer">groupementdespossibles.org/le-groupement/oiseau-bleu/</a></div>
+					<div class="web"><a href="https://www.helloasso.com/associations/oiseau-bleu" rel="external noreferrer">www.helloasso.com/associations/oiseau-bleu</a></div>
+					<div class="loc">
+						<span class="doubt">Doute sur l'addresse correcte</span>
+						<a href="geo:45.180134,5.790045" class="tomap" rel="external sidebar noreferrer">5 place de l’Église, 38610 GIÈRES</a><br/>
+            <a href="geo:45.186825,5.704190" class="tomap" rel="external sidebar noreferrer">15 rue Georges Jacquet, 38000 GRENOBLE</a>
+					</div>
+				</article>
+
+				<article data-hashtag="work 185"><!-- OK -->
+					<h2>Réseau <u>O</u>lympe de Gouges</h2>
+					<h3>Association qui favorise les échanges professionnels entre femmes pour lutter contre le plafond de verre.</h3>
+					<div class="mail"><a href="mailto:olympeg38@gmail.com">olympeg38@gmail.com</a></div>
+					<div class="web"><a href="https://www.olympedeg38.fr/" rel="external noreferrer">www.olympedeg38.fr</a></div>
+					<div class="loc"><a href="geo:45.184583,5.724417" class="tomap" rel="external sidebar noreferrer">
+				    Maison des associations<br/>6 rue Berthe de Boissieux<br/>38000 GRENOBLE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184583,5.724417" rel="external noreferrer">
+						<span class="P16">16</span> Caserne de Bonne<br/>
+						<span class="P12">12</span> <span class="C3">C3</span> Championnet<br/>
+						<span class="TC">C</span> Gustave Rivet
+					</a></div>
+					<div class="time">Rendez-vous les 2<sup>èmes</sup> vendredis du mois de 12h15 à 13h45 pour une rencontre informelle le temps d’un déjeuner ou d’un café au Mel's Café (2 place Gustave Rivet, 38000 GRENOBLE, espace mezzanine réservé).</div>
+				</article>
+
+				<article data-hashtag="185 educ femi">
+					<h2>Les Orageuses (Scop l'Orage)</h2>
+					<h3>Collectif d'éducation populaire. De nombreuses formations dans l'objectif de mieux déceler et de prendre conscience des oppressions, injustices et mécanismes de domination à l'œuvre dans notre société.</h3>
+					<div class="num"><a href="tel:+33951875035">09 51 87 50 35</a></div>
+					<div class="mail"><a href="mailto:collectif.lesorageuses@gmail.com">collectif.lesorageuses@gmail.com</a></div>
+					<div class="web"><a href="https://scoplorage.org" rel="external noreferrer">scoplorage.org</a></div>
+					<div class="loc"><a href="geo:45.187608,5.712493" class="tomap" rel="external sidebar noreferrer">
+						20 place Saint Bruno<br/>38000 GRENOBLE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.187608,5.712493" rel="external noreferrer">
+						 <span class="TA">A</span> <span class="TB">A</span> Saint-Bruno
+					 </a></div>
+				</article>
+
+				<article data-hashtag="185 asso femi acti"><!-- OK -->
+					<h2>Osez le féminisme 38</h2>
+					<h3>Promotion de l’égalité femmes-hommes et lutte pour supprimer toutes les formes de violences masculines contre les filles et les femmes.</h3>
+					<div class="mail"><a href="mailto:osezlefeminisme38@gmail.com">osezlefeminisme38@gmail.com</a></div>
+					<div class="web"><a href="https://osezlefeminisme38.wordpress.com/" rel="external noreferrer">osezlefeminisme38.wordpress.com</a> (n'est plus mis à jour)</div>
+					<div class="web"><a href="https://linktr.ee/OLF38" rel="external noreferrer">linktr.ee/OLF38</a></div>
+					<div class="fb"><a href="https://www.facebook.com/osezlefeminisme38" rel="external noreferrer">@osezlefeminisme38</a></div>
+					<div class="ig"><a href="https://www.instagram.com/osezlefeminisme38" rel="external noreferrer">@osezlefeminisme38</a></div>
+					<div class="loc"><a href="geo:45.184583,5.724417" class="tomap" rel="external sidebar noreferrer">
+						Maison des associations<br/>6 rue Berthe de Boissieux<br/>38000 GRENOBLE
+				 </a></div>
+				 <div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184583,5.724417" rel="external noreferrer">
+						<span class="P16">16</span> Caserne de Bonne<br/>
+						<span class="P12">12</span>	<span class="C3">C3</span> Championnet<br/>
+						<span class="TC">C</span> Gustave Rivet
+					</a></div>
+				</article>
+
+				<article data-hashtag="psyo 185 aggr heal conj" id="p">
+					<h2>Passible</h2>
+					<h3>Centre de psychothérapie des auteur&middot;es de violences conjugales.</h3>
+					<div class="num"><a href="tel:+33689279210">06 89 27 92 10</a></div>
+					<div class="mail"><a href="mailto:asso.passible@gmail.com">asso.passible@gmail.com</a></div>
+					<div class="web"><a href="https://www.passible.org/" rel="external noreferrer">www.passible.org</a></div>
+					<div class="loc"><a href="geo:45.159823,5.734112" class="tomap" rel="external sidebar noreferrer">
+						25 avenue de Constantine<br/>38100 GRENOBLE
+					</a></div>
+					<div class="bus">
+						<a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.159823,5.734112" rel="external noreferrer">
+						<span class="TA">A</span>	<span class="C3">C3</span> <span class="C6">C6</span> <span class="P12">12</span>	<span class="F65">65</span> <span class="F67">67</span> Grand'place
+					</a></div>
+				</article>
+
+				<article data-hashtag="185 cult asso"><!-- REECRIRE DETAILS -->
+					<h2>Patriarchie</h2>
+					<h3>Association qui mêle connerie, humour et militantisme à travers des événements inclusifs.</h3>
+					<div class="num"><a href="tel:+33640272386">06 40 27 23 86</a></div>
+					<div class="mail"><a href="mailto:contact@patriarchie.com">contact@patriarchie.com</a></div>
+					<div class="web"><a href="https://patriarchie.com/" rel="external noreferrer">patriarchie.com</a></div>
+					<div class="web"><a href="https://linktr.ee/Patriarchie" rel="external noreferrer">linktr.ee/Patriarchie</a></div>
+					<div class="fb"><a href="https://www.facebook.com/patriarchieasso" rel="external noreferrer">@patriarchieasso</a></div>
+					<div class="ig"><a href="https://www.instagram.com/patriarchiemagazine" rel="external noreferrer">@patriarchiemagazine</a></div>
+					<div class="loc"><a href="geo:45.188998,5.718643" class="tomap" rel="external sidebar noreferrer">
+						7 bis rue Gabriel Péri<br/>38000 GRENOBLE
+					</a></div>
+					<div class="bus">
+						<a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.188998,5.718643" rel="external noreferrer">
+						<span class="TA">A</span>	<span class="TB">B</span>	<span class="TE">E</span>	<span class="P26">26</span> Alsace-Lorraine
+					</a></div>
+					<div class="info">
+						Notre but est de créer une plateforme d’expression, de rencontre d’opinions, pour questionner ensemble la société contemporaine à travers la collaboration, la pratique culturelle et artistique, mais en rigolant un peu quand même.
+						Patriarchie Magazine est une série d’illustrations satirico-féministes facilitant une conversation organique autour du sujet du genre, du féminisme, du rôle et de la place des femmes et des hommes dans notre société.
+						En 2022, lauréat d'un appel à projet de la Maison pour l'égalité Femmes-Hommes, Patriarchie Magazine devient une expo itinérante visible à Grenoble et alentours.
+						Initiation au drag, au tatouage, au mix.. Patriarchie organise également des ateliers qui mêlent humour, diy et activisme afin d’aborder de manière ludique des thématiques sociales. Patriarchie a déjà organisé près de 15 ateliers et reçu plus de 200 participant.es. Rejoins nous !
+					</div>
+				</article>
+
+				<article data-hashtag="righ 169">
+					<h2>Permanence d’information et d’orientation juridiques de Fontaine</h2>
+					<h3></h3>
+					<div class="num"><a href="tel:+33476533410">04 76 53 34 10</a></div>
+					<div class="loc"><a href="geo:45.192671,5.687208" class="tomap" rel="external sidebar noreferrer">Mission locale<br/>72 Mail Marcel Cachin<br/>38600 FONTAINE</a></div>
+				</article>
+
+				<article data-hashtag="185 158 547 382 053 553 femi acti lgbt heal dmst ivg">
+					<h2>Planning Familial 38</h2>
+					<h3>Mouvement militant qui prend en compte toutes les sexualités, défend le droit à la contraception, à l’avortement et à l’éducation à la sexualité.</h3>
+					<div class="num"><a href="tel:+33476878924">04 76 87 89 24</a></div>
+					<div class="mail"><a href="mailto:communication@leplanningfamilial38.org">communication@leplanningfamilial38.org</a></div>
+					<div class="mail"><a href="mailto:secretariat@leplanningfamilial38.org">secretariat@leplanningfamilial38.org</a></div>
+					<div class="web"><a href="https://www.planning-familial.org/fr/le-planning-familial-de-lisere-38" rel="external noreferrer">www.planning-familial.org/fr/le-planning-familial-de-lisere-38</a>         </div>
+					<div class="fb"><a href="https://www.facebook.com/planningfamilial38" rel="external noreferrer">@planningfamilial38</a></div>
+					<div class="ig"><a href="https://www.instagram.com/planningfamilial38" rel="external noreferrer">@planningfamilial38</a></div>
+					<div class="tw"><a href="https://www.twitter.com/leplanning38" rel="external noreferrer">@leplanning38</a></div>
+					<div class="yt"><a href="https://www.youtube.com/channel/UCQyI9upoKeGNnHyDZO7uetw" rel="external noreferrer">Planning familial 38</a></div>
+					<hr/>
+					<h4>Grenoble Gambetta</h4>
+					<div class="loc">
+						<a href="geo:45.186340,5.724349" class="tomap" rel="external sidebar noreferrer">30 boulevard Gambetta<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.186340,5.724349" rel="external noreferrer">
+						<span class="C3">C3</span> <span class="P12">12</span> Championnet<br/>
+						<span class="P16">16</span> Caserne de Bonne<br/>
+						<span class="C4">C4</span> <span class="C1">C1</span> Docteur Martin
+					</a></div>
+					<hr/>
+					<h4>Échirolles</h4>
+					<div class="loc"><a href="geo:45.156872,5.718803" class="tomap" rel="external sidebar noreferrer">
+						14 avenue des États Généraux<br/>38130 ÉCHIROLLES
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.156872,5.718803" rel="external noreferrer">
+						<span class="TA">A</span>	<span class="C6">C6</span> Essarts - La Butte
+					</a></div>
+					<hr/>
+					<h4>Eybens</h4>
+					<div class="num"><a href="tel:+33476593769">04 76 59 37 69</a></div>
+					<div class="loc"><a href="geo:45.1591138,5.7511988" class="tomap" rel="external sidebar noreferrer">
+						29 rue Victor Hugo<br/>38320 EYBENS
+					</a></div>
+					<hr/>
+					<h4>Villard-Bonnot</h4>
+					<div class="num"><a href="tel:+33476133951">04 76 13 39 51</a></div>
+					<div class="loc"><a href="geo:45.238199,5.888170" class="tomap" rel="external sidebar noreferrer">
+						21 Boulevard Jules Ferry<br/>38190 VILLARD-BONNOT
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.238199,5.888170" rel="external noreferrer">
+						<span class="G2">G2</span> <span class="G3">G3</span> Villard-Bonnot La Mairie<br/>
+						<span class="NVG">NVA</span> Lancey Gare
+					</a></div>
+					<hr/>
+					<h4>Saint-Egrève</h4>
+					<div class="num"><a href="tel:+33476753304">04 76 75 33 04</a></div>
+					<div class="loc"><a href="geo:45.224051,5.688727" class="tomap" rel="external sidebar noreferrer">
+						Immeuble Le Fié<br/>2 rue du 19 mars 1962<br/>38120 SAINT-EGRÈVE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.224051,5.688727" rel="external noreferrer">
+						<span class="P22">22</span>	<span class="TE">E</span> Fiancey – Prédieu
+					</a></div>
+					<hr/>
+					<h4>Bourgoin Jallieu</h4>
+					<div class="loc"><a href="geo:45.589984,5.276861" class="tomap" rel="external sidebar noreferrer">
+						14 place Albert Schweitzer<br/>38300 BOURGOIN-JALLIEU
+					</a></div>
+					<hr/>
+					<h4>Villefontaine</h4>
+					<div class="num"><a href="tel: +33474967899">04 74 96 78 99</a></div>
+					<div class="loc">
+						<span class="doubt">Doute sur l'adresse correcte</span>
+						<a href="geo:45.610257,5.158658" class="tomap" rel="external sidebar noreferrer">
+						 46 rue Émile Zola<br/>38090 VILLEFONTAINE
+					 </a><br/><br/>
+					 <a href="geo:45.610584,5.158467" class="tomap" rel="external sidebar noreferrer">
+					  Carré Léon Blum<br/>Centre Simone Signoret<br/>38090 VILLEFONTAINE
+					 </a>
+				</div>
+				</article>
+
+				<article data-hashtag="asso femi acti"><!-- OK -->
+					<h2>Plateforme des droits des femmes</h2>
+					<h3>Collectif isérois regroupant les associations, partis politiques, syndicats et militant&middot;es se retrouvant dans les combats féministes.</h3>
+					<div class="mail"><a href="mailto:pfdf38@gmail.com">pfdf38@gmail.com</a></div>
+					<div class="fb"><a href="https://www.facebook.com/PlateformeDDF38" rel="external noreferrer">@PlateformeDDF38</a></div>
+					<div class="tw"><a href="https://www.twitter.com/pfdf38" rel="external noreferrer">@pfdf38</a></div>
+				</article>
+
+				<article data-hashtag="">
+					<h2>Pluségales</h2>
+					<h3>Cécile Bonthonneau propose conseil et formations pour plus d'égalité.	</h3>
+					<div class="mail"><a href="mailto:cecile.bonthonneau@plusegales.fr">cecile.bonthonneau@plusegales.fr</a></div>
+					<div class="web"><a href="https://plusegales.blogspot.com/" rel="external noreferrer">plusegales.fr</a></div>
+					<div class="loc"><a href="geo:45.183131,5.706782" class="tomap" rel="external sidebar noreferrer">74 rue du Drac<br/>38000 GRENOBLE</a></div>
+				</article>
+
+				<article data-hashtag="151 185 heal">
+					<h2>Le Point précarité santé (Pops)</h2>
+					<h3>Aide à l'accès à la santé des personnes en situation de précarité.</h3>
+					<div class="num"><a href="tel:+33476893142">04 76 89 31 42</a> (du lundi au vendredi)
+					</div>
+					<div class="num"><a href="tel:+33476229210">04 76 22 92 10</a></div>
+					<div class="mail"><a href="mailto:pops@pops38.fr">pops@pops38.fr</a></div>
+					<div class="loc">
+					  1 rue du Gâtinais<br/>38130 ÉCHIROLLES<br/>97 galerie de l'Arlequin,  38100 GRENOBLE
+					</div>
+				</article>
+
+				<article data-hashtag="185 heal dmst">
+					<h2>Pôle Isère VIH - IREPS ARA 38</h2>
+					<h3>Améliorer la santé des populations en agissant sur les différents déterminants de santé et réduire les inégalités sociales de santé.</h3>
+					<div class="num"><a href="tel:+33457582684">04 57 58 26 84</a></div>
+					<div class="mail"><a href="mailto:contact38@ireps-ara.org">contact38@ireps-ara.org</a></div>
+					<div class="web"><a href="https://ireps-ara.org/ind/m.asp?id=17" rel="external noreferrer">ireps-ara.org/ind/m.asp?id=17</a></div>
+					<div class="loc"><a href="geo:45.181731,5.730450" class="tomap" rel="external sidebar noreferrer">
+						23 avenue Albert 1<sup>er</sup> de Belgique<br/>38000 GRENOBLE
+				  </a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.181731,5.730450" rel="external noreferrer">
+						<span class="TA">A</span> Albert 1<sup>er</sup> de Belgique<br/>
+						<span class="TC">C</span>	<span class="P16">16</span> Gustave Rivet
+					</a></div>
+					<hr/>
+					<h4>IREPS Auvergne-Rhône-Alpes (siège régional)</h4>
+					<div class="num"><a href="tel:+33472005570">04 72 00 55 70</a></div>
+					<div class="mail"><a href="mailto:contact@ireps-ara.org">contact@ireps-ara.org</a></div>
+					<div class="web"><a href="https://linktr.ee/irepsara" rel="external noreferrer">linktr.ee/irepsara</a></div>
+					<div class="fb"><a href="https://www.facebook.com/irepsara" rel="external noreferrer">@irepsara</a></div>
+					<div class="tw"><a href="https://twitter.com/irepsara" rel="external noreferrer">@irepsara</a></div>
+					<div class="yt"><a href="https://www.youtube.com/channel/UC_Twqmq5WiwfPbV3EgTI0TA" rel="external noreferrer">IREPS Auvergne-Rhône-Alpes</a></div>
+					<div class="loc">
+						<a href="geo:45.182338,5.720978" class="tomap" rel="external sidebar noreferrer">8 rue sergent Bobillot<br/>38000 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.589984,5.276861" rel="external noreferrer">
+						<span class="TC">C</span> Foch Férié<br/>
+						<span class="C3">C3</span> Marceau - Jardin des Vallons<br/>
+						<span class="P25">25</span> Colonel Dumont
+						</a></div>
+					<div class="info">
+						 Des randonnées et activités de montagne tout au long de l’année, Des moments conviviaux, de la détente, de l’amitié... Un repas type auberge espagnole le 1<sup>er</sup> mardi du mois à 20h.
+					</div>
+				</article>
+
+				<article data-hashtag="sprt lgbt" id="q">
+					<h2>Queers On Wheels</h2>
+					<h3>Collectif de roller.</h3>
+					<div class="ig"><a href="https://www.instagram.com/queersonwheels38" rel="external noreferrer">@queersonwheels38</a></div>
+					<div class="info">Crew de glisse entre personnes queers sur Grenoble et environs.</div>
+				</article>
+
+				<article data-hashtag="185 sprt lgbt" id="r"><!-- OK -->
+					<h2>Rando's Rhône-Alpes</h2>
+					<h3>Association de randonnée LGBTQI+ & friendly.</h3>
+					<div class="num"><a href="tel:+33671850867">06 71 85 08 67</a></div>
+					<div class="mail"><a href="mailto:randos38@laposte.net">randos38@laposte.net</a></div>
+					<div class="web"><a href="http://www.randos-rhone-alpes.org/" rel="external noreferrer">www.randos-rhone-alpes.org</a></div>
+					<div class="fb"><a href="https://www.facebook.com/randosrhonealpes" rel="external noreferrer">@randosrhonealpes</a></div>
+					<div class="loc"><a href="geo:45.182338,5.720978" class="tomap" rel="external sidebar noreferrer">
+						8 rue sergent Bobillot<br/>38000 GRENOBLE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.589984,5.276861" rel="external noreferrer">
+						<span class="TC">C</span> Foch Férié<br/>
+						<span class="C3">C3</span> Marceau - Jardin des Vallons<br/>
+						<span class="P25">25</span> Colonel Dumont
+					</a></div>
+					<div class="info">Des randonnées et activités de montagne tout au long de l’année, Des moments conviviaux, de la détente, de l’amitié...</div>
+					<div class="time">Un repas type auberge espagnole le 1<sup>er</sup> mardi du mois à 20h.</div>
+				</article>
+
+				<article data-hashtag="185">
+					<h2>Référence départementale violences conjugales</h2>
+					<h3></h3>
+					<div class="loc"><a href="geo:45.169806,5.712367" class="tomap" rel="external sidebar noreferrer">
+						106 cours de la Libération et du Général de Gaulle<br/>38100 GRENOBLE
+				  </a></div>
+				</article>
+
+				<article data-hashtag="185 563 host">
+					<h2>Le Refuge</h2>
+					<h3>Héberge et accompagne les jeunes LGBT+, de 14 à 25 ans, victimes d’homophobie ou de transphobie et en situation de rupture familiale.</h3>
+					<div class="num"><a href="tel:+33631596950">06 31 59 69 50</a> (ligne d'urgence)
+					</div>
+					<div class="num"><a href="tel:+33984412900">09 84 41 29 00</a></div>
+					<div class="mail"><a href="mailto:grenoble@le-refuge.org">grenoble@le-refuge.org</a></div>
+					<div class="web"><a href="https://le-refuge.org/dispositifs/delegation-isere" rel="external noreferrer">le-refuge.org/dispositifs/delegation-isere</a></div>
+					<div class="fb"><a href="https://www.facebook.com/LeRefugeIsere" rel="external noreferrer">@LeRefugeIsere</a></div>
+					<div class="tw"><a href="https://www.twitter.com/LeRefugeIsere" rel="external noreferrer">@LeRefugeIsere</a></div>
+					<div class="loc">
+						<span class="doubt">Doute sur l'adresse correcte</span>
+						<a href="geo:45.186486,5.717752" class="tomap" rel="external sidebar noreferrer">
+							22 avenue Albert 1<sup>er</sup> de Belgique<br/>38000 GRENOBLE
+						</a><br/><br/>
+						<a href="geo:45.186399,5.717773" class="tomap" rel="external sidebar noreferrer">
+							4 rue Étienne Marcel<br/>38000 GRENOBLE
+						</a>
+					</div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.186486,5.717752" rel="external noreferrer">
+						<span class="TE">E</span>	<span class="P26">26</span> Condorcet<br/>
+						<span class="P12">12</span> Chorier – Condorcet
+						</a></div>
+					<div class="time">
+						<ul>
+							<li>Mardi : 14h – 17h</li>
+							<li>Mercredi : 14h – 17h</li>
+							<li>Samedi : 14h – 17h</li>
+						</ul>
+						Tous les samedis de 14h30 à 16h30 au Centre LGBTI de Grenoble<br/>
+						<br/> Chaque 1<sup>er</sup> lundi du mois de 14h30 à 17h au Centre Social Charles Béraudier à Voiron
+					</div>
+				</article>
+
+				<article data-hashtag="185 work">
+					<h2>Réseau Entreprendre Isère au féminin</h2>
+					<h3></h3>
+					<div class="loc"><a href="geo:45.183911,5.70345" class="tomap" rel="external sidebar noreferrer">
+						31 rue Gustave Eiffel<br/>38000 GRENOBLE
+					</a></div>
+				</article>
+
+				<article data-hashtag="185">
+					<h2>Réseau mariage forcé</h2>
+					<h3>Accompagner les différentes personnes confrontées à un mariage forcé, qu'il soit réalisé ou prévu.</h3>
+					<div class="num"><a href="tel:+33645226551">06 45 22 65 51</a></div>
+					<div class="mail"><a href="mailto:mariageforce38@yahoo.fr">mariageforce38@yahoo.fr</a></div>
+					<div class="web"><a href="http://www.mariageforce.fr" rel="external noreferrer">www.mariageforce.fr</a></div>
+					<div class="loc"><a href="geo:45.186340,5.724349" class="tomap" rel="external sidebar noreferrer">
+						Planning familial de l'Isère<br/>30 Boulevard Gambetta<br/>38000 GRENOBLE
+				  </a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.186340,5.724349" rel="external noreferrer">
+						<span class="C3">C3</span> <span class="P12">12</span> Championnet<br/>
+						<span class="P16">16</span> Caserne de Bonne<br/>
+						<span class="C4">C4</span> <span class="C1">C1</span> Docteur Martin
+						</a></div>
+					<div class="info">Le réseau mariage forcé 38 a été créé en Isère fin 2007, afin d'accompagner les différentes personnes confrontées à un mariage forcé, qu'il soit réalisé ou prévu. Ce réseau isérois s'inscrit dans un réseau national de prévention et d'information sur les mariages forcés (et plus globalement, un réseau de lutte contre les violences intra-familiales), porté par le Planning Familial depuis les années 2000. En Isère, il est constitué de plusieurs associations et institutions: Le Planning Familial de l'Isère, Solidarité Femmes Milena, Amicale du Nid, Association AIV, L'Appart', Le Rialto, Amnesty International Le mariage forcé consiste à être marié à une personne connue ou inconnue, contre son gré. En France, le mariage forcé est interdit, mais les jeunes qui tentent d’y échapper sont souvent confrontés à une rupture familiale, avec tous les dangers que cela comporte.</div>
+				</article>
+
+				<article data-hashtag="asso lgbt heal 185"><!-- OK -->
+					<h2>RITA<br/>(Ressort Intersexe et Trans en Action)</h2>
+					<h3>Association de santé communautaire Trans et Intersexes de Grenoble.</h3>
+					<div class="mail"><a href="mailto:rita@poivron.org">rita@poivron.org</a></div>
+					<div class="web"><a href="https://assorita.org/" rel="external noreferrer">assorita.org</a></div>
+					<div class="web"><a href="https://rita.poivron.org/" rel="external noreferrer">rita.poivron.org</a> (ancien site)</div>
+					<div class="fb"><a href="https://www.facebook.com/rita.grenoble" rel="external noreferrer">@rita.grenoble</a></div>
+					<div class="ig"><a href="https://www.instagram.com/rita_asso" rel="external noreferrer">@rita_asso</a></div>
+					<div class="loc"><a href="geo:45.186945,5.705433" class="tomap" rel="external sidebar noreferrer">
+							15 rue Georges Jacquet<br/>38000 GRENOBLE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.186945,5.705433" rel="external noreferrer">
+						<span class="TA">A</span> <span class="C5">C5</span> Berriat - Le Magasin<br/>
+					</a></div>
+					<div class="time">
+						<ul>
+							<li>Le 2<sup>ème</sup> mercredi du mois de 16h à 18h (Planning Familial de Grenoble)</li>
+							<li>Le 4<sup>ème</sup> mardi du mois, de 19h à 20h sur rendez-vous et de 20h à 21h30 (au Centre LGBTI pour les personnes trans et/ou intersexes et/ou en questionnement)</li>
+						</ul>
+					</div>
+				</article>
+
+				<article data-hashtag="544 work aggr">
+					<h2>RIVHAJ<br/>(Relais d'Insertion dans la Ville par l'Habitat des Adultes et des Jeunes)</h2>
+					<h3>Entretiens individuels et confidentiels information orientation hébergement temporaire accompagnement social intermédiation locative.</h3>
+					<div class="num"><a href="tel:+33474532092">04 74 53 20 92</a></div>
+					<div class="num"><a href="tel:+33782590929">07 82 59 09 29</a></div>
+					<div class="mail"><a href="mailto:secretariat@rivhaj.org">secretariat@rivhaj.org</a></div>
+					<div class="web"><a href="https://www.rivhaj.org/femmes-victimes-de-violences.html" rel="external noreferrer">www.rivhaj.org</a></div>
+					<div class="fb"><a href="https://www.facebook.com/rivhajvienne/" rel="external noreferrer">@rivhajvienne</a></div>
+					<div class="loc"><a href="geo:45.517881,4.869527" class="tomap" rel="external sidebar noreferrer">
+							30 Cours de Verdun<br/>38200 VIENNE
+					</a></div>
+				</article>
+
+				<article data-hashtag="185 421 cult">
+					<h2>Compagnie Ru’elles</h2>
+					<h3>Collectif qui invite à la rencontre des arts: théâtre, danse, performance sonore, vidéo, illustration, arts plastiques et graphiques…. Surprendre, révéler l’invisible et questionner les quotidiens in situ.</h3>
+					<div class="num"><a href="tel:+33767702718">07 67 70 27 18</a></div>
+					<div class="mail"><a href="mailto:contact@ru-elles.com">contact@ru-elles.com</a> (artistique)</div>
+					<div class="mail"><a href="mailto:admin@ru-elles.com">admin@ru-elles.com</a> (administration & production)</div>
+					<div class="web"><a href="http://www.ru-elles.com/" rel="external noreferrer">www.ru-elles.com</a></div>
+					<div class="fb"><a href="https://www.facebook.com/ruellescie" rel="external noreferrer">@ruellescie</a></div>
+					<div class="loc">
+						<span class="doubt">Doute sur l'adresse correcte</span>
+						<a href="geo:45.168628,5.755912" class="tomap" rel="external sidebar noreferrer">
+					  	c/o Le Baz’Arts<br/>63 avenue du 8 mai 1945<br/>38400 SAINT-MARTIN-D'HÈRES
+				  	</a><br/><br/>
+						<a href="geo:45.184258,5.705546" class="tomap" rel="external sidebar noreferrer">
+					  	1 rue Victor Lastella, 38000 GRENOBLE
+				  	</a>
+				</div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.168628,5.755912" rel="external noreferrer">
+						<span class="C6">C6</span> Zella Mehlis
+					</a></div>
+				</article>
+
+				<article data-hashtag="185 cont" id="s">
+					<h2>Les <u>S</u>ans Gamêtes</h2>
+					<h3>Atelier autour des contraceptions testiculaires.</h3>
+					<div class="mail"><a href="mailto:lessansgametes@gresille.org">lessansgametes@gresille.org</a></div>
+					<div class="loc"><a href="geo:45.178571,5.745259" class="tomap" rel="external sidebar noreferrer">
+						MJC/centre social Abbaye<br/>1 Place de la Commune de 1871<br/>38100 GRENOBLE
+				  </a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.178571,5.745259" rel="external noreferrer">
+						<span class="C5">C5</span> Saint-Augustin<br/>
+						<span class="P13">13</span> Suzanne Noël - Les Bains
+					</a></div>
+				</article>
+
+				<article data-hashtag="185 aggr">
+					<h2>Serein&middot;e&middot;s</h2>
+					<h3>Sensibilisation et prévention des agressions sexistes, sexuelles et de genres en milieux festifs, pour en faire des espaces plus sûrs et égalitaires pour tou&middot;te&middot;s.</h3>
+					<div class="mail"><a href="mailto:serein-e-s@riseup.net">serein-e-s@riseup.net</a></div>
+					<div class="web"><a href="https://www.serein-e-s.org/" rel="external noreferrer">www.serein-e-s.org</a></div>
+					<div class="fb"><a href="https://www.facebook.com/AssociationSerein.e.s" rel="external noreferrer">@AssociationSerein.e.s</a></div>
+					<div class="ig"><a href="https://www.instagram.com/serein.e.s" rel="external noreferrer">@serein.e.s</a></div>
+					<div class="loc"><a href="geo:45.188790,5.708336" class="tomap" rel="external sidebar noreferrer">
+						146 cours Berriat<br/>38000 GRENOBLE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.188790,5.708336" rel="external noreferrer">
+						<span class="TA">A</span>	<span class="C5">C5</span> Berriat-Le Magasin<br/>
+						<span class="TB">B</span> Saint-Bruno
+					</a></div>
+				</article>
+
+				<article data-hashtag="319">
+					<h2>S.I.S.T.A</h2>
+					<h3>Association féministe matérialiste et intersectionnelle proposant des stages d'auto-défense et des ateliers de soin et de pratiques énergétiques, danse, gymnastique...</h3>
+					<div class="mail"><a href="mailto:asso.sista@outlook.com">asso.sista@outlook.com</a></div>
+					<div class="web"><a href="https://associationsista.wordpress.com/" rel="external noreferrer">associationsista.wordpress.com</a></div>
+					<div class="num"><a href="tel:+33648469921">06 48 46 99 21</a></div>
+					<div class="loc">
+						<a href="geo:45.062690,5.340998" class="tomap" rel="external sidebar noreferrer">3 place du 19 mars 1962<br/>38680 PONT EN ROYANS</a></div>
+				</article>
+
+				<article data-hashtag="185 cult">
+					<h2>SIEFEGP (Société internationale d'étude des femmes et d'études de genre en poésie)</h2>
+					<h3>Etablissement social d’accueil, d’écoute, d’Hébergement et d’accompagnement des femmes victimes de violences.</h3>
+					<div class="mail"><a href="mailto:encyclopediesiefegp@pandesmuses.fr">encyclopediesiefegp@pandesmuses.fr</a></div>
+					<div class="loc">
+						<a href="geo:45.164187,5.721029" class="tomap" rel="external sidebar noreferrer">24 Rue Lucien Andrieux<br/>38100 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.164187,5.721029" rel="external noreferrer">
+						<span class="P16">16</span> Beauvert<br/>
+						<span class="C3">C3</span> Village Olympique
+					</a></div>
+					<div class="info">Jouer un rôle international dans la réhabilitation d'une partie des savoirs dits féminins par le biais des savoirs féministes , transmettre aux générations futures l'histoire universelle de la poésie en intégrant les femmes et le genre , la SIEFEGP vise la diffusion, l'organisation de manifestations scientifiques, l'édition, la réédition, la médiatisation et la réhabilitation de la poésie de femmes et de genre , il est question de soutenir toute action culturelle, scientifique et artistique en lien avec les femmes et le genre en poésie en France et ailleurs dans une optique pluridisciplinaire, de partager ces susdites recherches par le biais de publications dans ses revues et sa maison d'édition : Pan des muses.</div>
+				</article>
+
+				<article data-hashtag="158 host aggr">
+					<h2>Solidarité Femmes Miléna (Fondation Boissel)</h2>
+					<h3>Établissement social d’accueil, d’écoute, d’Hébergement et d’accompagnement des femmes victimes de violences.</h3>
+					<div class="num"><a href="tel:+33476405010">04 76 40 50 10</a> (de 9h à 12h30 et de 13h30 à 17h30)</div>
+					<div class="mail"><a href="mailto:contact@sfm.fondation-boissel.fr">contact@sfm.fondation-boissel.fr</a></div>
+					<div class="web"><a href="https://info072846.wixsite.com/my-site-2" rel="external noreferrer">info072846.wixsite.com</a></div>
+					<div class="web"><a href="https://sfm.fondation-boissel.fr/" rel="external noreferrer">sfm.fondation-boissel.fr</a></div>
+					<div class="loc">
+            <span class="doubt">Doute sur l'adresse correcte</span>
+						<a href="geo:45.158303,5.738812" class="tomap" rel="external sidebar noreferrer">
+						  Solidarité Femmes<br/>2 rue Roland Garros<br/>38320 EYBENS
+					  </a><br/><br/>
+						<a href="geo:45.159668,5.728245" class="tomap" rel="external sidebar noreferrer">
+							34 ter avenue Marie Reynoard<br/>38100 GRENOBLE
+						</a>
+			  	</div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.158303,5.738812" rel="external noreferrer">
+						<span class="P12">12</span> <span class="C6">C6</span> Raymond Chanas<br/>
+						<span class="F65">65</span>	<span class="F67">67</span> Polesud - Alpexpo<br/>
+						<span class="TA">A</span>	<span class="C3">C3</span> Grand'place
+					</a></div>
+					<div class="info">Établissement social d’accueil, d’écoute, d’Hébergement et d’accompagnement des femmes victimes de violences Aide et protection des femmes victimes de violences conjugales ou familiales « Vous êtes victimes de violences physique ou psychologique. Ne restez pas seule, parlez-en ! nos services sont gratuits, nous pouvons : Vous écouter, vous conseiller Vous protéger, vous orienter Vous accompagner à l’ouverture des droits » Parler de la violence c’est déjà la combattre.</div>
+				</article>
+
+				<article data-hashtag="185 lgbt asso">
+					<h2>SOS Homophobie</h2>
+					<h3>Association nationale de lutte contre les LGBTphobies.</h3>
+					<div class="num"><a href="tel:+33148064241">01 48 06 42 41</a> (ligne d'écoute anonyme)</div>
+					<div class="mail"><a href="mailto:sos-grenoble@sos-homophobie.org">sos-grenoble@sos-homophobie.org</a></div>
+					<div class="mail"><a href="mailto:sos-dauphinealpesnord@sos-homophobie.org">sos-dauphinealpesnord@sos-homophobie.org</a></div>
+					<div class="web"><a href="https://www.sos-homophobie.org/" rel="external noreferrer">www.sos-homophobie.org</a></div>
+					<div class="fb"><a href="https://www.facebook.com/SOShDauphineAlpesNord" rel="external noreferrer">@SOShDauphineAlpesNord</a></div>
+					<div class="loc"><a href="geo:45.182338,5.720978" class="tomap" rel="external sidebar noreferrer">
+						8 rue sergent Bobillot<br/>38000 GRENOBLE
+				  </a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
+						<span class="TC">C</span> Foch Férié<br/>
+						<span class="C3">C3</span> Marceau - Jardin des Vallons<br/>
+						<span class="P25">25</span> Colonel Dumont
+						</a></div>
+					<div class="time">Le 2<sup>ème</sup> mercredi de chaque mois de 18h30 à 20h45</div>
+					<div class="info">Un pôle écoute et soutien : aider les personnes victimes d’actes homophobes. Un pôle de prévention : mener des actions de prévention de l’homophobie bars, clubs, milieu scolaire...) Un pôle action : obtenir l’égalité des droits. Actions de sensibilisations en milieu scolaire, publication d’un rapport annuel, soutien aux personnes victimes d'homophobie.</div>
+				</article>
+
+				<article data-hashtag="185 aggr">
+					<h2>SOS inceste pour revivre</h2>
+					<h3>Soutien aux personnes victimes de violences sexuelles.</h3>
+					<div class="num"><a href="tel:+33476479093">04 76 47 90 93</a> (ligne d'écoute)</div>
+					<div class="num"><a href="tel:+33652359844">06 52 35 98 44</a> (administration)</div>
+					<div class="mail"><a href="mailto:contact@sos-inceste-grenoble.org">contact@sos-inceste-grenoble.org</a></div>
+					<div class="web"><a href="https://sos-inceste-grenoble.org/" rel="external noreferrer">sos-inceste-grenoble.org</a></div>
+					<div class="loc"><a href="geo:45.184601,5.724440" class="tomap" rel="external sidebar noreferrer">
+						Maison des Associations<br/>6 rue Berthe de Boissieux<br/>38000 GRENOBLE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184601,5.724440" rel="external noreferrer">
+						<span class="P16">16</span> Caserne de Bonne<br/>
+						<span class="P12">12</span> <span class="C3">C3</span> Championnet<br/>
+						<span class="TC">C</span> Gustave Rivet
+					</a></div>
+				</article>
+
+				<article data-hashtag="169">
+					<h2>Les Soupapes</h2>
+					<h3>Garage automobile associatif autogéré et féministe.</h3>
+					<div class="num"><a href="tel:+33986120442">09 86 12 04 42</a></div>
+					<div class="mail"><a href="mailto:lessolenoides@riseup.net">lessolenoides@riseup.net</a></div>
+					<div class="loc"><a href="geo:45.187988,5.682138" class="tomap" rel="external sidebar noreferrer">
+						8 rue Guy Moquet<br/>38600 FONTAINE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.187988,5.682138" rel="external noreferrer">
+						<span class="P20">20</span> Jean Prévost<br/>
+						<span class="TA">A</span> Fontaine Hôtel de Ville - La Source
+						</a></div>
+					<div class="time"> Permanences les lundis de 14h à 19h.</div>
+					<div class="info"> Des ateliers autour de la découverte de la mécanique automobile sont aussi organisés ponctuellement.</div>
+				</article>
+
+				<article data-hashtag="185 aggr">
+					<h2>SVS Isère<br/>(Stop aux Violences Sexuelles)</h2>
+					<h3>Formations (dont une spécifique pour les médecins), ateliers thérapeutiques	</h3>
+					<div class="mail"><a href="mailto:svsisere@gmail.com ">svsisere@gmail.com </a></div>
+					<div class="mail"><a href="mailto:pf.38@stopauxviolencessexuelles.com">pf.38@stopauxviolencessexuelles.com</a></div>
+					<div class="web"><a href="https://svs-isere-37.checkout.webself.net/accueil" rel="external noreferrer">svs-isere-37.checkout.webself.net</a></div>
+					<div class="loc"><a href="geo:45.188165,5.717769" class="tomap" rel="external sidebar noreferrer">
+						52 cours Berriat<br/>38000 GRENOBLE
+					</a></div>
+				</article>
+
+				<article data-hashtag="">
+					<h2>Le syndicat des femmes musulmanes (d'Alliance Citoyenne)</h2>
+					<h3>Lutte pour le droit des femmes musulmanes et campagnes autour des discriminations qu'elles subissent.</h3>
+					<div class="ig"><a href="https://www.instagram.com/sfm_grenoble" rel="external noreferrer">@sfm_grenoble</a></div>
+					<div class="web"><a href="https://alliancecitoyenne.org/le-syndicat-des-femmes-musulmanes/" rel="external noreferrer">alliancecitoyenne.org/le-syndicat-des-femmes-musulmanes</a></div>
+					<hr/>
+					<h4>Association Alliance Citoyenne</h4>
+					<div class="num"><a href="tel:+33627010536">06 27 01 05 36</a></div>
+					<div class="mail"><a href="mailto:contact@alliancecitoyenne.org">contact@alliancecitoyenne.org</a></div>
+					<div class="web"><a href="https://alliancecitoyenne.org/grenoble/" rel="external noreferrer">alliancecitoyenne.org/grenoble</a></div>
+					<div class="fb"><a href="https://www.facebook.com/AllianceCitoyenne38" rel="external noreferrer">@AllianceCitoyenne38</a></div>
+					<div class="ig"><a href="https://www.instagram.com/alliance_citoyenne_" rel="external noreferrer">@alliance_citoyenne_</a></div>
+					<div class="tw"><a href="https://www.twitter.com/alliancecitoyen" rel="external noreferrer">@alliancecitoyen</a></div>
+					<div class="yt"><a href="https://www.youtube.com/channel/UCWivaplnuB7sfHYbzWKQq_A" rel="external noreferrer">Alliance Citoyenne</a></div>
+					<div class="info">
+						Droits des locataires, des personnes handicapées et des femmes musulmanes.<br/><br/>
+						L'action directe non-violente pour combattre injustices et discriminations.
+					</div>
+				</article>
+
+				<article data-hashtag="185 heal dmst cont asso" id="t">
+					<h2>Tempo</h2>
+					<h3>Lieu d'écoute et d'accompagnement des personnes vivant avec me VIH ou les Hépatites et leurs proches.</h3>
+					<div class="num"><a href="tel:+33476031643">04 76 03 16 43</a></div>
+					<div class="mail"><a href="mailto:astempo@wanadoo.fr">astempo@wanadoo.fr</a></div>
+					<div class="web"><a href="https://www.astempo.fr/" rel="external noreferrer">www.astempo.fr</a></div>
+					<div class="loc"><a href="geo:45.178072,5.732525" class="tomap" rel="external sidebar noreferrer">13 rue Gay Lussac<br/>38100 GRENOBLE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.178072,5.732525" rel="external noreferrer">
+						<span class="TA">A</span> Mounier
+					</a></div>
+					<div class="time">
+						<ul>
+							<li>Mardi : de 14h00 à 19h00</li>
+							<li>Jeudi : de 09h00 à 12h00</li>
+							<li>Vendredi : de 10h00 à 16h00</li>
+						</ul>
+						<br/>
+						Il est préférable de prendre rendez-vous.
+					</div>
+					<div class="info">
+						Pour que chacun&middot;e apprennent à mieux vivre et ait une meilleure qualité de vie, des professionnels et des bénévoles vous apportent :
+						<ul>
+							<li>soutien psychologique</li>
+							<li>conseils diététiques</li>
+							<li>art-thérapie
+							<li>osthéopathie</li>
+							<li>aide aux démarches administratives</li>
+							<li>aide individualisée</li>
+						</ul>
+						<p>Tempo, c'est aussi l'information et la prévention, notamment via des entretiens de réduction des risques en santé sexuelle (prévention des IST, vaccinations, pratiques sexuelles, violences, …)</p>
+						<p>Des tests rapides, gratuits et anonymes sont possibles : TROD pour le VIH, hépatite B et hépatite C.</p>
+					</div>
+				</article>
+
+				<article data-hashtag="asso 516 aggr heal" id="u">
+					<h2>Uni(e-s)VersElles</h2>
+					<h3>Association qui vise l’accompagnement des femmes victimes de violences vers la résilience en leur proposant un parcours médical, social et institutionnel coordonné et sécurisé.</h3>
+					<div class="mail"><a href="mailto:contact@uniesverselles.fr">contact@uniesverselles.fr</a></div>
+					<div class="web"><a href="https://www.uniesverselles-grenoble.fr/" rel="external noreferrer">www.uniesverselles-grenoble.fr</a></div>
+					<div class="tw"><a href="https://twitter.com/UniesVersElles" rel="external noreferrer">@UniesVersElles</a></div>
+					<div class="loc">
+						<a href="geo:45.202560,5.741547" class="tomap" rel="external sidebar noreferrer">Hôpital Couple Enfants<br/>Bureau Pr Hoffmann<br/>Quai Yermoloff<br/>38700 LA TRONCHE</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.202666,5.741533" rel="external noreferrer">
+						<span class="P13">13</span>	<span class="TB">B</span> La Tronche Hôpital
+					</a></div>
+				</article>
+
+				<article data-hashtag="cult">
+					<h2>Versants Queer</h2>
+					<h3>Soutenir et favoriser le queer à Grenoble et en montagne (randonnées, drag, bingos, shows, soirées...).</h3>
+					<div class="ig"><a href="https://www.instagram.com/versantsqueer" rel="external noreferrer">@versantsqueer</a></div>
+				</article>
+
+				<article data-hashtag="185" id="v">
+					<h2>Les Voies d’Elles - ALG</h2>
+					<h3>Association non-mixte des Lesbiennes de Grenoble.</h3>
+					<div class="num"><a href="tel:+33476852064">04 76 85 20 64</a></div>
+					<div class="num"><a href="tel:+33767395095">07 67 39 50 95</a></div>
+					<div class="mail"><a href="mailto:lesvoiesdelles@hotmail.com">lesvoiesdelles@hotmail.com</a></div>
+					<div class="mail"><a href="mailto:voiesdelles@riseup.net">voiesdelles@riseup.net</a></div>
+					<div class="fb"><a href="https://www.facebook.com/lesvoiesdelles" rel="external noreferrer">@lesvoiesdelles</a></div>
+					<div class="loc"><a href="geo:45.182338,5.720978" class="tomap" rel="external sidebar noreferrer">
+						8 rue sergent Bobillot<br/>38000 GRENOBLE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
+						<span class="TC">C</span> Foch Férié<br/>
+						<span class="C3">C3</span> Marceau - Jardin des Vallons<br/>
+						<span class="P25">25</span> Colonel Dumont
+						</a></div>
+					<div class="time">
+						Les 2<sup>ème</sup> et 4<sup>ème</sup> lundi de chaque mois de 19h30 à 21h30
+					</div>
+					<div class="info">
+						 Activités conviviales, culturelles, sportives et militantes Accueil et écoute Agrément départemental Jeunesse et Éducation Populaire Favoriser l'épanouissement personnel et la convivialité entre des femmes vivant ou s'interrogeant sur toutes forme de sexualité lesbienne.
+					</div>
+				</article>
+
+				<article data-hashtag="">
+					<h2>Virus 36</h2>
+					<h3>	Education populaire, pédagogie active, lutte contre le sexisme. Formation aux débats démocratiques.	</h3>
+					<div class="num"><a href="tel:+33695020455">06 95 02 04 55</a></div>
+					(Adeline)
+					<div class="num"><a href="tel:+33688983654">06 88 98 36 54</a></div>
+					(Hélène)
+					<div class="mail"><a href="mailto:virus36@no-log.org">virus36@no-log.org</a></div>
+					<div class="web"><a href="https://virus36.org/" rel="external noreferrer">virus36.org</a></div>
+					<div class="loc"><a href="geo:45.186946,5.705395" class="tomap" rel="external sidebar noreferrer">5 rue Georges Jacquet<br/>38000 GRENOBLE</a></div>
+				</article>
+
+				<article data-hashtag="185">
+					<h2>Vues d'en face</h2>
+					<h3>Festival International du Film LGBTQIA+ de Grenoble.</h3>
+					<div class="num"><a href="tel:+33688707564">06 88 70 75 64</a></div>
+					<div class="mail"><a href="mailto:festival@vuesdenface.com">festival@vuesdenface.com</a></div>
+					<div class="web"><a href="https://www.vuesdenface.com/web/" rel="external noreferrer">www.vuesdenface.com/web</a></div>
+					<div class="fb"><a href="https://www.facebook.com/vuesdenface" rel="external noreferrer">@vuesdenface</a></div>
+					<div class="ig"><a href="https://www.instagram.com/vuesdenface/" rel="external noreferrer">@vuesdenface</a></div>
+					<div class="tw"><a href="https://www.twitter.com/vuesdenface" rel="external noreferrer">@vuesdenface</a></div>
+					<div class="yt"><a href="https://www.youtube.com/user/vuesdenface" rel="external noreferrer">Vues d'en face Festival du Film G&L de Grenoble</a></div>
+					<div class="loc">
+						<a href="geo:45.193158,5.727449" class="tomap" rel="external sidebar noreferrer">
+							4 rue Hector Berlioz<br/>38000 GRENOBLE
+					</a></div>
+					<div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.193158,5.727449" rel="external noreferrer">
+						<span class="F40">40</span> Quai Stéphane Jay<br/>
+						<span class="TB">B</span> <span class="F62">62</span> <span class="P16">16</span> Notre-Dame - Musée
+					</a></div>
+					<div class="loc">
+						 <b>Boîte Postale</b><br/>FIFGLG<br/>BP 408<br/>38015 GRENOBLE CEDEX 1
+					</div>
+				</article>
+
+			</main>
+			<a href="#top" id="totop" accesskey="h">&#x2191; Revenir en haut<span class="sr-only">de la page</span>
+			</a>
+			<div id="mapbox">
+				<a id="exit-map" aria-label="Fermer la carte">&#x2715; Fermer</a>
+				<div id="mymap"></div>
+			</div>
+		</div>
+		<script src="carte/leaflet.js"></script>
+		<!--<script src="carte/marqueurs.js"></script>-->
+		<script src="carte/carte.js"></script>
+		<script src="ress-mtpgi-38.js"></script>-->
+	</body>
+</html>
+<!--
+	https://carto.isere.fr/carte-interactive/index.html
+	https://www.mobilites-m.fr/planTC.html#
+	https://www.itinisere.fr/fr/itineraires/4/JourneyPlanner
+	https://annuaires.isere.fr/cms
+	https://www.isere.fr/sites/default/files/liste-des-cpef-isere.pdf
+	https://www.etablissementsdesante.fr/liste/13-centres-medico-psychologiques-cmp-cattp/dep:38
+	  Cidff =
+	  Le droit de la familles: divorce, union libre, filiation… , Le droit du travail, Les droits sociaux: sécurité sociale, prestations familiales, Le droit de la consommation, Le droit locatif
+	  Maison des Habitant-es Teisseire - Malherbe
+	  https://www.grenoble.fr/lieu/404/137-maison-des-habitant-es-teisseire-malherbe.htm
+	  Point Info Santé le jeudi matin de 9h à 12h
+	  Collectif femmes  Actions et projets d'habitantes du quartier
+	  -->
