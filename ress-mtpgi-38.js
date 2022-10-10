@@ -55,10 +55,12 @@ const mbox = document.getElementById('mapbox'),
         if (isDesktop) {
           e.preventDefault();
           var loc = t.href.split(/[:,]/);
+          location.href = 'https://www.openstreetmap.org/directions?to=' + loc[1] + ',' + loc[2] + '#map=18/' + loc[1] + '/' + loc[2];
+          /*
           mbox.className += ' deploy';
           stock = t;
           exit.focus();
-          map.setView([loc[1], loc[2]],18);
+          map.setView([loc[1], loc[2]],18);*/
         }
       };
 
