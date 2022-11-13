@@ -66,11 +66,11 @@ font-size: 100%
       flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-content: flex-start; align-items: stretch;
       width: 100%;
       margin-bottom: 10px;
-      white-space: no-wrap;
+      white-space: nowrap;
 	  background: #d3dcfd linear-gradient(45deg, #bbdcfd, #ecdbfd) fixed;
       box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
       transition: background 1s ease;
-      user-select: none
+      user-select: none;
       z-index: 1;
       }
         nav > div {
