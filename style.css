@@ -1,18 +1,79 @@
 @charset "UTF-8";
-
-:root {color-scheme: light dark}
-*, *::before, *::after {box-sizing: border-box}
-.sr-only,body::after {position: absolute;width: 1px;height: 1px;padding: 0;margin: -1px;overflow: hidden;clip: rect(0, 0, 0, 0);border: 0}
-a {background: transparent} a:active, a:hover {outline: 0}
-select, option {font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; text-transform: none; margin: 0}
-sup {font-size: 75%;line-height: 0;position: relative;vertical-align: baseline;top: -0.5em}
-q::before { content: "\00ab\00a0" } q::after { content: "\00a0\00bb" }
-img {border: 0}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), 
+       url('fonts/fontawesome-webfont.woff?v=4.7.0') format('woff');
+  font-weight: normal; 
+  font-style: normal;
+}
+:root {
+	color-scheme: light dark;
+    --copy-opacity: 0;
+	--vh: 1vh;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;  
+  padding: 0;  
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  color: inherit;
+  vertical-align: baseline;
+  position: relative;
+}
+::before, ::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+.sr-only, body::after {
+  border: 0 !important;
+  clip-path: inset(50%) !important; 
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  clip-path: none !important;
+  height: auto !important;
+  margin: auto !important;
+  overflow: visible !important;
+  width: auto !important;
+  white-space: normal !important;
+  position:static;
+  z-index: 3;
+}
+a {
+  background: transparent;
+  text-decoration-skip-ink: auto
+} 
+a:active, a:hover {
+  outline: 0
+}
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em
+}
+q::before { 
+  content: "\00ab\00a0"
+} 
+q::after { 
+  content: "\00a0\00bb"
+}
 html {
-font-size: 100%
+  font-size: 100%;
+  height: 100%;
+  line-height: 1.15; 
 }
   body {
-  position: relative;
   margin: 0; padding: 0;
   width: 100vw; height: 100vh;
   overflow: hidden;
@@ -21,51 +82,45 @@ font-size: 100%
   background: #d7eeff linear-gradient(45deg, #8ec5fc, #e0c3fc) fixed;
   font-family: "Public Sans", "fira_sans", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   }
-    body::before {
-    content: "";
-    display: block; position: absolute;
-    height: 100%; min-height: 100vh;
-    left: 0; right: 0;
-    background: #d7eeff linear-gradient(45deg, #232526, #414345) fixed;
-    opacity: 0; transition: opacity 1s ease; will-change: opacity;
-    z-index: -1
-    }
-    body::after {
-    content: url(img/sprite.png) url(img/logo.png)
+    body::after { /* preload */
+    content: url(img/sprite.png) url(img/logo.png) url(img/sprite2.png);
     }
     #container {
-    position: relative;
-    height: 100%; width: 100%;
+    width: 100%; height: 100vh; 
     overflow: auto;
+    height: calc(var(--vh) * 100);
     }
       #container::after {
       content: "";
       display: block;
-      height: 10vh; width: 100%
+      height: 10vh;
       }
       header {
-      position: relative;
       background: #d3dcfd linear-gradient(45deg, #bbdcfd, #ecdbfd) fixed;
       transition: background 1s ease;
       user-select: none;
       z-index: 2;
       }
-        header img {
+	  h1 {
+      margin: 0;
+      text-align: center
+      }
+        header h1 img {
         margin-top: .5rem;
-        filter: invert(75%)
+        filter: invert(75%);
+		transition: filter 1s ease;
+		max-width: 90vw
         }
-        h1 {
-        margin: 0;
-        text-align: center
-        }
-        h1 img {
-        transition: filter 1s ease
-        }
+/* <nav> START */        
       nav {
-      display: flex; position: relative;
-      flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-content: flex-start; align-items: stretch;
+      display: flex;
+      flex-direction: row; 
+	  flex-wrap: wrap; 
+	  justify-content: flex-start; 
+	  align-content: flex-start; 
+	  align-items: stretch;
       width: 100%;
-      margin-bottom: 10px;
+      margin-bottom: 1vh;
       white-space: nowrap;
 	  background: #d3dcfd linear-gradient(45deg, #bbdcfd, #ecdbfd) fixed;
       box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -74,24 +129,45 @@ font-size: 100%
       z-index: 1;
       }
         nav > div {
-        display: flex; position: relative;
-        flex: 1 1 auto; align-items: center;
-        border-top: 1px solid rgba(0,0,0,.05);
-        }
+       display: flex;
+       flex: 1 1 auto; align-items: center;
+       border-top: 1px solid rgba(0,0,0,.05);
+	   min-width: 150px
+       }
+		  nav > div.disabled-within {
+		  opacity: .5
+		  }
         nav > div:not(:last-child) {
         border-right: 1px solid rgba(0,0,0,.15)
         }
         nav > div:hover {
         background: rgba(255,255,255,.8);
         }
-          nav div i {
-          padding-left: 5px
+          nav > div > i {
+		   position: absolute;
+          left: 7px
           }
+		  select, option:first-child, option:checked {
+		  text-align:center;
+		  }
           select, option, nav > div:hover select {
           color: inherit;
-          background: transparent
-          }
-          nav > div > a, nav div select {
+          background: transparent;
+          }		  
+		  input {
+		  background: transparent;
+		  height: 100%;width: 100%;
+		  padding-left: 30px;
+		  padding-right: 7px;
+		  mask-image: linear-gradient(90deg, #000, #000 85%, transparent 100%);
+		}
+		select, option {
+		  line-height: inherit; 
+		  text-transform: none; 
+		  margin: 0
+		}
+          nav > div > a, 
+		  nav div select {
           width: 100%; height:100%;
           padding: 8px;
           border: 0;  outline: 0;
@@ -101,75 +177,113 @@ font-size: 100%
           color: inherit;
           cursor: pointer
           }
-          #city, #categories {
+		  
+		  nav div select:disabled {
+			  cursor: not-allowed;
+		  }
+		  nav div select:focus-visible,
+		  nav div input:focus-visible, 
+		  summary:focus-visible {
+		  outline: 3px solid rgba(255,255,255,.8) !important;
+		  mask-image: none
+		  }
+
+          #select--ville, #select--categories {
           flex: 1 1 auto
           }
-          #incoming:empty {
-          display:none;
+		  details > summary::marker {
+           content: '';
+			display: none
+		  }
+		  details > summary {
+		  list-style: none;
+		  height: 100%;
+		  display: flex;
+         align-items: center;
+         justify-content: center;
+		  cursor: pointer;
+		  padding-top: 8px;
+		  padding-bottom: 8px;
+		  }
+          details  {
+          width: 100%; height:100%;
           }
-          #incoming:not(:empty) {
-          display: flex; position: relative;
-          justify-content: center;
-          align-items:center;
-          width: 1.1rem; height: 1.1rem;
-          float: right;
-          color: #fff; background: #1E90FF;
-          border-radius: 3px
-          }
-          #contact-box {
-          position: absolute; display: none;
-          top: 100%; right:0;
-          white-space: nowrap;
-          overflow: hidden;
-          padding: 15px;
-          background: #fefefe;
-          box-shadow: 0 1px 0 white inset, 0 -1px 0 #d5d5d5 inset, inset 0 1px 0 rgba(255,255,255,0.7);
-          z-index:999;
-          }
-            #contact-box a {
-            display: inline-block;
+		  details[open] {
+			  background: #f8f9ff
+		  }
+		  details > div {
+		  position: absolute;
+		  top: 100%; right:0;
+		  padding: 15px;
+		  width: 100%;
+		  z-index: 4;	  
+		  border-left: 1px solid #C4BAD7;
+		  border-bottom:  1px solid  #C4BAD7;
+		  background: linear-gradient(to top, #e4e8fe, #f8f9ff);
+		  }
+            details > div a {
+            display: block;
             text-decoration: none;
             color: #333;
             margin-bottom: .7rem;
             }
-            #contact-box a:hover {
+			details > div a i {
+			margin-right: 5px;
+			}
+            details > div a:hover {
             text-decoration: underline
             }
-              #contact-box a i {
-              width: 1.5rem;
-              display: inline-block
-              }
-      /*Calendar-Box*/
-      #numbr {
-      width:100%;
-      text-align:center
+/* <nav> END */		
+			
+      #text--resultats {
+      text-align: center;
+	  user-select: none;
       }
+	  #text--resultats::before {content:'('}
+	  #text--resultats::after  {content:')'}
+	  
       main {
-      display: flex; position: relative;
-      flex-direction: row; flex-wrap: wrap; justify-content: center;
-      width: 100%
+	    margin:1vh max(2.25vw, 36px) 0; 
       }
         article {
-        position: relative;
-        width: 500px;
-        margin: 11px 1vw; padding: 5px 0 9px 0;
+        padding: 5px 0 9px 0;
         background: linear-gradient(145deg, #e4e8fe, #f8f9ff);
         border-radius: 5px;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-        will-change: top, left, background, color;
+        will-change: top, left, width;
+		transition: transform 1s ease;
+		position: absolute;
         }
-          article div {
-          padding: 4px 13px 4px 38px
-          }
+	  main.flex {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		align-items: stretch;	
+		gap: 2vw 2vw;
+	  }
+	  main.flex article {
+		min-width: 560px;
+		max-width: 95vw;
+		flex:1 1 33.33333%;
+		position:relative;
+	  }
+          article div:not(.card) {
+         padding: 4px 13px 4px 38px
+         }
+		  article div.card {
+		  padding-top: 8px;
+		  padding-bottom: 8px;
+		  }
+		  div.card ~ div.card {
+		  border-top: 2px dashed #777;
+		  } 
             ul {
             margin: 0; padding-left: 15px;
             }
-            article div img {
-            display: block;position: absolute;
-            left: 12px
-            }
-            article div::before {
-            content:"";
+          
+            article div:not(.card)::before {
+            content: "";
             display: inline-block;
             position: absolute;
             left: 13px;
@@ -191,6 +305,7 @@ font-size: 100%
         .doubt {
           color: #A00;
           display: block;
+		  text-align:center
         }
         .doubt::before {
           content:"\26A0\FE0F\0020"
@@ -218,6 +333,8 @@ font-size: 100%
 		      	.C4 {background:#F3D000}	  .C5 {background:#E5AD34}	  .C6 {background:#FDEA00}    .C7 {background:#F3D92F}
 		      	.P12 {background:#309c44}   .P13 {background:#49c5a5}   .P14 {background:#a7d14d}   .P15 {background:#5ec689}
 		       	.P16 {background:#00ab4f}   .P19 {background:#5992ba}   .P20 {background:#50c7c2}   .P21 {background:#50c7c2}
+
+				
 		      	.P22 {background:#50c7c2}   .P23 {background:#2c9ac4}   .P25 {background:#77c547}   .P26 {background:#3e9ba8}
             .F40 {background:#CA5069}   .F41 {background:#CD74A5}   .F42 {background:#75649F}   .F43 {background:#8077AD}
             .F44 {background:#8C6EA4}   .F45 {background:#8077AD}   .F46 {background:#D790AC}   .F47 {background:#8077AD}
@@ -231,13 +348,14 @@ font-size: 100%
             .C1, .TD, .G2, .C2, .C3, .C5, .C4,  .C6, .C7, .P14, .P20, .P21, .F46, .F61, .F65 {color:#000 !important}
             .TA, .TB, .TC, .TD, .TE, .C1, .C2, .C3, .C4, .C5, .C6, .C7 {border-radius: 50% !important}
 
-          h2, h3, h4, .desc {
+          h2, h3, .desc {
           padding: 4px 13px;
           }
           h2 {
           margin: 0 0 5px 0;
           text-align: center;
-          font-size: inherit;
+          font-size: 1.2rem;
+		   font-weight:bold;
           border-bottom: 1px solid #777
           }
           h3 {
@@ -248,13 +366,12 @@ font-size: 100%
           }
           h4 {
           margin: 0;
-          font-size: inherit
+		  padding-left: 15px;
+          font-size: inherit;
+		  font-weight:bold
           }
-          hr {
-          box-sizing: content-box;
-          border-top: 2px dashed #777; border-bottom: 0
-          }
-      #totop {
+	
+      #link--to-top {
       position: fixed; display: none;
       right: 25px; bottom: 20px;
       padding: 4px 7px;
@@ -263,93 +380,17 @@ font-size: 100%
       font-size: 1rem; color: inherit;
       background: linear-gradient(145deg, #e4e8fe, #f8f9ff);
       box-shadow: #888 0 0 2px, #888 0 2px 0;
-      z-index: 2;
+      z-index: 3;
       user-select: none
       }
-      #totop:hover {background: #fefefe}
-      #totop:active {transform: translateY(2px)}
-      #mapbox {
-      position: fixed;
-      width: 100vw;  height: 100vh;
-      bottom: 0; top: 0; right: -100vw;
-      transition: right 1s; will-change: right;
-      z-index: 3
-      }
-      .deploy {right: 0 !important}
-        #mymap {
-        width: 100%; height: 100%;
-        border: 0;
-        }
-		  #mapbox .command {top: 45px;right:5px}
-          #exit-map {
-          position: absolute;
-          top: 15px; right: 15px;
-          padding: 2px 5px;
-          font-size: 1.2rem; text-decoration: none;
-          color:inherit; border: 1px solid #888; border-radius: 7px;
-          background: linear-gradient(145deg, #e4e8fe, #f8f9ff);
-          box-shadow: #888 0 0 2px, #888 0 2px 0;
-          cursor: pointer;
-          user-select: none;
-          z-index: 999;
-          }
-          #exit-map:active {background: #fefefe !important}
-          #exit-map:hover {transform: translateY(2px)}
-
-@media (prefers-color-scheme: dark) {
-  body  {color:#ddd}
-  body::before {opacity:1}
-  h1 {background: #333}
-  header {border-bottom: 1px solid #efefef}
-  h1 img {filter:invert(5%)}
-  article div a {color: #8cdeff}
-  article {box-shadow:#eee 0 0 2px, #777 0 3px 0}
-  nav {box-shadow: none}
-  nav div {background:#333 !important; box-shadow:none !important;border-right: 1px solid #ccc;border-bottom: 1px solid #ccc }
-  article, .bouton {background: #242626}
-  nav > div:hover {background: rgba(255,255,255,.8) !important;color: #111}
-  .num img {filter:invert(1)}
-  #contact-box, #contact-box a {color: #fefefe }
-}
-@media screen and (prefers-reduced-motion: no-preference) {
-  html{scroll-behavior:smooth}
-}
-@media screen and (max-width:940px) {
-  nav {flex-wrap: wrap}
-    nav div {box-shadow: none}
-}
-@media screen and (max-width:490px) {
-  h1 {padding:5px}
-    h1 img {max-width: 75vw}
-}
-@page {size:A4 portrait}
-@media print {
-  html, body {height:auto !important; overflow:auto !important}
-  #container {overflow: hidden}
-  main {display: block; height: auto !important}
-  h1 {border:0}
-  h2 {border-bottom: 1px dashed #333 !important;}
-  a {text-decoration:none !important; color:#000 !important}
-  body, article, header, h1, body::before {color:#000 !important; background:#fff !important}
-  nav, footer,  #totop, #mapbox, h1 img {display:none !important}
-  article {box-shadow:none !important;break-inside: avoid;border-radius: 0;width: 100% !important;position: relative !important;top: unset !important;left: unset !important}
-  article {border: 2px solid #555 !important}
-  .bus span  {border: 1px solid #777}
-  .fb a, .ig a, .tw a, .sc a, .yt a {font-size:0}
-  .fb a::after, .ig a::after, .tw a::after, .sc a::after, .yt a::after {content:attr(href);font-size: 1rem}
-}
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.7.0') format('woff');
-  font-weight: normal; font-style: normal;
-}
+      #link--to-top:hover {background: #fefefe}
+      #link--to-top:active {transform: translateY(2px)}
+     
 .fa::before {
   display: inline-block;
   font: normal normal normal 1rem FontAwesome;
   font-size: inherit;
   text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 .fa-ig::before {content:"\f16d"}		.fa-search::before {content:"\f002"}
 .fa-info::before {content:"\f05a"}		.fa-building::before {content:"\f1ad"}
@@ -357,3 +398,200 @@ font-size: 100%
 .fa-cal::before {content:"\f073"}		.fa-gh::before {content:"\f09b"}
 .fa-mail::before {content:"\f0e0"}		.fa-user::before {content:"\f2b9"}
 .fa-cc::before {content:"\f25e"}		.fa-pp::before { content: "\f1ed" }
+.fa-cate::before {content:"\f00b"}
+
+.fa-download::before{content:"\f019"}	
+.fa-print::before{content:"\f02f"}	
+.fa-copy::before{content:"\f0c5"}	
+.fa-select::before{content:"\f247"}	
+.fa-vcard::before{content:"\f2c3"}
+.fa-vcard-alt::before{content:"\f2c2"}
+
+#modale {
+  position: absolute;
+  top: 5px;
+  right: -35px;
+  display: none;
+  padding: 0 5px 3px 5px;
+  background: #EEF1FE;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px;
+  z-index: 9999; 
+  border-radius:10px;
+}
+#modale button {
+  display:block;
+  border:0;
+  background-color: transparent;
+  /*background-image: url('img/sprite2.png');
+  background-size:100%;*/
+  font-size:1.5rem;
+  width: 32px; height:32px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius:5px;
+}
+#modale button:hover {
+  background-color: #B8C3FB;
+  outline: 2px solid  #B8C3FB;
+}
+/*
+#modale button::after {
+  position: absolute;
+  display: none;
+}
+#modale button:hover::after {
+  display:block
+}*/
+#btn-savecontact { background-position: 0 0 }
+/*#btn-savecontact::after { content:'Ajouter à mes contacts' }*/
+#btn-selectall { background-position: 0 33.33%}
+/*#btn-selectall::after { content:'Sélectionner tout'}*/
+#btn-copy { 
+  background-position: 0 66.6%;
+}
+#btn-print {
+	 background-position: 0 100%;
+}
+
+/*#btn-copy::after { content:'Copier le texte' }*/
+#btn-copy::before {
+  content: 'Copié !';
+  opacity: var(--copy-opacity);
+  transition: opacity .5s;
+  display: block;
+}
+
+#btn-copy::before/*, 
+#modale button::after */ {
+	pointer-events:none;
+	font-size: 1.2rem;
+	white-space: nowrap;
+	position:absolute;
+	top: 0; right: 100%;
+	margin-right: 15px;
+	background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	padding: 5px;
+	border-radius: 8px;
+}
+.print-frame {
+	position: absolute;
+	top:-150%;
+	width: 21cm;
+	height: 29.7cm;
+	
+}
+
+@media (prefers-color-scheme: dark) {
+  body { background: linear-gradient(45deg, #232526, #414345) fixed}
+  h1 {background: #333}
+  header, nav div {
+	border-color: #ccc;
+	border-style: solid;
+  }
+  header {border-bottom-width: 1px}
+  header h1 img {filter:invert(5%)}
+  article div a {color: #8cdeff}
+  body, details div, details div a {color: #fefefe}
+  article {box-shadow:#eee 0 0 2px, #777 0 3px 0}
+  nav {box-shadow: none}
+  nav div {
+	  background:#333;
+	  box-shadow:none;
+	  border-left-width: 1px;
+	  border-bottom-width: 1px;
+	  margin-left:-1px
+  }
+  article,  #link--to-top {background: #242626}
+  #modale { 
+    background: #232526;
+	box-shadow: 0 0 5px #fff
+  }
+  #modale button:hover {
+	  background:transparent;
+	  outline: 2px solid #ddd
+	  }
+  nav > div:hover {
+    background: #F5F8FF;
+  }
+  .num img {filter:invert(1)}
+   
+  
+  #link--to-top:hover, btn-copy::before, nav > div:hover {color: #333}
+
+}
+@media (prefers-reduced-motion: reduce){
+  html, body, html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transition: none;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html, body {
+	scroll-behavior: smooth
+  }
+}
+
+/* PRINT */
+@page {
+  size: A4 portrait
+}
+@media print {
+  * { 
+    /* pour forcer les fonds à apparaître */
+    -webkit-print-color-adjust: exact !important;   
+    color-adjust: exact !important; 
+    print-color-adjust: exact !important
+  }
+  article div::before, .bus span {
+	/* pour les passer en niveau de gris */  
+	filter: grayscale(1);
+  }
+  html, body, #container, main {
+    height:auto !important;
+    overflow:auto !important;
+    display: block !important
+  }
+  h1 {
+	border:0
+  }
+  h2 {
+    border-bottom: 1px dashed #333 !important
+  }
+  a {
+	text-decoration:none !important;
+	color: black !important
+  }
+  .fb a, .ig a, .tw a, .sc a, .yt a {
+	font-size:0
+  }
+  .fb a::after, .ig a::after, .tw a::after, .sc a::after, .yt a::after {
+	content:attr(href);
+	font-size: 1rem
+  }
+  body, article, header, h1, body::before {
+	color:black !important;
+	background:transparent !important
+  }
+  nav, #link--to-top, #modale, #text--resultats, h1 img {
+    display:none !important
+  }
+  article {
+	box-shadow:none !important;
+    break-inside: avoid;
+	border-radius: 0;
+	width: 100% !important;
+	position: relative !important;
+	top: unset !important;
+	left: unset !important;
+	transform: none !important;
+	margin-bottom: 1rem;
+	border: 2px solid #555 !important
+  }
+}
