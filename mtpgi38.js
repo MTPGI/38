@@ -69,7 +69,7 @@ const $id = x => {return document.getElementById(x)},
 		const copylistener = (e) => {
 			e.preventDefault();
 			if (e.clipboardData) {
-			  e.clipboardData.setData('text/plain', text.textContent || text.innerHTML);
+			  e.clipboardData.setData('text/plain', text.innerText/*.replace(/(^[\t ]*(?:\r?\n|\r)+)|^[\t ]+|[\t ]+$/gm,'')*/);
 			  e.clipboardData.setData('text/html', text.innerHTML);
 			  document.documentElement.style.setProperty('--copy-opacity', '1');
 			  setTimeout(()=> {
@@ -99,11 +99,11 @@ const $id = x => {return document.getElementById(x)},
 		+ "</body></html>");
 		frameDoc.document.close();
 		setTimeout(function () {
-		window.frames["frame1"].focus();
-		window.frames["frame1"].print();
-		document.body.removeChild(frame1);
+			window.frames["frame1"].focus();
+			window.frames["frame1"].print();
+			document.body.removeChild(frame1);
 		}, 500);
-		return false;
+		//return false;
 	  },
 	  populateDatalist = () => {
 		const datalist = $id('searchlist'),
@@ -152,7 +152,6 @@ document.addEventListener('click', (e) => {
   t.closest('#btn-savecontact') && exportVCARD(c || a, c ? true : false);
   t.closest('#btn-print') 		&& printArticle(a);
   !t.closest('#apropos') 		&& $id('apropos').removeAttribute('open');
-
 }, !1);
 
 document.addEventListener('mouseover', (e) => {
@@ -245,7 +244,7 @@ function exportVCARD(artOrCard, isCard) {
     }
     if (isCard) {
 	   /* is a Card */
-	   const cardContent = artOrCard.$q('h4, div:not(.acc,.info,.time,.yt,.bus)');
+	   const cardContent = artOrCard.$q('h3, div:not(.acc,.info,.time,.yt,.bus)');
 	   feed = [...extractBeforeFirstCard(), ...cardContent];
 	   generateVCFfile(generateCard(feed))
     } else {
@@ -255,7 +254,7 @@ function exportVCARD(artOrCard, isCard) {
 		   const allCards = parentArticle.querySelectorAll('.card');
 		   feed = [];
 		   allCards.forEach(function(card){
-			  const cardContent = card.$q('h4, div:not(.acc,.info,.time,.yt,.bus)')
+			  const cardContent = card.$q('h3, div:not(.acc,.info,.time,.yt,.bus)')
 			  feed.push([...extractBeforeFirstCard(), ...cardContent])
 		   });
 		   let fusionnedVcard = '';
@@ -269,99 +268,61 @@ function exportVCARD(artOrCard, isCard) {
 		   generateVCFfile(generateCard(feed))
 	   }
     }
-	function generateCard(content) {
-		let vcard_text = 'BEGIN:VCARD\nVERSION:4.0\nPRODID:-//MTPGI38//NONSGML v1.0//FR\nTZ:Europe/Paris\n';
-		const adr_regex = /((?:.+\n)+)?(^(?=.*(?:\W|^)(?:rue|route|mail|galerie|avenue|montée|chemin|place|allée|carré|impasse|boulevard|cours|quai)(?:\W|$)).*)\n^([0-8]\d{4}|9(?:7[1-68]\d{2}|8[6-8]\d{2}|[0-6]\d{3})) ([A-Za-z\u00C0-\u00FF\u2019\u02bc\u0027 -]+)$/mi;
-		const entries = [
-			{
-				name: 'SOURCE',
-				callback: 'http://mtpgi.github.io/38?vcard=' + vcard_name
-			}, {
-				name: 'REV',
-				callback: $id('revision').innerText.split('/').reverse().join('') + 'T000000Z'
-			}, {
-				name: 'FN',
-				callback: content.find(el => el.nodeName === 'H2').innerText.replace(/[\n\r\t]+/g, ' ').replace(/\(.+?\)/, '').replace(/([\\,;:])/g, '\\$1')
-			}, {
-				name: 'KIND',
-				callback: parentArticle.getAttribute('data-hashtag').includes('pers') ? 'individual' : 'org'
-			}, {
-				name: 'TEL',
-				elements: content.filter(el => el.classList.contains('num')),
-				callback: (elementS) => {
-					return elementS.querySelector('a').href.split(':')[1];
-				}
-			}, {
-				name: 'EMAIL',
-				elements: content.filter(el => el.classList.contains('mail')),
-				callback: (elementS) => {
-					return elementS.querySelector('a').href.split(':')[1];
-				}
-			}, {
-				name: 'URL',
-				elements: content.filter(el => el.classList.contains('web')),
-				callback: (elementS) => {
-					return elementS.querySelector('a').href;
-				}
-			}, {
-				name: 'X-SOCIALPROFILE;type=facebook;x-user=facebookuser',
-				elements: content.filter(el => el.classList.contains('fb')),
-				callback: (elementS) => {
-					return elementS.querySelector('a').href;
-				}
-			}, {
-				name: 'X-SOCIALPROFILE;type=twitter;x-user=twitteruser',
-				elements: content.filter(el => el.classList.contains('tw')),
-				callback: (elementS) => {
-					return elementS.querySelector('a').href;
-				}
-			}, {
-				name: 'X-SOCIALPROFILE;type=instagram;x-user=instagramuser',
-				elements: content.filter(el => el.classList.contains('ig')),
-				callback: (elementS) => {
-					return elementS.querySelector('a').href;
-				}
-			}, {
-				name: 'ADR',
-				elements: content.filter(el => el.classList.contains('loc')),
-				callback: (elementS) => {
-					let lnk = elementS.querySelector('a');
-					if (!lnk) return false;
 
-					let txt = lnk.innerHTML.replace(/(<br\s*\/?>)/gmi, '\n')
-						.replace(/^[\t ]+|[\t ]+$|[\r\n]{2,}|<\/?sup>/gm, '')
-						.replace(/<\/?q>/g, '"')
-						.replace(/([\\,;:])/g, '\\$1');
-					let m = txt.match(adr_regex);
-					if (!m) { console.log(txt, 'did not match'); return false }
-					m[1] = m[1] ? m[1].replace(/\r?\n/g, ' ') : '';
-					return `${m[1]};;${m[2]};${m[4]};;${m[3]};FRANCE`;
-				}
-			}, {
-				name: 'GEO',
-				elements: content.filter(el => el.classList.contains('loc')),
-				callback: (elementS) => {
-					let lnk = elementS.querySelector('a');
-					return lnk ? lnk.href : false
-				}
-			}
-		];
-		entries.forEach(process => {
-			if ('elements' in process) {
-				process.elements.forEach(element => {
-					const callbackResult = process.callback(element);
-					if (callbackResult !== false) {
-						vcard_text += `${process.name}:${callbackResult}\n`;
-					}
-				});
-			} else {
-				const callbackResult = process.callback;
-				if (callbackResult !== false) {
-					vcard_text += `${process.name}:${callbackResult}\n`;
-				}
-			}
+	function generateCard(content) {
+		let vcard_text = 'BEGIN:VCARD\nVERSION:3.0\nPRODID:-//MTPGI38//NONSGML v1.0//FR\nTZ:+01:00\n';
+		const adr_regex = /((?:.+\n)+)?(^(?=.*(?:\W|^)(?:rue|route|mail|galerie|avenue|montée|chemin|place|allée|carré|impasse|boulevard|cours|quai)(?:\W|$)).*)\n^([0-8]\d{4}|9(?:7[1-68]\d{2}|8[6-8]\d{2}|[0-6]\d{3})) ([A-Za-z\u00C0-\u00FF\u2019\u02bc\u0027 -]+)$/mi;
+		
+		
+		vcard_text += 'SOURCE:http://mtpgi.github.io/38?vcard=' + vcard_name+'\n'
+		
+		
+		vcard_text += 'REV:' + $id('revision').innerText.split('/').reverse().join('-') + 'T00:00:00Z\n'
+		let name = content.find(el => el.nodeName === 'H2').innerText.replace(/[\n\r\t]+/g, ' ').replace(/\(.+?\)/, '').replace(/([\\,;:])/g, '\\$1')
+		vcard_text += 'FN:'+name+'\n';
+		vcard_text += 'N:'+name+'\n';
+
+		content.filter(el => el.classList.contains('num')).forEach(function(n) {
+			vcard_text += 'TEL:' + n.querySelector('a').href.split(':')[1] + '\n'
+		});
+		content.filter(el => el.classList.contains('mail')).forEach(function(n) {
+			vcard_text += 'EMAIL:' + n.querySelector('a').href.split(':')[1] + '\n'
+		});
+		content.filter(el => el.classList.contains('web')).forEach(function(n) {
+			vcard_text += 'URL:' + n.querySelector('a').href + '\n'
+		});
+		content.filter(el => el.classList.contains('fb')).forEach(function(n) {
+			vcard_text += 'X-SOCIALPROFILE;type=facebook;x-user=facebookuser:' + n.querySelector('a').href + '\n'
+		});
+		content.filter(el => el.classList.contains('tw')).forEach(function(n) {
+			vcard_text += 'X-SOCIALPROFILE;type=twitter;x-user=twitteruser:'+ n.querySelector('a').href + '\n'
+		});
+		content.filter(el => el.classList.contains('ig')).forEach(function(n) {
+			vcard_text += 'X-SOCIALPROFILE;type=instagram;x-user=instagramuser:' + n.querySelector('a').href + '\n'
+		});
+		content.filter(el => el.classList.contains('loc')).forEach(function(n) {
+			let lnk = n.querySelector('a');
+			if (!lnk) return false;
+			let txt = lnk.innerHTML.replace(/(<br\s*\/?>)/gmi, '\n')
+				.replace(/^[\t ]+|[\t ]+$|[\r\n]{2,}|<\/?sup>/gm, '')
+				.replace(/<\/?q>/g, '"')
+				.replace(/([\\,;:])/g, '\\$1');
+			let m = txt.match(adr_regex);
+			if (!m) { console.log(txt, 'did not match'); return false }
+			m[1] = m[1] ? m[1].replace(/\r?\n/g, ' ') : '';
+			
+			vcard_text += 'ADR:' + `${m[1]};;${m[2]};${m[4]};;${m[3]};FRANCE` + '\n';
+			
+			let arr = lnk.href.split(/[:,]/);
+			vcard_text += 'GEO:' + arr[1]+';'+arr[2] + '\n'
+			
 		});
 		vcard_text += 'END:VCARD';
 		return vcard_text;
 	}
 }
+
+// Notes:
+//https://en.wikipedia.org/wiki/HCard
+//https://en.wikipedia.org/wiki/MeCard_(QR_code)
+//https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
