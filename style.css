@@ -57,6 +57,7 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
+  display: inline-block;
   vertical-align: baseline;
   top: -0.5em
 }
@@ -257,7 +258,12 @@ html {
 		  font-size: 1em;
 		  margin: 0;
 		  }
-		
+		  article p {
+			  margin-left: 13px
+		  }
+		  article > :where(div, a, h3) {
+			margin-right: 1.5rem;
+		  }
 	  main.flex {
 		display: flex;
 		flex-direction: row;
@@ -283,7 +289,7 @@ html {
 		  width: 100%
 		}
 	  }
-        article div:not(.card) {
+        article div:not(.card), article > a, article .card > a {
         padding: 4px 13px 4px 38px
         }
 		  article div.card {
@@ -293,7 +299,7 @@ html {
 		  div.card ~ div.card {
 		  border-top: 2px dashed #777;
 		  } 
-            article div:not(.card)::before {
+            article div:not(.card)::before, article > a::before, article .card > a:before {
             content: "";
             display: inline-block;
             position: absolute;
@@ -306,13 +312,13 @@ html {
             background-size: 100%;
             background-image: url("img/sprite.png");
             }
-			article div a {
+			article div a, article > a, article .card > a {
 			color: #0078A8;
 		    text-overflow: "\2026";
 		    overflow: hidden;
 		    display: block;
 		    }
-			article div a:hover {color:inherit}
+			article div a:hover, article > a:hover {color:inherit}
 				article div ul {
 				margin: 0; 
 				padding-left: 15px;
@@ -339,19 +345,30 @@ html {
 		  .bus a {
 		  text-decoration: none
 		  }
-
-.acc img, .acc::before {background-position: 0 0} .acti {background-position: 0 3.846154%}
-.avis img, .avis::before {background-position:0 7.692308%} .bus img, .bus::before {background-position:0 11.538462%}
-.web img, .web::before {background-position:0 15.384615%} .conv img, .conv::before {background-position:0 19.230769%}
-.cult {background-position:0 23.076923%} .doc {background-position:0 26.923077%}
-.fb, .fb img, .fb::before {background-position:0 30.769231%} .heal {background-position:0 34.615385%}
-.host {background-position:0 38.461538%} .ig, .ig img, .ig::before {background-position:0 42.307692%}
-.info img, .info::before {background-position:0 46.153846%} .lng img, .lng::before {background-position:0 50.000000%}
-.loc img, .loc::before {background-position:0 53.846154%} .tool {background-position:0 57.692308%}
-.num, .num img, .num::before {background-position:0 61.538462%} .park img, .park::before {background-position:0 65.384615%}
+          .adr .extended-address, .adr .street-address, .adr .post-office-box {
+			display:block
+		  }
+.acc img, .acc::before {background-position: 0 0} 
+.acti {background-position: 0 3.846154%}
+.avis img, .avis::before {background-position:0 7.692308%} 
+.bus img, .bus::before {background-position:0 11.538462%}
+.url img, .url::before {background-position:0 15.384615%} 
+.conv img, .conv::before {background-position:0 19.230769%}
+.cult {background-position:0 23.076923%} 
+.doc {background-position:0 26.923077%}
+.fb, .fb img, .fb::before {background-position:0 30.769231%} 
+.heal {background-position:0 34.615385%}
+.host {background-position:0 38.461538%} 
+.ig, .ig img, .ig::before {background-position:0 42.307692%}
+.info img, .info::before {background-position:0 46.153846%} 
+.lng img, .lng::before {background-position:0 50.000000%}
+.adr img, .adr::before {background-position:0 53.846154%} 
+.tool {background-position:0 57.692308%}
+.tel, .tel img, .tel::before {background-position:0 61.538462%} 
+.park img, .park::before {background-position:0 65.384615%}
 .pers {background-position:0 69.230769%} .prix img, .prix::before  {background-position:0 73.076923%}
-.time img, .time::before {background-position:0 76.923077%} .sprt {background-position:0 80.769231%}
-.soli {background-position:0 84.615384%} .mail img, .mail::before {background-position:0 88.461538%}
+.hours img, .hours::before {background-position:0 76.923077%} .sprt {background-position:0 80.769231%}
+.soli {background-position:0 84.615384%} .email img, .email::before {background-position:0 88.461538%}
 .tw img, .tw::before {background-position:0 92.307692%} .sc img, .sc::before {background-position:0 96.153846%}
 .yt img, .yt::before {background-position:0 100%}
 
@@ -371,7 +388,7 @@ html {
 .F70 {background:#7864A4}	.F71 {background:#CA5069}	.G2 {background:#f9b000}	.G3 {background:#69b42e}
 .G4 {background:#8a6452}	.G5 {background:#6c4796}	.G6 {background:#ffed00}	.NVG {background:#ed6c84}
 
-.C1, .TD, .G2, .C2, .C3, .C5, .C4,  .C6, .C7, .P14, .P20, .P21, .F46, .F61, .F65 {color:#000 !important}
+.C1, .TD, .G2, .C2, .C5, .C4,  .C6, .C7, .P14, .P20, .P21, .F46, .F61, .F65 {color:#000 !important}
 .TA, .TB, .TC, .TD, .TE, .C1, .C2, .C3, .C4, .C5, .C6, .C7 {border-radius: 50% !important}
 
 .fa::before {
@@ -409,8 +426,12 @@ html {
 	  h3 {
 	  margin: 0;
 	  padding-left: 15px;
+	  padding-right: 15px;
 	  font-size: inherit;
 	  font-weight:bold
+	  }
+	  h3 span {
+		display:none
 	  }
       #link--to-top {
       position: fixed; display: none;
@@ -525,7 +546,7 @@ html {
   header h1 img {
 	filter: invert(5%)
   }
-  .num img {
+  .tel img {
 	filter: invert(1)
   }
 }

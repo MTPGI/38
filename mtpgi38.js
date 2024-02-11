@@ -23,8 +23,16 @@ const
     !isDesktop && document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px')
   },
   getVCARDUrlParamAndDownload = () => {
-    let vcarddata = new URLSearchParams(window.location.search).get('vcard');
-    vcarddata && exportVCARD($q(`[data-vcard=${vcarddata}]`), false);
+	const params = new URLSearchParams(window.location.search),
+		  vcarddata = params.get('vcard'),
+	      index = +params.get('i');
+	if (vcarddata) {
+		if (index) {
+			exportVCARD($q('[data-vcard='+vcarddata+']').querySelectorAll('.card')[index], true)
+		} else {
+			exportVCARD($q('[data-vcard='+vcarddata+']'), false)
+		}
+	}
   },
   filtrerArticles = () => {
     nb = 0;
@@ -93,11 +101,11 @@ const
     var frameDoc = (frame1.contentWindow) ? frame1.contentWindow : (frame1.contentDocument.document) ? frame1.contentDocument.document : frame1.contentDocument;
     frameDoc.document.open();
     frameDoc.document.write(
-      "<!DOCTYPE html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>" +
-      article.querySelector('h2').innerText +
-      "</title><link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\" /><style>.card {break-inside: avoid}</style></head><body>" +
-      article.outerHTML +
-      "</body></html>");
+      "<!DOCTYPE html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>"
+      + article.querySelector('h2').innerText
+      + "</title><link rel=\"stylesheet\" href=\"style.css\" type=\"text/css\" /><style>.card {break-inside: avoid}</style></head><body>"
+      + article.outerHTML
+      + "</body></html>");
     frameDoc.document.close();
     setTimeout(function() {
       window.frames["frame1"].focus();
@@ -148,8 +156,8 @@ document.addEventListener('click', (e) => {
     a = t.closest('article'),
     c = t.closest('.card');
   'link--to-top' == t.id && (e.preventDefault(), $q('nav').scrollIntoView({behavior: 'smooth'}));
-  'tomap' == t.className && (toMap(e, t));
   'goto' == t.className && (e.preventDefault(), scrollTo(t));
+  t.closest('.adr') && (toMap(e, t.closest('.adr')));
   t.closest('#btn-selectall') && selectAll(c || a);
   t.closest('#btn-copy') && toClipboard(c || a);
   t.closest('#btn-savecontact') && exportVCARD(c || a, c ? true : false);
@@ -219,10 +227,10 @@ window.addEventListener('load', () => {
 });
 
 function exportVCARD(artOrCard, isCard) {
-  const parentArticle = isCard ? artOrCard.parentElement : artOrCard,
+  const 
+    parentArticle = isCard ? artOrCard.parentElement : artOrCard,
     vcard_name = parentArticle.getAttribute('data-vcard'),
-    firstCard = parentArticle.querySelector('.card'),
-    adr_regex = /((?:.+\n)+)?(^(?=.*(?:\W|^)(?:rue|route|mail|galerie|avenue|montée|chemin|place|allée|carré|impasse|boulevard|cours|quai)(?:\W|$)).*)\n^([0-8]\d{4}|9(?:7[1-68]\d{2}|8[6-8]\d{2}|[0-6]\d{3})) ([A-Za-z\u00C0-\u00FF\u2019\u02bc\u0027 -]+)$/mi;
+    firstCard = parentArticle.querySelector('.card');
   var feed;
 
   function generateVCFfile(txt) {
@@ -252,44 +260,47 @@ function exportVCARD(artOrCard, isCard) {
     return elementsBeforeFirstCard
   }
   if (isCard) {
-    const cardContent = artOrCard.$q('h3, div:not(.acc,.info,.time,.yt,.bus)');
+    const cardContent = artOrCard.$q('header, h3, .adr, .url, .tel, .email, .fb, .tw, .ig');
     feed = [...extractBeforeFirstCard(), ...cardContent];
-    generateVCFfile(generateCard(feed))
+    generateVCFfile(generateCard(feed,isCard));
   } else {
     if (firstCard) {
-      const allCards = parentArticle.querySelectorAll('.card');
       feed = [];
-      allCards.forEach(function(card) {
-        const cardContent = card.$q('h3, div:not(.acc,.info,.time,.yt,.bus)')
-        feed.push([...extractBeforeFirstCard(), ...cardContent])
+      parentArticle.querySelectorAll('.card').forEach(function(card) {
+        const cardContent = card.$q('header, h3, .adr, .url, .tel, .email, .fb, .tw, .ig');
+        feed.push([...extractBeforeFirstCard(), ...cardContent]);
       });
       let fusionnedVcard = '';
       for (let i = 0; i < feed.length; i++) {
-        fusionnedVcard += generateCard(feed[i]) + '\n'
+        fusionnedVcard += generateCard(feed[i]) + '\n';
       }
       generateVCFfile(fusionnedVcard)
     } else {
-      feed = parentArticle.$q('div:not(.acc,.info,.time,.yt,.bus),h2,h3');
-      generateVCFfile(generateCard(feed))
+      feed = parentArticle.$q('header, h3, .adr, .url, .tel, .email, .fb, .tw, .ig');
+      generateVCFfile(generateCard(feed));
     }
   }
-
+  function escapeChar(txt) {
+	  return txt.replace(/[\n\r\t]+/g,' ').replace(/\(.+?\)/,'').replace(/([\\,;:])/g,'\\$1');
+  }
   function generateCard(content) {
     let vcard_text = 'BEGIN:VCARD\nVERSION:3.0\nPRODID:-//MTPGI38//NONSGML v1.0//FR\nTZ:+01:00\n';
-    const adr_regex = /((?:.+\n)+)?(^(?=.*(?:\W|^)(?:rue|route|mail|galerie|avenue|montée|chemin|place|allée|carré|impasse|boulevard|cours|quai)(?:\W|$)).*)\n^([0-8]\d{4}|9(?:7[1-68]\d{2}|8[6-8]\d{2}|[0-6]\d{3})) ([A-Za-z\u00C0-\u00FF\u2019\u02bc\u0027 -]+)$/mi;
-    // a faire , ajouter ?vcard=vcard_name&card 
-    vcard_text += 'SOURCE:http://mtpgi.github.io/38?vcard=' + vcard_name + '\n'
-    vcard_text += 'REV:' + $id('revision').innerText.split('/').reverse().join('-') + 'T00:00:00Z\n'
-    let name = content.find(el => el.nodeName === 'H2').innerText.replace(/[\n\r\t]+/g, ' ').replace(/\(.+?\)/, '').replace(/([\\,;:])/g, '\\$1')
-    vcard_text += 'FN:' + name + '\n';
-    vcard_text += 'N:' + name + '\n';
-    content.filter(el => el.classList.contains('num')).forEach(function(n) {
+	const index = isCard ? '&i='+Array.from(parentArticle.querySelectorAll('.card')).indexOf(artOrCard) : '';	
+    vcard_text += 'SOURCE:http://mtpgi.github.io/38?vcard=' + vcard_name + index + '\n';
+    vcard_text += 'REV:' + $id('revision').innerText.split('/').reverse().join('-') + 'T00:00:00Z\n';
+    const header = content.find(el => el.nodeName === 'HEADER');
+	const h2_txt = escapeChar(header.querySelector('h2').innerText);
+    vcard_text += 'FN:' + h2_txt + '\n';
+    vcard_text += 'N:' + h2_txt + '\n';
+	const note = header.querySelector('p');
+	note && (vcard_text += 'NOTE:' + escapeChar(note.innerText) + '\n')
+    content.filter(el => el.classList.contains('tel')).forEach(function(n) {
       vcard_text += 'TEL:' + n.querySelector('a').href.split(':')[1] + '\n'
     });
-    content.filter(el => el.classList.contains('mail')).forEach(function(n) {
+    content.filter(el => el.classList.contains('email')).forEach(function(n) {
       vcard_text += 'EMAIL:' + n.querySelector('a').href.split(':')[1] + '\n'
     });
-    content.filter(el => el.classList.contains('web')).forEach(function(n) {
+    content.filter(el => el.classList.contains('url')).forEach(function(n) {
       vcard_text += 'URL:' + n.querySelector('a').href + '\n'
     });
     content.filter(el => el.classList.contains('fb')).forEach(function(n) {
@@ -301,24 +312,42 @@ function exportVCARD(artOrCard, isCard) {
     content.filter(el => el.classList.contains('ig')).forEach(function(n) {
       vcard_text += 'X-SOCIALPROFILE;type=instagram;x-user=instagramuser:' + n.querySelector('a').href + '\n'
     });
-    content.filter(el => el.classList.contains('loc')).forEach(function(n) {
-      let lnk = n.querySelector('a');
-      if (!lnk) return false;
-      let txt = lnk.innerHTML.replace(/(<br\s*\/?>)/gmi, '\n')
-        .replace(/^[\t ]+|[\t ]+$|[\r\n]{2,}|<\/?sup>/gm, '')
-        .replace(/<\/?q>/g, '"')
-        .replace(/([\\,;:])/g, '\\$1');
-      let m = txt.match(adr_regex);
-      if (!m) {
-        console.log(txt, 'did not match');
-        return false
-      }
-      m[1] = m[1] ? m[1].replace(/\r?\n/g, ' ') : '';
-      vcard_text += 'ADR:' + `${m[1]};;${m[2]};${m[4]};;${m[3]};FRANCE` + '\n';
-      let arr = lnk.href.split(/[:,]/);
-      vcard_text += 'GEO:' + arr[1] + ';' + arr[2] + '\n'
+    content.filter(el => el.classList.contains('adr')).forEach(function(n) {
+      const postOfficeBox 	= n.querySelector('.post-office-box'),
+			extendedAddress = n.querySelector('.extended-address'),
+	        streetAddress 	= n.querySelector('.street-address'),
+			locality 		= n.querySelector('.locality'),
+			postalCode 		= n.querySelector('.postal-code'),
+			getContent = c => {
+				return c ? c.innerText.replace(/([\\,;:])/g, '\\$1')
+				                      .replace(/[\n\r]+/,'\\n') 
+	                     : '';
+			},
+			adr = 'ADR:' +
+                  getContent(postOfficeBox) + ';' + 
+			      getContent(extendedAddress) + ';' + 
+                  getContent(streetAddress) + ';' + 
+				  getContent(locality) + ';;' + 
+				  getContent(postalCode) + ';FRANCE\n';
+      (postOfficeBox||extendedAddress||streetAddress||locality||postalCode) && (vcard_text += adr);
+      const lnk = n.href;
+	  if (lnk) {
+		  const spl = lnk.split(/[:,]/);
+		  vcard_text += 'GEO:' + spl[1] + ';' + spl[2] + '\n';
+	  }
     });
     vcard_text += 'END:VCARD';
     return vcard_text;
   }
 }
+// Notes:
+//https://en.wikipedia.org/wiki/HCard
+//https://en.wikipedia.org/wiki/MeCard_(QR_code)
+//https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
+ //const adr_regex = /((?:.+\n)+)?(^(?=.*(?:\W|^)(?:rue|route|mail|galerie|avenue|montée|chemin|place|allée|carré|impasse|boulevard|cours|quai)(?:\W|$)).*)\n^([0-8]\d{4}|9(?:7[1-68]\d{2}|8[6-8]\d{2}|[0-6]\d{3})) ([A-Za-z\u00C0-\u00FF\u2019\u02bc\u0027 -]+)$/mi;
+
+  /*lnk.innerHTML.replace(/(<br\s*\/?>)/gmi, '\n')
+        .replace(/^[\t ]+|[\t ]+$|[\r\n]{2,}|<\/?sup>/gm, '')
+        .replace(/<\/?q>/g, '"')
+        .replace(/([\\,;:])/g, '\\$1');
+        .replace(/\r?\n/g, ' ') : ''*/
