@@ -133,6 +133,22 @@ const
     });
   };
 
+/* A FINIR
+function handleBeforePrint(event) {
+  event.preventDefault();
+  const response = confirm("Par souci d'économie, le document a été passé en niveau de gris.\n\nÉconomisez du papier et privilégiez la copie numérique\nou activez le recto/verso !\n\nJe souhaite imprimer ?");
+  if (response) {
+    window.removeEventListener("beforeprint", handleBeforePrint);
+    window.print();
+  }
+}
+
+function handleAfterPrint() {
+  window.addEventListener("beforeprint", handleBeforePrint);
+}
+*/
+//window.addEventListener("afterprint", handleAfterPrint);
+//window.addEventListener("beforeprint", handleBeforePrint);
 window.addEventListener('resize', correctHeight);
 
 
@@ -214,7 +230,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('load', () => {
   if (isDesktop && window.innerWidth > 900) {
-    /*$id('main').classList.remove('flex');
+    $id('main').classList.remove('flex');
     masonry = new Macy({
       container: 'main',
       mobileFirst: true,
@@ -225,7 +241,7 @@ window.addEventListener('load', () => {
         940: 2,
         630: 1
       }
-    });*/
+    });
   }
   correctHeight();
 });
@@ -317,7 +333,22 @@ function generateVCARDtext(artOrCard, isCard) {
     vcard_text += 'N:' + escapeChar(name.innerText) + '\n';
 	const note = name.querySelector('p');
 	note && (vcard_text += 'NOTE:' + escapeChar(note.innerText) + '\n')
-    
+	
+	/*https://datatracker.ietf.org/doc/html/rfc6350#section-10.3.4
+	+-----------+-------------------------------------------------------+
+    | Value     | Description                                           |
+    +-----------+-------------------------------------------------------+
+    | text      | Indicates that the telephone number supports text SMS |
+    | voice     | Indicates a voice telephone number.                   |
+    | fax       | Indicates a facsimile telephone number.               |
+    | cell      | Indicates a cellular or mobile telephone number.      |
+    | video     | Indicates a video conferencing telephone number.      |
+    | pager     | Indicates a paging device telephone number.           |
+    | textphone | Indicates a telecommunication device for people with  |
+    |           | hearing or speech difficulties.                       |
+    +-----------+-------------------------------------------------------+
+	*/
+	
     content.filter(el => el.classList.contains('tel')).forEach(function(n) {
 	  const telTypes = ['HOME', 'WORK', 'PREF', 'VOICE', 'FAX', 'MSG', 'CELL', 'VIDEO', 'TEXTPHONE', 'TEXT'];
       const telType = (n.href.startsWith('tel:+336') || n.href.startsWith('tel:06')) ? 'CELL' : 'VOICE';
@@ -363,3 +394,12 @@ function generateVCARDtext(artOrCard, isCard) {
     return vcard_text;
   }
 }
+
+
+ //const adr_regex = /((?:.+\n)+)?(^(?=.*(?:\W|^)(?:rue|route|mail|galerie|avenue|montée|chemin|place|allée|carré|impasse|boulevard|cours|quai)(?:\W|$)).*)\n^([0-8]\d{4}|9(?:7[1-68]\d{2}|8[6-8]\d{2}|[0-6]\d{3})) ([A-Za-z\u00C0-\u00FF\u2019\u02bc\u0027 -]+)$/mi;
+
+  /*lnk.innerHTML.replace(/(<br\s*\/?>)/gmi, '\n')
+        .replace(/^[\t ]+|[\t ]+$|[\r\n]{2,}|<\/?sup>/gm, '')
+        .replace(/<\/?q>/g, '"')
+        .replace(/([\\,;:])/g, '\\$1');
+        .replace(/\r?\n/g, ' ') : ''*/
