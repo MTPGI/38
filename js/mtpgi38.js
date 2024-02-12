@@ -169,15 +169,22 @@ function handleTouchOrHover(event) {
 	return
   }
   if (card) {
+	$id('btn-qrcode').classList.remove('hide');
     if (card !== hoveredCardOrArticle) {
-		hideQRCode();
+      hideQRCode();
       hoveredCardOrArticle = card;
       card.appendChild(modale);
       modale.classList.add('visible');
     }
   } else {
+	let hasCard = article.querySelector('.card');
+	if (hasCard) {
+		$id('btn-qrcode').classList.add('hide');
+	} else {
+		$id('btn-qrcode').classList.remove('hide');
+	}
     if (article !== hoveredCardOrArticle) {
-		hideQRCode();
+	  hideQRCode();
       hoveredCardOrArticle = article;
       article.appendChild(modale);
       modale.classList.add('visible');
