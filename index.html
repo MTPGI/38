@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- <a (.+?)<\/a> ?<span>\((.+?)\)<\/span> -->
 <html lang="fr-FR" dir="ltr">
   <head>
     <meta charset="utf8" />
@@ -16,7 +15,7 @@
     <link rel="icon" href="img/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="img/favicon.png" />
     <link rel="profile" href="http://microformats.org/profile/hcard" />
-    <!--<link rel="next" href="">-->
+    <link rel="next" href="https://mptgi.github.io/38/aide.html">
     <link rel="stylesheet" href="style.css" />
     <noscript>
       <style>
@@ -59,12 +58,11 @@
             <option value="phon">Ligne téléphonique</option>
             <option value="lgbt">LGBTQI+</option>
             <option value="matr">Maternité</option>
-            <option value="mine">Mineur&middot;es et Enfants</option>
+            <option value="mine">Mineur<span aria-hidden="true">&middot;</span>es et Enfants</option>
             <option value="pmi">Protection Maternelle Infantile (PMI)</option>
             <option value="acti">Politique / activisme / militantisme</option>
             <option value="rese">Réseaux sociaux</option>
             <option value="heal">Santé</option>
-            <!--<optgroup label="Soignant&middot;es &#x276F;"><option value="care">Voir tou&middot;te&middot;s</option><option value="derm">Dermatologue</option><option value="gene">Généraliste</option><option value="ggyn">Généraliste spé. gynéco</option><option value="gyne">Gynécologue</option><option value="hypn">Hypnothérapeute</option><option value="infi">Infirmier&middot;e</option><option value="orth">Orthophoniste / Vocologiste</option><option value="psyi">Psychiatre</option><option value="psyo">Psychologue</option><option value="safe">Sage-Femme</option><option value="sexo">Sexologue</option><option value="soph">Sophrologue</option></optgroup>-->
             <option value="sprt">Sport</option>
             <option value="tran">Transidentité</option>
             <option value="ptds">Travail du sexe</option>
@@ -134,7 +132,6 @@
             <option value="m">M</option>
             <option value="n">N</option>
             <option value="o">O</option>
-            <option value="p">P</option>
             <option value="q">Q</option>
             <option value="r">R</option>
             <option value="s">S</option>
@@ -166,6 +163,17 @@
       </nav>
       <div id="text--resultats"></div>
       <main class="flex" id="main">
+	  
+	  <!--https://www.eve-grenoble.fr/plateforme-alveole/annuaire-des-associations/1-culturel/416-club-de-lectures-feministes
+	  https://www.eve-grenoble.fr/plateforme-alveole/annuaire-des-associations/15-structures-hors-associations/647-coordination-feministe
+	  https://www.eve-grenoble.fr/plateforme-alveole/annuaire-des-associations/1-culturel/725-organisation-universitaire-feministe-ouf
+	  https://www.eve-grenoble.fr/plateforme-alveole/annuaire-des-associations/10-solidarite-et-entraide/178-solidarite-femmes-grenoble-isere
+	  https://www.eve-grenoble.fr/plateforme-alveole/annuaire-des-associations/3-environnement-et-developpement-durable/327-developpement-durable-et-egalite-femmes-hommes-->
+	  
+	  
+	  
+	  
+	  
         <article class="vcard" data-hashtag="asso" data-vcard="afei" id="a">
           <header>
             <h2 class="fn org">
@@ -183,11 +191,11 @@
               <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu" href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.189459,5.735359" rel="external noreferrer">
-            <span class="P16">16</span> Mutualité<br>
-            <span class="P15">15</span> Bir Hakeim<br>
-            <span class="TA">A</span> Verdun - Préfecture<br>
-            <span class="TC">C</span> <span class="TE">E</span> <span class="C1">C1</span> Grenoble Hôtel de Ville<br>
-            <span class="TB">B</span> Sainte-Claire - Les Halles
+            <span class="P16">16</span> <span class="busstop">Mutualité</span><br>
+            <span class="P15">15</span> <span class="busstop">Bir Hakeim</span><br>
+            <span class="TA">A</span> <span class="busstop">Verdun - Préfecture</span><br>
+            <span class="C1">C1</span> <span class="busstop">Grenoble Hôtel de Ville</span><br>
+            <span class="TB">B</span> <span class="busstop">Sainte-Claire - Les Halles</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="asso 185 educ" data-vcard="affdu">
@@ -229,9 +237,9 @@
               <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
-            <span class="TC">C</span> Foch Férié<br>
-            <span class="C3">C3</span> Marceau - Jardin des Vallons<br>
-            <span class="P25">25</span> Colonel Dumont
+            <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
+            <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+            <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
           </a>
           <div class="hours">
             <ul>
@@ -273,7 +281,7 @@
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.190028,5.728965" rel="external noreferrer">
           <span class="TA">A</span>
-          <span class="TB">B</span> Hubert Dubedout - Maison du Tourisme
+          <span class="TB">B</span> <span class="busstop">Hubert Dubedout - Maison du Tourisme</span>
           </a>
           <div class="hours">
             <ul>
@@ -297,10 +305,10 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184601,5.724440" rel="external noreferrer">
-          <span class="P16">16</span> Caserne de Bonne<br>
+          <span class="P16">16</span> <span class="busstop">Caserne de Bonne</span><br>
           <span class="P12">12</span>
-          <span class="C3">C3</span> Championnet<br>
-          <span class="TC">C</span> Gustave Rivet
+          <span class="C3">C3</span> <span class="busstop">Championnet</span><br>
+          <span class="TC">C</span> <span class="busstop">Gustave Rivet</span>
           </a>
           <div class="hours">Mardi, mercredi et jeudi de 10h00 à 17h00</div>
         </article>
@@ -320,9 +328,9 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
-          <span class="TC">C</span> Foch Férié<br>
-          <span class="C3">C3</span> Marceau - Jardin des Vallons<br>
-          <span class="P25">25</span> Colonel Dumont
+          <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
+          <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+          <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
           </a>
           <div class="hours">Sur rendez-vous</div>
           <div class="info">
@@ -347,7 +355,7 @@
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.203864,5.700169" rel="external noreferrer">
           <span class="P22">22</span>
           <span class="TB">B</span>
-          <span class="F54">54</span> Oxford
+          <span class="F54">54</span> <span class="busstop">Oxford</span>
           </a>
           <h3>Siège social</h3>
           <div class="adr">
@@ -377,7 +385,7 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.193429,5.732938" rel="external noreferrer">
-            <span class="TB">B</span> <span class="F62">62</span> <span class="P16">16</span> Notre-Dame – Musée</a>
+            <span class="P16">16</span> <span class="busstop">Notre-Dame </span>– Musée</a>
           </div>
           <div class="hours">Du lundi au vendredi de 9h à 12h et de 14h à 17h</div>
           <div class="info">
@@ -444,8 +452,8 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.173248,5.711259" rel="external noreferrer">
-          <span class="C5">C5</span> Lys Rouge<br>
-          <span class="TE">E</span> Alliés
+          <span class="C5">C5</span> <span class="busstop">Lys Rouge</span><br>
+          <span class="TE">E</span> <span class="busstop">Alliés</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="185 heal" data-vcard="bien_naitre_et_grandir">
@@ -464,9 +472,9 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.188419,5.737459" rel="external noreferrer">
-          <span class="P15">15</span> Bir Hakeim<br>
+          <span class="P15">15</span> <span class="busstop">Bir Hakeim</span><br>
           <span class="TC">C</span>
-          <span class="C1">C1</span> Grenoble Hôtel de Ville
+          <span class="C1">C1</span> <span class="busstop">Grenoble Hôtel de Ville</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="asso 185" data-vcard="bon_sang">
@@ -485,10 +493,10 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.183975,5.705998" rel="external noreferrer">
-          <span class="C5">C5</span> Cémoi<br>
-          <span class="TA">A</span> Berriat-Le Magasin<br>
+          <span class="C5">C5</span> <span class="busstop">Cémoi</span><br>
+          <span class="TA">A</span> <span class="busstop">Berriat-Le Magasin</span><br>
           <span class="TC">C</span>
-          <span class="P26">26</span> Vallier-Catane
+          <span class="P26">26</span> <span class="busstop">Vallier-Catane</span>
           </a>
           <div class="info">
             <ul>
@@ -516,10 +524,10 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.160950,5.712524" rel="external noreferrer">
-          <span class="P16">16</span> Les Essarts<br>
+          <span class="P16">16</span> <span class="busstop">Les Essarts</span><br>
           <span class="C2">C2</span>
-          <span class="P25">25</span> Marielle Franco - Rondeau<br>
-          <span class="P12">12</span> Verlaine
+          <span class="P25">25</span> <span class="busstop">Marielle Franco - Rondeau</span><br>
+          <span class="P12">12</span> <span class="busstop">Verlaine</span>
           </a>
         </article>
         <article data-hashtag="185 544 053 heal" data-vcard="cegidd" id="c">
@@ -540,9 +548,9 @@
               <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.181731,5.730450" rel="external noreferrer">
-            <span class="TA">A</span> Albert 1<sup>er</sup> de Belgique<br>
+            <span class="TA">A</span> <span class="busstop">Albert 1</span><sup>er</sup> de Belgique<br>
             <span class="TC">C</span>
-            <span class="P16">16</span> Gustave Rivet
+            <span class="P16">16</span> <span class="busstop">Gustave Rivet</span>
             </a>
             <div class="hours">Du lundi au vendredi : de 08h30 à 12h30 et de 13h30 à 17h00</div>
           </div>
@@ -591,8 +599,8 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.527767,4.879736" rel="external noreferrer">
-          <span class="P12">12</span> Les Géants<br>
-          <span class="C6">C6</span> Raymond Chanas
+          <span class="P12">12</span> <span class="busstop">Les Géants</span><br>
+          <span class="C6">C6</span> <span class="busstop">Raymond Chanas</span>
           </a>
           <div class="hours">
             <ul>
@@ -618,9 +626,9 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
-          <span class="TC">C</span> Foch Férié<br>
-          <span class="C3">C3</span> Marceau - Jardin des Vallons<br>
-          <span class="P25">25</span> Colonel Dumont
+          <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
+          <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+          <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
           </a>
           <div class="info">
             Le centre LGBTI (Lesbiennes, Gays, Bisexuel.le.s, Trans’, Intersexes) de Grenoble existe depuis 1994 (à l'époque collectif C.I.G.A.L.E). C'est un collectif d'associations issues des communautés LGBTI.<br>
@@ -833,7 +841,7 @@
           <header>
             <h2>Centres de planification départementaux</h2>
             <p>
-              Conseiller&middot;es et médecins vous écoutent et vous informent sur tout&middot;es sur les questions liées à la vie sexuelle et affective (contraception, grossesse, l’avortement, ITS, difficultés conjugales,
+              Conseiller<span aria-hidden="true">&middot;</span>es et médecins vous écoutent et vous informent sur tout<span aria-hidden="true">&middot;</span>es sur les questions liées à la vie sexuelle et affective (contraception, grossesse, l’avortement, ITS, difficultés conjugales,
               adolescence...).
             </p>
           </header>
@@ -847,8 +855,8 @@
             </a>
             <a class="tel" href="tel:+33476542627">04 76 54 26 27</a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.179510,5.744926" rel="external noreferrer">
-            <span class="C5">C5</span> Saint-Augustin<br>
-            <span class="P13">13</span> Suzanne Noël - Les Bains
+            <span class="C5">C5</span> <span class="busstop">Saint-Augustin</span><br>
+            <span class="P13">13</span> <span class="busstop">Suzanne Noël - Les Bains</span>
             </a>
           </div>
           <div class="card vcard">
@@ -906,9 +914,9 @@
               <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.589936,5.2769" rel="external noreferrer">
-            <span class="TA">A</span> Albert 1<sup>er</sup> de Belgique<br>
+            <span class="TA">A</span> <span class="busstop">Albert 1</span><sup>er</sup> de Belgique<br>
             <span class="TC">C</span>
-            <span class="P16">16</span> Gustave Rivet
+            <span class="P16">16</span> <span class="busstop">Gustave Rivet</span>
             </a>
           </div>
           <div class="card vcard">
@@ -920,9 +928,9 @@
               <span class="locality">FONTAINE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.196871,5.684416" rel="external noreferrer">
-            <span class="P19">19</span> Les Écrins<br>
-            <span class="C6">C6</span> Charmettes<br>
-            <span class="TA">A</span> Charles Michels
+            <span class="P19">19</span> <span class="busstop">Les Écrins</span><br>
+            <span class="C6">C6</span> <span class="busstop">Charmettes</span><br>
+            <span class="TA">A</span> <span class="busstop">Charles Michels</span>
             </a>
           </div>
           <div class="card vcard">
@@ -934,8 +942,8 @@
               <span class="locality">LE PONT DE CLAIX</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.127919,5.697414" rel="external noreferrer">
-            <span class="P25">25</span> Irène Joliot-Curie<br>
-            <span class="F64">64</span> Marianne
+            <span class="P25">25</span> <span class="busstop">Irène Joliot-Curie</span><br>
+            <span class="F64">64</span> <span class="busstop">Marianne</span>
             </a>
           </div>
           <div class="card vcard">
@@ -950,8 +958,8 @@
               <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.191801,5.717774" rel="external noreferrer">
-            <span class="TA">A</span> <span class="TB">B</span> <span class="P26">26</span> Gares<br>
-            <span class="C1">C1</span> Félix Viallet
+            <span class="P26">26</span> <span class="busstop">Gares</span><br>
+            <span class="C1">C1</span> <span class="busstop">Félix Viallet</span>
             </a>
             <div class="hours">Par téléphone de 9h à 10h et de 14h à 15h</div>
           </div>
@@ -964,7 +972,7 @@
               <span class="locality">ÉCHIROLLES</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.156887,5.718845" rel="external noreferrer">
-			  <span class="C6">C6</span> <span class="TA">A</span> Essarts – La Butte
+			  <span class="TA">A</span> <span class="busstop">Essarts </span>– La Butte
 			</a>
           </div>
           <div class="card vcard">
@@ -976,8 +984,8 @@
               <span class="locality">SAINT-MARTIN-D'HÈRES</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.183099,5.752367" rel="external noreferrer">
-            <span class="P14">14</span> <span class="TD">D</span> Maison Communale<br>
-            <span class="P12">12</span> Grand Châtelet
+            <span class="TD">D</span> <span class="busstop">Maison Communale</span><br>
+            <span class="P12">12</span> <span class="busstop">Grand Châtelet</span>
             </a>
           </div>
           <div class="card vcard">
@@ -991,9 +999,9 @@
               <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.181036,5.710161" rel="external noreferrer">
-            <span class="P12">12</span> Groupe Hospitalier Mutualiste<br>
-            <span class="TC">C</span> Vallier – Docteur Calmette<br>
-            <span class="P26">26</span> Vallier – Catane
+            <span class="P12">12</span> <span class="busstop">Groupe Hospitalier Mutualiste</span><br>
+            <span class="TC">C</span> <span class="busstop">Vallier </span>– Docteur Calmette<br>
+            <span class="P26">26</span> <span class="busstop">Vallier </span>– Catane
             </a>
           </div>
           <div class="card vcard">
@@ -1016,8 +1024,8 @@
                 <span class="locality">SAINT MARTIN D'HÈRES</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.056959,6.028826" rel="external noreferrer">
-              <span class="TB">B</span> <span class="TD">D</span> Les Taillées – Universités<br>
-              <span class="TC">C</span> <span class="TE">E</span> Hector Berlioz - Universités
+              <span class="TD">D</span> <span class="busstop">Les Taillées </span>– Universités<br>
+              <span class="TE">E</span> <span class="busstop">Hector Berlioz - Universités</span>
             </a>
             <div class="hours">Par téléphone de 9h à 10h et de 14h à 15h</div>
           </div>
@@ -1030,26 +1038,22 @@
               <span class="locality">MEYLAN</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.208553,5.763187" rel="external noreferrer">
-            <span class="P13">13</span> <span class="F42">42</span> Place de la Louisiane<br>
-            <span class="C1">C1</span> Aiguinards-Hexagone
+            <span class="F42">42</span> <span class="busstop">Place de la Louisiane</span><br>
+            <span class="C1">C1</span> <span class="busstop">Aiguinards-Hexagone</span>
             </a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>La Tronche</h3>
             <a class="tel" href="tel:+33776765410">07 76 76 54 10</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.202666,5.741533" rel="external noreferrer">
-              <span class="extended-address">
-            Rez-de-Chaussée<br>
-            Hôpital Couple-Enfant<br>
-            CHU de Grenoble
-            </span>
+              <span class="extended-address">Rez-de-Chaussée<br>Hôpital Couple-Enfant<br>CHU de Grenoble</span>
               <span class="street-address">avenue Maquis Du Gresivaudan</span>
               <span class="postal-code">38700</span>
               <span class="locality">LA TRONCHE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.202666,5.741533" rel="external noreferrer">
             <span class="P13">13</span>
-            <span class="TB">B</span> La Tronche Hôpital
+            <span class="TB">B</span> <span class="busstop">La Tronche Hôpital</span>
             </a>
           </div>
           <div class="card vcard">
@@ -1256,8 +1260,8 @@
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.188058,5.710936" rel="external noreferrer">
           <span class="TA">A</span>
-          <span class="TB">B</span> Saint-Bruno<br>
-          <span class="P12">12</span> Saint-Bruno
+          <span class="TB">B</span> <span class="busstop">Saint-Bruno</span><br>
+          <span class="P12">12</span> <span class="busstop">Saint-Bruno</span>
           </a>
           <div class="hours">
             Séances tous les dimanches à 18h.<br>
@@ -1284,13 +1288,35 @@
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.190028,5.728965" rel="external noreferrer">
           <span class="TA">A</span>
-          <span class="TB">B</span> Hubert Dubedout - Maison du Tourisme
+          <span class="TB">B</span> <span class="busstop">Hubert Dubedout - Maison du Tourisme</span>
           </a>
           <div class="hours">Du Lundi au Vendredi : de 9h00 à 12h00 et de 13h00 à 17h00</div>
           <div class="info">
             Un lieu d'accueil et d'informations gratuit pour tout public et plus particulièrement les femmes. Il a une mission d'intérêt général confiée par l'état. Permanences Grenoble Maison des Associations 6, rue Berthe de
             Boissieux. Cité des Familles 3 rue de Belgrade
           </div>
+        </article>
+		<article class="vcard" data-hashtag="psyo 185 aggr heal conj" data-vcard="codase">
+          <header>
+            <h2 class="fn org">
+			  CODASE-<abbr title="Centre de Soin et d'Accompagnement des Auteur(e)s de Violences Intra-familiales en Isère">CSAAVI</abbr>
+			</h2>
+            <p>Anciennement <q>Passible</q>, le CSAAVI est un centre de soin et d'accompagnement de la violence intra-familiale, spécialisé dans la prise en charge de l’auteur(e) de ces violences.</p>
+          </header>
+		  <a class="tel" href="tel:+33476449415">04 76 44 94 15</a>
+          <a class="tel" href="tel:+33689279210">06 89 27 92 10</a>
+          <a class="email" href="mailto:sociojudiciaire@codase.org">sociojudiciaire@codase.org</a>
+          <a class="url" href="https://www.codase-csaavi.org/" rel="external noreferrer">www.codase-csaavi.org</a>
+          <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.172202,5.724110" rel="external noreferrer">
+            <span class="street-address">96 rue de Stalingrad</span>
+            <span class="postal-code">38100</span>
+            <span class="locality">GRENOBLE</span>
+          </a>
+          <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.1722026,5.724110" rel="external noreferrer">
+		    <span class="P16">16</span> <span class="C3">C3</span> <span class="busstop">Eugène Sue</span><br>
+		    <span class="C5">C5</span> <span class="busstop">Stalingrad Alliés</span><br>
+		    <span class="TA">A</span> <span class="busstop">Malherbe</span>
+          </a>
         </article>
         <article class="vcard" data-hashtag="185" data-vcard="coin_des_lgbt">
           <header>
@@ -1326,9 +1352,9 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
-          <span class="TC">C</span> Foch Férié<br>
-          <span class="C3">C3</span> Marceau - Jardin des Vallons<br>
-          <span class="P25">25</span> Colonel Dumont
+          <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
+          <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+          <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
           </a>
           <div class="hours">
             <ul>
@@ -1338,33 +1364,37 @@
           </div>
           <div class="info">La commission aide notamment à la préparation des entretiens OFPRA et CNDA.</div>
         </article>
-        <!-- MISSING Commission Féministe du Campus de Grenoble -->
+        <article data-hashtag="185 femi acti" data-vcard="commission_feministe_campus">
+		  <header>
+            <h2 class="fn org">Commission féministe du campus de Grenoble</h2>
+          </header>
+		  <a class="facebook" href="https://www.facebook.com/commisionfeministe38/" rel="external noreferrer">@commisionfeministe38</a>
+		</article>
         <article class="vcard" data-hashtag="185 femi acti" data-vcard="contact_38">
           <header>
             <h2 class="fn org">CONTACT 38</h2>
-            <p>Dialogue entre les parents, les lesbiennes, gays, bi et trans, leurs familles, ami&middot;es et le milieu scolaire.</p>
+            <p>Dialogue entre les parents, les lesbiennes, gays, bi et trans, leurs familles, ami<span aria-hidden="true">&middot;</span>es et le milieu scolaire.</p>
           </header>
-          <a class="tel" href="tel:+33805696464">08 05 69 64 64</a>
-          <div class="hours">(ligne d'écoute : du lundi au jeudi de 17h à 21h&nbsp;; le vendredi de 15h à 20h&nbsp;; le samedi de 13h30 à 15h30)</div>
+          <div class="one-line"><a class="tel" href="tel:+33805696464">08 05 69 64 64</a> <span class="details">(ligne d'écoute : du lundi au jeudi de 17h à 21h, le vendredi de 15h à 20h, le samedi de 13h30 à 15h30)</span></div>
           <a class="email" href="mailto:38@asso-contact.org">38@asso-contact.org</a>
           <a class="url" href="http://www.asso-contact.org/38/" rel="external noreferrer">www.asso-contact.org/38</a>
           <a class="facebook" href="https://www.facebook.com/contact.isere" rel="external noreferrer">@contact.isere</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
-          <span class="street-address">8 rue sergent Bobillot</span>
+            <span class="street-address">8 rue sergent Bobillot</span>
             <span class="postal-code">38000</span>
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
-          <span class="TC">C</span> Foch Férié<br>
-          <span class="C3">C3</span> Marceau - Jardin des Vallons<br>
-          <span class="P25">25</span> Colonel Dumont
+          <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
+          <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+          <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
           </a>
           <div class="hours">Tous les vendredis soirs de 18h30 à 19h30</div>
         </article>
         <article class="vcard" data-hashtag="185 heal dmst" data-vcard="corevih">
           <header>
             <h2 class="fn org"><abbr title="Comité de coordination régional de la lutte contre les infections sexuellement transmissibles et le VIH">COREVIH Arc Alpin</abbr></h2>
-            <p>Regroupe et coordonne les acteur&middot;ices de la prévention, du dépistage, de la promotion de la santé, du soin et de l'accompagnement.</p>
+            <p>Regroupe et coordonne les acteur<span aria-hidden="true">&middot;</span>ices de la prévention, du dépistage, de la promotion de la santé, du soin et de l'accompagnement.</p>
           </header>
           <a class="tel" href="tel:+33476766162">04 76 76 61 62</a>
           <a class="email" href="mailto:coreviharcalpin@chu-grenoble.fr">coreviharcalpin@chu-grenoble.fr</a>
@@ -1378,7 +1408,7 @@
               <span class="locality">GRENOBLE</span>
                    <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
               <span class="street-address">8 rue sergent Bobillot<br/><span class="postal-code">38000</span>
-              <span class="locality">GRENOBLE</span></span></a><div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer"><span class="TC">C</span> Foch Férié<br/><span class="C3">C3</span> Marceau - Jardin des Vallons<br/><span class="P25">25</span> Colonel Dumont
+              <span class="locality">GRENOBLE</span></span></a><div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer"><span class="TC">C</span> <span class="busstop">Foch Férié</span><br/><span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br/><span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
                     </a></div><div class="hours">
                      Tous les vendredis soirs de 18h30 à 19h30
                    </div>-->
@@ -1398,7 +1428,7 @@
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184115,5.7148800" rel="external noreferrer">
           <span class="TE">E</span>
           <span class="P26">26</span>
-          <span class="P12">12</span> Condorcet
+          <span class="P12">12</span> <span class="busstop">Condorcet</span>
           </a>
           <div class="hours">Les 1<sup>ers</sup> vendredi du mois de 16h à 20h</div>
           <div class="info">
@@ -1418,29 +1448,27 @@
             et trans, et limiter ainsi les rapports de domination liés aux genres en son sein.
           </div>
         </article>
-        <article class="vcard" data-hashtag="righ inst pers 185" data-vcard="isabelle_jahier_deton">
+        <article class="vcard" data-hashtag="righ inst 185" data-vcard="dddfe">
           <header>
-            <h2 class="fn">
-              Isabelle JAHIER-DETON
+            <h2 class="org">
+              Déléguée Départementale aux Droits des Femmes et à l'Égalité de l'Isère (DDDFE)
             </h2>
-            <p>Déléguée Départementale aux Droits des Femmes et à l'Égalité de l'Isère (DDDFE).</p>
+            <p class="fn">Sarah MARCATO</p>
           </header>
+		  <a class="url" href="https://www.isere.gouv.fr/Actions-de-l-Etat/Droits-des-femmes-et-egalite/Delegation-aux-droits-des-femmes-et-a-l-egalite/La-delegation-droits-des-femmes-et-egalite">www.isere.gouv.fr/Actions-de-l-Etat/Droits-des-femmes-et-egalite/Delegation-aux-droits-des-femmes-et-a-l-egalite/La-delegation-droits-des-femmes-et-egalite</a>
           <a class="tel" href="tel:+33457386513">04 57 38 65 13</a>
-          <a class="tel" href="tel:+33612685150">06 12 68 51 50</a>
-          <a class="email" href="mailto:isabelle.jahier-deton@isere.gouv.fr">isabelle.jahier-deton@isere.gouv.fr</a>
+          <a class="tel" href="tel:+33637137809">06 37 13 78 09</a>
+          <a class="email" href="mailto:sarah.marcato@isere.gouv.fr">sarah.marcato@isere.gouv.fr</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.191822,5.735199" rel="external noreferrer">
-            <span class="extended-address">
-          DDCS<br>
-          Cité administrative – Bâtiment 2
-          </span>
-          <span class="street-address">1 rue Joseph Chanrion</span>
+            <span class="extended-address">DDCS<br>Cité administrative – Bâtiment 2</span>
+            <span class="street-address">1 rue Joseph Chanrion</span>
             <span class="postal-code">38000</span>
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.191822,5.735199" rel="external noreferrer">
           <span class="P16">13</span>
-          <span class="P23">16</span> Mutualité<br>
-          <span class="TB">B</span> Notre-Dame - Musée
+          <span class="P23">16</span> <span class="busstop">Mutualité</span><br>
+          <span class="TB">B</span> <span class="busstop">Notre-Dame - Musée</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="cult" data-vcard="degenree">
@@ -1462,9 +1490,9 @@
           <span class="TB">B</span>
           <span class="TC">C</span>
           <span class="TD">D</span>
-          <span class="TE">E</span> Gabriel Fauré<br>
+          <span class="TE">E</span> <span class="busstop">Gabriel Fauré</span><br>
           <span class="C7">C7</span>
-          <span class="P23">23</span> Bibliothèques Universitaires
+          <span class="P23">23</span> <span class="busstop">Bibliothèques Universitaires</span>
           </a>
           <div class="hours">Sur Radio Campus Grenoble (90.8 FM) de 19h à 20h un jeudi sur deux</div>
         </article>
@@ -1483,9 +1511,9 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
-          <span class="TC">C</span> Foch Férié<br>
-          <span class="C3">C3</span> Marceau - Jardin des Vallons<br>
-          <span class="P25">25</span> Colonel Dumont
+          <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
+          <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+          <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
           </a>
           <div class="info">Association grenobloise par et pour des personnes déviantes de genre, trans, inter, NB, trav, et les personnes en questionnement.</div>
         </article>
@@ -1504,9 +1532,9 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182734,5.711362" rel="external noreferrer">
-          <span class="P12">12</span> Abbé Grégoire<br>
+          <span class="P12">12</span> <span class="busstop">Abbé Grégoire</span><br>
           <span class="TC">C</span>
-          <span class="P26">26</span> Vallier - Docteur Calmette
+          <span class="P26">26</span> <span class="busstop">Vallier - Docteur Calmette</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="185 421" data-vcard="en_tout_genre">
@@ -1530,7 +1558,7 @@
           <span class="C5">C5</span>
           <span class="C7">C7</span>
           <span class="TB">B</span>
-          <span class="TC">C</span> Bibliothèques Universitaires
+          <span class="TC">C</span> <span class="busstop">Bibliothèques Universitaires</span>
           </a>
           <div class="info">Fait vivre le débat sur la place des femmes et des sexualités dans la société</div>
         </article>
@@ -1565,10 +1593,10 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.183975,5.705998" rel="external noreferrer">
-          <span class="C5">C5</span> Cémoi<br>
-          <span class="TA">A</span> Berriat-Le Magasin<br>
+          <span class="C5">C5</span> <span class="busstop">Cémoi</span><br>
+          <span class="TA">A</span> <span class="busstop">Berriat-Le Magasin</span><br>
           <span class="TC">C</span>
-          <span class="P26">26</span> Vallier-Catane
+          <span class="P26">26</span> <span class="busstop">Vallier-Catane</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="185 host" data-vcard="femmes_sdf">
@@ -1590,7 +1618,7 @@
           <span class="TA">A</span>
           <span class="TC">C</span>
           <span class="C4">C4</span>
-          <span class="P13">13</span> Chavant<br>
+          <span class="P13">13</span> <span class="busstop">Chavant</span><br>
           </a>
           <div class="hours">
             <ul>
@@ -1711,18 +1739,20 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
-          <span class="TC">C</span> Foch Férié<br>
-          <span class="C3">C3</span> Marceau - Jardin des Vallons<br>
-          <span class="P25">25</span> Colonel Dumont
+          <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
+          <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+          <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
           </a>
           <div class="hours">Tous les mercredis de 19h30 à 21h30</div>
           <div class="info">Une chorale LGBTI et Hétéro-friendly dans une ambiance conviviale. Répertoire très varié : de la Renaissance à la variété contemporaine, à quatre voix.</div>
         </article>
         <article class="vcard" data-hashtag="516 fami educ" data-vcard="grandir_egaux" id="g">
-          <!-- OK -->
           <header>
-            <h2 class="fn org">Grandir Égaux</h2>
-            <p>Accompagner les parents et professionnel&middot;les qui souhaitent éduquer des enfants libres et égaux – quelque soit leur sexe ou leur genre – du plus jeune âge à l’adolescence.</p>
+            <h2>
+			<span class="org">Grandir Égaux</span><br>
+			<span class="fn">(Noémie Ott)</span>
+			</h2>
+            <p>Accompagner les parents et professionnel<span aria-hidden="true">&middot;</span>les qui souhaitent éduquer des enfants libres et égaux – quelque soit leur sexe ou leur genre – du plus jeune âge à l’adolescence.</p>
           </header>
           <a class="email" href="mailto:noemie@grandiregaux.fr">noemie@grandiregaux.fr</a>
           <a class="url" href="https://grandiregaux.fr/" rel="external noreferrer">grandiregaux.fr</a>
@@ -1734,7 +1764,6 @@
           </div>
         </article>
         <article class="vcard" data-hashtag="185 lgbt cult acti" data-vcard="grenoble_fiertes">
-          <!-- OK -->
           <header>
             <h2 class="fn org">Grenoble Fiertés</h2>
             <p>Organisation d'événements culturels, militants et festifs autour des thématiques LGBTI, dont la Marche des Fiertés de Grenoble.</p>
@@ -1750,13 +1779,13 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
-          <span class="TC">C</span> Foch Férié<br>
-          <span class="C3">C3</span> Marceau - Jardin des Vallons<br>
-          <span class="P25">25</span> Colonel Dumont
+          <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
+          <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+          <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="185 aggr femi rese" data-vcard="grenoble_sans_relou">
-          <!-- OK -->
+          
           <header>
             <h2 class="fn org">Grenoble sans relou</h2>
             <p>Lutte contre le harcèlement de rue</p>
@@ -1765,7 +1794,7 @@
           <a class="facebook" href="https://www.facebook.com/GrenobleSansRelou" rel="external noreferrer">@GrenobleSansRelou</a>
         </article>
         <article data-hashtag="185 421 femi lgbt acti asso educ" data-vcard="inpulse_adelphie" id="i">
-          <!-- OK -->
+          
           <header>
             <h2>INPulse &amp; Adelphie</h2>
             <p>Association étudiante LGBT+ des écoles d’ingénieurs de l'INP.</p>
@@ -1802,9 +1831,9 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.181731,5.730450" rel="external noreferrer">
-          <span class="TA">A</span> Albert 1<sup>er</sup> de Belgique<br>
+          <span class="TA">A</span> <span class="busstop">Albert 1</span><sup>er</sup> de Belgique<br>
           <span class="TC">C</span>
-          <span class="P16">16</span> Gustave Rivet
+          <span class="P16">16</span> <span class="busstop">Gustave Rivet</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="053 aggr righ" data-vcard="isis">
@@ -1843,7 +1872,7 @@
               <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.169829,5.712224" rel="external noreferrer">
-            <span class="TE">E</span> <span class="C2">C2</span> <span class="P25">25</span> Louise Michel
+            <span class="P25">25</span> <span class="busstop">Louise Michel</span>
           </a>
           <div class="hours">Du lundi au vendredi de 10h à 17h</div>
           <div class="info">
@@ -1867,7 +1896,7 @@
         <article data-hashtag="femi righ 185 asso 140 397 544 563" data-vcard="lighe_droits_homme">
           <header>
             <h2 class="fn org">La Ligue des Droits de l'Homme</h2>
-            <p>Défense des droits des citoyen&middot;nes (atteintes aux droits des étranger&middot;es, aux droits des femmes, lutte contre le racisme et toutes les discriminations).</p>
+            <p>Défense des droits des citoyen<span aria-hidden="true">&middot;</span>nes (atteintes aux droits des étranger<span aria-hidden="true">&middot;</span>es, aux droits des femmes, lutte contre le racisme et toutes les discriminations).</p>
           </header>
           <a class="url" href="https://www.ldh-france.org/" rel="external noreferrer">www.ldh-france.org</a>
           <div class="card vcard">
@@ -1886,10 +1915,10 @@
               <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184583,5.724417" rel="external noreferrer">
-            <span class="P16">16</span> Caserne de Bonne<br>
+            <span class="P16">16</span> <span class="busstop">Caserne de Bonne</span><br>
             <span class="P12">12</span>
-            <span class="C3">C3</span> Championnet<br>
-            <span class="TC">C</span> Gustave Rivet
+            <span class="C3">C3</span> <span class="busstop">Championnet</span><br>
+            <span class="TC">C</span> <span class="busstop">Gustave Rivet</span>
             </a>
             <div class="hours">Permanence d'accueil et d'orientation : le jeudi de 17h à 19h</div>
           </div>
@@ -1939,9 +1968,9 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.181198,5.710091" rel="external noreferrer">
-          <span class="P12">12</span> Groupe Hospitalier Mutualiste<br>
-          <span class="TC">C</span> Vallier – Docteur Calmette<br>
-          <span class="P26">26</span> Vallier – Catane
+          <span class="P12">12</span> <span class="busstop">Groupe Hospitalier Mutualiste</span><br>
+          <span class="TC">C</span> <span class="busstop">Vallier </span>– Docteur Calmette<br>
+          <span class="P26">26</span> <span class="busstop">Vallier </span>– Catane
           </a>
         </article>
         <article class="vcard" data-hashtag="185 heal aggr gyne" data-vcard="maison_des_femmes">
@@ -2094,7 +2123,7 @@
         <article data-hashtag="185 psyo heal righ asso fami" data-vcard="maison_des_habitantes">
           <header>
             <h2>
-              Maison des Habitant&middot;es
+              Maison des Habitant<span aria-hidden="true">&middot;</span>es
             </h2>
             <p>
               Les MDH sont des équipements de proximité qui accueillent les résidents d’un secteur dans un cadre convivial pour leur proposer de s'impliquer dans des projets communs et pour leur offrir différentes prestations
@@ -2102,17 +2131,17 @@
             </p>
           </header>
           <div class="card vcard">
-            <h3 class="fn org">Maison des Habitant&middot;es Abbaye (Secteur 5)</h3>
+            <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es Abbaye (Secteur 5)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.179510,5.744936" rel="external noreferrer">
               <span class="street-address">1 place de la Commune de 1871</span>
               <span class="postal-code">38000</span>
               <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.179510,5.744936" rel="external noreferrer">
-            <span class="C5">C5</span> Saint-Augustin<br>
-            <span class="P13">13</span> Suzanne Noël - Les Bains<br>
-            <span class="P12">23</span> Jeanne d'Arc<br>
-            <span class="TD">D</span> Édouard Vaillant
+            <span class="C5">C5</span> <span class="busstop">Saint-Augustin</span><br>
+            <span class="P13">13</span> <span class="busstop">Suzanne Noël - Les Bains</span><br>
+            <span class="P12">23</span> <span class="busstop">Jeanne d'Arc</span><br>
+            <span class="TD">D</span> <span class="busstop">Édouard Vaillant</span>
             </a>
             <a class="tel" href="tel:+33476542627">04 76 54 26 27</a>
             <a class="email" href="mailto:mdh.abbaye-jouhaux@grenoble.fr">mdh.abbaye-jouhaux@grenoble.fr</a>
@@ -2135,7 +2164,7 @@
             </div>
           </div>
           <div class="card vcard">
-            <h3 class="fn org">Maison des Habitant&middot;es Anatole France (Secteur 3)</h3>
+            <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es Anatole France (Secteur 3)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.172520,5.707279" rel="external noreferrer">
               <span class="street-address">68 bis rue Anatole France</span>
               <span class="postal-code">38000</span>
@@ -2143,8 +2172,8 @@
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.172520,5.707279" rel="external noreferrer">
             <span class="C5">C5</span>
-            <span class="P12">12</span> Docteur Schweitzer<br>
-            <span class="TE">E</span> Alliés
+            <span class="P12">12</span> <span class="busstop">Docteur Schweitzer</span><br>
+            <span class="TE">E</span> <span class="busstop">Alliés</span>
             </a>
             <a class="tel" href="tel:+33476205390">04 76 20 53 90</a>
             <a class="email" href="mailto:mdh.anatole-france@grenoble.fr">mdh.anatole-france@grenoble.fr</a>
@@ -2170,7 +2199,7 @@
             </div>
           </div>
           <div class="card vcard">
-            <h3 class="fn org">Maison des Habitant&middot;es Capuche (Secteur 4)</h3>
+            <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es Capuche (Secteur 4)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.177276,5.726022" rel="external noreferrer">
               <span class="street-address">58 rue de Stalingrad</span>
               <span class="postal-code">38000</span>
@@ -2178,8 +2207,8 @@
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.177276,5.726022" rel="external noreferrer">
             <span class="C3">C3</span>
-            <span class="P16">16</span> Capuche<br>
-            <span class="TC">C</span> Foch - Ferrié
+            <span class="P16">16</span> <span class="busstop">Capuche</span><br>
+            <span class="TC">C</span> <span class="busstop">Foch - Ferrié</span>
             </a>
             <a class="tel" href="tel:+33476878074">04 76 87 80 74</a>
             <a class="email" href="mailto:mdh.capuche@grenoble.fr">mdh.capuche@grenoble.fr</a>
@@ -2194,7 +2223,7 @@
             </div>
           </div>
           <div class="card vcard">
-            <h3 class="fn org">Maison des Habitant&middot;es Centre Ville (Secteur 2)</h3>
+            <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es Centre Ville (Secteur 2)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.193678,5.733745" rel="external noreferrer">
               <span class="street-address">2 rue du Vieux Temple</span>
               <span class="postal-code">38000</span>
@@ -2203,7 +2232,7 @@
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.193678,5.733745" rel="external noreferrer">
             <span class="TB">B</span>
             <span class="P16">16</span>
-            <span class="F62">62</span> Notre-Dame - Musée<br>
+            <span class="F62">62</span> <span class="busstop">Notre-Dame - Musée</span><br>
             </a>
             <a class="tel" href="tel:+33476546753">04 76 54 67 53</a>
             <a class="email" href="mailto:mdh.centre-ville@grenoble.fr">mdh.centre-ville@grenoble.fr</a>
@@ -2225,7 +2254,7 @@
             </div>
           </div>
           <div class="card vcard">
-            <h3 class="fn org">Maison des Habitant&middot;es Chorier Berriat (Secteur 1)</h3>
+            <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es Chorier Berriat (Secteur 1)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.186386,5.711338" rel="external noreferrer">
               <span class="street-address">10 rue Henry Le Chatelier</span>
               <span class="postal-code">38000</span>
@@ -2234,7 +2263,7 @@
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.186386,5.711338" rel="external noreferrer">
             <span class="TA">A</span>
             <span class="TB">B</span>
-            <span class="P12">12</span> Saint-Bruno<br>
+            <span class="P12">12</span> <span class="busstop">Saint-Bruno</span><br>
             </a>
             <a class="tel" href="tel:+33476212909">04 76 21 29 09</a>
             <a class="email" href="mailto:mdh.chorier-berriat@grenoble.fr">mdh.chorier-berriat@grenoble.fr</a>
@@ -2272,17 +2301,17 @@
             </div>
           </div>
           <div class="card vcard">
-            <h3 class="fn org">Maison des Habitant&middot;es du Bois d'Artas (Secteur 2)</h3>
+            <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es du Bois d'Artas (Secteur 2)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.183309,5.721195" rel="external noreferrer">
               <span class="street-address">3 rue Augereau</span>
               <span class="postal-code">38000</span>
               <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.183309,5.721195" rel="external noreferrer">
-            <span class="C3">C3</span> Marceau - Jardin des Vallons<br>
-            <span class="P12">12</span> Championnet<br>
-            <span class="P25">25</span> Colonel Dumont<br>
-            <span class="TC">C</span> Foch - Ferrié
+            <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+            <span class="P12">12</span> <span class="busstop">Championnet</span><br>
+            <span class="P25">25</span> <span class="busstop">Colonel Dumont</span><br>
+            <span class="TC">C</span> <span class="busstop">Foch - Ferrié</span>
             </a>
             <a class="tel" href="tel:+33476170037">04 76 17 00 37</a>
             <a class="email" href="mailto:mdh.bois-dartas@grenoble.fr">mdh.bois-dartas@grenoble.fr</a>
@@ -2297,13 +2326,13 @@
             </div>
           </div>
           <div class="card vcard">
-            <h3 class="fn org">Maison des Habitant&middot;es Le Patio (Secteur 6)</h3>
+            <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es Le Patio (Secteur 6)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.163934,5.732640" rel="external noreferrer">
               <span class="street-address">97 galerie de l'Arlequin</span>
               <span class="postal-code">38000</span>
               <span class="locality">GRENOBLE</span>
             </a>
-            <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.163934,5.732640" rel="external noreferrer"> <span class="TA">A</span> Arlequin</a>
+            <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.163934,5.732640" rel="external noreferrer"> <span class="TA">A</span> <span class="busstop">Arlequin</span></a>
             <a class="tel" href="tel:+33476229210">04 76 22 92 10</a>
             <a class="email" href="mailto:mdh.lepatio@grenoble.fr">mdh.lepatio@grenoble.fr</a>
             <a class="url" href="https://www.grenoble.fr/lieu/395/137-maison-des-habitant-es-le-patio.htm" rel="external noreferrer">www.grenoble.fr/lieu/395/137-maison-des-habitant-es-le-patio.htm</a>
@@ -2314,7 +2343,7 @@
                 <li>Samedi : de 10h à 13h</li>
               </ul>
               <p>
-                <b>Horaires d'ouverture au public de l'accueil de la Maison des Habitant&middot;es Le Patio :</b>
+                <b>Horaires d'ouverture au public de l'accueil de la Maison des Habitant<span aria-hidden="true">&middot;</span>es Le Patio :</b>
               </p>
               <ul>
                 <li>Lundi, mardi, mercredi et vendredi : 8h30 à 12h15 et de 13h30 à 17h30</li>
@@ -2332,16 +2361,16 @@
             </div>
           </div>
           <div class="card vcard">
-            <h3 class="fn org">Maison des Habitant&middot;es les Baladins (Secteur 6)</h3>
+            <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es les Baladins (Secteur 6)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.162071,5.738440" rel="external noreferrer">
               <span class="street-address">31 place des Géants</span>
               <span class="postal-code">38000</span>
               <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.162071,5.738440" rel="external noreferrer">
-            <span class="P12">12</span> Les Géants<br>
+            <span class="P12">12</span> <span class="busstop">Les Géants</span><br>
             <span class="C4">C4</span>
-            <span class="C6">C6</span> Général de Gaulle
+            <span class="C6">C6</span> <span class="busstop">Général de Gaulle</span>
             </a>
             <a class="tel" href="tel:+33476333503">04 76 33 35 03</a>
             <a class="email" href="mailto:mdh.baladins@grenoble.fr">mdh.baladins@grenoble.fr</a>
@@ -2361,13 +2390,13 @@
             </div>
           </div>
           <div class="card vcard">
-            <h3 class="fn org">Maison des Habitant&middot;es Prémol (Secteur 6)</h3>
+            <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es Prémol (Secteur 6)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.163653,5.727776" rel="external noreferrer">
               <span class="street-address">7 rue Henry Duhamel</span>
               <span class="postal-code">38000</span>
               <span class="locality">GRENOBLE</span>
             </a>
-            <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.163653,5.727776" rel="external noreferrer"> <span class="C3">C3</span> Village Olympique</a>
+            <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.163653,5.727776" rel="external noreferrer"> <span class="C3">C3</span> <span class="busstop">Village Olympique</span></a>
             <a class="tel" href="tel:+33476090028">04 76 09 00 28</a>
             <a class="email" href="mailto:mdh.premol@grenoble.fr">mdh.premol@grenoble.fr</a>
             <a class="url" href="https://www.grenoble.fr/lieu/403/137-maison-des-habitant-es-premol.htm" rel="external noreferrer">www.grenoble.fr/lieu/403/137-maison-des-habitant-es-premol.htm</a>
@@ -2389,7 +2418,7 @@
             </div>
           </div>
           <div class="card vcard">
-            <h3 class="fn org">Maison des Habitant&middot;es Teisseire - Malherbe (Secteur 5)</h3>
+            <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es Teisseire - Malherbe (Secteur 5)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.171285,5.738913" rel="external noreferrer">
               <span class="street-address">110 avenue Jean Perrot</span>
               <span class="postal-code">38000</span>
@@ -2397,7 +2426,7 @@
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.171285,5.738913" rel="external noreferrer">
             <span class="C4">C4</span>
-            <span class="C5">C5</span> Teisseire
+            <span class="C5">C5</span> <span class="busstop">Teisseire</span>
             </a>
             <a class="tel" href="tel:+33476254963">04 76 25 49 63</a>
             <a class="email" href="mailto:mdh.teisseire-malherbe@grenoble.fr">mdh.teisseire-malherbe@grenoble.fr</a>
@@ -2443,11 +2472,11 @@
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.156871,5.718811" rel="external noreferrer">
           <span class="TA">A</span>
-          <span class="C6">C6</span> Essarts - La Butte
+          <span class="C6">C6</span> <span class="busstop">Essarts - La Butte</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="185 work fami" data-vcard="mampreneurs">
-          <!-- OK -->
+          
           <header>
             <h2 class="fn org">Mampreneurs Isère</h2>
             <p>Construire son propre modèle d'épanouissement entrepreneurial tout en étant mère.</p>
@@ -2465,9 +2494,12 @@
           <header>
             <h2 class="fn org">Mission égalité de l'Académie de Grenoble</h2>
             <p>
-              <span class="doubt">Manque informations</span>
+              Référente égalité académique : Myrtille GARDET<br>
+			  Chargée de mission : Clémentine MASSON
             </p>
           </header>
+		  <a class="url" href="https://www1.ac-grenoble.fr/article/egalite-entre-les-filles-et-les-garcons-121882" rel="external noreferrer">www1.ac-grenoble.fr/article/egalite-entre-les-filles-et-les-garcons-121882</a>
+		  <a class="email" href="mailto:mission.egalite@ac-grenoble.fr">mission.egalite@ac-grenoble.fr</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.188595,5.736734" rel="external noreferrer">
           <span class="street-address">7 place Bir Hakeim</span>
             <span class="postal-code">38000</span>
@@ -2488,7 +2520,7 @@
           <a class="facebook" href="https://www.facebook.com/NousToutes38" rel="external noreferrer">@NousToutes38</a>
         </article>
         <article class="vcard" data-hashtag="185" data-vcard="observatoire_iserois_parite">
-          <!-- OK -->
+          
           <header>
             <h2 class="fn org">
               <abbr title="Observatoire Isérois de la Parité">OIP</abbr>
@@ -2504,10 +2536,10 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184583,5.724417" rel="external noreferrer">
-          <span class="P16">16</span> Caserne de Bonne<br>
+          <span class="P16">16</span> <span class="busstop">Caserne de Bonne</span><br>
           <span class="P12">12</span>
-          <span class="C3">C3</span> Championnet<br>
-          <span class="TC">C</span> Gustave Rivet
+          <span class="C3">C3</span> <span class="busstop">Championnet</span><br>
+          <span class="TC">C</span> <span class="busstop">Gustave Rivet</span>
           </a>
           <div class="info">
             <ul>
@@ -2536,8 +2568,8 @@
             <span class="locality">GIÈRES</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.180134,5.790045">
-          <span class="P23">23</span> <span class="F59">59</span> Pont de Venon<br>
-          <span class="P14">14</span> <span class="P15">15</span> <span class="P23">23</span> <span class="F59">59</span> Edelweiss
+          <span class="F59">59</span> <span class="busstop">Pont de Venon</span><br>
+          <span class="F59">59</span> <span class="busstop">Edelweiss</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="work 185" data-vcard="reseau_olympe">
@@ -2554,10 +2586,10 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184583,5.724417" rel="external noreferrer">
-          <span class="P16">16</span> Caserne de Bonne<br>
+          <span class="P16">16</span> <span class="busstop">Caserne de Bonne</span><br>
           <span class="P12">12</span>
-          <span class="C3">C3</span> Championnet<br>
-          <span class="TC">C</span> Gustave Rivet
+          <span class="C3">C3</span> <span class="busstop">Championnet</span><br>
+          <span class="TC">C</span> <span class="busstop">Gustave Rivet</span>
           </a>
           <div class="hours">
             Rendez-vous les 2<sup>èmes</sup> vendredis du mois de 12h15 à 13h45 pour une rencontre informelle le temps d’un déjeuner ou d’un café au Mel's Café (2 place Gustave Rivet, <span class="postal-code">38000</span>
@@ -2579,11 +2611,10 @@
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.187608,5.712493" rel="external noreferrer">
           <span class="TA">A</span>
-          <span class="TB">A</span> Saint-Bruno
+          <span class="TB">A</span> <span class="busstop">Saint-Bruno</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="185 asso femi acti" data-vcard="osez_le_feminisme_38">
-          <!-- OK -->
           <header>
             <h2 class="fn org">Osez le féminisme 38</h2>
             <p>Promotion de l’égalité femmes-hommes et lutte pour supprimer toutes les formes de violences masculines contre les filles et les femmes.</p>
@@ -2599,32 +2630,10 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184583,5.724417" rel="external noreferrer">
-          <span class="P16">16</span> Caserne de Bonne<br>
+          <span class="P16">16</span> <span class="busstop">Caserne de Bonne</span><br>
           <span class="P12">12</span>
-          <span class="C3">C3</span> Championnet<br>
-          <span class="TC">C</span> Gustave Rivet
-          </a>
-        </article>
-        <article class="vcard" data-hashtag="psyo 185 aggr heal conj" data-vcard="passible" id="p">
-          <header>
-            <h2 class="fn org">Passible</h2>
-            <p>Centre de psychothérapie des auteur&middot;es de violences conjugales.</p>
-          </header>
-          <a class="tel" href="tel:+33689279210">06 89 27 92 10</a>
-          <a class="email" href="mailto:asso.passible@gmail.com">asso.passible@gmail.com</a>
-          <a class="url" href="https://www.passible.org/" rel="external noreferrer">www.passible.org</a>
-          <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.159823,5.734112" rel="external noreferrer">
-          <span class="street-address">25 avenue de Constantine</span>
-            <span class="postal-code">38100</span>
-            <span class="locality">GRENOBLE</span>
-          </a>
-          <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.159823,5.734112" rel="external noreferrer">
-          <span class="TA">A</span>
-          <span class="C3">C3</span>
-          <span class="C6">C6</span>
-          <span class="P12">12</span>
-          <span class="F65">65</span>
-          <span class="F67">67</span> Grand'place
+          <span class="C3">C3</span> <span class="busstop">Championnet</span><br>
+          <span class="TC">C</span> <span class="busstop">Gustave Rivet</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="185 cult asso drag" data-vcard="patriarchie">
@@ -2647,7 +2656,7 @@
           <span class="TA">A</span>
           <span class="TB">B</span>
           <span class="TE">E</span>
-          <span class="P26">26</span> Alsace-Lorraine
+          <span class="P26">26</span> <span class="busstop">Alsace-Lorraine</span>
           </a>
           <div class="info">
             Notre but est de créer une plateforme d’expression, de rencontre d’opinions, pour questionner ensemble la société contemporaine à travers la collaboration, la pratique culturelle et artistique, mais en rigolant un
@@ -2680,9 +2689,9 @@
               <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.186340,5.724349" rel="external noreferrer">
-            <span class="C3">C3</span> <span class="P12">12</span> Championnet<br>
-            <span class="P16">16</span> Caserne de Bonne<br>
-            <span class="C4">C4</span> <span class="C1">C1</span> Docteur Martin
+            <span class="P12">12</span> <span class="busstop">Championnet</span><br>
+            <span class="P16">16</span> <span class="busstop">Caserne de Bonne</span><br>
+            <span class="C1">C1</span> <span class="busstop">Docteur Martin</span>
             </a>
             <div class="hours">
               Horaires d'ouverture hors période estivale  :
@@ -2705,8 +2714,8 @@
               <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.178577,5.745256" rel="external noreferrer">
-              <span class="C5">C5</span> Saint-Augustin<br>
-			  <span class="P13">13</span> Suzanne Noël - Les Bains
+              <span class="C5">C5</span> <span class="busstop">Saint-Augustin</span><br>
+			  <span class="P13">13</span> <span class="busstop">Suzanne Noël - Les Bains</span>
             </a>
             <div class="hours">
               Uniquement sur rendez-vous. Vous pouvez nous appeler tous les jours, du lundi au jeudi de 9h-17h et le vendredi de 9h-16h.
@@ -2722,7 +2731,7 @@
               <span class="locality">ÉCHIROLLES</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.156872,5.718803" rel="external noreferrer">
-            <span class="TA">A</span> <span class="C6">C6</span> Essarts - La Butte
+            <span class="C6">C6</span> <span class="busstop">Essarts - La Butte</span>
             </a>
             <div class="hours">
               Consultations médicales et entretiens uniquement sur RDV :
@@ -2743,11 +2752,11 @@
               <span class="locality">VILLARD-BONNOT</span>
             </a>
 			<a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.ter.sncf.com/auvergne-rhone-alpes/se-deplacer/gares/lancey-87417501" rel="external noreferrer">
-			  <span class="TER">TER</span> gare Lancey
+			  <span class="TER">TER</span> <span class="busstop">gare Lancey</span>
 			</a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.238199,5.888170" rel="external noreferrer">
-              <span class="G2">G2</span> <span class="G3">G3</span> <span class="G6">G6</span> <span class="X02">X02</span> <span class="T86">86</span> <span class="L407">407</span> (Villard-Bonnot) La Mairie<br>
-              <span class="NVA">NVA</span> Lancey Gare
+              <span class="L407">407</span> <span class="busstop"> </span>(Villard-Bonnot) La Mairie<br>
+              <span class="NVA">NVA</span> <span class="busstop">Lancey Gare</span>
             </a>
             <div class="hours">
               Horaires des consultations médicales et entretiens :
@@ -2771,9 +2780,9 @@
                 <span class="locality">SAINT-EGRÈVE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.224051,5.688727" rel="external noreferrer">
-            <span class="P22">22</span> <span class="TE">E</span> Fiancey – Prédieu<br>
-			<span class="F60">60</span> Muret<br>
-			<span class="F56">56</span> Collège Chartreuse
+            <span class="TE">E</span> <span class="busstop">Fiancey </span>– Prédieu<br>
+			<span class="F60">60</span> <span class="busstop">Muret</span><br>
+			<span class="F56">56</span> <span class="busstop">Collège Chartreuse</span>
             </a>
             <div class="hours">
               <ul>
@@ -2794,7 +2803,7 @@
               <span class="locality">BOURGOIN-JALLIEU</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.ter.sncf.com/auvergne-rhone-alpes/se-deplacer/gares/bourgoin-jallieu-87723429" rel="external noreferrer">
-              <span class="TER">TER</span> Bourgoin-Jallieu
+              <span class="TER">TER</span> <span class="busstop">Bourgoin-Jallieu</span>
             </a>
             <div class="hours">
               <ul>
@@ -2828,7 +2837,7 @@
         <article class="vcard" data-hashtag="asso femi acti" data-vcard="plateforme_droits_femmes">
           <header>
             <h2 class="fn org">Plateforme des droits des femmes</h2>
-            <p>Collectif isérois regroupant les associations, partis politiques, syndicats et militant&middot;es se retrouvant dans les combats féministes.</p>
+            <p>Collectif isérois regroupant les associations, partis politiques, syndicats et militant<span aria-hidden="true">&middot;</span>es se retrouvant dans les combats féministes.</p>
           </header>
           <a class="email" href="mailto:pfdf38@gmail.com">pfdf38@gmail.com</a>
           <a class="facebook" href="https://www.facebook.com/PlateformeDDF38" rel="external noreferrer">@PlateformeDDF38</a>
@@ -2890,9 +2899,9 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.589984,5.276861" rel="external noreferrer">
-          <span class="TC">C</span> Foch Férié<br>
-          <span class="C3">C3</span> Marceau - Jardin des Vallons<br>
-          <span class="P25">25</span> Colonel Dumont
+          <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
+          <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+          <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
           </a>
           <div class="info">Des randonnées et activités de montagne tout au long de l’année, Des moments conviviaux, de la détente, de l’amitié...</div>
           <div class="hours">Un repas type auberge espagnole le 1<sup>er</sup> mardi du mois de 19h30 à 22h.</div>
@@ -2914,13 +2923,13 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.18210,5.73115" rel="external noreferrer">
-          <span class="TA">A</span> Albert 1er de Belgique<br>
+          <span class="TA">A</span> <span class="busstop">Albert 1er de Belgique</span><br>
           <span class="TA">A</span>
           <span class="TC">C</span>
           <span class="C4">C4</span>
-          <span class="P13">13</span> Chavant<br>
+          <span class="P13">13</span> <span class="busstop">Chavant</span><br>
           <span class="C4">C4</span>
-          <span class="P13">13</span> Driant<br>
+          <span class="P13">13</span> <span class="busstop">Driant</span><br>
           </a>
           <div class="hours">
             <ul>
@@ -2947,10 +2956,10 @@
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.186340,5.724349" rel="external noreferrer">
           <span class="C3">C3</span>
-          <span class="P12">12</span> Championnet<br>
-          <span class="P16">16</span> Caserne de Bonne<br>
+          <span class="P12">12</span> <span class="busstop">Championnet</span><br>
+          <span class="P16">16</span> <span class="busstop">Caserne de Bonne</span><br>
           <span class="C4">C4</span>
-          <span class="C1">C1</span> Docteur Martin
+          <span class="C1">C1</span> <span class="busstop">Docteur Martin</span>
           </a>
           <div class="info">
             Le réseau mariage forcé 38 a été créé en Isère fin 2007, afin d'accompagner les différentes personnes confrontées à un mariage forcé, qu'il soit réalisé ou prévu. Ce réseau isérois s'inscrit dans un réseau national
@@ -2961,7 +2970,7 @@
           </div>
         </article>
         <article class="vcard" data-hashtag="asso lgbt heal 185" data-vcard="rita">
-          <!-- OK -->
+          
           <header>
             <h2 class="fn org">
               <abbr title="Ressort Intersexe et Trans en Action">RITA</abbr>
@@ -2979,9 +2988,9 @@
               <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
-          <span class="TC">C</span> Foch Férié<br>
-          <span class="C3">C3</span> Marceau - Jardin des Vallons<br>
-          <span class="P25">25</span> Colonel Dumont
+          <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
+          <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+          <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
           </a>
           <div class="hours">
             <ul>
@@ -2993,8 +3002,7 @@
         <article class="vcard" data-hashtag="544 work aggr" data-vcard="rivhaj">
           <header>
             <h2 class="fn org">
-              RIVHAJ<br>
-              (Relais d'Insertion dans la Ville par l'Habitat des Adultes et des Jeunes)
+              <abbr title="Relais d'Insertion dans la Ville par l'Habitat des Adultes et des Jeunes">RIVHAJ</abbr>
             </h2>
             <p>Entretiens individuels et confidentiels information orientation hébergement temporaire accompagnement social intermédiation locative.</p>
           </header>
@@ -3028,7 +3036,7 @@
             <span class="locality">SAINT-MARTIN-D'HÈRES</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.168628,5.755912" rel="external noreferrer">
-          <span class="C6">C6</span> Zella Mehlis
+          <span class="C6">C6</span> <span class="busstop">Zella Mehlis</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="185 cont" data-vcard="sans_gametes" id="s">
@@ -3043,28 +3051,28 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.178571,5.745259" rel="external noreferrer">
-          <span class="C5">C5</span> Saint-Augustin<br>
-          <span class="P13">13</span> Suzanne Noël - Les Bains
+          <span class="C5">C5</span> <span class="busstop">Saint-Augustin</span><br>
+          <span class="P13">13</span> <span class="busstop">Suzanne Noël - Les Bains</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="185 aggr" data-vcard="sereines">
           <header>
-            <h2 class="fn org">Serein&middot;e&middot;s</h2>
-            <p>Sensibilisation et prévention des agressions sexistes, sexuelles et de genres en milieux festifs, pour en faire des espaces plus sûrs et égalitaires pour tou&middot;te&middot;s.</p>
+            <h2 class="fn org">Serein<span aria-hidden="true">&middot;</span>e<span aria-hidden="true">&middot;</span>s</h2>
+            <p>Sensibilisation et prévention des agressions sexistes, sexuelles et de genres en milieux festifs, pour en faire des espaces plus sûrs et égalitaires pour tou<span aria-hidden="true">&middot;</span>te<span aria-hidden="true">&middot;</span>s.</p>
           </header>
           <a class="email" href="mailto:serein-e-s@riseup.net">serein-e-s@riseup.net</a>
           <a class="url" href="https://www.serein-e-s.org/" rel="external noreferrer">www.serein-e-s.org</a>
           <a class="facebook" href="https://www.facebook.com/AssociationSerein.e.s" rel="external noreferrer">@AssociationSerein.e.s</a>
           <a class="instagram" href="https://www.instagram.com/serein.e.s" rel="external noreferrer">@serein.e.s</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.188790,5.708336" rel="external noreferrer">
-          <span class="street-address">146 cours Berriat</span>
+            <span class="street-address">146 cours Berriat</span>
             <span class="postal-code">38000</span>
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.188790,5.708336" rel="external noreferrer">
           <span class="TA">A</span>
-          <span class="C5">C5</span> Berriat-Le Magasin<br>
-          <span class="TB">B</span> Saint-Bruno
+          <span class="C5">C5</span> <span class="busstop">Berriat-Le Magasin</span><br>
+          <span class="TB">B</span> <span class="busstop">Saint-Bruno</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="319" data-vcard="sista">
@@ -3093,8 +3101,8 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.164187,5.721029" rel="external noreferrer">
-          <span class="P16">16</span> Beauvert<br>
-          <span class="C3">C3</span> Village Olympique
+          <span class="P16">16</span> <span class="busstop">Beauvert</span><br>
+          <span class="C3">C3</span> <span class="busstop">Village Olympique</span>
           </a>
           <div class="info">
             Jouer un rôle international dans la réhabilitation d'une partie des savoirs dits féminins par le biais des savoirs féministes , transmettre aux générations futures l'histoire universelle de la poésie en intégrant les
@@ -3119,9 +3127,9 @@
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.167951,5.729532" rel="external noreferrer">
           <span class="TA">A</span>
-          <span class="C5">C5</span> Malherbe<br>
+          <span class="C5">C5</span> <span class="busstop">Malherbe</span><br>
           <span class="P16">16</span>
-          <span class="C3">C3</span> Stalingrad-Alliés
+          <span class="C3">C3</span> <span class="busstop">Stalingrad-Alliés</span>
           </a>
           <div class="info">
             Établissement social d’accueil, d’écoute, d’Hébergement et d’accompagnement des femmes victimes de violences Aide et protection des femmes victimes de violences conjugales ou familiales « Vous êtes victimes de
@@ -3145,9 +3153,9 @@
             <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
-          <span class="TC">C</span> Foch Férié<br>
-          <span class="C3">C3</span> Marceau - Jardin des Vallons<br>
-          <span class="P25">25</span> Colonel Dumont
+          <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
+          <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+          <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
           </a>
           <div class="hours">Le 2<sup>ème</sup> mercredi de chaque mois de 18h30 à 20h30</div>
           <div class="info">
@@ -3171,10 +3179,10 @@
                <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184601,5.724440" rel="external noreferrer">
-          <span class="P16">16</span> Caserne de Bonne<br>
+          <span class="P16">16</span> <span class="busstop">Caserne de Bonne</span><br>
           <span class="P12">12</span>
-          <span class="C3">C3</span> Championnet<br>
-          <span class="TC">C</span> Gustave Rivet
+          <span class="C3">C3</span> <span class="busstop">Championnet</span><br>
+          <span class="TC">C</span> <span class="busstop">Gustave Rivet</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="169" data-vcard="les_soupapes">
@@ -3190,8 +3198,8 @@
             <span class="locality">FONTAINE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.187988,5.682138" rel="external noreferrer">
-          <span class="P20">20</span> Jean Prévost<br>
-          <span class="TA">A</span> Fontaine Hôtel de Ville - La Source
+          <span class="P20">20</span> <span class="busstop">Jean Prévost</span><br>
+          <span class="TA">A</span> <span class="busstop">Fontaine Hôtel de Ville - La Source</span>
           </a>
           <div class="hours">Permanences les lundis de 14h à 19h.</div>
           <div class="info">Des ateliers autour de la découverte de la mécanique automobile sont aussi organisés ponctuellement.</div>
@@ -3242,7 +3250,7 @@
               <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.178072,5.732525" rel="external noreferrer">
-		    <span class="TA">A</span> Mounier
+		    <span class="TA">A</span> <span class="busstop">Mounier</span>
 		  </a>
           <div class="hours">
             <ul>
@@ -3254,7 +3262,7 @@
             Il est préférable de prendre rendez-vous.
           </div>
           <div class="info">
-            Pour que chacun&middot;e apprennent à mieux vivre et ait une meilleure qualité de vie, des professionnels et des bénévoles vous apportent :
+            Pour que chacun<span aria-hidden="true">&middot;</span>e apprennent à mieux vivre et ait une meilleure qualité de vie, des professionnels et des bénévoles vous apportent :
             <ul>
               <li>soutien psychologique</li>
               <li>conseils diététiques</li>
@@ -3283,7 +3291,7 @@
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.202666,5.741533" rel="external noreferrer">
           <span class="P13">13</span>
-          <span class="TB">B</span> La Tronche Hôpital
+          <span class="TB">B</span> <span class="busstop">La Tronche Hôpital</span>
           </a>
         </article>
         <article class="vcard" data-hashtag="185" data-vcard="velorution_feministe_grenoble" id="v">
@@ -3307,9 +3315,9 @@
               <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
-            <span class="TC">C</span> Foch Férié<br>
-            <span class="C3">C3</span> Marceau - Jardin des Vallons<br>
-            <span class="P25">25</span> Colonel Dumont
+            <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
+            <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+            <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
           </a>
           <div class="hours">
             <ul>
@@ -3355,8 +3363,8 @@
               <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.193158,5.727449" rel="external noreferrer">
-            <span class="F40">40</span> Quai Stéphane Jay<br>
-            <span class="TB">B</span> <span class="F62">62</span> <span class="P16">16</span> Notre-Dame - Musée
+            <span class="F40">40</span> <span class="busstop">Quai Stéphane Jay</span><br>
+            <span class="P16">16</span> <span class="busstop">Notre-Dame - Musée</span>
           </a>
 		  <p><b>Boite Postale</b></p>
           <div class="adr">
