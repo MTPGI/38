@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/clamp*/
 @font-face {
   font-family: 'FontAwesome';
   src: url('fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), 
@@ -61,6 +62,18 @@ sup {
   vertical-align: baseline;
   top: -0.5em
 }
+small {
+  font-size: 90%
+}
+article header abbr {
+	border-bottom: none !important;
+	text-decoration: none
+}
+article header abbr[title]::after {
+	content: '(' attr(title) ')';
+	font-size: 90%;
+	display: block;
+}
 /* guillemets français */
 q::before { content: "\00ab\00a0" } 
 q::after { content: "\00a0\00bb" }
@@ -80,7 +93,7 @@ html {
   font-family: "Public Sans", "fira_sans", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   }
     body::after { /* preload */
-    content: url(img/sprite.png) url(img/logo.png) url(img/sprite2.png);
+    content: url(img/sprite.png) url(img/logo.png)
     }
     #container {
     width: 100%; height: 100vh; 
@@ -240,10 +253,12 @@ html {
 	  #text--resultats::after  {content:')'}
 	  
       main {
-	    margin:1vh max(2.25vw, 36px) 0; 
+	    margin: 1vh max(2.25vw, 36px) 0; 
       }
         article {
-        padding: 5px 0 9px 0;
+        /*padding: 5px 0 9px 0;*/
+		padding-top: .3rem;
+		padding-bottom: .6rem;
         background: linear-gradient(145deg, #e4e8fe, #f8f9ff);
         border-radius: 5px;
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
@@ -251,19 +266,15 @@ html {
 		transition: transform 1s ease;
 		position: absolute;
         }
+		  article header {
+			  
+		  }
 		  article header p {
-		  padding: 4px 13px;
 		  font-style: italic;
 		  font-weight: normal;
 		  font-size: 1em;
-		  margin: 0;
 		  }
-		  article p {
-			  margin-left: 13px
-		  }
-		  article > :where(div, a, h3) {
-			margin-right: 1.5rem;
-		  }
+
 	  main.flex {
 		display: flex;
 		flex-direction: row;
@@ -278,60 +289,79 @@ html {
 		flex:1 1 28vw;
 		position:relative;
 	  }
-	  @media screen and (max-width:940px) {
-		main.flex article {
-		  min-width: 380px
-		}
-	  }
-	  @media screen and (max-width:460px) {
-		main.flex article {
-		  min-width: unset;
-		  width: 100%
-		}
-	  }
-        article div:not(.card), article > a, article .card > a {
-        padding: 4px 13px 4px 38px
-        }
-		  article div.card {
-		  padding-top: 8px;
-		  padding-bottom: 8px;
-		  }
 		  div.card ~ div.card {
 		  border-top: 2px dashed #777;
 		  } 
-            article div:not(.card)::before, article > a::before, article .card > a:before {
+            article div:not(.card):not(.one-line)::before, 
+			.one-line a::before,
+			article > a::before, 
+			article .card > a:before {
             content: "";
             display: inline-block;
             position: absolute;
-            left: 13px;
             width: 1.1rem;
             height: 1.1rem;
-            margin-right: 5px;
-            transform: translateY(2px);
             max-width: 100%;
             background-size: 100%;
             background-image: url("img/sprite.png");
             }
 			article div a, article > a, article .card > a {
 			color: #0078A8;
-		    text-overflow: "\2026";
-		    overflow: hidden;
-		    display: block;
+		    
 		    }
 			article div a:hover, article > a:hover {color:inherit}
-				article div ul {
-				margin: 0; 
-				padding-left: 15px;
-				}
+		h2 {
+		  margin-top: .2rem;
+		  padding-bottom: .5rem;
+		  padding-left: 1rem;
+		  padding-right: 1rem	;
+		  border-bottom: 1px solid #777
+		}
+		.card {
+		  margin-top: .4rem;
+		  margin-bottom: .7rem
+		}
+		.tel, .email, .adr, .url, .bus, .time, .info, .hours, .acc,
+		.youtube, .soundcloud, .instagram, .twitter, .facebook, 
+		article p, article h3, .doubt {
+			display: block;
+			margin-top:.4rem;
+			margin-bottom:.4rem;	
+		}
+				
+		.tel, .email, .adr, .url, .bus, .time, .info, .hours, .acc,
+		.youtube, .soundcloud, .instagram, .twitter, .facebook {
+			padding-left: 2.5rem;
+			padding-right: .8rem;
+		}		
+		article p, article h3 {
+			padding-left: .8rem;
+			padding-right: .8rem;
+		}
+		.tel::before, .email::before, .adr::before, .url::before, .bus::before, .time::before, .info::before, .hours::before,
+		.acc::before, .youtube::before, .soundcloud::before, .instagram::before, .twitter::before, .facebook::before {
+			position: absolute;
+			left: .8rem;top:.2rem;
+			display: block;
+		}
+		ul, li {margin:0;padding:0}
+		article ul {
+			padding-left: .9rem ;
+		}
+		.one-line a, .one-line span {
+			display: inline-block
+		}
 		.doubt {
         color: #A00;
         display: block;
-		text-align:center
+		text-align:center;
         }
           .doubt::before {
-          content:"\26A0\FE0F\0020"
+            content:"\26A0\FE0F\0020";
           }
-		  
+		  a.bus {
+		  text-decoration:none
+		  }
 		  .bus span {
 		  display: inline-flex;  
 		  align-items: center; 
@@ -346,7 +376,10 @@ html {
 		  text-decoration: none
 		  }
           .adr .extended-address, .adr .street-address, .adr .post-office-box {
-			display:block
+		  display:block
+		  }
+		  .locality {
+		  text-transform: uppercase;
 		  }
 .acc img, .acc::before {background-position: 0 0} 
 .acti {background-position: 0 3.846154%}
@@ -356,10 +389,10 @@ html {
 .conv img, .conv::before {background-position:0 19.230769%}
 .cult {background-position:0 23.076923%} 
 .doc {background-position:0 26.923077%}
-.fb, .fb img, .fb::before {background-position:0 30.769231%} 
+.facebook, .facebook img, .facebook::before {background-position:0 30.769231%} 
 .heal {background-position:0 34.615385%}
 .host {background-position:0 38.461538%} 
-.ig, .ig img, .ig::before {background-position:0 42.307692%}
+.instagram, .instagram img, .instagram::before {background-position:0 42.307692%}
 .info img, .info::before {background-position:0 46.153846%} 
 .lng img, .lng::before {background-position:0 50.000000%}
 .adr img, .adr::before {background-position:0 53.846154%} 
@@ -369,32 +402,43 @@ html {
 .pers {background-position:0 69.230769%} .prix img, .prix::before  {background-position:0 73.076923%}
 .hours img, .hours::before {background-position:0 76.923077%} .sprt {background-position:0 80.769231%}
 .soli {background-position:0 84.615384%} .email img, .email::before {background-position:0 88.461538%}
-.tw img, .tw::before {background-position:0 92.307692%} .sc img, .sc::before {background-position:0 96.153846%}
-.yt img, .yt::before {background-position:0 100%}
+.twitter img, .twitter::before {background-position:0 92.307692%} 
+.soundcloud img, .soundcloud::before {background-position:0 96.153846%}
+.youtube img, .youtube::before {background-position:0 100%}
 
-.TA {background:#3376B8}	.TB {background:#479A45}	.TC {background:#C20078}	.TD {background:#DE9917}
-.TE {background:#533786}	.C1 {background:#FDEA00}	.C2 {background:#F1D04C}	.C3 {background:#DB9325}
-.C4 {background:#F3D000}	.C5 {background:#E5AD34}	.C6 {background:#FDEA00}	.C7 {background:#F3D92F}
+.TA {background:#3376B8}	.TB {background:#479A45}	.TC {background:#C20078}	.TD {background:#DE9917} .TE {background:#533786}	
+
+.C1 {background:#FDEA00}	.C2 {background:#F1D04C}	.C3 {background:#DB9325}    .C4 {background:#F3D000}	
+.C5 {background:#E5AD34}	.C6 {background:#FDEA00}	.C7 {background:#F3D92F}
+
 .P12 {background:#309c44}	.P13 {background:#49c5a5}	.P14 {background:#a7d14d}	.P15 {background:#5ec689}
 .P16 {background:#00ab4f}	.P19 {background:#5992ba}	.P20 {background:#50c7c2}	.P21 {background:#50c7c2}
-
 .P22 {background:#50c7c2}	.P23 {background:#2c9ac4}	.P25 {background:#77c547}	.P26 {background:#3e9ba8}
+
 .F40 {background:#CA5069}	.F41 {background:#CD74A5}	.F42 {background:#75649F}	.F43 {background:#8077AD}
 .F44 {background:#8C6EA4}	.F45 {background:#8077AD}	.F46 {background:#D790AC}	.F47 {background:#8077AD}
 .F48 {background:#C85369}	.F49 {background:#75649F}	.F50 {background:#9D3482}   .F51 {background:#C34D65}
-.F54 {background:#8D6DA7}	.F55 {background:#8C6EA4}	.F56 {background:#CB74A2}	.F60 {background:#9E3485}
-.F61 {background:#D88FAE}	.F62 {background:#9E3485}	.F63 {background:#9E3485}	.F64 {background:#9E3485}
-.F65 {background:#D88FAE}	.F66 {background:#7663A3}	.F67 {background:#94317D}	.F68 {background:#CA5069}
-.F70 {background:#7864A4}	.F71 {background:#CA5069}	.G2 {background:#f9b000}	.G3 {background:#69b42e}
-.G4 {background:#8a6452}	.G5 {background:#6c4796}	.G6 {background:#ffed00}	.NVG {background:#ed6c84}
+.F54 {background:#8D6DA7}	.F55 {background:#8C6EA4}	.F56 {background:#CB74A2}	.F59 {background:#D572A8}
+.F60 {background:#9E3485}   .F61 {background:#D88FAE}	.F62 {background:#9E3485}	.F63 {background:#9E3485}	
+.F64 {background:#9E3485}   .F65 {background:#D88FAE}	.F66 {background:#7663A3}	.F67 {background:#94317D}	
+.F68 {background:#CA5069}   .F70 {background:#7864A4}	.F71 {background:#CA5069}	
 
-.C1, .TD, .G2, .C2, .C5, .C4,  .C6, .C7, .P14, .P20, .P21, .F46, .F61, .F65 {color:#000 !important}
+.T86 {background:#f29549} .L407 {background:#722583}
+
+.G2 {background:#f9b000}	.G3 {background:#69b42e}    .G4 {background:#8a6452}	.G5 {background:#6c4796}	.G6 {background:#ffed00}	
+
+.NVA, .NVB, .NVC {background:#ed6c84}   .TER{background:#205DC9}
+
+.X01, .X02, .X03, .X08 {background:#9d1c6d}
+.C1, .TD, .G2, .C2, .C5, .C4,  .C6, .C7, .P14, .P20, .P21, .F46, .F61, .F65, .G6 {color:#000 !important}
 .TA, .TB, .TC, .TD, .TE, .C1, .C2, .C3, .C4, .C5, .C6, .C7 {border-radius: 50% !important}
+.NVA, .NVB, .NVC, .TER, .X01, .X02, .X03, .X08, .L407 { width: auto;padding: 0 14px;}
 
 .fa::before {
   display: inline-block;
-  font: normal normal normal 1rem FontAwesome;
-  font-size: inherit;
+  /*font: normal normal normal 1rem FontAwesome;
+  font-size: inherit;*/
+  font-family: FontAwesome;
   text-rendering: auto;
 }
 .fa-ig::before {content:"\f16d"}		.fa-search::before {content:"\f002"}
@@ -411,27 +455,24 @@ html {
 .fa-select::before{content:"\f247"}	
 .fa-vcard::before{content:"\f2c3"}
 .fa-vcard-alt::before{content:"\f2c2"}
-
+.fa-qrcode {font-size:1.5rem !important} .fa-qrcode::before {content:"\f029"}
 		
 	  h2, .desc {
-	  padding: 4px 13px;
+	  /*padding: 4px 13px;*/
 	  }
 	  h2 {
-	  margin: 0 0 5px 0;
+	  /*margin: 0 0 5px 0;*/
 	  text-align: center;
 	  font-size: 1.2rem;
-	  font-weight:bold;
-	  border-bottom: 1px solid #777
+	  font-weight: bold;
+	  
 	  }
 	  h3 {
-	  margin: 0;
-	  padding-left: 15px;
-	  padding-right: 15px;
-	  font-size: inherit;
-	  font-weight:bold
+	  font-size: 1.05rem;
+	  font-weight: bold
 	  }
 	  h3 span {
-		display:none
+		display: none
 	  }
       #link--to-top {
       position: fixed; display: none;
@@ -447,6 +488,8 @@ html {
       }
       #link--to-top:hover {background: #fefefe}
       #link--to-top:active {transform: translateY(2px)}
+
+/*** MODALE ***/
 
 #modale {
   display: none;
@@ -488,7 +531,42 @@ html {
     transition: opacity .5s;
   pointer-events: none;
 }
-
+#modale #qr-code {
+    position: absolute;
+    right: 100%;
+	top: 0;
+    padding: 20px; 
+  background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 8px;
+  display: none;
+}
+.visible {
+  display: block !important
+}
+.hide {
+  display: none !important
+}
+@media screen and (max-width:940px) {
+  main.flex article {
+   min-width: 380px
+  }
+}
+@media screen and (max-width:460px) {
+  main.flex article {
+   min-width: unset;
+   max-width: unset;
+   width: 100%;
+   flex: unset
+  }
+  main.flex {
+    margin: 1vh 5px 0;
+  }
+  #modale {
+    right: 0;
+    top: 0
+  }
+}
 /*** DARK THEME ***/
 @media (prefers-color-scheme: dark) {
   /* FONDS */
@@ -522,7 +600,7 @@ html {
 	border-bottom-width: 1px;
 	margin-left: -1px
   }
-  header {
+  .container > header {
 	border-bottom-width: 1px
   }
   article {
@@ -533,7 +611,7 @@ html {
 	box-shadow: none
   }
   /* COULEUR TEXTE */
-  article div a {
+  article a, article .card a, article .one-line a {
 	color: #8cdeff
   }
   body, details div, details div a {
@@ -543,10 +621,10 @@ html {
     color: #333
   }
   /* IMAGES */
-  header h1 img {
-	filter: invert(5%)
+  #container > header h1 img {
+	filter: none
   }
-  .tel img {
+  .tel::before {
 	filter: invert(1)
   }
 }
@@ -586,7 +664,7 @@ html {
     color-adjust: exact !important; 
     print-color-adjust: exact !important
   }
-  article div::before, .bus span {
+  article div::before, article a::before, .bus span {
 	/* pour les passer en niveau de gris */  
 	filter: grayscale(1);
   }
@@ -605,10 +683,10 @@ html {
 	text-decoration:none !important;
 	color: black !important
   }
-  .fb a, .ig a, .tw a, .sc a, .yt a {
+  .facebook a, .instagram a, .twitter a, .soundcloud a, .youtube a {
 	font-size:0
   }
-  .fb a::after, .ig a::after, .tw a::after, .sc a::after, .yt a::after {
+  .facebook a::after, .instagram a::after, .twitter a::after, .soundcloud a::after, .youtube a::after {
 	content:attr(href);
 	font-size: 1rem
   }
