@@ -499,8 +499,6 @@ window.addEventListener("load", () => {
 });
 
 window.addEventListener("resize", debounce(correctHeight, 500));
-window.addEventListener("beforeprint", handleBeforePrint);
-window.addEventListener("afterprint", handleAfterPrint);
 document.addEventListener("touchstart", handleTouchOrHover);
 document.addEventListener("mouseover", handleTouchOrHover);
 document.addEventListener("click", handleClick);
