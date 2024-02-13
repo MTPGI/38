@@ -13,19 +13,13 @@
   --vh: 1vh;
   --base-blue: hsl(210, 94.29%, 86.27%);
   --base-purple: hsl(270, 89.47%, 92.55%);
-  
-  --H: 228.67; --S: 92%; --L: 85.29%;
-  --lighterdarker: 10%;
-  --degree: 30;
-  --comp-color: hsl(calc(var(--H) + 180), var(--S), var(--L));
-  --base-color: hsl(var(--H),var(--S), var(--L));
-  --desat-color: hsl(var(--H), 0%, var(--L));
-  --darker-color: hsl(var(--H),var(--S), calc(var(--L) - var(--lighterdarker)));
-  --lighter-color: hsl(var(--H),var(--S), calc(var(--L) + var(--lighterdarker)));
-  --adj-color-1: hsl(calc(var(--H) + 120), var(--S), var(--L));
-  --adj-color-2: hsl(calc(var(--H) + 240), var(--S), var(--L));
-  --ana-color-1: hsl(calc(var(--H) - var(--degree)), var(--S), var(--L));
-  --ana-color-2: hsl(calc(var(--H) + var(--degree)), var(--S), var(--L));
+ 
+  --body-bg: linear-gradient(45deg, #8ec5fc, #e0c3fc) fixed;
+  --head-bg: #d3dcfd linear-gradient(45deg, #bbdcfd, #ecdbfd) fixed;
+  --text-clr: #333;
+  --link-clr: #0078A8;
+  --nav-bg: #d3dcfd linear-gradient(45deg, #bbdcfd, #ecdbfd) fixed;
+  --about-bg: #f8f9ff
 }
 *, *::before, *::after {
   box-sizing: border-box;
@@ -98,8 +92,8 @@ html {
   width: 100vw; height: 100vh;
   overflow: hidden;
   line-height: 1.3;
-  color: #333;
-  background: linear-gradient(45deg, #8ec5fc, #e0c3fc) fixed;
+  color: var(--text-clr);
+  background: var(--body-bg);
   font-family: "Public Sans", "fira_sans", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   }
     body::after { /* preload */
@@ -116,7 +110,7 @@ html {
       height: 10vh;
       }
       #container > header {
-      background: #d3dcfd linear-gradient(45deg, #bbdcfd, #ecdbfd) fixed;
+      background: var(--head-bg);
       transition: background 1s ease;
       user-select: none;
       z-index: 2;
@@ -209,7 +203,7 @@ html {
       width: 100%;
       margin-bottom: 1vh;
       white-space: nowrap;
-	  background: #d3dcfd linear-gradient(45deg, #bbdcfd, #ecdbfd) fixed;
+	  background: var(--nav-bg);
       box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
       transition: background 1s ease;
       user-select: none;
@@ -286,19 +280,19 @@ html {
 		  list-style: none;
 		  height: 100%;
 		  display: flex;
-         align-items: center;
-         justify-content: center;
+          align-items: center;
+          justify-content: center;
 		  cursor: pointer;
 		  padding-top: 8px;
 		  padding-bottom: 8px;
 		  }
-          details  {
+          details#apropos {
           width: 100%; height:100%;
           }
-		  details[open] {
-		    background: #f8f9ff
+		  details#apropos[open] {
+		    background: var(--about-bg)
 		  }
-		  details > div {
+		  details#apropos > div {
 		  position: absolute;
 		  top: 100%; right:0;
 		  padding: 15px;
@@ -308,16 +302,16 @@ html {
 		  border-bottom:  1px solid  #C4BAD7;
 		  background: linear-gradient(to top, #e4e8fe, #f8f9ff);
 		  }
-            details > div a {
+            details#apropos > div a {
             display: block;
             text-decoration: none;
-            color: #333;
+            color: var(--text-clr);
             margin-bottom: .7rem;
             }
-			details > div a i {
+			details#apropos > div a i {
 			margin-right: 5px;
 			}
-            details > div a:hover {
+            details#apropos > div a:hover {
             text-decoration: underline
             }
 /* <nav> END */		
@@ -374,9 +368,7 @@ html {
 		flex:1 1 28vw;
 		position:relative;
 	  }
-		  div.card ~ div.card {
-		  border-top: 2px dashed #777;
-		  } 
+
             article div:not(.card):not(.one-line)::before, 
 			.one-line a::before,
 			article > a::before, 
@@ -391,7 +383,7 @@ html {
             background-image: url("img/sprite.png");
             }
 			article div a, article > a, article .card > a {
-			color: #0078A8;
+			color: var(--link-clr);
 		    
 		    }
 			article div a:hover, article > a:hover {color:inherit}
@@ -399,25 +391,31 @@ html {
 		  margin-top: .2rem;
 		  padding-bottom: .5rem;
 		  padding-left: 1rem;
-		  padding-right: 1rem	;
+		  padding-right: 1rem;
 		  border-bottom: 1px solid #777
 		}
 		.card {
-		  margin-top: .4rem;
-		  margin-bottom: .7rem
+		  border-top: 2px dashed #777;
 		}
+
 		.tel, .email, .adr, .url, .bus, .time, .info, .hours, .acc,
-		.youtube, .soundcloud, .instagram, .twitter, .facebook, 
+		.youtube, .soundcloud, .instagram, .twitter, .facebook, .one-line,
 		article p, article h3, .doubt {
 			display: block;
-			margin-top:.4rem;
-			margin-bottom:.4rem;	
+			margin-top: .4rem;
+			margin-bottom: .4rem
 		}
-				
+		.card *:last-child, .article *:last-child {
+			
+		}
 		.tel, .email, .adr, .url, .bus, .time, .info, .hours, .acc,
 		.youtube, .soundcloud, .instagram, .twitter, .facebook, .one-line {
 			padding-left: 2.5rem;
 			padding-right: .8rem;
+		}
+		:where(.tel, .email, .adr, .url, .bus, .time, .info, .hours, .acc,
+		.youtube, .soundcloud, .instagram, .twitter, .facebook, .one-line, header, .card):has(+ .card) {
+			padding-bottom: .3rem
 		}
 		.one-line a::before {
 			left: -1.6rem
@@ -425,6 +423,9 @@ html {
 		.one-line a, .one-line span {
 			display: inline;
 			padding-left: 0;
+		}
+		.one-line > * {
+			padding-right: 0;
 		}
 		article p, article h3 {
 			padding-left: .8rem;
@@ -666,11 +667,19 @@ html {
 /*** DARK THEME ***/
 @media (prefers-color-scheme: dark) {
   /* FONDS */
-  body { 
-    background: #323436 linear-gradient(45deg, #232526, #414345) fixed
+  :root {
+	--body-bg:  #323436 linear-gradient(45deg, #232526, #414345) fixed;
+	--head-bg:  #333;
+	--text-clr: #fefefe;
+	--link-clr: #8cdeff;
+	--nav-bg: #333;
+    --about-bg: #333
   }
-  h1, nav div {
-	background: #333
+  body { 
+    background: var(--body-bg);
+  }
+  nav div {
+	background: var(--nav-bg)
   }
   nav > div:hover {
     background: #F5F8FF
@@ -696,8 +705,9 @@ html {
 	border-bottom-width: 1px;
 	margin-left: -1px
   }
-  .container > header {
-	border-bottom-width: 1px
+  #container > header {
+	border-bottom-width: 1px;
+	background: var(--head-bg);
   }
   article {
 	box-shadow: #eee 0 0 2px, 
@@ -708,7 +718,7 @@ html {
   }
   /* COULEUR TEXTE */
   article a, article .card a, article .one-line a {
-	color: #8cdeff
+	color: var(--link-clr)
   }
   body, details div, details div a {
 	color: #fefefe
@@ -805,4 +815,45 @@ html {
 	margin-bottom: 1rem;
 	border: 2px solid #555 !important
   }
+  .card {
+	break-inside: avoid
+  }
 }
+
+
+
+
+ /* THEME BUTTON */
+      #theme-toggle {
+        appearance: none;
+      }
+      #theme-toggle + label {
+      position: absolute;
+      top: 1vh; right: 1vh;
+      width: 56px; height: 30px;
+      background: #ffffff;
+      border: 2px solid #333; border-radius: 20px;
+      cursor: pointer;
+	  transition: all 2s;
+	  overflow: hidden;
+      }
+      #theme-toggle + label::after {
+      content: "";
+      position: absolute;
+      height: 20px; width: 20px;
+      box-shadow: none;
+      background-color: #fca823;
+	  top: 3px; left: 3px;
+      border-radius: 50%;
+      transition: all 2s
+      }
+	  .dark-theme #theme-toggle + label{
+      background: #15181f; 
+      border: 2px solid #fff; 
+      }
+      .dark-theme #theme-toggle + label::after{
+      top: -5px; left: 20px; 
+      background: transparent; 
+      box-shadow: 8px 8px #3197b7; 
+      }
+      
