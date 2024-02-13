@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- <a (.+?)<\/a> ?<span>\((.+?)\)<\/span> -->
 <html lang="fr-FR" dir="ltr">
   <head>
     <meta charset="utf8" />
@@ -34,6 +35,11 @@
           <span class="sr-only">Ressources féministe et queer de Grenoble et de l'Isère.</span>
           <img src="img/logo.png" alt="Logo" />
         </h1>
+		<!--<a href="./aide.html" target="_self" id="need-help">
+		  <span class="shadow"></span>
+		  <span class="edge"></span>
+		  <span class="front">j'ai besoin d'aide</span>
+		</a>-->
       </header>
       <nav>
         <div>
@@ -44,7 +50,7 @@
             <option value="asso">Associations</option>
             <option value="cont">Contraception</option>
             <option value="cult">Culturel / Artistique</option>
-            <option value="dmst">Dépistage MST / IST</option>
+            <option value="mst">Dépistage MST / IST</option>
             <option value="drag">Drag king/queen/queer</option>
             <option value="righ">Droits, Justice</option>
             <option value="educ">Éducation</option>
@@ -52,20 +58,23 @@
             <option value="evnt">Évènements</option>
             <option value="fami">Famille</option>
             <option value="femi">Féminisme</option>
+			<option value="gyne">Gynécologie</option>
             <option value="host">Hébergement</option>
             <option value="inst">Institution</option>
             <option value="ivg">IVG</option>
             <option value="phon">Ligne téléphonique</option>
+			<option value="lesb">Lesbiennes</option>
             <option value="lgbt">LGBTQI+</option>
             <option value="matr">Maternité</option>
+			<option value="migr">Migration, asile, réfugiées</option>
             <option value="mine">Mineur<span aria-hidden="true">&middot;</span>es et Enfants</option>
             <option value="pmi">Protection Maternelle Infantile (PMI)</option>
             <option value="acti">Politique / activisme / militantisme</option>
-            <option value="rese">Réseaux sociaux</option>
+            <option value="rs">Réseaux sociaux</option>
             <option value="heal">Santé</option>
             <option value="sprt">Sport</option>
             <option value="tran">Transidentité</option>
-            <option value="ptds">Travail du sexe</option>
+            <option value="tds">Travail du sexe</option>
             <option value="aggr">Violences, agressions</option>
           </select>
         </div>
@@ -74,10 +83,12 @@
           <label for="select--ville" class="sr-only">Choix d'une ville pour restreindre les résultats</label>
           <select id="select--ville">
             <option selected value="">FILTRER PAR VILLE</option>
+            <option value="007">Ampuis</option>
             <option value="027">Barraux</option>
             <option value="034">Beaurepaire</option>
-            <option value="052">Bourg-d'Oisans</option>
+            <option value="052">Le Bourg-d'Oisans</option>
             <option value="053">Bourgoin-Jallieu</option>
+			<option value="087">Chasse-sur-Rhône</option>
             <option value="130">La Côte-Saint-André</option>
             <option value="138">Crémieu</option>
             <option value="140">Crolles</option>
@@ -87,7 +98,7 @@
             <option value="170">Fontanil-Cornillon</option>
             <option value="179">Gières</option>
             <option value="185">Grenoble</option>
-            <option value="226">Mens</option>
+			<option value="193">L'Isle-d'Abeau</option>
             <option value="226">Mens</option>
             <option value="229">Meylan</option>
             <option value="242">Monestier de Clermont</option>
@@ -103,7 +114,6 @@
             <option value="412">Saint-Laurent-du-Pont</option>
             <option value="416">Saint-Marcellin</option>
             <option value="421">Saint-Martin-d'Hères</option>
-            <!--<option value="486">Seyssins</option>-->
             <option value="509">La Tour du Pin</option>
             <option value="516">La Tronche</option>
             <option value="517">Tullins</option>
@@ -121,23 +131,6 @@
           <label for="select--AZ" class="sr-only">Aller directement à une lettre de l'alphabet</label>
           <select id="select--AZ">
             <option selected value="">ABC&#x2026;</option>
-            <option value="a">A</option>
-            <option value="b">B</option>
-            <option value="c">C</option>
-            <option value="d">D</option>
-            <option value="e">E</option>
-            <option value="f">F</option>
-            <option value="g">G</option>
-            <option value="i">I</option>
-            <option value="m">M</option>
-            <option value="n">N</option>
-            <option value="o">O</option>
-            <option value="q">Q</option>
-            <option value="r">R</option>
-            <option value="s">S</option>
-            <option value="t">T</option>
-            <option value="u">U</option>
-            <option value="v">V</option>
           </select>
         </div>
         <!--
@@ -174,7 +167,7 @@
 	  
 	  
 	  
-        <article class="vcard" data-hashtag="asso" data-vcard="afei" id="a">
+        <article class="vcard" data-keyword="asso" data-vcard="afei">
           <header>
             <h2 class="fn org">
               <abbr title="Association des Femmes Élues de l’Isère">AFÉI</abbr>
@@ -185,10 +178,10 @@
           <a class="tel" href="tel:+33476631056">04 76 63 10 56</a>
           <a class="email" href="mailto:contact@afei38.fr">contact@afei38.fr</a>
           <a class="url" href="https://www.afei38.fr/" rel="external noreferrer">www.afei38.fr</a>
-          <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.189459,5.735359" rel="external noreferrer">
-              <span class="street-address">2 ter rue Joseph Fourier</span>
-              <span class="postal-code">38000</span>
-              <span class="locality">GRENOBLE</span>
+          <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.189459,5.735359" target="_self" rel="external noreferrer">
+            <span class="street-address">2 ter rue Joseph Fourier</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu" href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.189459,5.735359" rel="external noreferrer">
             <span class="P16">16</span> <span class="busstop">Mutualité</span><br>
@@ -198,7 +191,7 @@
             <span class="TB">B</span> <span class="busstop">Sainte-Claire - Les Halles</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="asso 185 educ" data-vcard="affdu">
+        <article class="vcard" data-keyword="asso,educ" data-vcard="affdu">
           <header>
             <h2 class="fn org">
               <abbr title="Association Française des Femmes Diplômées de l’Université">AFFDU</abbr>
@@ -207,8 +200,12 @@
           </header>
           <a class="email" href="mailto:affdu-grenoble@int-evry.fr">affdu-grenoble@int-evry.fr</a>
           <a class="url" href="https://www.associationdesfemmesdiplomees.fr/" rel="external noreferrer">www.associationdesfemmesdiplomees.fr</a>
+		  <a class="facebook" href="https://www.facebook.com/AFFDU.Grenoble/" rel="external noreferrer">@AFFDU.Grenoble</a>
+		  <div class="adr">
+			<span class="locality">GRENOBLE</span>
+		  </div>
         </article>
-        <article class="vcard" data-hashtag="acti femi" data-vcard="ag_feministe_38">
+        <article class="vcard" data-keyword="acti,femi" data-vcard="ag_feministe_38">
           <header>
             <h2 class="fn org">AG Féministe 38</h2>
             <p>
@@ -216,12 +213,17 @@
               internationale pour le droit des femmes).
             </p>
           </header>
+		  <a class="email" href="mailto:agfeministe38@protonmail.com">agfeministe38@protonmail.com</a>
           <a class="instagram" href="https://www.instagram.com/agfeministe_38" rel="external noreferrer">@agfeministe_38</a>
+		  <a class="url" href="https://www.ulule.com/caisse-de-greve-ag-feministe" rel="external noreferrer">www.ulule.com/caisse-de-greve-ag-feministe</a>
+		  <div class="adr">
+			<span class="locality">GRENOBLE</span>
+		  </div>
           <div class="info">
             En non-mixité femmes et minorités de genre.
           </div>
         </article>
-        <article class="vcard" data-hashtag="185 heal dmst asso cont" data-vcard="aides_caarud">
+        <article class="vcard" data-keyword="heal,mst,asso,cont" data-vcard="aides_caarud">
           <header>
             <h2 class="fn org">AIDES Grenoble – CAARUD</h2>
             <p>Lieux d'écoute, de parole et de prévention sur le SIDA et sur les infections sexuellement transmissibles ; informations IVG.</p>
@@ -249,7 +251,7 @@
             </ul>
           </div>
         </article>
-        <article class="vcard" data-hashtag="053 host aggr" data-vcard="alpa">
+        <article class="vcard" data-keyword="host,aggr" data-vcard="alpa">
           <header>
             <h2 class="fn org">ALPA (Fondation Boissel)</h2>
             <p>Hébergement d'urgence et accueil de jour pour les femmes victime de violence.</p>
@@ -260,10 +262,10 @@
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.584854,5.272334" rel="external noreferrer">
               <span class="extended-address">ALPA - Tétras-Lyre</span><span class="street-address">17 avenue des Alpes</span>
               <span class="postal-code">38300</span>
-              <span class="locality">BOURGOIN JALLIEU</span>
+              <span class="locality">BOURGOIN-JALLIEU</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185 ptds" data-vcard="amicale_du_nid">
+        <article class="vcard" data-keyword="tds" data-vcard="amicale_du_nid">
           <header>
             <h2 class="fn org">L’Amicale du Nid</h2>
             <p>
@@ -290,7 +292,7 @@
             </ul>
           </div>
         </article>
-        <article class="vcard" data-hashtag="acti 185 aggr sprt femi" data-vcard="ancrage">
+        <article class="vcard" data-keyword="acti,aggr,sprt,femi" data-vcard="ancrage">
           <header>
             <h2 class="fn org">Ancrage (ex ASSPA)</h2>
             <p>Association de prévention des violences proposant des stages d'autodéfense.</p>
@@ -312,7 +314,7 @@
           </a>
           <div class="hours">Mardi, mercredi et jeudi de 10h00 à 17h00</div>
         </article>
-        <article class="vcard" data-hashtag="185 asso fami lgbt" data-vcard="apgl">
+        <article class="vcard" data-keyword="asso,fami,lgbt" data-vcard="apgl">
           <header>
             <h2 class="fn org"><abbr title="Association des Parents et futurs parents Gays et Lesbiens">APGL</abbr></h2>
             <p>Organisation d'activités d'information et de partage d'expériences autour de l'homoparentalité.</p>
@@ -338,7 +340,7 @@
             l’Homoparentalité, en France et à l‘international et a pour objectif principal de faire cesser les discriminations dont les familles et leurs enfants sont les premières victimes.
           </div>
         </article>
-        <article class="vcard" data-hashtag="185 asso educ" data-vcard="apmst">
+        <article class="vcard" data-keyword="asso,educ" data-vcard="apmst">
           <header>
             <h2 class="fn org">
               <abbr title="Association pour la Parité dans les Métiers Scientifiques et Techniques">APMST</abbr>
@@ -360,12 +362,12 @@
           <h3>Siège social</h3>
           <div class="adr">
               <span class="extended-address">LNCMI CNRS</span>
-            <span class="post-office-box">BP 166</span>
+              <span class="post-office-box">BP 166</span>
               <span class="postal-code">38042</span>
               <span class="locality">GRENOBLE CEDEX 9</span>
           </div>
         </article>
-        <article class="vcard" data-hashtag="185 ptds" data-vcard="althea">
+        <article class="vcard" data-keyword="tds,host" data-vcard="althea">
           <!-- A VERIFIER -->
           <header>
             <h2 class="fn org">L'Appart – ALTHEA</h2>
@@ -397,7 +399,7 @@
             </ul>
           </div>
         </article>
-        <article class="vcard" data-hashtag="asso aggr righ" data-vcard="apress">
+        <article class="vcard" data-keyword="asso,aggr,righ" data-vcard="apress">
           <header>
             <h2 class="fn org">APRESS - FRANCE VICTIMES 38</h2>
             <p>Activités : information | information juridique</p>
@@ -414,22 +416,23 @@
           <span class="street-address">43 rue Victor Hugo</span>
             <span class="postal-code">38200</span>
             <span class="locality">VIENNE</span>
-          </a>
-          <p>Autres permanences : Vienne, Villefontaine, L'Isle d'Abeau, Roussillon, Chasse-sur-Rhône, Ampuis.</p>
+          </a>									 <!-- A AJOUTER AUX FILTRES DE VILLE -->
+          <p>Autres permanences : <span class="locality">Villefontaine</span>, <span class="locality">L'Isle-d'Abeau</span>, <span class="locality">Roussillon</span>, <span class="locality">Chasse-sur-Rhône</span>, <span class="locality">Ampuis</span>.</p>
           <div class="hours">Du lundi au vendredi : de 9h00 à 17h00</div>
         </article>
-        <article class="vcard" data-hashtag="work asso" data-vcard="l_autre_cercle">
+		<!--
+        <article class="vcard" data-keyword="work,asso" data-vcard="autre_cercle">
           <header>
             <h2 class="fn org">L'Autre cercle</h2>
             <p>Association de lutte contre les discriminations liées à l’orientation sexuelle et à l’identité de genre dans le monde du travail.</p>
           </header>
           <a class="tel" href="tel:+33680284467">06 80 28 44 67</a>
           <a class="email" href="mailto:info.rhonealpes@autrecercle.org">info.rhonealpes@autrecercle.org</a>
-          <a class="url" href="https://www.autrecercle.org/region/rhone-alpes" rel="external noreferrer">www.autrecercle.org/region/rhone-alpes</a>
+          <a class="url" href="https://autrecercle.org/rhone-alpes/" rel="external noreferrer">autrecercle.org/rhone-alpes</a>
           <a class="facebook" href="https://www.facebook.com/autrecercle.rhonealpes" rel="external noreferrer">@autrecercle.rhonealpes</a>
           <a class="twitter" href="https://www.twitter.com/autrecerclera" rel="external noreferrer">@autrecerclera</a>
-        </article>
-        <article class="vcard" data-hashtag="185" data-vcard="balance_ton_bar">
+        </article>-->
+        <article class="vcard" data-keyword="" data-vcard="balance_ton_bar">
           <header>
             <h2 class="fn org">Balance ton bar Grenoble</h2>
             <p>Reçoit et partage des témoignages d’agressions au sein des bars.</p>
@@ -437,8 +440,11 @@
           <a class="email" href="mailto:balancetonbargrenoble@gmail.com">balancetonbargrenoble@gmail.com</a>
           <a class="url" href="https://balancetonbar.com/" rel="external noreferrer">balancetonbar.com</a>
           <a class="instagram" href="https://www.instagram.com/balance_ton_bar_grenoble" rel="external noreferrer">@balance_ton_bar_grenoble</a>
+          <div class="adr">
+            <span class="locality">GRENOBLE</span>
+          </div>	
         </article>
-        <article class="vcard" data-hashtag="185 heal" data-vcard="bien_etre_pour_elles">
+        <article class="vcard" data-keyword="heal" data-vcard="bien_etre_pour_elles">
           <header>
             <h2 class="fn org">Bien-être pour elles</h2>
             <p>Écoute, soutien, accompagnement individuel de femmes en grande précarité vers l’autonomie et la sécurité alimentaire et physique.</p>
@@ -456,7 +462,7 @@
           <span class="TE">E</span> <span class="busstop">Alliés</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185 heal" data-vcard="bien_naitre_et_grandir">
+        <article class="vcard" data-keyword="heal" data-vcard="bien_naitre_et_grandir">
           <header>
             <h2 class="fn org">Bien naître et grandir</h2>
             <p>Association de parents. Informer, former et échanger sur la naissance, l’accouchement, la parentalité, le maternage proximal et la santé holistique.</p>
@@ -477,7 +483,7 @@
           <span class="C1">C1</span> <span class="busstop">Grenoble Hôtel de Ville</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="asso 185" data-vcard="bon_sang">
+        <article class="vcard" data-keyword="asso " data-vcard="bon_sang">
           <header>
             <h2 class="fn org">Bon Sang !</h2>
             <p>Faire évoluer les mœurs autour des règles. Ateliers de confection de protection périodiques, jeux et sensibilisation dans les collèges.</p>
@@ -506,7 +512,7 @@
             </ul>
           </div>
         </article>
-        <article class="vcard" data-hashtag="185 righ aggr" data-vcard="bureau_aide_aux_victimes">
+        <article class="vcard" data-keyword="righ,aggr" data-vcard="bureau_aide_aux_victimes">
           <header>
             <h2 class="fn org">Bureau d'aide aux victimes</h2>
             <p>Mise à disposition de meubles pour personnes sans ressources, notamment les femmes victimes de violences conjugales.</p>
@@ -530,7 +536,7 @@
           <span class="P12">12</span> <span class="busstop">Verlaine</span>
           </a>
         </article>
-        <article data-hashtag="185 544 053 heal" data-vcard="cegidd" id="c">
+        <article			   data-keyword="heal,mst" data-vcard="cegidd">
           <header>
             <h2>
               <abbr title="Centre Gratuit d'Information, de Dépistage et de Diagnostic">CeGIDD</abbr>
@@ -586,7 +592,7 @@
             </div>
           </div>
         </article>
-        <article class="vcard" data-hashtag="185" data-vcard="centre_sante_baladins">
+        <article class="vcard" data-keyword="heal" data-vcard="centre_sante_baladins">
           <header>
             <h2 class="fn org">Centre de santé Baladins-Géants</h2>
             <p>Médecine généraliste et soins infirmiers sans dépassement d'honoraires.</p>
@@ -609,7 +615,7 @@
             </ul>
           </div>
         </article>
-        <article class="vcard" data-hashtag="185 asso lgbt" data-vcard="centre_lgbti_grenoble">
+        <article class="vcard" data-keyword="asso,lgbt" data-vcard="centre_lgbti_grenoble">
           <header>
             <h2 class="fn org">Centre LGBTI de Grenoble</h2>
             <p>Collectif d'associations qui lutte pour l'égalité des droits, la visibilité des luttes, et contre l'exclusion et la discrimination envers les personnes LGBTI.</p>
@@ -636,7 +642,7 @@
             Caserne de Bonne et accessible PMR, sont conçus pour accueillir des activités militantes et conviviales.
           </div>
         </article>
-        <article data-hashtag="heal 052 170 416 545 130 151 185 421 548 140 269 516 562 314 517 563 169 412" data-vcard="centres_medicaux_psychologiques">
+        <article 			   data-keyword="heal,psy" data-vcard="centres_medicaux_psychologiques">
           <header>
             <h2>Centres Médicaux Psychologiques (CMP)</h2>
             <p>Institutions médicales proposant généralement des parcours de soin psychiatriques, psychologiques et infirmiers gratuits.</p>
@@ -646,7 +652,7 @@
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.059245,6.030811" rel="external noreferrer">
               <span class="extended-address">HLM <q>Prè des Roches</q> - Bâtiment A</span><span class="street-address">276 rue de Belledonne</span>
               <span class="postal-code">38520</span>
-              <span class="locality">BOURG-D'OISANS</span>
+              <span class="locality">LE BOURG-D'OISANS</span>
             </a>
             <a class="tel" href="tel:+33476802286">04 76 80 22 86</a>
             <div class="hours">Ouvert du mardi au jeudi de 9h à 17h</div>
@@ -656,7 +662,7 @@
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.255256,5.661896" rel="external noreferrer">
               <span class="extended-address">Le hameau des Poètes</span><span class="street-address">7 allée Charles Baudelaire</span>
               <span class="postal-code">38120</span>
-              <span class="locality">LE FONTANIL-CORNILLON</span>
+              <span class="locality">FONTANIL-CORNILLON</span>
             </a>
             <a class="tel" href="tel:+33456588755">04 56 58 87 55</a>
             <div class="hours">Ouvert tous les jours de 9h à 17h</div>
@@ -837,7 +843,7 @@
             <div class="hours">Ouvert tous les jours de 9h à 17h</div>
           </div>
         </article>
-        <article data-hashtag="053 185 169 242 317 185 151 421 185 052 421 229 315 344 316 516 heal" data-vcard="centres_planification_departementaux">
+        <article 			   data-keyword="heal,mst,cont,ivg" data-vcard="centres_planification_departementaux">
           <header>
             <h2>Centres de planification départementaux</h2>
             <p>
@@ -902,7 +908,7 @@
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.589936,5.2769" rel="external noreferrer">
               <span class="street-address">14 place Albert Schweitzer</span>
               <span class="postal-code">38300</span>
-              <span class="locality">BOURGOIN JALLIEU</span>
+              <span class="locality">BOURGOIN-JALLIEU</span>
             </a>
           </div>
           <div class="card vcard">
@@ -934,12 +940,12 @@
             </a>
           </div>
           <div class="card vcard">
-            <h3 class="fn org"><span>Centre de planification - </span> Pont de Claix</h3>
+            <h3 class="fn org"><span>Centre de planification - </span> Le Pont-de-Claix</h3>
             <a class="tel" href="tel:+33476298650">04 76 29 86 50</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.127919,5.697414" rel="external noreferrer">
               <span class="street-address">27 avenue Antoine Girard</span>
               <span class="postal-code">38800</span>
-              <span class="locality">LE PONT DE CLAIX</span>
+              <span class="locality">LE PONT-DE-CLAIX</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.127919,5.697414" rel="external noreferrer">
             <span class="P25">25</span> <span class="busstop">Irène Joliot-Curie</span><br>
@@ -1012,7 +1018,7 @@
                 <span class="extended-address">Maison médicale – 1<sup>er</sup> étage</span>
                 <span class="street-address">44 avenue Jean-Baptiste Gautier</span>
                 <span class="postal-code">38520</span>
-                <span class="locality">BOURG D’OISANS</span>
+                <span class="locality">LE BOURG-D'OISANS</span>
             </a>
           </div>
           <div class="card vcard">
@@ -1021,7 +1027,7 @@
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.193078,5.75947" rel="external noreferrer">
                 <span class="street-address">180 rue de la Piscine</span>
                 <span class="postal-code">38400</span>
-                <span class="locality">SAINT MARTIN D'HÈRES</span>
+                <span class="locality">SAINT-MARTIN-D'HÈRES</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.056959,6.028826" rel="external noreferrer">
               <span class="TD">D</span> <span class="busstop">Les Taillées </span>– Universités<br>
@@ -1082,7 +1088,7 @@
               <span class="extended-address">Immeuble pré-cateland</span>
               <span class="street-address">41 A boulevard Victor Hugo</span>
               <span class="postal-code">38110</span>
-              <span class="locality">LA TOUR DU PIN</span>
+              <span class="locality">LA TOUR-DU-PIN</span>
             </a>
             <a class="tel" href="tel:+33476975344">04 76 97 53 44</a>
           </div>
@@ -1105,7 +1111,7 @@
               <span class="postal-code">38650</span>
               <span class="locality">MONESTIER DE CLERMONT</span>
             </a>
-            <div class="one-line"><a class="tel" href="tel:+33476298650">04 76 29 86 50</a> <span>(CPEF Pont de Claix)</span></div>
+            <div class="one-line"><a class="tel" href="tel:+33476298650">04 76 29 86 50</a> <span>(CPEF Pont-de-Claix)</span></div>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Agathe-Pontcharra</h3>
@@ -1130,20 +1136,20 @@
             <a class="tel" href="tel:+33476327854">04 76 32 78 54</a>
           </div>
           <div class="card vcard">
-            <h3 class="fn org"><span>Centre de planification - </span>Pont de Chéruy</h3>
+            <h3 class="fn org"><span>Centre de planification - </span>Pont-de-Chéruy</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.7493424,5.1800142" rel="external noreferrer">
               <span class="street-address">66 rue de la République</span>
               <span class="postal-code">38230</span>
-              <span class="locality">PONT DE CHÉRUY</span>
+              <span class="locality">PONT-DE-CHÉRUY</span>
             </a>
             <a class="tel" href="tel:+33472939075">04 72 93 90 75</a>
           </div>
           <div class="card vcard">
-            <h3 class="fn org"><span>Centre de planification - </span>Pont de Claix</h3>
+            <h3 class="fn org"><span>Centre de planification - </span>Pont-de-Claix</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.1278656,5.6976287" rel="external noreferrer">
               <span class="street-address">27 avenue Antoine Girard</span>
               <span class="postal-code">38800</span>
-              <span class="locality">PONT DE CLAIX</span>
+              <span class="locality">LE PONT-DE-CLAIX</span>
             </a>
             <a class="tel" href="tel:+33476298650">04 76 29 86 50</a>
           </div>
@@ -1206,12 +1212,12 @@
             <div class="one-line"><a href="tel:+33481340052" class="tel">04 81 34 00 52</a> <span>(le mercredi)</span></div>
           </div>
           <div class="card vcard">
-            <h3 class="fn org"><span>Centre de planification - </span>Villard de Lans</h3>
+            <h3 class="fn org"><span>Centre de planification - </span>Villard-de-Lans</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.0747271,5.5557732" rel="external noreferrer">
               <span class="extended-address">Maison du territoire</span>
               <span class="street-address">150 impasse Meillarot</span>
               <span class="postal-code">38250</span>
-              <span class="locality">VILLARD DE LANS</span>
+              <span class="locality">VILLARD-DE-LANS</span>
             </a>
             <a class="tel" href="tel:+33631449031">06 31 44 90 31</a>
             <div class="one-line"><a class="tel" href="tel:+33476269740">04 76 26 97 40</a> <span>(CPEF de Fontaine)</span></div>
@@ -1224,7 +1230,7 @@
               <span class="postal-code">38220</span>
               <span class="locality">VIZILLE</span>
             </a>
-            <div class="one-line"><a class="tel" href="tel:+33476298650">04 76 29 86 50</a> <span>(CPEF Pont de Claix)</span></div>
+            <div class="one-line"><a class="tel" href="tel:+33476298650">04 76 29 86 50</a> <span>(CPEF Le Pont-de-Claix)</span></div>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Voiron</h3>
@@ -1241,12 +1247,12 @@
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.393492,5.265568" rel="external noreferrer">
               <span class="street-address">3 avenue de verdun</span>
               <span class="postal-code">38260</span>
-              <span class="locality">LA CÔTE SAINT ANDRÉ</span>
+              <span class="locality">LA CÔTE-SAINT-ANDRÉ</span>
             </a>
             <a class="tel" href="tel:+33675274175">06 75 27 41 75</a>
           </div>
         </article>
-        <article class="vcard" data-hashtag="185 cult" data-vcard="la_chorageuse">
+        <article class="vcard" data-keyword="cult" data-vcard="chorageuse">
           <header>
             <h2 class="fn org">La Chorageuse</h2>
             <p>Chorale féministe.</p>
@@ -1268,7 +1274,7 @@
             Accueil des nouvelleaux chaque 1<sup>er</sup> dimanche du mois à 18h.
           </div>
         </article>
-        <article class="vcard" data-hashtag="185 righ fami" data-vcard="cidff">
+        <article class="vcard" data-keyword="righ,fami" data-vcard="cidff">
           <header>
             <h2 class="fn org">
               <abbr title="Centre d'Information sur les Droits des Femmes et des Familles">CIDFF</abbr>
@@ -1296,7 +1302,7 @@
             Boissieux. Cité des Familles 3 rue de Belgrade
           </div>
         </article>
-		<article class="vcard" data-hashtag="psyo 185 aggr heal conj" data-vcard="codase">
+		<article class="vcard" data-keyword="psyo,aggr,heal" data-vcard="codase">
           <header>
             <h2 class="fn org">
 			  CODASE-<abbr title="Centre de Soin et d'Accompagnement des Auteur(e)s de Violences Intra-familiales en Isère">CSAAVI</abbr>
@@ -1318,28 +1324,27 @@
 		    <span class="TA">A</span> <span class="busstop">Malherbe</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185" data-vcard="coin_des_lgbt">
+        <article class="vcard" data-keyword="rs,lgbt" data-vcard="coin_des_lgbt">
           <header>
             <h2 class="fn org">Le coin des LGBT Grenoble</h2>
             <p>Informations militantes, groupe Discord, petites annonces.</p>
           </header>
           <a class="instagram" href="https://www.instagram.com/lecoindeslgbt.grenoble" rel="external noreferrer">@lecoindeslgbt.grenoble</a>
+		  <div class="adr">
+		    <span class="locality">GRENOBLE</span>
+		  </div>
         </article>
-        <article class="vcard" data-hashtag="185" data-vcard="collages_feministes_grenoble">
+        <article class="vcard" data-keyword="" data-vcard="collages_feministes_grenoble">
           <header>
             <h2 class="fn org">Collages Féministes Grenoble</h2>
             <p>Collectif intersectionnel de collages urbains.</p>
           </header>
           <a class="instagram" href="https://www.instagram.com/collages_feministes_grenoble" rel="external noreferrer">@collages_feministes_grenoble</a>
+		  <div class="adr">
+		    <span class="locality">GRENOBLE</span>
+		  </div>
         </article>
-        <article class="vcard" data-hashtag="185 cult" data-vcard="collectif_samovar">
-          <header>
-            <h2 class="fn org">Collectif Samovar</h2>
-            <p>Collectif LGBTQIA+ féministe favorisant l’expression artistique dans la bienveillance.</p>
-          </header>
-          <a class="instagram" href="https://www.instagram.com/collectif.samovar" rel="external noreferrer">@collectif.samovar</a>
-        </article>
-        <article class="vcard" data-hashtag="asso lgbt 185" data-vcard="commission_asile_lgbti">
+        <article class="vcard" data-keyword="asso,lgbt,migr" data-vcard="commission_asile_lgbti">
           <header>
             <h2 class="fn org">Commission Asile et Exil du Centre LGBTI</h2>
             <p>Soutien et convivialité pour les personnes en demande d’asile pour LGBTI-phobie.</p>
@@ -1364,13 +1369,16 @@
           </div>
           <div class="info">La commission aide notamment à la préparation des entretiens OFPRA et CNDA.</div>
         </article>
-        <article data-hashtag="185 femi acti" data-vcard="commission_feministe_campus">
+        <article class="vcard" data-keyword="femi,acti" data-vcard="commission_feministe_campus">
 		  <header>
             <h2 class="fn org">Commission féministe du campus de Grenoble</h2>
           </header>
 		  <a class="facebook" href="https://www.facebook.com/commisionfeministe38/" rel="external noreferrer">@commisionfeministe38</a>
+		  <div class="adr">
+		    <span class="locality">GRENOBLE</span>
+		  </div>
 		</article>
-        <article class="vcard" data-hashtag="185 femi acti" data-vcard="contact_38">
+        <article class="vcard" data-keyword="femi,acti" data-vcard="contact_38">
           <header>
             <h2 class="fn org">CONTACT 38</h2>
             <p>Dialogue entre les parents, les lesbiennes, gays, bi et trans, leurs familles, ami<span aria-hidden="true">&middot;</span>es et le milieu scolaire.</p>
@@ -1391,7 +1399,7 @@
           </a>
           <div class="hours">Tous les vendredis soirs de 18h30 à 19h30</div>
         </article>
-        <article class="vcard" data-hashtag="185 heal dmst" data-vcard="corevih">
+        <article class="vcard" data-keyword="heal,mst" data-vcard="corevih">
           <header>
             <h2 class="fn org"><abbr title="Comité de coordination régional de la lutte contre les infections sexuellement transmissibles et le VIH">COREVIH Arc Alpin</abbr></h2>
             <p>Regroupe et coordonne les acteur<span aria-hidden="true">&middot;</span>ices de la prévention, du dépistage, de la promotion de la santé, du soin et de l'accompagnement.</p>
@@ -1402,18 +1410,76 @@
           <a class="facebook" href="https://www.facebook.com/coreviharcalpin" rel="external noreferrer">@coreviharcalpin</a>
           <a class="twitter" href="https://www.twitter.com/COREVIH_Alpin" rel="external noreferrer">@COREVIH_Alpin</a>
           <a class="youtube" href="https://www.youtube.com/channel/UCQXA8x4R2CrqUf07p8bhy_Q" rel="external noreferrer">COREVIH Arc Alpin Alpes sans sida</a>
-          <!---
+          
+		   <!---
+			COREVIH :
+		  
+			Centre Départemental de Santé
+			23 avenue Albert 1er de Belgique
+			GRENOBLE
+			Tel : 04.76.12.12.85
+
+			Maison de Territoire de la Porte des Alpes
+			18 avenue Frédéric Dard
+			38 Bourgoin Jallieu	
+			Tel : 04.26.73.05.08
+
+			?
+			10 rue Albert Thomas
+			Tel : 04.81.34.00.50
+			VIENNE
+		 
             CHU GRENOBLE - Hôpital de Jour
-              <span class="postal-code">38043</span>
+              
+          <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
+			  <span class="postal-code">38043</span>
               <span class="locality">GRENOBLE</span>
-                   <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
-              <span class="street-address">8 rue sergent Bobillot<br/><span class="postal-code">38000</span>
-              <span class="locality">GRENOBLE</span></span></a><div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer"><span class="TC">C</span> <span class="busstop">Foch Férié</span><br/><span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br/><span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
-                    </a></div><div class="hours">
-                     Tous les vendredis soirs de 18h30 à 19h30
-                   </div>-->
+			  
+              <span class="street-address">8 rue sergent Bobillot</span>
+			  <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
+			 </a>
+			  <a class="bus" href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
+			    <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
+			    <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+			    <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
+              </a></div>
+			  <div class="hours">Tous les vendredis soirs de 18h30 à 19h30</div>
+			  
+			  
+		https://www.alpesansida.fr/corevih-arc-alpin/
+
+Président Pr Olivier Epaulard - CHU Grenoble Alpes
+Vice-Présidente Sylvie Vanderschilt - Sida Info Service
+
+Bureau
+Marc Brisson - IREPS Auvergne-Rhône-Alpes
+Dr Emilie Piet (co-optée) - CH Annecy Genevois
+Rafael Curry - AIDES Savoies
+Paul-Emmanuel Devez - AIDES 38
+Dr Marie-Noëlle Hilleret (co-optée) - CHU Grenoble Alpes
+Dr Gaelle Vareilles - CeGIDD Conseil Départemental Isère
+Dr Alexie Bosch - CH Métropôle Savoie
+Une équipe opérationnelle
+Coordinatrice Anne Monnet-Hoel - amonnethoel@chu-grenoble.fr
+Chargée de projets Elodie Guillois - eguillois@chu-grenoble.fr
+Secrétaire Cyrine Collu - secretariatcorevih@chu-grenoble.fr		
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  -->
         </article>
-        <article class="vcard" data-hashtag="185" data-vcard="la_cyclique">
+        <article class="vcard" data-keyword="" data-vcard="cyclique">
           <header>
             <h2 class="fn org">La Cyclique</h2>
             <p>Permanences de réparation de vélo en mixité choisie</p>
@@ -1435,8 +1501,8 @@
             Atelier sans homme cisgenre. Un espace d’auto-réparation entre femmes, trans, intergenres, ou personnes s’auto-identifiant différemment mais autrement qu’un homme cisgenre*. Pendant les permanences, on se dépoussière
             de nos stéréotypes genrés, on se remonte les manches et on met les mains dans le cambouis pour réparer nos biclous !
           </div>
-        </article>
-        <article class="vcard" data-hashtag="cult" data-vcard="dalidark" id="d">
+        </article><!--
+        <article class="vcard" data-keyword="cult" data-vcard="dalidark" >
           <header>
             <h2 class="fn org">Dalidark</h2>
             <p>Promouvoir la musique et autres créations réalisées par des femmes, lesbiennes ou trans.</p>
@@ -1447,8 +1513,8 @@
             ce but. Les soirées organisées peuvent être mixtes ou non-mixtes suivant les thèmes abordés. Le collectif est lui non-mixte, afin de faciliter une auto-organisation et des moments d'échange entre femmes, lesbiennes
             et trans, et limiter ainsi les rapports de domination liés aux genres en son sein.
           </div>
-        </article>
-        <article class="vcard" data-hashtag="righ inst 185" data-vcard="dddfe">
+        </article>-->
+        <article class="vcard" data-keyword="righ,inst " data-vcard="dddfe">
           <header>
             <h2 class="org">
               Déléguée Départementale aux Droits des Femmes et à l'Égalité de l'Isère (DDDFE)
@@ -1471,7 +1537,7 @@
           <span class="TB">B</span> <span class="busstop">Notre-Dame - Musée</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="cult" data-vcard="degenree">
+        <article class="vcard" data-keyword="cult" data-vcard="degenree">
           <header>
             <h2 class="fn org">DégenréE</h2>
             <p>Émission de radio féministe.</p>
@@ -1496,7 +1562,7 @@
           </a>
           <div class="hours">Sur Radio Campus Grenoble (90.8 FM) de 19h à 20h un jeudi sur deux</div>
         </article>
-        <article class="vcard" data-hashtag="185" data-vcard="deviations">
+        <article class="vcard" data-keyword="" data-vcard="deviations">
           <header>
             <h2 class="fn org">Déviations</h2>
             <p>Association grenobloise par et pour des personnes déviantes de genre, trans, inter, NB, trav.</p>
@@ -1517,7 +1583,7 @@
           </a>
           <div class="info">Association grenobloise par et pour des personnes déviantes de genre, trans, inter, NB, trav, et les personnes en questionnement.</div>
         </article>
-        <article class="vcard" data-hashtag="185 " data-vcard="les_egales" id="e">
+        <article class="vcard" data-keyword="" data-vcard="egales">
           <header>
             <h2 class="fn org">Les Égales</h2>
             <p>Promouvoir les droits des femmes et valoriser les femmes qui ont un parcours singulier, dans le passé et dans la société actuelle.</p>
@@ -1537,7 +1603,7 @@
           <span class="P26">26</span> <span class="busstop">Vallier - Docteur Calmette</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185 421" data-vcard="en_tout_genre">
+        <article class="vcard" data-keyword="" data-vcard="en_tout_genre">
           <header>
             <h2 class="fn org">En tout genre</h2>
             <p>Association féministe et LGBTI+ de Sciences Po.</p>
@@ -1562,7 +1628,7 @@
           </a>
           <div class="info">Fait vivre le débat sur la place des femmes et des sexualités dans la société</div>
         </article>
-        <article class="vcard" data-hashtag="adate">
+        <article class="vcard" data-vcard="adate">
           <header>
             <h2 class="fn org">L'envolée féminine (ADATE)</h2>
             <p>
@@ -1579,7 +1645,7 @@
             <span class="locality">GRENOBLE</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185 cult" data-vcard="les_fees_rosses" id="f">
+        <article class="vcard" data-keyword="cult" data-vcard="fees_rosses">
           <header>
             <h2 class="fn org">Les <u>F</u>ées Rosses</h2>
             <p>Promouvoir les pratiques artistiques, culturelles et de transformations sociales dans une démarche d'éducation populaire.</p>
@@ -1599,7 +1665,7 @@
           <span class="P26">26</span> <span class="busstop">Vallier-Catane</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185 host" data-vcard="femmes_sdf">
+        <article class="vcard" data-keyword="host" data-vcard="femmes_sdf">
           <header>
             <h2 class="fn org">Femmes SDF</h2>
             <p>Agit aux côtés des femmes en errance et en précarité. Accompagnement, écoute, information juridique...</p>
@@ -1634,7 +1700,7 @@
             douches, chambre avec lit, produits cosmétiques, préparation de repas collectifs, lieu social, accompagnement dans les démarches, implication dans la vie du lieu...
           </div>
         </article>
-        <article class="vcard" data-hashtag="fere">
+        <article class="vcard" data-vcard="fere">
           <header>
             <h2 class="fn org">
               <abbr title="Femme et Renouveau Économique">FERE</abbr>
@@ -1650,7 +1716,7 @@
             <span class="locality">GRENOBLE</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="asso psyo righ aggr 185" data-vcard="france_victimes_grenoble">
+        <article class="vcard" data-keyword="asso,psyo,righ,aggr " data-vcard="france_victimes_grenoble">
           <header>
             <h2 class="fn org">France Victimes Grenoble (ex-AIV)</h2>
             <p>Association judiciaire d'Aide aux Victimes. Apporter un soutien moral, psychologique et juridique aux victimes de délit, d'agressions ou de violences. Lieux d'écoute et de parole.</p>
@@ -1684,9 +1750,9 @@
             Échirolles : tous les mercredis de 10h à 12h,
             Saint Martin d’Hères  : tous les jeudis de 14h à 17h,
             La maison de la justice et du droit Immeuble le Polynome, 25 Avenue de Constantine <span class="postal-code">38100</span>
-              <span class="locality">Grenoble </span>: tous les lundis et mardis de 09h à 12h
+              <span class="locality">GRENOBLE </span>: tous les lundis et mardis de 09h à 12h
             Le Palais de justice bureau 352 place Firmin Gautier <span class="postal-code">38019</span>
-              <span class="locality">Grenoble </span>: du lundi au vendredi de 09h à 12h et 13h30 à 17h.
+              <span class="locality">GRENOBLE </span>: du lundi au vendredi de 09h à 12h et 13h30 à 17h.
             L’association est également joignable au
             <div class="tel"><a href="tel:+33476462737">04 76 46 27 37</a></div>
             du lundi au vendredi de 9h à 17h.
@@ -1695,7 +1761,7 @@
             
             43 rue Victor Hugo
               <span class="postal-code">38200</span>
-              <span class="locality">Vienne</span>
+              <span class="locality">VIENNE</span>
             Tél : 04 74 53 58 13
             courriel : contact@fv38apress.fr
             
@@ -1707,10 +1773,10 @@
             Tél : 04 74 85 58 66
             courriel : contact@fv38apress.fr
             
-            Maison de Justice et du Droit de Villefontaine
-            place du 11 novembre
+            <span class="extended-address">Maison de Justice et du Droit de Villefontaine</span>
+            <span class="street-address">place du 11 novembre</span>
               <span class="postal-code">38090</span>
-              <span class="locality">Villefontaine</span>
+              <span class="locality">VILLEFONTAINE</span>
             (tous les mercredis après midi et jeudis)
             
             CCAS de L'Isle D'Abeau
@@ -1721,11 +1787,10 @@
             Mairie de Roussillon
             place de l'Edit
               <span class="postal-code">38550</span>
-              <span class="locality">Roussillon</span>
+              <span class="locality">ROUSSILLON</span>
             (tous les mardis après midi et vendredis)-->
         </article>
-        <article class="vcard" data-hashtag="185 cult lgbt" data-vcard="freesons">
-          <!--OK-->
+        <article class="vcard" data-keyword="cult,lgbt" data-vcard="freesons">
           <header>
             <h2 class="fn org">Freesons</h2>
             <p>La chorale lesbiennes, gay, bi, trans, intersexe et hétéro-friendly.</p>
@@ -1746,7 +1811,7 @@
           <div class="hours">Tous les mercredis de 19h30 à 21h30</div>
           <div class="info">Une chorale LGBTI et Hétéro-friendly dans une ambiance conviviale. Répertoire très varié : de la Renaissance à la variété contemporaine, à quatre voix.</div>
         </article>
-        <article class="vcard" data-hashtag="516 fami educ" data-vcard="grandir_egaux" id="g">
+        <article class="vcard" data-keyword="fami,educ" data-vcard="grandir_egaux">
           <header>
             <h2>
 			<span class="org">Grandir Égaux</span><br>
@@ -1763,7 +1828,7 @@
               <span class="locality">LA TRONCHE</span>
           </div>
         </article>
-        <article class="vcard" data-hashtag="185 lgbt cult acti" data-vcard="grenoble_fiertes">
+        <article class="vcard" data-keyword="lgbt,cult,acti" data-vcard="grenoble_fiertes">
           <header>
             <h2 class="fn org">Grenoble Fiertés</h2>
             <p>Organisation d'événements culturels, militants et festifs autour des thématiques LGBTI, dont la Marche des Fiertés de Grenoble.</p>
@@ -1784,7 +1849,7 @@
           <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185 aggr femi rese" data-vcard="grenoble_sans_relou">
+        <article class="vcard" data-keyword="aggr,femi,rs" data-vcard="grenoble_sans_relou">
           
           <header>
             <h2 class="fn org">Grenoble sans relou</h2>
@@ -1792,28 +1857,23 @@
           </header>
           <a class="email" href="mailto:grenoblesansrelou@gmail.com">grenoblesansrelou@gmail.com</a>
           <a class="facebook" href="https://www.facebook.com/GrenobleSansRelou" rel="external noreferrer">@GrenobleSansRelou</a>
+		  <div class="adr">
+		    <span class="locality">GRENOBLE</span>
+		  </div>
         </article>
-        <article data-hashtag="185 421 femi lgbt acti asso educ" data-vcard="inpulse_adelphie" id="i">
-          
+        <article class="vcard" data-keyword="femi,lgbt,acti,asso,educ" data-vcard="inpulse_adelphie">
           <header>
-            <h2>INPulse &amp; Adelphie</h2>
+            <h2 class="fn org">INPulse Adelphie</h2>
             <p>Association étudiante LGBT+ des écoles d’ingénieurs de l'INP.</p>
           </header>
-          <div class="card vcard">
-            <h3 class="fn org">INPulse</h3>
-            <a class="email" href="mailto:asso.inpulse@gmail.com">asso.inpulse@gmail.com</a>
-            <a class="facebook" href="https://www.facebook.com/INPulsePage" rel="external noreferrer">@INPulsePage</a>
-            <a class="instagram" href="https://www.instagram.com/assoinpulse" rel="external noreferrer">@assoinpulse</a>
-          </div>
-          <div class="card vcard">
-            <h3 class="fn org">Adelphie</h3>
-            <p>Branche féministe de l'association</p>
-            <a class="email" href="mailto:adelphieinpulse@gmail.com">adelphieinpulse@gmail.com</a>
-            <a class="facebook" href="https://www.facebook.com/inpulseadelphie" rel="external noreferrer">@inpulseadelphie</a>
-            <a class="instagram" href="https://www.instagram.com/adelphieinpulse" rel="external noreferrer">@adelphieinpulse</a>
-          </div>
+          <a class="email" href="mailto:adelphieinpulse@gmail.com">adelphieinpulse@gmail.com</a>
+          <a class="facebook" href="https://www.facebook.com/adelphie.inpulse.7" rel="external noreferrer">@adelphie.inpulse.7</a>
+          <a class="instagram" href="https://www.instagram.com/inpulse_adelphie/" rel="external noreferrer">@inpulse_adelphie</a>
+		  <div class="adr">
+		    <span class="locality">GRENOBLE</span>
+		  </div>
         </article>
-        <article class="vcard" data-hashtag="185 heal dmst" data-vcard="ireps">
+        <article class="vcard" data-keyword="heal,mst" data-vcard="ireps">
           <header>
             <h2 class="fn org">Pôle Isère VIH - IREPS ARA 38</h2>
             <p>Améliorer la santé des populations en agissant sur les différents déterminants de santé et réduire les inégalités sociales de santé.</p>
@@ -1836,7 +1896,7 @@
           <span class="P16">16</span> <span class="busstop">Gustave Rivet</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="053 aggr righ" data-vcard="isis">
+        <article class="vcard" data-keyword="aggr,righ" data-vcard="isis">
           <header>
             <h2 class="fn org">ISIS Nord-Isère</h2>
             <p>Un soutien juridique et psychologique pour toutes les victimes, y compris de violences faites aux femmes.</p>
@@ -1846,13 +1906,14 @@
           <a class="email" href="mailto:isis.administratif@orange.fr">isis.administratif@orange.fr</a>
           <a class="url" href="https://isisnordisere.wordpress.com/" rel="external noreferrer">isisnordisere.wordpress.com</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.586774,5.276608" rel="external noreferrer">
-            <span class="extended-address">TJ de Bourgoin-Jallieu</span><span class="street-address">33 rue du tribunal</span>
+            <span class="extended-address">TJ de Bourgoin-Jallieu</span>
+			<span class="street-address">33 rue du tribunal</span>
             <span class="postal-code">38300</span>
             <span class="locality">BOURGOIN-JALLIEU</span>
           </a>
           <div class="hours">Du lundi au vendredi de 9h à 17h sur rendez-vous</div>
         </article>
-        <article class="vcard" data-hashtag="185 host aggr fami" data-vcard="rialto">
+        <article class="vcard" data-keyword="host,aggr,fami" data-vcard="issue_de_secours">
           <header>
             <h2 class="fn org">
               SOS Femmes 38 - Issue de secours - RIALTO
@@ -1881,7 +1942,7 @@
             disposition de 4 studios adaptés aux personnes handicapées.
           </div>
         </article>
-        <article class="vcard" data-hashtag="phon heal ivg cont aggr dmst lgbt" data-vcard="ligne_planning_familial" id="l">
+        <article class="vcard" data-keyword="phon,heal,ivg,cont,aggr,mst,lgbt" data-vcard="ligne_planning_familial">
           <header>
             <h2 class="fn org">Ligne nationale <q>Sexualités, Contraception, IVG</q></h2>
             <p>Écoute, information et orientation en fonction des besoins en matière de sexualités, contraception, avortement, violences, dépistages IST-SIDA et orientation sexuelle.</p>
@@ -1893,7 +1954,7 @@
             appels anonymes et gratuits
           </div>
         </article>
-        <article data-hashtag="femi righ 185 asso 140 397 544 563" data-vcard="lighe_droits_homme">
+        <article 			   data-keyword="femi,righ,asso" data-vcard="ligue_droits_homme">
           <header>
             <h2 class="fn org">La Ligue des Droits de l'Homme</h2>
             <p>Défense des droits des citoyen<span aria-hidden="true">&middot;</span>nes (atteintes aux droits des étranger<span aria-hidden="true">&middot;</span>es, aux droits des femmes, lutte contre le racisme et toutes les discriminations).</p>
@@ -1953,7 +2014,7 @@
             <a class="email" href="mailto:vienne@ldh-france.org">vienne@ldh-france.org</a>
           </div>
         </article>
-        <article class="vcard" data-hashtag="185 heal matr" data-vcard="la_maison" id="m">
+        <article class="vcard" data-keyword="heal,matr" data-vcard="maison">
           <header>
             <h2 class="fn org">La <u>M</u>aison</h2>
             <p>Maison de naissance. Accoucher naturellement, en en étant suivi de manière globale par la même sage-femme.</p>
@@ -1973,16 +2034,7 @@
           <span class="P26">26</span> <span class="busstop">Vallier </span>– Catane
           </a>
         </article>
-        <article class="vcard" data-hashtag="185 heal aggr gyne" data-vcard="maison_des_femmes">
-          <header>
-            <h2 class="fn org">Maison des Femmes</h2>
-            <p>Accompagnement des femmes vivant ou ayant vécu des violences, suivi gynécologique, prise en soins des mutilations sexuelles.</p>
-          </header>
-          <a class="tel" href="tel:+33476766800">04 76 76 68 00</a>
-          <a class="email" href="mailto:maisondesfemmes@chu-grenoble.fr">maisondesfemmes@chu-grenoble.fr</a>
-          <a class="url" href="https://www.uniesverselles-grenoble.fr/maison-des-femmes/" rel="external noreferrer">www.uniesverselles-grenoble.fr/maison-des-femmes</a>
-        </article>
-        <article data-hashtag="heal fami pmi 027 185 034 544 138 269 052 053 416 226 509 548 563" data-vcard="maisons_du_departement">
+        <article 			   data-keyword="heal,fami,pmi" data-vcard="maisons_du_departement">
           <header>
             <h2>Maisons du Département</h2>
             <p>Consultations médicales pour les jeunes enfants (PMI), prévention médicale, dépistage des handicaps, aides aux familles...</p>
@@ -2105,7 +2157,7 @@
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.074621,5.555652" rel="external noreferrer">
               <span class="street-address">150 impasse de Meillarot</span>
               <span class="postal-code">38250</span>
-              <span class="locality">VILLARD-DE-LANS</span><br>
+              <span class="locality">VILLARD-DE-LANS</span>
             </a>
             <div class="hours">Du lundi au vendredi de 08h00 à 12h00 et 13h30 à 17h30</div>
           </div>
@@ -2115,12 +2167,12 @@
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.363568,5.593684" rel="external noreferrer">
               <span class="street-address">33 avenue Francois Mitterrand</span>
               <span class="postal-code">38500</span>
-              <span class="locality">VOIRON</span><br>
+              <span class="locality">VOIRON</span>
             </a>
             <div class="hours">Du lundi au vendredi de 8h30 à 12h30 et de 13h30 à 17h30</div>
           </div>
         </article>
-        <article data-hashtag="185 psyo heal righ asso fami" data-vcard="maison_des_habitantes">
+        <article 			   data-keyword="psy,heal,righ,asso,fami" data-vcard="maison_des_habitantes">
           <header>
             <h2>
               Maison des Habitant<span aria-hidden="true">&middot;</span>es
@@ -2457,7 +2509,7 @@
             </div>
           </div>
         </article>
-        <article class="vcard" data-hashtag="inst 151" data-vcard="maison_egalite_femmes_homme">
+        <article class="vcard" data-keyword="inst" data-vcard="maison_egalite_femmes_homme">
           <header>
             <h2 class="fn org">Maison pour l'égalité Femmes – Hommes</h2>
             <p>Informer, sensibiliser et accompagner tous ceux qui souhaitent œuvrer dans la métropole grenobloise pour l'égalité entre les femmes et les hommes.</p>
@@ -2475,7 +2527,7 @@
           <span class="C6">C6</span> <span class="busstop">Essarts - La Butte</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185 work fami" data-vcard="mampreneurs">
+        <article class="vcard" data-keyword="work,fami" data-vcard="mampreneurs">
           
           <header>
             <h2 class="fn org">Mampreneurs Isère</h2>
@@ -2490,7 +2542,7 @@
             <span class="locality">GRENOBLE</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185" data-vcard="mission_egalite_academie_grenoble">
+        <article class="vcard" data-keyword="" data-vcard="mission_egalite_academie_grenoble">
           <header>
             <h2 class="fn org">Mission égalité de l'Académie de Grenoble</h2>
             <p>
@@ -2511,7 +2563,7 @@
             <span class="locality">SAINT-MARTIN-D'HÈRES</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="femi asso acti" data-vcard="nous_toutes_38" id="n">
+        <article class="vcard" data-keyword="femi,asso,acti" data-vcard="nous_toutes_38">
           <header>
             <h2 class="fn org">Nous Toustes 38</h2>
             <p>Collectif Féministe contre les violences sexistes et sexuelles. Actions, manif, formations, sororité.</p>
@@ -2519,7 +2571,7 @@
           <a class="email" href="mailto:noustoutes38@gmail.com">noustoutes38@gmail.com</a>
           <a class="facebook" href="https://www.facebook.com/NousToutes38" rel="external noreferrer">@NousToutes38</a>
         </article>
-        <article class="vcard" data-hashtag="185" data-vcard="observatoire_iserois_parite">
+        <article class="vcard" data-keyword="" data-vcard="observatoire_iserois_parite">
           
           <header>
             <h2 class="fn org">
@@ -2553,7 +2605,7 @@
             </ul>
           </div>
         </article>
-        <article class="vcard" data-hashtag="host 179 185" data-vcard="oiseau_bleu_relais_ozanam" id="o">
+        <article class="vcard" data-keyword="host" data-vcard="oiseau_bleu_relais_ozanam">
           <header>
             <h2 class="fn org">L'<u>O</u>iseau bleu / Relais Ozanam</h2>
             <p>Accompagnement, hébergement et insertion pour les publics fragilisés</p>
@@ -2570,9 +2622,12 @@
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.180134,5.790045">
           <span class="F59">59</span> <span class="busstop">Pont de Venon</span><br>
           <span class="F59">59</span> <span class="busstop">Edelweiss</span>
+		  
+		  Bus 14 et 23 
+		  TER Gieres gare
           </a>
         </article>
-        <article class="vcard" data-hashtag="work 185" data-vcard="reseau_olympe">
+        <article class="vcard" data-keyword="work" data-vcard="olympe_reseau">
           <header>
             <h2 class="fn org">Réseau Olympe de Gouges</h2>
             <p>Association qui favorise les échanges professionnels entre femmes pour lutter contre le plafond de verre.</p>
@@ -2587,8 +2642,7 @@
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184583,5.724417" rel="external noreferrer">
           <span class="P16">16</span> <span class="busstop">Caserne de Bonne</span><br>
-          <span class="P12">12</span>
-          <span class="C3">C3</span> <span class="busstop">Championnet</span><br>
+          <span class="P12">12</span> <span class="C3">C3</span> <span class="busstop">Championnet</span><br>
           <span class="TC">C</span> <span class="busstop">Gustave Rivet</span>
           </a>
           <div class="hours">
@@ -2596,7 +2650,7 @@
               <span class="locality">GRENOBLE</span>, espace mezzanine réservé).
           </div>
         </article>
-        <article class="vcard" data-hashtag="185 educ femi" data-vcard="les_orageuses">
+        <article class="vcard" data-keyword="educ,femi" data-vcard="orageuses">
           <header>
             <h2 class="fn org">Les Orageuses (Scop l'Orage)</h2>
             <p>Collectif d'éducation populaire. De nombreuses formations dans l'objectif de mieux déceler et de prendre conscience des oppressions, injustices et mécanismes de domination à l'œuvre dans notre société.</p>
@@ -2614,7 +2668,7 @@
           <span class="TB">A</span> <span class="busstop">Saint-Bruno</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185 asso femi acti" data-vcard="osez_le_feminisme_38">
+        <article class="vcard" data-keyword="asso,femi,acti" data-vcard="osez_le_feminisme_38">
           <header>
             <h2 class="fn org">Osez le féminisme 38</h2>
             <p>Promotion de l’égalité femmes-hommes et lutte pour supprimer toutes les formes de violences masculines contre les filles et les femmes.</p>
@@ -2636,7 +2690,7 @@
           <span class="TC">C</span> <span class="busstop">Gustave Rivet</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185 cult asso drag" data-vcard="patriarchie">
+        <article class="vcard" data-keyword="cult,asso,drag" data-vcard="patriarchie">
           <header>
             <h2 class="fn org">Patriarchie</h2>
             <p>Association qui mêle connerie, humour et militantisme à travers des événements inclusifs.</p>
@@ -2666,7 +2720,7 @@
             participant.es. Rejoins nous !
           </div>
         </article>
-        <article data-hashtag="acti righ heal femi dmst cont aggr 151 158 547 382 053 553" data-vcard="planning_familial">
+        <article 			   data-keyword="acti,righ,heal,femi,dmst,cont,aggr" data-vcard="planning_familial">
           <header>
             <h2>Le Planning Familial</h2>
             <p>Mouvement militant qui prend en compte toutes les sexualités, défend le droit à la contraception, à l’avortement et à l’éducation à la sexualité.</p>
@@ -2770,14 +2824,14 @@
             </div>
           </div>
           <div class="card vcard">
-            <h3 class="fn org">Planning Familial - Saint-Egrève</h3>
+            <h3 class="fn org">Planning Familial - Saint-Égrève</h3>
             <a class="tel" href="tel:+33476753304">04 76 75 33 04</a>
             <a class="email" href="mailto:cpef.saint-egreve@leplanningfamilial38.org">cpef.saint-egreve@leplanningfamilial38.org</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.224051,5.688727" rel="external noreferrer">
                 <span class="extended-address">Immeuble Le Fié</span>
                 <span class="street-address">2 rue du 19 mars 1962</span>
                 <span class="postal-code">38120</span>
-                <span class="locality">SAINT-EGRÈVE</span>
+                <span class="locality">SAINT-ÉGRÈVE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.224051,5.688727" rel="external noreferrer">
             <span class="TE">E</span> <span class="busstop">Fiancey </span>– Prédieu<br>
@@ -2834,7 +2888,7 @@
             </div>
           </div>
         </article>
-        <article class="vcard" data-hashtag="asso femi acti" data-vcard="plateforme_droits_femmes">
+        <article class="vcard" data-keyword="asso,femi,acti" data-vcard="plateforme_droits_femmes">
           <header>
             <h2 class="fn org">Plateforme des droits des femmes</h2>
             <p>Collectif isérois regroupant les associations, partis politiques, syndicats et militant<span aria-hidden="true">&middot;</span>es se retrouvant dans les combats féministes.</p>
@@ -2843,7 +2897,7 @@
           <a class="facebook" href="https://www.facebook.com/PlateformeDDF38" rel="external noreferrer">@PlateformeDDF38</a>
           <a class="twitter" href="https://www.twitter.com/pfdf38" rel="external noreferrer">@pfdf38</a>
         </article>
-        <article class="vcard" data-hashtag="plus_egales">
+        <article class="vcard" data-vcard="plus_egales">
           <header>
             <h2 class="org">Pluségales</h2>
             <p><span class="fn">Cécile Bonthonneau</span> propose conseil et formations pour plus d'égalité.</p>
@@ -2856,27 +2910,32 @@
             <span class="locality">GRENOBLE</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="151 185 heal" data-vcard="point_precarite_sante">
+        <article data-keyword="heal" data-vcard="point_precarite_sante">
           <header>
-            <h2 class="fn org">Le Point précarité santé (Pops)</h2>
-            <p>Aide à l'accès à la santé des personnes en situation de précarité.</p>
+            <h2>Le Point précarité santé (Pops)</h2>
+            <p>Aide à l'accès à la santé des personnes en situation de précarité, appui aux professionnels de santé, médiations squats et bidonvilles.</p>
           </header>
           <div class="one-line"><a class="tel" href="tel:+33476893142">04 76 89 31 42</a> <span>(du lundi au vendredi)</span></div>
-          <a class="tel" href="tel:+33476229210">04 76 22 92 10</a>
           <a class="email" href="mailto:pops@pops38.fr">pops@pops38.fr</a>
-		  <BIG>CREER LES LIENS</BIG>
-          <div class="adr">
-              <span class="street-address">1 rue du Gâtinais</span>
+		  <a class="url" href="https://pops38.fr/" rel="external noreferrer">pops38.fr</a>  
+		  <div class="card vcard">
+		    <h3 class="fn org">POPS Sud Isère</h3>
+		    <div class="adr">
+              <span class="street-address">1 allée du Gâtinais</span>
               <span class="postal-code">38130</span>
               <span class="locality">ÉCHIROLLES</span>
-          </div>
-          <div class="adr">
-              <span class="street-address">97 galerie de l'Arlequin</span>
-              <span class="postal-code">38100</span>
-              <span class="locality">GRENOBLE</span>                    
-          </div>
+            </div>
+		  </div>
+		  <div class="card vcard">
+		    <h3 class="fn org">POPS Nord Isère</h3>
+		    <div class="adr">
+              <span class="street-address">8 rue Jospeh Cugnot</span>
+              <span class="postal-code">38300</span>
+              <span class="locality">BOURGOIN-JALLIEU</span>                    
+            </div>
+		  </div>
         </article>
-        <article class="vcard" data-hashtag="sprt lgbt" data-vcard="queers_on_wheels" id="q">
+        <article class="vcard" data-keyword="sprt,lgbt" data-vcard="queers_on_wheels">
           <header>
             <h2 class="fn org">Queers On Wheels</h2>
             <p>Collectif de roller.</p>
@@ -2884,7 +2943,7 @@
           <a class="instagram" href="https://www.instagram.com/queersonwheels38" rel="external noreferrer">@queersonwheels38</a>
           <div class="info">Crew de glisse entre personnes queers sur Grenoble et environs.</div>
         </article>
-        <article class="vcard" data-hashtag="185 sprt lgbt" data-vcard="randos_rhone_alpes" id="r">
+        <article class="vcard" data-keyword="sprt,lgbt" data-vcard="randos_rhone_alpes">
           <header>
             <h2 class="fn org">Rando's Rhône-Alpes</h2>
             <p>Association de randonnée LGBTQI+ &amp; friendly.</p>
@@ -2906,7 +2965,7 @@
           <div class="info">Des randonnées et activités de montagne tout au long de l’année, Des moments conviviaux, de la détente, de l’amitié...</div>
           <div class="hours">Un repas type auberge espagnole le 1<sup>er</sup> mardi du mois de 19h30 à 22h.</div>
         </article>
-        <article class="vcard" data-hashtag="185" data-vcard="reference_departementale_violences_conjugales">
+        <article class="vcard" data-keyword="" data-vcard="reference_departementale_violences_conjugales">
           <header>
             <h2 class="fn org">Référence départementale violences conjugales</h2>
             <p>Héberge et accompagne les jeunes LGBT+, de 14 à 25 ans, victimes d’homophobie ou de transphobie et en situation de rupture familiale.</p>
@@ -2941,7 +3000,7 @@
               -->
           </div>
         </article>
-        <article class="vcard" data-hashtag="185 work" data-vcard="entreprendre_isere_feminin">
+        <article class="vcard" data-keyword="work" data-vcard="entreprendre_isere_feminin">
           <header>
             <h2 class="fn org">Réseau Entreprendre Isère au féminin</h2>
             <p>Accompagner les différentes personnes confrontées à un mariage forcé, qu'il soit réalisé ou prévu.</p>
@@ -2969,7 +3028,7 @@
             que cela comporte.
           </div>
         </article>
-        <article class="vcard" data-hashtag="asso lgbt heal 185" data-vcard="rita">
+        <article class="vcard" data-keyword="asso,lgbt,heal" data-vcard="rita">
           
           <header>
             <h2 class="fn org">
@@ -2999,7 +3058,7 @@
             </ul>
           </div>
         </article>
-        <article class="vcard" data-hashtag="544 work aggr" data-vcard="rivhaj">
+        <article class="vcard" data-keyword="work,aggr" data-vcard="rivhaj">
           <header>
             <h2 class="fn org">
               <abbr title="Relais d'Insertion dans la Ville par l'Habitat des Adultes et des Jeunes">RIVHAJ</abbr>
@@ -3017,7 +3076,7 @@
             <span class="locality">VIENNE</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185 421 cult" data-vcard="ruelles">
+        <article class="vcard" data-keyword="cult" data-vcard="ruelles">
           <header>
             <h2 class="fn org">Compagnie Ru’elles</h2>
             <p>Collectif qui invite à la rencontre des arts: théâtre, danse, performance sonore, vidéo, illustration, arts plastiques et graphiques…. Surprendre, révéler l’invisible et questionner les quotidiens in situ.</p>
@@ -3039,7 +3098,17 @@
           <span class="C6">C6</span> <span class="busstop">Zella Mehlis</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185 cont" data-vcard="sans_gametes" id="s">
+		<article class="vcard" data-keyword="cult" data-vcard="samovar_collectif">
+          <header>
+            <h2 class="fn org">Collectif Samovar</h2>
+            <p>Collectif LGBTQIA+ féministe favorisant l’expression artistique dans la bienveillance.</p>
+          </header>
+          <a class="instagram" href="https://www.instagram.com/collectif.samovar" rel="external noreferrer">@collectif.samovar</a>
+		  <div class="adr">
+		    <span class="locality">GRENOBLE</span>
+		  </div>
+        </article>
+        <article class="vcard" data-keyword="cont" data-vcard="sans_gametes">
           <header>
             <h2 class="fn org">Les <u>S</u>ans Gamêtes</h2>
             <p>Atelier autour des contraceptions testiculaires.</p>
@@ -3055,7 +3124,8 @@
           <span class="P13">13</span> <span class="busstop">Suzanne Noël - Les Bains</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185 aggr" data-vcard="sereines">
+		
+        <article class="vcard" data-keyword="aggr" data-vcard="sereines">
           <header>
             <h2 class="fn org">Serein<span aria-hidden="true">&middot;</span>e<span aria-hidden="true">&middot;</span>s</h2>
             <p>Sensibilisation et prévention des agressions sexistes, sexuelles et de genres en milieux festifs, pour en faire des espaces plus sûrs et égalitaires pour tou<span aria-hidden="true">&middot;</span>te<span aria-hidden="true">&middot;</span>s.</p>
@@ -3075,7 +3145,7 @@
           <span class="TB">B</span> <span class="busstop">Saint-Bruno</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="319" data-vcard="sista">
+        <article class="vcard" data-keyword="" data-vcard="sista">
           <header>
             <h2 class="fn org"><abbr title="Solidarité, Intersectionalité, Soin, Techniques d’Autodéfense">S.I.S.T.A</abbr></h2>
             <p>Association féministe matérialiste et intersectionnelle proposant des stages d'auto-défense et des ateliers de soin et de pratiques énergétiques, danse, gymnastique...</p>
@@ -3086,10 +3156,10 @@
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.062690,5.340998" rel="external noreferrer">
           <span class="street-address">3 place du 19 mars 1962</span>
             <span class="postal-code">38680</span>
-            <span class="locality">PONT EN ROYANS</span>
+            <span class="locality">PONT-EN-ROYANS</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185 cult" data-vcard="siefegp">
+        <article class="vcard" data-keyword="cult" data-vcard="siefegp">
           <header>
             <h2 class="fn org"><abbr title="Société internationale d'étude des femmes et d'études de genre en poésie">SIEFEGP</abbr></h2>
             <p>Etablissement social d’accueil, d’écoute, d’Hébergement et d’accompagnement des femmes victimes de violences.</p>
@@ -3111,7 +3181,7 @@
             biais de publications dans ses revues et sa maison d'édition : Pan des muses.
           </div>
         </article>
-        <article class="vcard" data-hashtag="158 host aggr" data-vcard="solidarite_femmes_milena">
+        <article class="vcard" data-keyword="host,aggr" data-vcard="solidarite_femmes_milena">
           <header>
             <h2 class="fn org">Solidarité Femmes Miléna (Fondation Boissel)</h2>
             <p>Établissement social d’accueil, d’écoute, d’Hébergement et d’accompagnement des femmes victimes de violences.</p>
@@ -3137,7 +3207,7 @@
             Parler de la violence c’est déjà la combattre.
           </div>
         </article>
-        <article class="vcard" data-hashtag="185 lgbt asso" data-vcard="sos_homophobie">
+        <article class="vcard" data-keyword="lgbt,asso" data-vcard="sos_homophobie">
           <header>
             <h2 class="fn org">SOS Homophobie</h2>
             <p>Association nationale de lutte contre les LGBTphobies.</p>
@@ -3163,7 +3233,7 @@
             des droits. Actions de sensibilisations en milieu scolaire, publication d’un rapport annuel, soutien aux personnes victimes d'homophobie.
           </div>
         </article>
-        <article class="vcard" data-hashtag="185 aggr" data-vcard="sos_inceste">
+        <article class="vcard" data-keyword="aggr" data-vcard="sos_inceste">
           <header>
             <h2 class="fn org">SOS inceste pour revivre</h2>
             <p>Soutien aux personnes victimes de violences sexuelles.</p>
@@ -3185,7 +3255,7 @@
           <span class="TC">C</span> <span class="busstop">Gustave Rivet</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="169" data-vcard="les_soupapes">
+        <article class="vcard" data-keyword="" data-vcard="soupapes">
           <header>
             <h2 class="fn org">Les Soupapes</h2>
             <p>Garage automobile associatif autogéré et féministe.</p>
@@ -3204,7 +3274,7 @@
           <div class="hours">Permanences les lundis de 14h à 19h.</div>
           <div class="info">Des ateliers autour de la découverte de la mécanique automobile sont aussi organisés ponctuellement.</div>
         </article>
-        <article class="vcard" data-hashtag="185 aggr" data-vcard="stop_violences_sexuelles_isere">
+        <article class="vcard" data-keyword="aggr" data-vcard="stop_violences_sexuelles_isere">
           <header>
             <h2 class="fn org">
               <abbr title="Stop aux Violences Sexuelles">SVS Isère</abbr>
@@ -3220,7 +3290,7 @@
               <span class="locality">GRENOBLE</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="syndicat_femmes_musulmanes">
+        <article class="vcard" data-vcard="syndicat_femmes_musulmanes">
           <header>
             <h2 class="fn org">Le syndicat des femmes musulmanes</h2>
             <p>Lutte pour le droit des femmes musulmanes et campagnes autour des discriminations qu'elles subissent.</p>
@@ -3236,7 +3306,7 @@
           <a class="youtube" href="https://www.youtube.com/channel/UCWivaplnuB7sfHYbzWKQq_A" rel="external noreferrer">Alliance Citoyenne</a>
           <div class="info">Droits des locataires, des personnes handicapées et des femmes musulmanes.</div>
         </article>
-        <article class="vcard" data-hashtag="185 heal dmst cont asso" data-vcard="tempo" id="t">
+        <article class="vcard" data-keyword="heal,dmst,cont,asso" data-vcard="tempo">
           <header>
             <h2 class="fn org">Tempo</h2>
             <p>Lieu d'écoute et d'accompagnement des personnes vivant avec me VIH ou les Hépatites et leurs proches.</p>
@@ -3275,7 +3345,10 @@
             <p>Des tests rapides, gratuits et anonymes sont possibles : TROD pour le VIH, hépatite B et hépatite C.</p>
           </div>
         </article>
-        <article class="vcard" data-hashtag="asso 516 aggr heal" data-vcard="uniesverselles" id="u">
+		
+		
+		
+        <article class="vcard" data-keyword="asso,aggr,heal" data-vcard="uniesverselles">
           <header>
             <h2 class="fn org">Uni(e-s)VersElles</h2>
             <p>Association qui vise l’accompagnement des femmes victimes de violences vers la résilience en leur proposant un parcours médical, social et institutionnel coordonné et sécurisé.</p>
@@ -3294,14 +3367,32 @@
           <span class="TB">B</span> <span class="busstop">La Tronche Hôpital</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185" data-vcard="velorution_feministe_grenoble" id="v">
+<!-- A FUSIONNER -->
+		<article class="vcard" data-keyword="heal,aggr,gyne" data-vcard="maison_des_femmes">
+          <header>
+            <h2 class="fn org">Maison des Femmes</h2>
+            <p>Accompagnement des femmes vivant ou ayant vécu des violences, suivi gynécologique, prise en soins des mutilations sexuelles.</p>
+          </header>
+          <a class="tel" href="tel:+33476766800">04 76 76 68 00</a>
+          <a class="email" href="mailto:maisondesfemmes@chu-grenoble.fr">maisondesfemmes@chu-grenoble.fr</a>
+          <a class="url" href="https://www.uniesverselles-grenoble.fr/maison-des-femmes/" rel="external noreferrer">www.uniesverselles-grenoble.fr/maison-des-femmes</a>
+        </article>
+		
+		
+		
+		
+		
+        <article class="vcard" data-keyword="" data-vcard="velorution_feministe_grenoble">
           <header>
             <h2 class="fn org">Vélorution féministe Grenoble</h2>
             <p>Soutenir et favoriser le queer à Grenoble et en montagne (randonnées, drag, bingos, shows, soirées...).</p>
           </header>
           <a class="instagram" href="https://www.instagram.com/versantsqueer" rel="external noreferrer">@versantsqueer</a>
+		  <div class="adr">
+		     <span class="locality">GRENOBLE</span>
+		  </div>
         </article>
-        <article class="vcard" data-hashtag="185 asso lgbt" data-vcard="voies_d_elles">
+        <article class="vcard" data-keyword="asso,lgbt,lesb" data-vcard="voies_d_elles">
           <header>
             <h2 class="fn org">Les Voies d’Elles - <abbr>ALG</abbr></h2>
             <p>Association non-mixte des Lesbiennes de Grenoble.</p>
@@ -3330,7 +3421,7 @@
             s'interrogeant sur toutes forme de sexualité lesbienne.
           </div>
         </article>
-        <article class="vcard" data-hashtag="virus_36">
+        <article class="vcard" data-keyword="educ" data-vcard="virus_36">
           <header>
             <h2 class="fn org">Virus 36</h2>
             <p>Éducation populaire, pédagogie active, lutte contre le sexisme. Formation aux débats démocratiques.</p>
@@ -3345,7 +3436,7 @@
               <span class="locality">GRENOBLE</span>
           </a>
         </article>
-        <article class="vcard" data-hashtag="185" data-vcard="vues_d_en_face">
+        <article class="vcard" data-keyword="" data-vcard="vues_d_en_face">
           <header>
             <h2 class="fn org">Vues d'en face</h2>
             <p>Festival International du Film LGBTQIA+ de Grenoble.</p>
@@ -3368,10 +3459,10 @@
           </a>
 		  <p><b>Boite Postale</b></p>
           <div class="adr">
-              <span class="extended-address">FIFGLG</span>
+            <span class="extended-address">FIFGLG</span>
             <span class="post-office-box">BP 408</span>
-              <span class="postal-code">38015</span>
-              <span class="locality">GRENOBLE CEDEX 1</span>
+            <span class="postal-code">38015</span>
+            <span class="locality">GRENOBLE CEDEX 1</span>
           </div>
         </article>
       </main>
