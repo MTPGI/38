@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- <a (.+?)<\/a> ?<span>\((.+?)\)<\/span> -->
 <html lang="fr-FR" dir="ltr">
   <head>
     <meta charset="utf8" />
@@ -10,24 +11,33 @@
     <meta name="description" content="Annuaire, cartographie et agenda associatif militant, institutionnel, médical, sportif et culturel à destination des femmes et des LGBTQI+" />
     <meta name="color-scheme" content="dark light" />
     <meta name="referrer" content="no-referrer" />
-    <meta name="revised" content="14/02/2024" />
+    <meta name="revised" content="06/02/2024" />
     <base target="_blank" />
     <link rel="icon" href="img/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="img/favicon.png" />
     <link rel="profile" href="http://microformats.org/profile/hcard" />
+    <link rel="next" href="https://mptgi.github.io/38/aide.html">
     <link rel="stylesheet" href="style.css" />
     <title>Ressources MTPGI 38</title>
   </head>
   <body>
+    
     <a class="sr-only sr-only-focusable" target="_self" href="#main">Aller au contenu</a>
     <div id="container" tabindex="-1">
+	  <input type="checkbox" id="chk--theme-switch" class="sr-only"><label for="chk--theme-switch"></label>
       <header id="top">
         <h1>
           <span class="sr-only">Ressources féministe et queer de Grenoble et de l'Isère.</span>
           <img src="img/logo.png" alt="Logo" />
         </h1>
+			<!--<a href="./aide.html" target="_self" id="link--need-help">
+			  <span class="shadow"></span>
+			  <span class="edge"></span>
+			  <span class="front">j'ai besoin d'aide</span>
+			</a>-->
       </header>
-      <nav>
+	  
+      <nav id="nav-bar">
         <div>
           <i class="fa fa-cate"></i>
           <label for="select--categories" class="sr-only">Choix d'une catégories pour restreindre les résultats</label>
@@ -44,15 +54,15 @@
             <option value="evnt">Évènements</option>
             <option value="fami">Famille</option>
             <option value="femi">Féminisme</option>
-            <option value="gyne">Gynécologie</option>
+			<option value="gyne">Gynécologie</option>
             <option value="host">Hébergement</option>
             <option value="inst">Institution</option>
             <option value="ivg">IVG</option>
             <option value="phon">Ligne téléphonique</option>
-            <option value="lesb">Lesbiennes</option>
+			<option value="lesb">Lesbiennes</option>
             <option value="lgbt">LGBTQI+</option>
             <option value="matr">Maternité</option>
-            <option value="migr">Migration, asile, réfugiées</option>
+			<option value="migr">Migration, asile, réfugiées</option>
             <option value="mine">Mineur<span aria-hidden="true">&middot;</span>es et Enfants</option>
             <option value="pmi">Protection Maternelle Infantile (PMI)</option>
             <option value="acti">Politique / activisme / militantisme</option>
@@ -69,49 +79,15 @@
           <label for="select--ville" class="sr-only">Choix d'une ville pour restreindre les résultats</label>
           <select id="select--ville">
             <option selected value="">FILTRER PAR VILLE</option>
-            <option value="007">Ampuis</option>
-            <option value="027">Barraux</option>
-            <option value="034">Beaurepaire</option>
-            <option value="052">Le Bourg-d'Oisans</option>
-            <option value="053">Bourgoin-Jallieu</option>
-            <option value="087">Chasse-sur-Rhône</option>
-            <option value="130">La Côte-Saint-André</option>
-            <option value="138">Crémieu</option>
-            <option value="140">Crolles</option>
-            <option value="151">Échirolles</option>
-            <option value="158">Eybens</option>
-            <option value="169">Fontaine</option>
-            <option value="170">Fontanil-Cornillon</option>
-            <option value="179">Gières</option>
-            <option value="185">Grenoble</option>
-            <option value="193">L'Isle-d'Abeau</option>
-            <option value="226">Mens</option>
-            <option value="229">Meylan</option>
-            <option value="242">Monestier de Clermont</option>
-            <option value="315">Le Pont de Beauvoisin</option>
-            <option value="316">Pont-de-Chéruy</option>
-            <option value="317">Le Pont-de-Claix</option>
-            <option value="269">La Mure</option>
-            <option value="314">Pontcharra</option>
-            <option value="319">Pont-en-Royans</option>
-            <option value="344">Roussillon</option>
-            <option value="382">Saint-Égrève</option>
-            <option value="397">Saint-Ismier</option>
-            <option value="412">Saint-Laurent-du-Pont</option>
-            <option value="416">Saint-Marcellin</option>
-            <option value="421">Saint-Martin-d'Hères</option>
-            <option value="509">La Tour du Pin</option>
-            <option value="516">La Tronche</option>
-            <option value="517">Tullins</option>
-            <option value="544">Vienne</option>
-            <option value="545">Vif</option>
-            <option value="547">Villard-Bonnot</option>
-            <option value="548">Villard-de-Lans</option>
-            <option value="553">Villefontaine</option>
-            <option value="562">Vizille</option>
-            <option value="563">Voiron</option>
+            
           </select>
-        </div>
+        </div><!--
+		<div>
+            <i class="fa fa-search"></i>
+            <label for="input--search" class="sr-only">Recherche par saisie de nom ou de mot clef</label>
+            <input type="search" list="searchlist" id="input--search" placeholder="Planning familial, Grenoble, sport...">
+            <datalist id="searchlist"></datalist>
+        </div>-->
         <div>
           <i class="fa fa-az-sort"></i>
           <label for="select--AZ" class="sr-only">Aller directement à une lettre de l'alphabet</label>
@@ -119,17 +95,11 @@
             <option selected value="">ABC&#x2026;</option>
           </select>
         </div>
-        <!--
-          <div>
-              <i class="fa fa-search"></i>
-              <label for="input--search" class="sr-only">Recherche par saisie de nom ou de mot clef</label>
-              <input type="search" list="searchlist" id="input--search" placeholder="Planning familial, Grenoble, sport...">
-              <datalist id="searchlist"></datalist>
-          </div>-->
+
         <div>
           <i class="fa fa-info"></i>
           <details id="apropos">
-            <summary>À PROPOS</summary>
+            <summary> À PROPOS</summary>
             <div>
               <a href="https://framaforms.org/users/annmb/contact" rel="external noreferrer contact"> <i class="fa fa-mail"></i>Formulaire de contact </a>
               <a href="https://github.com/MTPGI/38" rel="external noreferrer"> <i class="fa fa-gh"></i>Page GitHub du projet </a>
@@ -139,9 +109,22 @@
             </div>
           </details>
         </div>
+
+
       </nav>
       <div id="text--resultats"></div>
       <main class="flex" id="main">
+	  
+	  <!--https://www.eve-grenoble.fr/plateforme-alveole/annuaire-des-associations/1-culturel/416-club-de-lectures-feministes
+	  https://www.eve-grenoble.fr/plateforme-alveole/annuaire-des-associations/15-structures-hors-associations/647-coordination-feministe
+	  https://www.eve-grenoble.fr/plateforme-alveole/annuaire-des-associations/1-culturel/725-organisation-universitaire-feministe-ouf
+	  https://www.eve-grenoble.fr/plateforme-alveole/annuaire-des-associations/10-solidarite-et-entraide/178-solidarite-femmes-grenoble-isere
+	  https://www.eve-grenoble.fr/plateforme-alveole/annuaire-des-associations/3-environnement-et-developpement-durable/327-developpement-durable-et-egalite-femmes-hommes-->
+	  
+	  
+	  
+	  
+	  
         <article class="vcard" data-keyword="asso" data-vcard="afei">
           <header>
             <h2 class="fn org">
@@ -154,16 +137,16 @@
           <a class="email" href="mailto:contact@afei38.fr">contact@afei38.fr</a>
           <a class="url" href="https://www.afei38.fr/" rel="external noreferrer">www.afei38.fr</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.189459,5.735359" target="_self" rel="external noreferrer">
-          <span class="street-address">2 ter rue Joseph Fourier</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="street-address">2 ter rue Joseph Fourier</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu" href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.189459,5.735359" rel="external noreferrer">
-          <span class="P16">16</span> <span class="busstop">Mutualité</span><br>
-          <span class="P15">15</span> <span class="busstop">Bir Hakeim</span><br>
-          <span class="TA">A</span> <span class="busstop">Verdun - Préfecture</span><br>
-          <span class="C1">C1</span> <span class="busstop">Grenoble Hôtel de Ville</span><br>
-          <span class="TB">B</span> <span class="busstop">Sainte-Claire - Les Halles</span>
+            <span class="P16">16</span> <span class="busstop">Mutualité</span><br>
+            <span class="P15">15</span> <span class="busstop">Bir Hakeim</span><br>
+            <span class="TA">A</span> <span class="busstop">Verdun - Préfecture</span><br>
+            <span class="C1">C1</span> <span class="busstop">Grenoble Hôtel de Ville</span><br>
+            <span class="TB">B</span> <span class="busstop">Sainte-Claire - Les Halles</span>
           </a>
         </article>
         <article class="vcard" data-keyword="asso,educ" data-vcard="affdu">
@@ -175,10 +158,10 @@
           </header>
           <a class="email" href="mailto:affdu-grenoble@int-evry.fr">affdu-grenoble@int-evry.fr</a>
           <a class="url" href="https://www.associationdesfemmesdiplomees.fr/" rel="external noreferrer">www.associationdesfemmesdiplomees.fr</a>
-          <a class="facebook" href="https://www.facebook.com/AFFDU.Grenoble/" rel="external noreferrer">@AFFDU.Grenoble</a>
-          <div class="adr">
-            <span class="locality">GRENOBLE</span>
-          </div>
+		  <a class="facebook" href="https://www.facebook.com/AFFDU.Grenoble/" rel="external noreferrer">@AFFDU.Grenoble</a>
+		  <div class="adr">
+			<span class="locality">GRENOBLE</span>
+		  </div>
         </article>
         <article class="vcard" data-keyword="acti,femi" data-vcard="ag_feministe_38">
           <header>
@@ -188,12 +171,12 @@
               internationale pour le droit des femmes).
             </p>
           </header>
-          <a class="email" href="mailto:agfeministe38@protonmail.com">agfeministe38@protonmail.com</a>
+		  <a class="email" href="mailto:agfeministe38@protonmail.com">agfeministe38@protonmail.com</a>
           <a class="instagram" href="https://www.instagram.com/agfeministe_38" rel="external noreferrer">@agfeministe_38</a>
-          <a class="url" href="https://www.ulule.com/caisse-de-greve-ag-feministe" rel="external noreferrer">www.ulule.com/caisse-de-greve-ag-feministe</a>
-          <div class="adr">
-            <span class="locality">GRENOBLE</span>
-          </div>
+		  <a class="url" href="https://www.ulule.com/caisse-de-greve-ag-feministe" rel="external noreferrer">www.ulule.com/caisse-de-greve-ag-feministe</a>
+		  <div class="adr">
+			<span class="locality">GRENOBLE</span>
+		  </div>
           <div class="info">
             En non-mixité femmes et minorités de genre.
           </div>
@@ -209,14 +192,14 @@
           <a class="facebook" href="https://www.facebook.com/aidesgrenoble38" rel="external noreferrer">@aidesgrenoble38</a>
           <a class="instagram" href="https://www.instagram.com/aidesgrenoble" rel="external noreferrer">@aidesgrenoble</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
-          <span class="street-address">8 rue sergent Bobillot</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+              <span class="street-address">8 rue sergent Bobillot</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
-          <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
-          <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
-          <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
+            <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
+            <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+            <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
           </a>
           <div class="hours">
             <ul>
@@ -235,9 +218,9 @@
           <a class="tel" href="tel:+33437035733">04 37 03 57 33</a>
           <a class="url" href="https://alpa.fondation-boissel.fr/" rel="external noreferrer">alpa.fondation-boissel.fr</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.584854,5.272334" rel="external noreferrer">
-          <span class="extended-address">ALPA - Tétras-Lyre</span><span class="street-address">17 avenue des Alpes</span>
-          <span class="postal-code">38300</span>
-          <span class="locality">BOURGOIN-JALLIEU</span>
+              <span class="extended-address">ALPA - Tétras-Lyre</span><span class="street-address">17 avenue des Alpes</span>
+              <span class="postal-code">38300</span>
+              <span class="locality">BOURGOIN-JALLIEU</span>
           </a>
         </article>
         <article class="vcard" data-keyword="tds" data-vcard="amicale_du_nid">
@@ -252,9 +235,9 @@
           <a class="email" href="mailto:amicaledunidisere@wanadoo.fr">amicaledunidisere@wanadoo.fr</a>
           <a class="url" href="https://amicaledunid.org/isere/" rel="external noreferrer">amicaledunid.org/isere</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.190028,5.728965" rel="external noreferrer">
-          <span class="street-address">9 rue Raoul Blanchard</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+              <span class="street-address">9 rue Raoul Blanchard</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.190028,5.728965" rel="external noreferrer">
           <span class="TA">A</span>
@@ -277,9 +260,9 @@
           <a class="email" href="mailto:contact@ancrage-autodefense.fr">contact@ancrage-autodefense.fr</a>
           <a class="facebook" href="https://www.facebook.com/prevention.des.violences" rel="external noreferrer">@prevention.des.violences</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.184601,5.724440" rel="external noreferrer">
-          <span class="extended-address">Maison des Associations</span><span class="street-address">6 rue Berthe de Boissieux</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="extended-address">Maison des Associations</span><span class="street-address">6 rue Berthe de Boissieux</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184601,5.724440" rel="external noreferrer">
           <span class="P16">16</span> <span class="busstop">Caserne de Bonne</span><br>
@@ -301,8 +284,8 @@
           <a class="youtube" href="https://www.youtube.com/AssociationAPGL" rel="external noreferrer">Association APGL</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
           <span class="street-address">8 rue Sergent Bobillot</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
           <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
@@ -326,8 +309,8 @@
           <a class="email" href="mailto:info@parite-science.fr">info@parite-science.fr</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.203864,5.700169" rel="external noreferrer">
           <span class="street-address">25 avenue des Martyrs</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.203864,5.700169" rel="external noreferrer">
           <span class="P22">22</span>
@@ -336,10 +319,10 @@
           </a>
           <h3>Siège social</h3>
           <div class="adr">
-            <span class="extended-address">LNCMI CNRS</span>
-            <span class="post-office-box">BP 166</span>
-            <span class="postal-code">38042</span>
-            <span class="locality">GRENOBLE CEDEX 9</span>
+              <span class="extended-address">LNCMI CNRS</span>
+              <span class="post-office-box">BP 166</span>
+              <span class="postal-code">38042</span>
+              <span class="locality">GRENOBLE CEDEX 9</span>
           </div>
         </article>
         <article class="vcard" data-keyword="tds,host" data-vcard="althea">
@@ -358,8 +341,8 @@
           <a class="url" href="https://althea38.org/" rel="external noreferrer">althea38.org</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.193429,5.732938" rel="external noreferrer">
           <span class="street-address">8 rue du Vieux Temple</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <div class="bus"><a href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.193429,5.732938" rel="external noreferrer">
             <span class="P16">16</span> <span class="busstop">Notre-Dame </span>– Musée</a>
@@ -389,24 +372,24 @@
           <a class="youtube" href="https://www.youtube.com/user/INAVEM08VICTIMES" rel="external noreferrer"> France Victimes</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.523478,4.876058" rel="external noreferrer">
           <span class="street-address">43 rue Victor Hugo</span>
-          <span class="postal-code">38200</span>
-          <span class="locality">VIENNE</span>
+            <span class="postal-code">38200</span>
+            <span class="locality">VIENNE</span>
           </a>									 <!-- A AJOUTER AUX FILTRES DE VILLE -->
           <p>Autres permanences : <span class="locality">Villefontaine</span>, <span class="locality">L'Isle-d'Abeau</span>, <span class="locality">Roussillon</span>, <span class="locality">Chasse-sur-Rhône</span>, <span class="locality">Ampuis</span>.</p>
           <div class="hours">Du lundi au vendredi : de 9h00 à 17h00</div>
         </article>
-        <!--
-          <article class="vcard" data-keyword="work,asso" data-vcard="autre_cercle">
-            <header>
-              <h2 class="fn org">L'Autre cercle</h2>
-              <p>Association de lutte contre les discriminations liées à l’orientation sexuelle et à l’identité de genre dans le monde du travail.</p>
-            </header>
-            <a class="tel" href="tel:+33680284467">06 80 28 44 67</a>
-            <a class="email" href="mailto:info.rhonealpes@autrecercle.org">info.rhonealpes@autrecercle.org</a>
-            <a class="url" href="https://autrecercle.org/rhone-alpes/" rel="external noreferrer">autrecercle.org/rhone-alpes</a>
-            <a class="facebook" href="https://www.facebook.com/autrecercle.rhonealpes" rel="external noreferrer">@autrecercle.rhonealpes</a>
-            <a class="twitter" href="https://www.twitter.com/autrecerclera" rel="external noreferrer">@autrecerclera</a>
-          </article>-->
+		<!--
+        <article class="vcard" data-keyword="work,asso" data-vcard="autre_cercle">
+          <header>
+            <h2 class="fn org">L'Autre cercle</h2>
+            <p>Association de lutte contre les discriminations liées à l’orientation sexuelle et à l’identité de genre dans le monde du travail.</p>
+          </header>
+          <a class="tel" href="tel:+33680284467">06 80 28 44 67</a>
+          <a class="email" href="mailto:info.rhonealpes@autrecercle.org">info.rhonealpes@autrecercle.org</a>
+          <a class="url" href="https://autrecercle.org/rhone-alpes/" rel="external noreferrer">autrecercle.org/rhone-alpes</a>
+          <a class="facebook" href="https://www.facebook.com/autrecercle.rhonealpes" rel="external noreferrer">@autrecercle.rhonealpes</a>
+          <a class="twitter" href="https://www.twitter.com/autrecerclera" rel="external noreferrer">@autrecerclera</a>
+        </article>-->
         <article class="vcard" data-keyword="" data-vcard="balance_ton_bar">
           <header>
             <h2 class="fn org">Balance ton bar Grenoble</h2>
@@ -417,7 +400,7 @@
           <a class="instagram" href="https://www.instagram.com/balance_ton_bar_grenoble" rel="external noreferrer">@balance_ton_bar_grenoble</a>
           <div class="adr">
             <span class="locality">GRENOBLE</span>
-          </div>
+          </div>	
         </article>
         <article class="vcard" data-keyword="heal" data-vcard="bien_etre_pour_elles">
           <header>
@@ -429,8 +412,8 @@
           <a class="url" href="https://www.bienetrepourelles.fr" rel="external noreferrer">www.bienetrepourelles.fr</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.173248,5.711259" rel="external noreferrer">
           <span class="street-address">23 ter rue Anatole France</span>
-          <span class="postal-code">38100</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38100</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.173248,5.711259" rel="external noreferrer">
           <span class="C5">C5</span> <span class="busstop">Lys Rouge</span><br>
@@ -448,9 +431,9 @@
           <a class="facebook" href="https://www.facebook.com/BienNaitreEtGrandir" rel="external noreferrer">@BienNaitreEtGrandir</a>
           <a class="twitter" href="https://www.twitter.com/Bgrandir" rel="external noreferrer">@Bgrandir</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.188419,5.737459" rel="external noreferrer">
-          <span class="extended-address">MNEI</span><span class="street-address">5 place Bir Hakeim</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="extended-address">MNEI</span><span class="street-address">5 place Bir Hakeim</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.188419,5.737459" rel="external noreferrer">
           <span class="P15">15</span> <span class="busstop">Bir Hakeim</span><br>
@@ -470,8 +453,8 @@
           <a class="instagram" href="https://www.instagram.com/bon.sang.asso" rel="external noreferrer">@bon.sang.asso</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.183975,5.705998" rel="external noreferrer">
           <span class="street-address">21 Rue Boucher de Perthes</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.183975,5.705998" rel="external noreferrer">
           <span class="C5">C5</span> <span class="busstop">Cémoi</span><br>
@@ -501,8 +484,8 @@
           <a class="youtube" href="https://www.youtube.com/channel/UCevhJXzYqC-FkW9ygUALKzA" rel="external noreferrer">Association ça déménage en Isère</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.160950,5.712524" rel="external noreferrer">
           <span class="street-address">93 bis rue Général Mangin</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.160950,5.712524" rel="external noreferrer">
           <span class="P16">16</span> <span class="busstop">Les Essarts</span><br>
@@ -511,7 +494,7 @@
           <span class="P12">12</span> <span class="busstop">Verlaine</span>
           </a>
         </article>
-        <article data-keyword="heal,mst" data-vcard="cegidd">
+        <article			   data-keyword="heal,mst" data-vcard="cegidd">
           <header>
             <h2>
               <abbr title="Centre Gratuit d'Information, de Dépistage et de Diagnostic">CeGIDD</abbr>
@@ -523,10 +506,10 @@
             <h3 class="fn org">CeGIDD Grenoble</h3>
             <a class="tel" href="tel:+33476121285">04 76 12 12 85</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.181731,5.730450" rel="external noreferrer">
-            <span class="extended-address">Centre départemental de Santé</span>
-            <span class="street-address">23 avenue Albert 1<sup>er</sup> de Belgique</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="extended-address">Centre départemental de Santé</span>
+              <span class="street-address">23 avenue Albert 1<sup>er</sup> de Belgique</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.181731,5.730450" rel="external noreferrer">
             <span class="TA">A</span> <span class="busstop">Albert 1</span><sup>er</sup> de Belgique<br>
@@ -539,9 +522,9 @@
             <h3 class="fn org">CeGIDD Vienne</h3>
             <a class="tel" href="tel:+33481340050">04 81 34 00 50</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.527767,4.879736" rel="external noreferrer">
-            <span class="street-address">10 rue Albert Thomas</span>
-            <span class="postal-code">38200</span>
-            <span class="locality">VIENNE</span>
+              <span class="street-address">10 rue Albert Thomas</span>
+              <span class="postal-code">38200</span>
+              <span class="locality">VIENNE</span>
             </a>
             <div class="hours">
               <ul>
@@ -554,10 +537,10 @@
             <h3 class="fn org">CeGIDD Bourgoin-Jallieu</h3>
             <a class="tel" href="tel:+33426730508">04 26 73 05 08</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.593398,5.274745" rel="external noreferrer">
-            <span class="extended-address">Maison de Territoire de la Porte des Alpes</span>
-            <span class="street-address">18 avenue Frédéric Dard</span>
-            <span class="postal-code">38300</span>
-            <span class="locality">BOURGOIN-JALLIEU</span>
+              <span class="extended-address">Maison de Territoire de la Porte des Alpes</span>
+              <span class="street-address">18 avenue Frédéric Dard</span>
+              <span class="postal-code">38300</span>
+              <span class="locality">BOURGOIN-JALLIEU</span>
             </a>
             <div class="hours">
               <ul>
@@ -576,8 +559,8 @@
           <a class="url" href="https://www.agecsa.fr/nos-5-centres-de-sante/centre-de-sante-geants/" rel="external noreferrer">www.agecsa.fr/nos-5-centres-de-sante/centre-de-sante-geants</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.162266,5.738991" rel="external noreferrer">
           <span class="street-address">64 place des Géants</span>
-          <span class="postal-code">38100</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38100</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.527767,4.879736" rel="external noreferrer">
           <span class="P12">12</span> <span class="busstop">Les Géants</span><br>
@@ -603,8 +586,8 @@
           <a class="twitter" href="https://www.twitter.com/CentreLGBTI38" rel="external noreferrer">@CentreLGBTI38</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
           <span class="street-address">8 rue sergent Bobillot</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
           <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
@@ -617,7 +600,7 @@
             Caserne de Bonne et accessible PMR, sont conçus pour accueillir des activités militantes et conviviales.
           </div>
         </article>
-        <article data-keyword="heal,psy" data-vcard="centres_medicaux_psychologiques">
+        <article 			   data-keyword="heal,psy" data-vcard="centres_medicaux_psychologiques">
           <header>
             <h2>Centres Médicaux Psychologiques (CMP)</h2>
             <p>Institutions médicales proposant généralement des parcours de soin psychiatriques, psychologiques et infirmiers gratuits.</p>
@@ -625,9 +608,9 @@
           <div class="card vcard">
             <h3 class="fn org">CMP Bourg-d'Oisans</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.059245,6.030811" rel="external noreferrer">
-            <span class="extended-address">HLM <q>Prè des Roches</q> - Bâtiment A</span><span class="street-address">276 rue de Belledonne</span>
-            <span class="postal-code">38520</span>
-            <span class="locality">LE BOURG-D'OISANS</span>
+              <span class="extended-address">HLM <q>Prè des Roches</q> - Bâtiment A</span><span class="street-address">276 rue de Belledonne</span>
+              <span class="postal-code">38520</span>
+              <span class="locality">LE BOURG-D'OISANS</span>
             </a>
             <a class="tel" href="tel:+33476802286">04 76 80 22 86</a>
             <div class="hours">Ouvert du mardi au jeudi de 9h à 17h</div>
@@ -635,9 +618,9 @@
           <div class="card vcard">
             <h3 class="fn org">CMP Fontanil-Cornillon - Thérèse Lempérière</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.255256,5.661896" rel="external noreferrer">
-            <span class="extended-address">Le hameau des Poètes</span><span class="street-address">7 allée Charles Baudelaire</span>
-            <span class="postal-code">38120</span>
-            <span class="locality">FONTANIL-CORNILLON</span>
+              <span class="extended-address">Le hameau des Poètes</span><span class="street-address">7 allée Charles Baudelaire</span>
+              <span class="postal-code">38120</span>
+              <span class="locality">FONTANIL-CORNILLON</span>
             </a>
             <a class="tel" href="tel:+33456588755">04 56 58 87 55</a>
             <div class="hours">Ouvert tous les jours de 9h à 17h</div>
@@ -645,9 +628,9 @@
           <div class="card vcard">
             <h3 class="fn org">CMP Saint-Marcellin</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.149347,5.324129" rel="external noreferrer">
-            <span class="street-address">4 avenue Jules David</span>
-            <span class="postal-code">38160</span>
-            <span class="locality">SAINT-MARCELLIN</span>
+              <span class="street-address">4 avenue Jules David</span>
+              <span class="postal-code">38160</span>
+              <span class="locality">SAINT-MARCELLIN</span>
             </a>
             <a class="tel" href="tel:+33456588280">04 56 58 82 80</a>
             <div class="hours">Ouvert tous les jours de 9h à 17h</div>
@@ -655,9 +638,9 @@
           <div class="card vcard">
             <h3 class="fn org">CMP Vif</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.054625,5.665973" rel="external noreferrer">
-            <span class="street-address">10 rue du Breuil</span>
-            <span class="postal-code">38450</span>
-            <span class="locality">VIF</span>
+              <span class="street-address">10 rue du Breuil</span>
+              <span class="postal-code">38450</span>
+              <span class="locality">VIF</span>
             </a>
             <a class="tel" href="tel:+33456588225">04 56 58 82 25</a>
             <div class="hours">Ouvert tous les jours sauf le mercredi de 9h à 17h</div>
@@ -665,9 +648,9 @@
           <div class="card vcard">
             <h3 class="fn org">CMP La Côte-Saint-André</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.387469,5.257896" rel="external noreferrer">
-            <span class="street-address">70 rue Henry Gérard</span>
-            <span class="postal-code">38260</span>
-            <span class="locality">LA CÔTE-SAINT-ANDRÉ</span>
+              <span class="street-address">70 rue Henry Gérard</span>
+              <span class="postal-code">38260</span>
+              <span class="locality">LA CÔTE-SAINT-ANDRÉ</span>
             </a>
             <a class="tel" href="tel:+33456588840">04 56 58 88 40</a>
             <div class="hours">Ouvert tous les jours de 9h à 17h</div>
@@ -675,45 +658,45 @@
           <div class="card vcard">
             <h3 class="fn org">CMP Grenoble - Les marronniers</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.167005,5.729619" rel="external noreferrer">
-            <span class="street-address">7 rue des Colibris</span>
-            <span class="postal-code">38100</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">7 rue des Colibris</span>
+              <span class="postal-code">38100</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="tel" href="tel:+33456588880">04 56 58 88 80</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org">CMP Grenoble - Bonnafé</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.183267,5.719728" rel="external noreferrer">
-            <span class="street-address">37 rue de Turenne</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">37 rue de Turenne</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="tel" href="tel:+33456588320">04 56 58 83 20</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org">CMP Grenoble - Lantéri Laura</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.171616,5.741024" rel="external noreferrer">
-            <span class="street-address">1 rue Dubois Fontanelle</span>
-            <span class="postal-code">38100</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">1 rue Dubois Fontanelle</span>
+              <span class="postal-code">38100</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="tel" href="tel:+33456588230">04 56 58 82 30</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org">CMP Saint-Martin-d'Hères - Dolto</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.171320,5.753793" rel="external noreferrer">
-            <span class="street-address">19 rue Jacques Anquetil</span>
-            <span class="postal-code">38400</span>
-            <span class="locality">SAINT-MARTIN-D'HÈRES</span>
+              <span class="street-address">19 rue Jacques Anquetil</span>
+              <span class="postal-code">38400</span>
+              <span class="locality">SAINT-MARTIN-D'HÈRES</span>
             </a>
             <a class="tel" href="tel:+33456588470">04 56 58 84 70</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org">CMP Villard-de-Lans</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.074609,5.555658" rel="external noreferrer">
-            <span class="street-address">150 impasse de Meillarot</span>
-            <span class="postal-code">38250</span>
-            <span class="locality">VILLARD-DE-LANS</span>
+              <span class="street-address">150 impasse de Meillarot</span>
+              <span class="postal-code">38250</span>
+              <span class="locality">VILLARD-DE-LANS</span>
             </a>
             <a class="tel" href="tel:+33456588460">04 56 58 84 60</a>
             <div class="hours">Ouvert tous les lundis, mardis et vendredis de 9h à 17h</div>
@@ -721,18 +704,18 @@
           <div class="card vcard">
             <h3 class="fn org">CMP Crolles</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.273678,5.894030" rel="external noreferrer">
-            <span class="extended-address">Espace Belle Étoile</span><span class="street-address">93 rue Henri Fabre</span>
-            <span class="postal-code">38920</span>
-            <span class="locality">CROLLES</span>
+              <span class="extended-address">Espace Belle Étoile</span><span class="street-address">93 rue Henri Fabre</span>
+              <span class="postal-code">38920</span>
+              <span class="locality">CROLLES</span>
             </a>
             <a class="tel" href="tel:+33456588290">04 56 58 82 90</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org">CMP La Mure</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:44.904980,5.793914" rel="external noreferrer">
-            <span class="street-address">1 bis rue de Thénevaux</span>
-            <span class="postal-code">38350</span>
-            <span class="locality">LA MURE</span>
+              <span class="street-address">1 bis rue de Thénevaux</span>
+              <span class="postal-code">38350</span>
+              <span class="locality">LA MURE</span>
             </a>
             <a class="tel" href="tel:+33456588400">04 56 58 84 00</a>
             <div class="hours">Ouvert tous les jours de 9h à 17h</div>
@@ -740,18 +723,18 @@
           <div class="card vcard">
             <h3 class="fn org">CMP Saint-Eynard - La Tronche</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.197319,5.751596" rel="external noreferrer">
-            <span class="extended-address">Immeuble Le Manhattan</span><span class="street-address">24 boulevard de la Chantourne</span>
-            <span class="postal-code">38700</span>
-            <span class="locality">LA TRONCHE</span>
+              <span class="extended-address">Immeuble Le Manhattan</span><span class="street-address">24 boulevard de la Chantourne</span>
+              <span class="postal-code">38700</span>
+              <span class="locality">LA TRONCHE</span>
             </a>
             <a class="tel" href="tel:+33456588375">04 56 58 83 75</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org">CMP Vizille</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.077048,5.772564" rel="external noreferrer">
-            <span class="street-address">111 rue du Général de Gaulle</span>
-            <span class="postal-code">38220</span>
-            <span class="locality">VIZILLE</span>
+              <span class="street-address">111 rue du Général de Gaulle</span>
+              <span class="postal-code">38220</span>
+              <span class="locality">VIZILLE</span>
             </a>
             <a class="tel" href="tel:+33456588360">04 56 58 83 60</a>
             <div class="hours">Ouvert tous jours 9h à 17h</div>
@@ -759,9 +742,9 @@
           <div class="card vcard">
             <h3 class="fn org">CMP Échirolles - Les Oréades</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.148859,5.720037" rel="external noreferrer">
-            <span class="street-address">33 rue de Normandie Niemen</span>
-            <span class="postal-code">38130</span>
-            <span class="locality">ÉCHIROLLES</span>
+              <span class="street-address">33 rue de Normandie Niemen</span>
+              <span class="postal-code">38130</span>
+              <span class="locality">ÉCHIROLLES</span>
             </a>
             <a class="tel" href="tel:+33456588300">04 56 58 83 00</a>
             <div class="hours">Ouvert tous les jours de 9h à 17h</div>
@@ -769,9 +752,9 @@
           <div class="card vcard">
             <h3 class="fn org">CMP Pontcharra</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.432693,6.015670" rel="external noreferrer">
-            <span class="street-address">440 avenue de la Gare</span>
-            <span class="postal-code">38530</span>
-            <span class="locality">PONTCHARRA</span>
+              <span class="street-address">440 avenue de la Gare</span>
+              <span class="postal-code">38530</span>
+              <span class="locality">PONTCHARRA</span>
             </a>
             <a class="tel" href="tel:+33456588900">04 56 58 89 00</a>
             <div class="hours">Ouvert tous les jours de 9h à 17h</div>
@@ -779,10 +762,10 @@
           <div class="card vcard">
             <h3 class="fn org">CMP Tullins, <q>Pavillon Parménie</q></h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.298870,5.482816" rel="external noreferrer">
-            <span class="extended-address">2<sup>ème</sup> étage</span>
-            <span class="street-address">1 place Gambetta</span>
-            <span class="postal-code">38210</span>
-            <span class="locality">TULLINS</span>
+              <span class="extended-address">2<sup>ème</sup> étage</span>
+			  <span class="street-address">1 place Gambetta</span>
+              <span class="postal-code">38210</span>
+              <span class="locality">TULLINS</span>
             </a>
             <a class="tel" href="tel:+33456588770">04 56 58 87 70</a>
             <div class="hours">Ouvert tous les jours de 9h à 17h</div>
@@ -790,9 +773,9 @@
           <div class="card vcard">
             <h3 class="fn org">CMP Voiron <q>Les jardins du consul</q></h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.369009,5.588259" rel="external noreferrer">
-            <span class="street-address">35 rue Sermorens</span>
-            <span class="postal-code">38500</span>
-            <span class="locality">VOIRON</span>
+              <span class="street-address">35 rue Sermorens</span>
+              <span class="postal-code">38500</span>
+              <span class="locality">VOIRON</span>
             </a>
             <a class="tel" href="tel:+33476677040">04 76 67 70 40</a>
             <div class="hours">Ouvert tous les jours de 9h à 17h</div>
@@ -800,9 +783,9 @@
           <div class="card vcard">
             <h3 class="fn org">CMP Fontaine - Escanglon</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.188579,5.687364" rel="external noreferrer">
-            <span class="street-address">17 rue Professeur Esclangon</span>
-            <span class="postal-code">38600</span>
-            <span class="locality">FONTAINE</span>
+              <span class="street-address">17 rue Professeur Esclangon</span>
+              <span class="postal-code">38600</span>
+              <span class="locality">FONTAINE</span>
             </a>
             <a class="tel" href="tel:+33476264282">04 76 26 42 82</a>
             <div class="hours">Ouvert tous les jours de 9h à 17h</div>
@@ -810,15 +793,15 @@
           <div class="card vcard">
             <h3 class="fn org">CMP Saint-Laurent-du-Pont</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.388215,5.730239" rel="external noreferrer">
-            <span class="street-address">1 rue Charles Berty</span>
-            <span class="postal-code">38380</span>
-            <span class="locality">SAINT-LAURENT-DU-PONT</span>
+              <span class="street-address">1 rue Charles Berty</span>
+              <span class="postal-code">38380</span>
+              <span class="locality">SAINT-LAURENT-DU-PONT</span>
             </a>
             <a class="tel" href="tel:+33456588910">04 56 58 89 10</a>
             <div class="hours">Ouvert tous les jours de 9h à 17h</div>
           </div>
         </article>
-        <article data-keyword="heal,mst,cont,ivg" data-vcard="centres_planification_departementaux">
+        <article 			   data-keyword="heal,mst,cont,ivg" data-vcard="centres_planification_departementaux">
           <header>
             <h2>Centres de planification départementaux</h2>
             <p>
@@ -829,10 +812,10 @@
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Grenoble Interquartier</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.179510,5.744926" rel="external noreferrer">
-            <span class="extended-address">Maison des Habitants Abbaye-Jouhaux</span>
-            <span class="street-address">1 place de la commune de 1871</span>
-            <span class="postal-code">38100</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="extended-address">Maison des Habitants Abbaye-Jouhaux</span>
+              <span class="street-address">1 place de la commune de 1871</span>
+              <span class="postal-code">38100</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="tel" href="tel:+33476542627">04 76 54 26 27</a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.179510,5.744926" rel="external noreferrer">
@@ -844,36 +827,36 @@
             <h3 class="fn org"><span>Centre de planification - </span>Grenoble - Mistral Eaux-Claires</h3>
             <a class="tel" href="tel:+33476214041">04 76 21 40 41</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.172581,5.703899" rel="external noreferrer">
-            <span class="street-address">82 rue Anatole France</span>
-            <span class="postal-code">38100</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">82 rue Anatole France</span>
+              <span class="postal-code">38100</span>
+              <span class="locality">GRENOBLE</span>
             </a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Grenoble - Prémol</h3>
             <a class="tel" href="tel:+33476090028">04 76 09 00 28</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.163403,5.727504" rel="external noreferrer">
-            <span class="street-address">7 rue Henry Duhamel</span>
-            <span class="postal-code">38100</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">7 rue Henry Duhamel</span>
+              <span class="postal-code">38100</span>
+              <span class="locality">GRENOBLE</span>
             </a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Grenoble - Teisseire Malherbe</h3>
             <a class="tel" href="tel:+33476254963">04 76 25 49 63</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.171364,5.739484" rel="external noreferrer">
-            <span class="street-address">110 Avenue Jean Perrot</span>
-            <span class="postal-code">38100</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">110 Avenue Jean Perrot</span>
+              <span class="postal-code">38100</span>
+              <span class="locality">GRENOBLE</span>
             </a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Grenoble - Vieux Temple</h3>
             <a class="tel" href="tel:+33476546753">04 76 54 67 53</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.193553,5.733709" rel="external noreferrer">
-            <span class="street-address">2 rue du Vieux Temple</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">2 rue du Vieux Temple</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
           </div>
           <div class="card vcard">
@@ -881,18 +864,18 @@
             <a class="tel" href="tel:+33474283022">04 74 28 30 22</a>
             <a class="url" href="https://www.isere.fr/centre-de-planification" rel="external noreferrer">www.isere.fr/centre-de-planification</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.589936,5.2769" rel="external noreferrer">
-            <span class="street-address">14 place Albert Schweitzer</span>
-            <span class="postal-code">38300</span>
-            <span class="locality">BOURGOIN-JALLIEU</span>
+              <span class="street-address">14 place Albert Schweitzer</span>
+              <span class="postal-code">38300</span>
+              <span class="locality">BOURGOIN-JALLIEU</span>
             </a>
           </div>
           <div class="card vcard">
             <h3 class="fn org">Centre de planification et de consultation prénatale - Grenoble</h3>
             <a class="tel" href="tel:+33476121287">04 76 12 12 87</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.181817,5.730485" rel="external noreferrer">
-            <span class="street-address">23 avenue Albert 1<sup>er</sup> de Belgique</span>
-            <span class="postal-code">38100</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">23 avenue Albert 1<sup>er</sup> de Belgique</span>
+              <span class="postal-code">38100</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.589936,5.2769" rel="external noreferrer">
             <span class="TA">A</span> <span class="busstop">Albert 1</span><sup>er</sup> de Belgique<br>
@@ -904,9 +887,9 @@
             <h3 class="fn org"><span>Centre de planification - </span>Fontaine</h3>
             <a class="tel" href="tel:+33476269740">04 76 26 97 40</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.196871,5.684416" rel="external noreferrer">
-            <span class="street-address">11 place des Écrins</span>
-            <span class="postal-code">38600</span>
-            <span class="locality">FONTAINE</span>
+              <span class="street-address">11 place des Écrins</span>
+              <span class="postal-code">38600</span>
+              <span class="locality">FONTAINE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.196871,5.684416" rel="external noreferrer">
             <span class="P19">19</span> <span class="busstop">Les Écrins</span><br>
@@ -918,9 +901,9 @@
             <h3 class="fn org"><span>Centre de planification - </span> Le Pont-de-Claix</h3>
             <a class="tel" href="tel:+33476298650">04 76 29 86 50</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.127919,5.697414" rel="external noreferrer">
-            <span class="street-address">27 avenue Antoine Girard</span>
-            <span class="postal-code">38800</span>
-            <span class="locality">LE PONT-DE-CLAIX</span>
+              <span class="street-address">27 avenue Antoine Girard</span>
+              <span class="postal-code">38800</span>
+              <span class="locality">LE PONT-DE-CLAIX</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.127919,5.697414" rel="external noreferrer">
             <span class="P25">25</span> <span class="busstop">Irène Joliot-Curie</span><br>
@@ -931,12 +914,12 @@
             <h3 class="fn org">Service de santé inter-universitaire - Grenoble</h3>
             <a class="tel" href="tel:+33476575090">04 76 57 50 90</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.191801,5.717774" rel="external noreferrer">
-            <span class="street-address">
+              <span class="street-address">
             2<sup>ème</sup> étage<br>
             5 rue d'Arsonval
             </span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.191801,5.717774" rel="external noreferrer">
             <span class="P26">26</span> <span class="busstop">Gares</span><br>
@@ -948,21 +931,21 @@
             <h3 class="fn org"><span>Centre de planification - </span> Échirolles – Eybens</h3>
             <a class="tel" href="tel:+33476593769">04 76 59 37 69</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.156887,5.718845" rel="external noreferrer">
-            <span class="street-address">12-14 avenue des États Généraux</span>
-            <span class="postal-code">38130</span>
-            <span class="locality">ÉCHIROLLES</span>
+              <span class="street-address">12-14 avenue des États Généraux</span>
+              <span class="postal-code">38130</span>
+              <span class="locality">ÉCHIROLLES</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.156887,5.718845" rel="external noreferrer">
-            <span class="TA">A</span> <span class="busstop">Essarts </span>– La Butte
-            </a>
+			  <span class="TA">A</span> <span class="busstop">Essarts </span>– La Butte
+			</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span> Saint-Martin-d’Hères</h3>
             <a class="tel" href="tel:+33476607459">04 76 60 74 59</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.183099,5.752367" rel="external noreferrer">
-            <span class="street-address">5 rue Anatole France</span>
-            <span class="postal-code">38400</span>
-            <span class="locality">SAINT-MARTIN-D'HÈRES</span>
+              <span class="street-address">5 rue Anatole France</span>
+              <span class="postal-code">38400</span>
+              <span class="locality">SAINT-MARTIN-D'HÈRES</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.183099,5.752367" rel="external noreferrer">
             <span class="TD">D</span> <span class="busstop">Maison Communale</span><br>
@@ -975,9 +958,9 @@
             <a class="url" href="https://www.ghm-grenoble.fr/Maternite-Vos-consultations-prenatales.113.0.html" rel="external noreferrer">www.ghm-grenoble.fr/Maternite-Vos-consultations-prenatales.113.0.html</a>
             <a class="facebook" href="https://www.facebook.com/materniteghm" rel="external noreferrer">@materniteghm</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.181036,5.710161" rel="external noreferrer">
-            <span class="street-address">8 rue du Docteur Calmette</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">8 rue du Docteur Calmette</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.181036,5.710161" rel="external noreferrer">
             <span class="P12">12</span> <span class="busstop">Groupe Hospitalier Mutualiste</span><br>
@@ -990,23 +973,23 @@
             <a class="tel" href="tel:+33476792269">04 76 79 22 69</a>
             <a class="tel" href="tel:+33640753938">06 40 75 39 38</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.056959,6.028826" rel="external noreferrer">
-            <span class="extended-address">Maison médicale – 1<sup>er</sup> étage</span>
-            <span class="street-address">44 avenue Jean-Baptiste Gautier</span>
-            <span class="postal-code">38520</span>
-            <span class="locality">LE BOURG-D'OISANS</span>
+                <span class="extended-address">Maison médicale – 1<sup>er</sup> étage</span>
+                <span class="street-address">44 avenue Jean-Baptiste Gautier</span>
+                <span class="postal-code">38520</span>
+                <span class="locality">LE BOURG-D'OISANS</span>
             </a>
           </div>
           <div class="card vcard">
             <h3 class="fn org">Centre de santé inter-universitaire - Saint-Martin-d’Hères</h3>
             <a class="tel" href="tel:+33476824070">04 76 82 40 70</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.193078,5.75947" rel="external noreferrer">
-            <span class="street-address">180 rue de la Piscine</span>
-            <span class="postal-code">38400</span>
-            <span class="locality">SAINT-MARTIN-D'HÈRES</span>
+                <span class="street-address">180 rue de la Piscine</span>
+                <span class="postal-code">38400</span>
+                <span class="locality">SAINT-MARTIN-D'HÈRES</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.056959,6.028826" rel="external noreferrer">
-            <span class="TD">D</span> <span class="busstop">Les Taillées </span>– Universités<br>
-            <span class="TE">E</span> <span class="busstop">Hector Berlioz - Universités</span>
+              <span class="TD">D</span> <span class="busstop">Les Taillées </span>– Universités<br>
+              <span class="TE">E</span> <span class="busstop">Hector Berlioz - Universités</span>
             </a>
             <div class="hours">Par téléphone de 9h à 10h et de 14h à 15h</div>
           </div>
@@ -1014,9 +997,9 @@
             <h3 class="fn org"><q>Le Douze</q> - <span>Centre de planification de</span> Meylan</h3>
             <a class="tel" href="tel:+33476900636">04 76 90 06 36</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.208553,5.763187" rel="external noreferrer">
-            <span class="street-address">12 rue des Ayguinards</span>
-            <span class="postal-code">38240</span>
-            <span class="locality">MEYLAN</span>
+              <span class="street-address">12 rue des Ayguinards</span>
+              <span class="postal-code">38240</span>
+              <span class="locality">MEYLAN</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.208553,5.763187" rel="external noreferrer">
             <span class="F42">42</span> <span class="busstop">place de la Louisiane</span><br>
@@ -1027,10 +1010,10 @@
             <h3 class="fn org"><span>Centre de planification - </span>La Tronche</h3>
             <a class="tel" href="tel:+33776765410">07 76 76 54 10</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.202666,5.741533" rel="external noreferrer">
-            <span class="extended-address">Rez-de-Chaussée<br>Hôpital Couple-Enfant<br>CHU de Grenoble</span>
-            <span class="street-address">avenue Maquis Du Gresivaudan</span>
-            <span class="postal-code">38700</span>
-            <span class="locality">LA TRONCHE</span>
+              <span class="extended-address">Rez-de-Chaussée<br>Hôpital Couple-Enfant<br>CHU de Grenoble</span>
+              <span class="street-address">avenue Maquis Du Gresivaudan</span>
+              <span class="postal-code">38700</span>
+              <span class="locality">LA TRONCHE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.202666,5.741533" rel="external noreferrer">
             <span class="P13">13</span>
@@ -1040,40 +1023,40 @@
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span><q>le 8</q>, Grenoble</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.1810022,5.7100825" rel="external noreferrer">
-            <span class="extended-address">Groupe hospitalier mutualiste</span>
-            <span class="street-address">8 rue Docteur Calmette</span>
-            <span class="postal-code">38028</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="extended-address">Groupe hospitalier mutualiste</span>
+              <span class="street-address">8 rue Docteur Calmette</span>
+              <span class="postal-code">38028</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="tel" href="tel:+33476707024">04 76 70 70 24</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>La Mure</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:44.9054843,5.794126" rel="external noreferrer">
-            <span class="extended-address">En face de l'Hôpital</span>
-            <span class="street-address">63A rue des Alpes</span>
-            <span class="postal-code">38350</span>
-            <span class="locality">LA MURE</span>
+              <span class="extended-address">En face de l'Hôpital</span>
+              <span class="street-address">63A rue des Alpes</span>
+              <span class="postal-code">38350</span>
+              <span class="locality">LA MURE</span>
             </a>
             <a class="tel" href="tel:+33476814704">04 76 81 47 04</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Tour du Pin</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.5681001,5.4404733" rel="external noreferrer">
-            <span class="extended-address">Immeuble pré-cateland</span>
-            <span class="street-address">41 A boulevard Victor Hugo</span>
-            <span class="postal-code">38110</span>
-            <span class="locality">LA TOUR-DU-PIN</span>
+              <span class="extended-address">Immeuble pré-cateland</span>
+              <span class="street-address">41 A boulevard Victor Hugo</span>
+              <span class="postal-code">38110</span>
+              <span class="locality">LA TOUR-DU-PIN</span>
             </a>
             <a class="tel" href="tel:+33476975344">04 76 97 53 44</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Mens (Permanence)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:44.8155025,5.7508588" rel="external noreferrer">
-            <span class="extended-address">Locaux de MIXAGES</span>
-            <span class="street-address">rue du Docteur Senebier</span>
-            <span class="postal-code">38710</span>
-            <span class="locality">MENS</span>
+              <span class="extended-address">Locaux de MIXAGES</span>
+              <span class="street-address">rue du Docteur Senebier</span>
+              <span class="postal-code">38710</span>
+              <span class="locality">MENS</span>
             </a>
             <div class="one-line"><a class="tel" href="tel:+33476814704">04 76 81 47 04</a> <span>(CPEF de La Mure)</span></div>
             <a class="tel" href="tel:+33649990343">06 49 99 03 43</a>
@@ -1081,69 +1064,69 @@
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Monestier de Clermont (Permanence)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:44.9143822,5.6283238" rel="external noreferrer">
-            <span class="extended-address">Centre socio-culturel intercommunal le Granjou</span>
-            <span class="street-address">13 chemin des Chambons</span>
-            <span class="postal-code">38650</span>
-            <span class="locality">MONESTIER DE CLERMONT</span>
+              <span class="extended-address">Centre socio-culturel intercommunal le Granjou</span>
+              <span class="street-address">13 chemin des Chambons</span>
+              <span class="postal-code">38650</span>
+              <span class="locality">MONESTIER DE CLERMONT</span>
             </a>
             <div class="one-line"><a class="tel" href="tel:+33476298650">04 76 29 86 50</a> <span>(CPEF Pont-de-Claix)</span></div>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Agathe-Pontcharra</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.4320285,6.0207771" rel="external noreferrer">
-            <span class="street-address">33 avenue de la gare</span>
-            <span class="postal-code">38530</span>
-            <span class="locality">PONTCHARRA</span>
+              <span class="street-address">33 avenue de la gare</span>
+              <span class="postal-code">38530</span>
+              <span class="locality">PONTCHARRA</span>
             </a>
             <a class="tel" href="tel:+33476978100">04 76 97 81 00</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Le Pont de Beauvoisin</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.5387387,5.6647208" rel="external noreferrer">
-            <span class="extended-address">
+              <span class="extended-address">
             Centre Hospitalier Yves Touraine<br>
             Locaux du centre périnatal
             </span>
-            <span class="street-address">rue Lieutenant Richard</span>
-            <span class="postal-code">38480</span>
-            <span class="locality">LE PONT DE BEAUVOISIN</span>
+              <span class="street-address">rue Lieutenant Richard</span>
+              <span class="postal-code">38480</span>
+              <span class="locality">LE PONT DE BEAUVOISIN</span>
             </a>
             <a class="tel" href="tel:+33476327854">04 76 32 78 54</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Pont-de-Chéruy</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.7493424,5.1800142" rel="external noreferrer">
-            <span class="street-address">66 rue de la République</span>
-            <span class="postal-code">38230</span>
-            <span class="locality">PONT-DE-CHÉRUY</span>
+              <span class="street-address">66 rue de la République</span>
+              <span class="postal-code">38230</span>
+              <span class="locality">PONT-DE-CHÉRUY</span>
             </a>
             <a class="tel" href="tel:+33472939075">04 72 93 90 75</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Pont-de-Claix</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.1278656,5.6976287" rel="external noreferrer">
-            <span class="street-address">27 avenue Antoine Girard</span>
-            <span class="postal-code">38800</span>
-            <span class="locality">LE PONT-DE-CLAIX</span>
+              <span class="street-address">27 avenue Antoine Girard</span>
+              <span class="postal-code">38800</span>
+              <span class="locality">LE PONT-DE-CLAIX</span>
             </a>
             <a class="tel" href="tel:+33476298650">04 76 29 86 50</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Roussillon</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.3656659,4.8055803" rel="external noreferrer">
-            <span class="street-address">24 bis avenue Jean Jaurès</span>
-            <span class="postal-code">38150</span>
-            <span class="locality">ROUSSILLON</span>
+              <span class="street-address">24 bis avenue Jean Jaurès</span>
+              <span class="postal-code">38150</span>
+              <span class="locality">ROUSSILLON</span>
             </a>
             <a class="tel" href="tel:+33474865562">04 74 86 55 62</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Saint-Marcellin</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.1524243,5.3225557" rel="external noreferrer">
-            <span class="extended-address">Centre hospitalier de Saint-Marcellin</span>
-            <span class="street-address">1 avenue Félix Faure</span>
-            <span class="postal-code">38160</span>
-            <span class="locality">SAINT-MARCELLIN</span>
+              <span class="extended-address">Centre hospitalier de Saint-Marcellin</span>
+              <span class="street-address">1 avenue Félix Faure</span>
+              <span class="postal-code">38160</span>
+              <span class="locality">SAINT-MARCELLIN</span>
             </a>
             <a class="tel" href="tel:+33476646524">04 76 64 65 24</a>
             <a class="tel" href="tel:+33476646520">04 76 64 65 20</a>
@@ -1151,48 +1134,48 @@
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Saint-Martin-d'Hères Université</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.1931443,5.7599308" rel="external noreferrer">
-            <span class="extended-address">Centre de santé inter-universitaire de Grenoble</span>
-            <span class="street-address">180 rue de la piscine</span>
-            <span class="postal-code">38400</span>
-            <span class="locality">SAINT-MARTIN-D'HÈRES</span>
+              <span class="extended-address">Centre de santé inter-universitaire de Grenoble</span>
+              <span class="street-address">180 rue de la piscine</span>
+              <span class="postal-code">38400</span>
+              <span class="locality">SAINT-MARTIN-D'HÈRES</span>
             </a>
             <a class="tel" href="tel:+33476824070">04 76 82 40 70</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Saint-Martin-d'Hères</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.1834467,5.7522325" rel="external noreferrer">
-            <span class="street-address">5 rue Anatole France</span>
-            <span class="postal-code">38400</span>
-            <span class="locality">SAINT-MARTIN-D'HÈRES</span>
+              <span class="street-address">5 rue Anatole France</span>
+              <span class="postal-code">38400</span>
+              <span class="locality">SAINT-MARTIN-D'HÈRES</span>
             </a>
             <a class="tel" href="tel:+33476607459">04 76 60 74 59</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Vienne Centre Hospitalier</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.5337267,4.8797643" rel="external noreferrer">
-            <span class="extended-address">Centre Hospitalier Lucien Hussel</span>
-            <span class="street-address">Montée du Dr Chapuis</span>
-            <span class="postal-code">38200</span>
-            <span class="locality">VIENNE</span>
+              <span class="extended-address">Centre Hospitalier Lucien Hussel</span>
+              <span class="street-address">Montée du Dr Chapuis</span>
+              <span class="postal-code">38200</span>
+              <span class="locality">VIENNE</span>
             </a>
             <a class="tel" href="tel:+33474313386">04 74 31 33 86</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Vienne Quartier Saint-Martin</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.5277735,4.8797651" rel="external noreferrer">
-            <span class="street-address">10 rue Albert Thomas</span>
-            <span class="postal-code">38200</span>
-            <span class="locality">VIENNE</span>
+              <span class="street-address">10 rue Albert Thomas</span>
+              <span class="postal-code">38200</span>
+              <span class="locality">VIENNE</span>
             </a>
             <div class="one-line"><a href="tel:+33481340052" class="tel">04 81 34 00 52</a> <span>(le mercredi)</span></div>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Villard-de-Lans</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.0747271,5.5557732" rel="external noreferrer">
-            <span class="extended-address">Maison du territoire</span>
-            <span class="street-address">150 impasse Meillarot</span>
-            <span class="postal-code">38250</span>
-            <span class="locality">VILLARD-DE-LANS</span>
+              <span class="extended-address">Maison du territoire</span>
+              <span class="street-address">150 impasse Meillarot</span>
+              <span class="postal-code">38250</span>
+              <span class="locality">VILLARD-DE-LANS</span>
             </a>
             <a class="tel" href="tel:+33631449031">06 31 44 90 31</a>
             <div class="one-line"><a class="tel" href="tel:+33476269740">04 76 26 97 40</a> <span>(CPEF de Fontaine)</span></div>
@@ -1200,29 +1183,29 @@
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Vizille</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.0834614,5.7737201" rel="external noreferrer">
-            <span class="extended-address">Maison médicale de garde</span>
-            <span class="street-address">rue du 19 mars 1962</span>
-            <span class="postal-code">38220</span>
-            <span class="locality">VIZILLE</span>
+              <span class="extended-address">Maison médicale de garde</span>
+              <span class="street-address">rue du 19 mars 1962</span>
+              <span class="postal-code">38220</span>
+              <span class="locality">VIZILLE</span>
             </a>
             <div class="one-line"><a class="tel" href="tel:+33476298650">04 76 29 86 50</a> <span>(CPEF Le Pont-de-Claix)</span></div>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>Voiron</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.3648293,5.5939776" rel="external noreferrer">
-            <span class="extended-address">Immeuble le Centre Gare</span>
-            <span class="street-address">6 avenue des frères Tardy</span>
-            <span class="postal-code">38500</span>
-            <span class="locality">VOIRON</span>
+              <span class="extended-address">Immeuble le Centre Gare</span>
+              <span class="street-address">6 avenue des frères Tardy</span>
+              <span class="postal-code">38500</span>
+              <span class="locality">VOIRON</span>
             </a>
             <a class="tel" href="tel:+33476057256">04 76 05 72 56</a>
           </div>
           <div class="card vcard">
             <h3 class="fn org"><span>Centre de planification - </span>La Côte Saint-André</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.393492,5.265568" rel="external noreferrer">
-            <span class="street-address">3 avenue de verdun</span>
-            <span class="postal-code">38260</span>
-            <span class="locality">LA CÔTE-SAINT-ANDRÉ</span>
+              <span class="street-address">3 avenue de verdun</span>
+              <span class="postal-code">38260</span>
+              <span class="locality">LA CÔTE-SAINT-ANDRÉ</span>
             </a>
             <a class="tel" href="tel:+33675274175">06 75 27 41 75</a>
           </div>
@@ -1236,8 +1219,8 @@
           <a class="url" href="https://chorageuse.noblogs.org/" rel="external noreferrer">chorageuse.noblogs.org</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.188058,5.710936" rel="external noreferrer">
           <span class="street-address">38 rue d’Alembert</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.188058,5.710936" rel="external noreferrer">
           <span class="TA">A</span>
@@ -1264,8 +1247,8 @@
           <a class="facebook" href="https://www.facebook.com/Cidff-38-563439737156575/" rel="external noreferrer">Cidff 38</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.190028,5.728965" rel="external noreferrer">
           <span class="street-address">9 rue Raoul Blanchard</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.190028,5.728965" rel="external noreferrer">
           <span class="TA">A</span>
@@ -1277,26 +1260,26 @@
             Boissieux. Cité des Familles 3 rue de Belgrade
           </div>
         </article>
-        <article class="vcard" data-keyword="psyo,aggr,heal" data-vcard="codase">
+		<article class="vcard" data-keyword="psyo,aggr,heal" data-vcard="codase">
           <header>
             <h2 class="fn org">
-              CODASE-<abbr title="Centre de Soin et d'Accompagnement des Auteur(e)s de Violences Intra-familiales en Isère">CSAAVI</abbr>
-            </h2>
+			  CODASE-<abbr title="Centre de Soin et d'Accompagnement des Auteur(e)s de Violences Intra-familiales en Isère">CSAAVI</abbr>
+			</h2>
             <p>Anciennement <q>Passible</q>, le CSAAVI est un centre de soin et d'accompagnement de la violence intra-familiale, spécialisé dans la prise en charge de l’auteur(e) de ces violences.</p>
           </header>
-          <a class="tel" href="tel:+33476449415">04 76 44 94 15</a>
+		  <a class="tel" href="tel:+33476449415">04 76 44 94 15</a>
           <a class="tel" href="tel:+33689279210">06 89 27 92 10</a>
           <a class="email" href="mailto:sociojudiciaire@codase.org">sociojudiciaire@codase.org</a>
           <a class="url" href="https://www.codase-csaavi.org/" rel="external noreferrer">www.codase-csaavi.org</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.172202,5.724110" rel="external noreferrer">
-          <span class="street-address">96 rue de Stalingrad</span>
-          <span class="postal-code">38100</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="street-address">96 rue de Stalingrad</span>
+            <span class="postal-code">38100</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.1722026,5.724110" rel="external noreferrer">
-          <span class="P16">16</span> <span class="C3">C3</span> <span class="busstop">Eugène Sue</span><br>
-          <span class="C5">C5</span> <span class="busstop">Stalingrad Alliés</span><br>
-          <span class="TA">A</span> <span class="busstop">Malherbe</span>
+		    <span class="P16">16</span> <span class="C3">C3</span> <span class="busstop">Eugène Sue</span><br>
+		    <span class="C5">C5</span> <span class="busstop">Stalingrad Alliés</span><br>
+		    <span class="TA">A</span> <span class="busstop">Malherbe</span>
           </a>
         </article>
         <article class="vcard" data-keyword="rs,lgbt" data-vcard="coin_des_lgbt">
@@ -1305,9 +1288,9 @@
             <p>Informations militantes, groupe Discord, petites annonces.</p>
           </header>
           <a class="instagram" href="https://www.instagram.com/lecoindeslgbt.grenoble" rel="external noreferrer">@lecoindeslgbt.grenoble</a>
-          <div class="adr">
-            <span class="locality">GRENOBLE</span>
-          </div>
+		  <div class="adr">
+		    <span class="locality">GRENOBLE</span>
+		  </div>
         </article>
         <article class="vcard" data-keyword="" data-vcard="collages_feministes_grenoble">
           <header>
@@ -1315,9 +1298,9 @@
             <p>Collectif intersectionnel de collages urbains.</p>
           </header>
           <a class="instagram" href="https://www.instagram.com/collages_feministes_grenoble" rel="external noreferrer">@collages_feministes_grenoble</a>
-          <div class="adr">
-            <span class="locality">GRENOBLE</span>
-          </div>
+		  <div class="adr">
+		    <span class="locality">GRENOBLE</span>
+		  </div>
         </article>
         <article class="vcard" data-keyword="asso,lgbt,migr" data-vcard="commission_asile_lgbti">
           <header>
@@ -1328,8 +1311,8 @@
           <a class="email" href="mailto:asilelgbti38@gresille.org">asilelgbti38@gresille.org</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
           <span class="street-address">8 rue Sergent Bobillot</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
           <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
@@ -1345,14 +1328,14 @@
           <div class="info">La commission aide notamment à la préparation des entretiens OFPRA et CNDA.</div>
         </article>
         <article class="vcard" data-keyword="femi,acti" data-vcard="commission_feministe_campus">
-          <header>
+		  <header>
             <h2 class="fn org">Commission féministe du campus de Grenoble</h2>
           </header>
-          <a class="facebook" href="https://www.facebook.com/commisionfeministe38/" rel="external noreferrer">@commisionfeministe38</a>
-          <div class="adr">
-            <span class="locality">GRENOBLE</span>
-          </div>
-        </article>
+		  <a class="facebook" href="https://www.facebook.com/commisionfeministe38/" rel="external noreferrer">@commisionfeministe38</a>
+		  <div class="adr">
+		    <span class="locality">GRENOBLE</span>
+		  </div>
+		</article>
         <article class="vcard" data-keyword="femi,acti" data-vcard="contact_38">
           <header>
             <h2 class="fn org">CONTACT 38</h2>
@@ -1363,9 +1346,9 @@
           <a class="url" href="http://www.asso-contact.org/38/" rel="external noreferrer">www.asso-contact.org/38</a>
           <a class="facebook" href="https://www.facebook.com/contact.isere" rel="external noreferrer">@contact.isere</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
-          <span class="street-address">8 rue sergent Bobillot</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="street-address">8 rue sergent Bobillot</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
           <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
@@ -1385,6 +1368,74 @@
           <a class="facebook" href="https://www.facebook.com/coreviharcalpin" rel="external noreferrer">@coreviharcalpin</a>
           <a class="twitter" href="https://www.twitter.com/COREVIH_Alpin" rel="external noreferrer">@COREVIH_Alpin</a>
           <a class="youtube" href="https://www.youtube.com/channel/UCQXA8x4R2CrqUf07p8bhy_Q" rel="external noreferrer">COREVIH Arc Alpin Alpes sans sida</a>
+          
+		   <!---
+			COREVIH :
+		  
+			Centre Départemental de Santé
+			23 avenue Albert 1er de Belgique
+			GRENOBLE
+			Tel : 04.76.12.12.85
+
+			Maison de Territoire de la Porte des Alpes
+			18 avenue Frédéric Dard
+			38 Bourgoin Jallieu	
+			Tel : 04.26.73.05.08
+
+			?
+			10 rue Albert Thomas
+			Tel : 04.81.34.00.50
+			VIENNE
+		 
+            CHU GRENOBLE - Hôpital de Jour
+              
+          <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
+			  <span class="postal-code">38043</span>
+              <span class="locality">GRENOBLE</span>
+			  
+              <span class="street-address">8 rue sergent Bobillot</span>
+			  <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
+			 </a>
+			  <a class="bus" href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
+			    <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
+			    <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+			    <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
+              </a></div>
+			  <div class="hours">Tous les vendredis soirs de 18h30 à 19h30</div>
+			  
+			  
+		https://www.alpesansida.fr/corevih-arc-alpin/
+
+Président Pr Olivier Epaulard - CHU Grenoble Alpes
+Vice-Présidente Sylvie Vanderschilt - Sida Info Service
+
+Bureau
+Marc Brisson - IREPS Auvergne-Rhône-Alpes
+Dr Emilie Piet (co-optée) - CH Annecy Genevois
+Rafael Curry - AIDES Savoies
+Paul-Emmanuel Devez - AIDES 38
+Dr Marie-Noëlle Hilleret (co-optée) - CHU Grenoble Alpes
+Dr Gaelle Vareilles - CeGIDD Conseil Départemental Isère
+Dr Alexie Bosch - CH Métropôle Savoie
+Une équipe opérationnelle
+Coordinatrice Anne Monnet-Hoel - amonnethoel@chu-grenoble.fr
+Chargée de projets Elodie Guillois - eguillois@chu-grenoble.fr
+Secrétaire Cyrine Collu - secretariatcorevih@chu-grenoble.fr		
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  
+			  -->
         </article>
         <article class="vcard" data-keyword="" data-vcard="cyclique">
           <header>
@@ -1393,10 +1444,10 @@
           </header>
           <a class="email" href="mailto:cyclique@clavette-gre.org">cyclique@clavette-gre.org</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.184115,5.7148800" rel="external noreferrer">
-          <span class="extended-address">uN p’Tit véLo dans La Tête</span>
+            <span class="extended-address">uN p’Tit véLo dans La Tête</span>
           <span class="street-address">5 rue de Londres</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184115,5.7148800" rel="external noreferrer">
           <span class="TE">E</span>
@@ -1408,20 +1459,19 @@
             Atelier sans homme cisgenre. Un espace d’auto-réparation entre femmes, trans, intergenres, ou personnes s’auto-identifiant différemment mais autrement qu’un homme cisgenre*. Pendant les permanences, on se dépoussière
             de nos stéréotypes genrés, on se remonte les manches et on met les mains dans le cambouis pour réparer nos biclous !
           </div>
-        </article>
-        <!--
-          <article class="vcard" data-keyword="cult" data-vcard="dalidark" >
-            <header>
-              <h2 class="fn org">Dalidark</h2>
-              <p>Promouvoir la musique et autres créations réalisées par des femmes, lesbiennes ou trans.</p>
-            </header>
-            <a class="email" href="mailto:dalidark@gresille.org">dalidark@gresille.org</a>
-            <div class="info">
-              Dalidark est un collectif qui a pour but de promouvoir la musique et autres créations réalisées par des femmes, lesbiennes ou trans. Dalidark propose régulièrément des événements, musicaux, projections de films, dans
-              ce but. Les soirées organisées peuvent être mixtes ou non-mixtes suivant les thèmes abordés. Le collectif est lui non-mixte, afin de faciliter une auto-organisation et des moments d'échange entre femmes, lesbiennes
-              et trans, et limiter ainsi les rapports de domination liés aux genres en son sein.
-            </div>
-          </article>-->
+        </article><!--
+        <article class="vcard" data-keyword="cult" data-vcard="dalidark" >
+          <header>
+            <h2 class="fn org">Dalidark</h2>
+            <p>Promouvoir la musique et autres créations réalisées par des femmes, lesbiennes ou trans.</p>
+          </header>
+          <a class="email" href="mailto:dalidark@gresille.org">dalidark@gresille.org</a>
+          <div class="info">
+            Dalidark est un collectif qui a pour but de promouvoir la musique et autres créations réalisées par des femmes, lesbiennes ou trans. Dalidark propose régulièrément des événements, musicaux, projections de films, dans
+            ce but. Les soirées organisées peuvent être mixtes ou non-mixtes suivant les thèmes abordés. Le collectif est lui non-mixte, afin de faciliter une auto-organisation et des moments d'échange entre femmes, lesbiennes
+            et trans, et limiter ainsi les rapports de domination liés aux genres en son sein.
+          </div>
+        </article>-->
         <article class="vcard" data-keyword="righ,inst " data-vcard="dddfe">
           <header>
             <h2 class="org">
@@ -1429,15 +1479,15 @@
             </h2>
             <p class="fn">Sarah MARCATO</p>
           </header>
-          <a class="url" href="https://www.isere.gouv.fr/Actions-de-l-Etat/Droits-des-femmes-et-egalite/Delegation-aux-droits-des-femmes-et-a-l-egalite/La-delegation-droits-des-femmes-et-egalite">www.isere.gouv.fr/Actions-de-l-Etat/Droits-des-femmes-et-egalite/Delegation-aux-droits-des-femmes-et-a-l-egalite/La-delegation-droits-des-femmes-et-egalite</a>
+		  <a class="url" href="https://www.isere.gouv.fr/Actions-de-l-Etat/Droits-des-femmes-et-egalite/Delegation-aux-droits-des-femmes-et-a-l-egalite/La-delegation-droits-des-femmes-et-egalite">www.isere.gouv.fr/Actions-de-l-Etat/Droits-des-femmes-et-egalite/Delegation-aux-droits-des-femmes-et-a-l-egalite/La-delegation-droits-des-femmes-et-egalite</a>
           <a class="tel" href="tel:+33457386513">04 57 38 65 13</a>
           <a class="tel" href="tel:+33637137809">06 37 13 78 09</a>
           <a class="email" href="mailto:sarah.marcato@isere.gouv.fr">sarah.marcato@isere.gouv.fr</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.191822,5.735199" rel="external noreferrer">
-          <span class="extended-address">DDCS<br>Cité administrative – Bâtiment 2</span>
-          <span class="street-address">1 rue Joseph Chanrion</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="extended-address">DDCS<br>Cité administrative – Bâtiment 2</span>
+            <span class="street-address">1 rue Joseph Chanrion</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.191822,5.735199" rel="external noreferrer">
           <span class="P16">13</span>
@@ -1455,10 +1505,10 @@
           <a class="url" href="https://campusgrenoble.org/series/degenree/" rel="external noreferrer">campusgrenoble.org/series/degenree</a>
           <a class="url" href="https://www.radiorageuses.net/spip.php?auteur3" rel="external noreferrer">www.radiorageuses.net/spip.php?auteur3</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.191087,5.767673" rel="external noreferrer">
-          <span class="extended-address">Espace Vie Étudiante (EVE)</span>
-          <span class="street-address">701 avenue centrale</span>
-          <span class="postal-code">38402</span>
-          <span class="locality">SAINT-MARTIN-D'HÈRES</span>
+              <span class="extended-address">Espace Vie Étudiante (EVE)</span>
+              <span class="street-address">701 avenue centrale</span>
+              <span class="postal-code">38402</span>
+              <span class="locality">SAINT-MARTIN-D'HÈRES</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.191087,5.767673" rel="external noreferrer">
           <span class="TB">B</span>
@@ -1481,8 +1531,8 @@
           <a class="instagram" href="https://www.instagram.com/deviationsgrenoble" rel="external noreferrer">@deviationsgrenoble</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
           <span class="street-address">8 rue sergent Bobillot</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
           <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
@@ -1502,8 +1552,8 @@
           <a class="facebook" href="https://www.facebook.com/Les-Egales-103385174536630" rel="external noreferrer">Les Égales</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182734,5.711362" rel="external noreferrer">
           <span class="street-address">94 bis rue Abbé Grégoire</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182734,5.711362" rel="external noreferrer">
           <span class="P12">12</span> <span class="busstop">Abbé Grégoire</span><br>
@@ -1524,8 +1574,8 @@
           <a class="twitter" href="https://www.twitter.com/genre_en" rel="external noreferrer">@genre_en</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.191097,5.770018" rel="external noreferrer">
           <span class="street-address">1030 avenue Centrale</span>
-          <span class="postal-code">38400</span>
-          <span class="locality">SAINT-MARTIN-D'HÈRES</span>
+            <span class="postal-code">38400</span>
+            <span class="locality">SAINT-MARTIN-D'HÈRES</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.191097,5.770018" rel="external noreferrer">
           <span class="P23">23</span>
@@ -1549,8 +1599,8 @@
           <a class="url" href="http://www.adate.org/developpement-local/envolee_feminine/" rel="external noreferrer">www.adate.org/developpement-local/envolee_feminine</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.172038,5.724057" rel="external noreferrer">
           <span class="street-address">96 rue de Stalingrad</span>
-          <span class="postal-code">38100</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38100</span>
+            <span class="locality">GRENOBLE</span>
           </a>
         </article>
         <article class="vcard" data-keyword="cult" data-vcard="fees_rosses">
@@ -1563,8 +1613,8 @@
           <a class="url" href="https://lesfeesrosses.org/" rel="external noreferrer">lesfeesrosses.org</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.183975,5.705998" rel="external noreferrer">
           <span class="street-address">21 Rue Boucher de Perthes</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.183975,5.705998" rel="external noreferrer">
           <span class="C5">C5</span> <span class="busstop">Cémoi</span><br>
@@ -1583,10 +1633,10 @@
           <a class="url" href="http://association-femmessdf.fr" rel="external noreferrer">association-femmessdf.fr</a>
           <a class="facebook" href="https://www.facebook.com/femmessdf" rel="external noreferrer">@femmessdf</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.185851,5.732805" rel="external noreferrer">
-          <span class="extended-address">Local des femmes</span>
+            <span class="extended-address">Local des femmes</span>
           <span class="street-address">16 boulevard Jean Pain</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.185851,5.732805" rel="external noreferrer">
           <span class="TA">A</span>
@@ -1620,8 +1670,8 @@
           <a class="twitter" href="https://twitter.com/LeLoarne" rel="external noreferrer">@LeLoarne</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.189718,5.713461" rel="external noreferrer">
           <span class="street-address">12 rue Pierre Sémard</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
         </article>
         <article class="vcard" data-keyword="asso,psyo,righ,aggr " data-vcard="france_victimes_grenoble">
@@ -1635,12 +1685,68 @@
           <a class="url" href="" rel="external noreferrer"></a>
           <a class="url" href="https://www.francevictimes-grenoble.fr/" rel="external noreferrer">www.francevictimes-grenoble.fr/</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.181527,5.719535" rel="external noreferrer">
-          <span class="extended-address">Immeuble le Mercure<br>4<sup>ème</sup> étage</span>
-          <span class="street-address">26 rue Colonel Dumont</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="extended-address">Immeuble le Mercure<br>4<sup>ème</sup> étage</span>
+            <span class="street-address">26 rue Colonel Dumont</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <div class="acc">accès handicap</div>
+          
+ 
+          
+          <!--Pour prendre rendez-vous : Du mardi au vendredi de 9h à 12h et de 14h à 17h
+            Lundi de 14h à 17h
+            Bureau d'Aide aux Victimes - bureau 352
+            ouvert du lundi au vendredi de 09h à 12h et de 13h30 à 17h
+            VIOLENCES / Je subis des violences : qui peut m'aider?
+            Pour tous
+            Pour prendre rendez-vous : Du mardi au vendredi de 9h à 12h et de 14h à 17h
+            Lundi de 14h à 17h
+            L’association d’Aide et d’Information aux Victimes (AIV) effectue des permanences à l’hôtel de police et dans les commissariats de secteur  :
+            Hôtel de Police  : du lundi au vendredi de 09h à 12h et 13h30 à 17h,
+            Fontaine  : tous les lundis de 14h à 17h,
+            Échirolles : tous les mercredis de 10h à 12h,
+            Saint Martin d’Hères  : tous les jeudis de 14h à 17h,
+            La maison de la justice et du droit Immeuble le Polynome, 25 Avenue de Constantine <span class="postal-code">38100</span>
+              <span class="locality">GRENOBLE </span>: tous les lundis et mardis de 09h à 12h
+            Le Palais de justice bureau 352 place Firmin Gautier <span class="postal-code">38019</span>
+              <span class="locality">GRENOBLE </span>: du lundi au vendredi de 09h à 12h et 13h30 à 17h.
+            L’association est également joignable au
+            <div class="tel"><a href="tel:+33476462737">04 76 46 27 37</a></div>
+            du lundi au vendredi de 9h à 17h.
+            Les services de l'AIV sont strictement confidentiels et indépendants du dépôt de plainte.
+            Vous pourrez également être orienté vers la psychologue de la police nationale présente à l'hôtel de police du lundi au vendredi de 9h à 17h.
+            
+            43 rue Victor Hugo
+              <span class="postal-code">38200</span>
+              <span class="locality">VIENNE</span>
+            Tél : 04 74 53 58 13
+            courriel : contact@fv38apress.fr
+            
+            Bureau d'Aide aux victimes
+            Tribunal de Grande Instance de Vienne
+            16 place Charles de Gaulle
+              <span class="postal-code">38200</span>
+              <span class="locality">VIENNE</span>
+            Tél : 04 74 85 58 66
+            courriel : contact@fv38apress.fr
+            
+            <span class="extended-address">Maison de Justice et du Droit de Villefontaine</span>
+            <span class="street-address">place du 11 novembre</span>
+              <span class="postal-code">38090</span>
+              <span class="locality">VILLEFONTAINE</span>
+            (tous les mercredis après midi et jeudis)
+            
+            CCAS de L'Isle D'Abeau
+            14 promenade des Baldaquins
+            3080 L'Isle d'Abeau
+            (tous les mercredis)
+            
+            Mairie de Roussillon
+            place de l'Edit
+              <span class="postal-code">38550</span>
+              <span class="locality">ROUSSILLON</span>
+            (tous les mardis après midi et vendredis)-->
         </article>
         <article class="vcard" data-keyword="cult,lgbt" data-vcard="freesons">
           <header>
@@ -1652,8 +1758,8 @@
           <a class="facebook" href="https://www.facebook.com/Freesons.chorale.lgbtih" rel="external noreferrer">@Freesons.chorale.lgbtih</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
           <span class="street-address">8 rue sergent Bobillot</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
           <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
@@ -1666,18 +1772,18 @@
         <article class="vcard" data-keyword="fami,educ" data-vcard="grandir_egaux">
           <header>
             <h2>
-              <span class="org">Grandir Égaux</span><br>
-              <span class="fn">(Noémie Ott)</span>
-            </h2>
+			<span class="org">Grandir Égaux</span><br>
+			<span class="fn">(Noémie Ott)</span>
+			</h2>
             <p>Accompagner les parents et professionnel<span aria-hidden="true">&middot;</span>les qui souhaitent éduquer des enfants libres et égaux – quelque soit leur sexe ou leur genre – du plus jeune âge à l’adolescence.</p>
           </header>
           <a class="email" href="mailto:noemie@grandiregaux.fr">noemie@grandiregaux.fr</a>
           <a class="url" href="https://grandiregaux.fr/" rel="external noreferrer">grandiregaux.fr</a>
           <a class="facebook" href="https://www.facebook.com/grandiregaux/" rel="external noreferrer">@grandiregaux</a>
           <div class="adr">
-            <span class="street-address">chemin Fortuné Ferrini</span>
-            <span class="postal-code">38700</span>
-            <span class="locality">LA TRONCHE</span>
+              <span class="street-address">chemin Fortuné Ferrini</span>
+              <span class="postal-code">38700</span>
+              <span class="locality">LA TRONCHE</span>
           </div>
         </article>
         <article class="vcard" data-keyword="lgbt,cult,acti" data-vcard="grenoble_fiertes">
@@ -1692,8 +1798,8 @@
           <a class="twitter" href="https://www.twitter.com/GrenoblePride" rel="external noreferrer">@GrenoblePride</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
           <span class="street-address">8 rue sergent Bobillot</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
           <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
@@ -1702,15 +1808,16 @@
           </a>
         </article>
         <article class="vcard" data-keyword="aggr,femi,rs" data-vcard="grenoble_sans_relou">
+          
           <header>
             <h2 class="fn org">Grenoble sans relou</h2>
             <p>Lutte contre le harcèlement de rue</p>
           </header>
           <a class="email" href="mailto:grenoblesansrelou@gmail.com">grenoblesansrelou@gmail.com</a>
           <a class="facebook" href="https://www.facebook.com/GrenobleSansRelou" rel="external noreferrer">@GrenobleSansRelou</a>
-          <div class="adr">
-            <span class="locality">GRENOBLE</span>
-          </div>
+		  <div class="adr">
+		    <span class="locality">GRENOBLE</span>
+		  </div>
         </article>
         <article class="vcard" data-keyword="femi,lgbt,acti,asso,educ" data-vcard="inpulse_adelphie">
           <header>
@@ -1720,9 +1827,9 @@
           <a class="email" href="mailto:adelphieinpulse@gmail.com">adelphieinpulse@gmail.com</a>
           <a class="facebook" href="https://www.facebook.com/adelphie.inpulse.7" rel="external noreferrer">@adelphie.inpulse.7</a>
           <a class="instagram" href="https://www.instagram.com/inpulse_adelphie/" rel="external noreferrer">@inpulse_adelphie</a>
-          <div class="adr">
-            <span class="locality">GRENOBLE</span>
-          </div>
+		  <div class="adr">
+		    <span class="locality">GRENOBLE</span>
+		  </div>
         </article>
         <article class="vcard" data-keyword="heal,mst" data-vcard="ireps">
           <header>
@@ -1738,8 +1845,8 @@
           <a class="youtube" href="https://www.youtube.com/channel/UC_Twqmq5WiwfPbV3EgTI0TA" rel="external noreferrer">IREPS Auvergne-Rhône-Alpes</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.181731,5.730450" rel="external noreferrer">
           <span class="street-address">23 avenue Albert 1<sup>er</sup> de Belgique</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.181731,5.730450" rel="external noreferrer">
           <span class="TA">A</span> <span class="busstop">Albert 1</span><sup>er</sup> de Belgique<br>
@@ -1757,10 +1864,10 @@
           <a class="email" href="mailto:isis.administratif@orange.fr">isis.administratif@orange.fr</a>
           <a class="url" href="https://isisnordisere.wordpress.com/" rel="external noreferrer">isisnordisere.wordpress.com</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.586774,5.276608" rel="external noreferrer">
-          <span class="extended-address">TJ de Bourgoin-Jallieu</span>
-          <span class="street-address">33 rue du tribunal</span>
-          <span class="postal-code">38300</span>
-          <span class="locality">BOURGOIN-JALLIEU</span>
+            <span class="extended-address">TJ de Bourgoin-Jallieu</span>
+			<span class="street-address">33 rue du tribunal</span>
+            <span class="postal-code">38300</span>
+            <span class="locality">BOURGOIN-JALLIEU</span>
           </a>
           <div class="hours">Du lundi au vendredi de 9h à 17h sur rendez-vous</div>
         </article>
@@ -1779,12 +1886,12 @@
           <a class="url" href="https://www.ssvp.fr/departement-de-lisere-38/issue-de-secours-38" rel="external noreferrer">www.ssvp.fr/departement-de-lisere-38/issue-de-secours-38</a>
           <a class="facebook" href="https://www.facebook.com/issuedesecours38/" rel="external noreferrer">@issuedesecours38</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.169829,5.712224" rel="external noreferrer">
-          <span class="street-address">106 cours de la Libération</span>
-          <span class="postal-code">38100</span>
-          <span class="locality">GRENOBLE</span>
+              <span class="street-address">106 cours de la Libération</span>
+              <span class="postal-code">38100</span>
+              <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.169829,5.712224" rel="external noreferrer">
-          <span class="P25">25</span> <span class="busstop">Louise Michel</span>
+            <span class="P25">25</span> <span class="busstop">Louise Michel</span>
           </a>
           <div class="hours">Du lundi au vendredi de 10h à 17h</div>
           <div class="info">
@@ -1818,13 +1925,13 @@
             <a class="email" href="mailto:ldh-grenoble@orange.fr">ldh-grenoble@orange.fr</a>
             <a class="facebook" href="https://www.facebook.com/GrenobleLDH/" rel="external noreferrer">@GrenobleLDH</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.184583,5.724417" rel="external noreferrer">
-            <span class="extended-address">
+              <span class="extended-address">
             Maison des associations<br>
             Bureau 120, 1<sup>er</sup> étage
             </span>
-            <span class="street-address">6 rue Berthe de Boissieux</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">6 rue Berthe de Boissieux</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184583,5.724417" rel="external noreferrer">
             <span class="P16">16</span> <span class="busstop">Caserne de Bonne</span><br>
@@ -1839,8 +1946,8 @@
             <a class="email" href="mailto:crollesgresivaudan@ldh-france.org">crollesgresivaudan@ldh-france.org</a>
             <div class="adr">
               <span class="post-office-box">BP 26</span>
-              <span class="postal-code">38330</span>
-              <span class="locality">SAINT-ISMIER</span>
+                <span class="postal-code">38330</span>
+                <span class="locality">SAINT-ISMIER</span>
             </div>
           </div>
           <div class="card vcard">
@@ -1848,19 +1955,19 @@
             <a class="tel" href="tel:+33663097981">06 63 09 79 81</a>
             <a class="email" href="mailto:voiron@ldh-france.org">voiron@ldh-france.org</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.367372,5.594826" rel="external noreferrer">
-            <span class="extended-address">Maison des associations</span>
-            <span class="street-address">2 place de Stalingrad</span>
-            <span class="postal-code">38500</span>
-            <span class="locality">VOIRON</span>
+              <span class="extended-address">Maison des associations</span>
+              <span class="street-address">2 place de Stalingrad</span>
+              <span class="postal-code">38500</span>
+              <span class="locality">VOIRON</span>
             </a>
           </div>
           <div class="card vcard">
             <h3 class="fn org">LDH - Vienne Condrieu-Agglomération</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.520468,4.867772" rel="external noreferrer">
-            <span class="extended-address">MJC</span>
-            <span class="street-address">2 rue Laurent Florentin</span>
-            <span class="postal-code">38200</span>
-            <span class="locality">VIENNE</span>
+              <span class="extended-address">MJC</span>
+              <span class="street-address">2 rue Laurent Florentin</span>
+              <span class="postal-code">38200</span>
+              <span class="locality">VIENNE</span>
             </a>
             <a class="email" href="mailto:vienne@ldh-france.org">vienne@ldh-france.org</a>
           </div>
@@ -1875,9 +1982,9 @@
           <a class="url" href="https://www.lamaisongrenoble.com/" rel="external noreferrer">www.lamaisongrenoble.com</a>
           <a class="facebook" href="https://www.facebook.com/lamaisongrenoble" rel="external noreferrer">@lamaisongrenoble</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.181198,5.710091" rel="external noreferrer">
-          <span class="extended-address">Clinique mutualiste</span><span class="street-address">8 rue du Docteur Calmette</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="extended-address">Clinique mutualiste</span><span class="street-address">8 rue du Docteur Calmette</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.181198,5.710091" rel="external noreferrer">
           <span class="P12">12</span> <span class="busstop">Groupe Hospitalier Mutualiste</span><br>
@@ -1896,9 +2003,9 @@
             <a class="tel" href="tel:+33457384400">04 57 38 44 00</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.184389,5.712707" rel="external noreferrer">
             <span class="post-office-box">CS 60097</span>
-            <span class="street-address">32 rue de New-York</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">32 rue de New-York</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <div class="hours">Du lundi au vendredi de 08h30 à 12h30 et de 13h30 à 17h30</div>
           </div>
@@ -1906,9 +2013,9 @@
             <h3 class="fn org">Maison du Département - BIÈVRE-VALLOIRE</h3>
             <a class="tel" href="tel:+33437022480">04 37 02 24 80</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.337924,5.050656" rel="external noreferrer">
-            <span class="street-address">rue de la Guillotière</span>
-            <span class="postal-code">38270</span>
-            <span class="locality">BEAUREPAIRE</span>
+              <span class="street-address">rue de la Guillotière</span>
+              <span class="postal-code">38270</span>
+              <span class="locality">BEAUREPAIRE</span>
             </a>
             <div class="hours">Du lundi au vendredi de 08h30 à 12h30 et de 13h30 à 17h30</div>
           </div>
@@ -1916,9 +2023,9 @@
             <h3 class="fn org">Maison du Département - Grésivaudan</h3>
             <a class="tel" href="tel:+33456581600">04 56 58 16 00</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.434713,6.000427" rel="external noreferrer">
-            <span class="street-address">53 route de Barraux</span>
-            <span class="postal-code">38530</span>
-            <span class="locality">BARRAUX</span>
+              <span class="street-address">53 route de Barraux</span>
+              <span class="postal-code">38530</span>
+              <span class="locality">BARRAUX</span>
             </a>
             <div class="hours">Du lundi au vendredi de 08h30 à 12h30 et de 13h30 à 17h30</div>
           </div>
@@ -1926,9 +2033,9 @@
             <h3 class="fn org">Maison du Département - Haut-Rhône-Dauphinois</h3>
             <a class="tel" href="tel:+33474186560">04 74 18 65 60</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.724455,5.238126" rel="external noreferrer">
-            <span class="street-address">45 impasse de l’Ancienne Gare</span>
-            <span class="postal-code">38460</span>
-            <span class="locality">CRÉMIEU</span>
+              <span class="street-address">45 impasse de l’Ancienne Gare</span>
+              <span class="postal-code">38460</span>
+              <span class="locality">CRÉMIEU</span>
             </a>
             <div class="hours">Du lundi au vendredi de 08h30 à 12h30 et de 13h30 à 17h30</div>
           </div>
@@ -1936,9 +2043,9 @@
             <h3 class="fn org">Maison du Département - Isère Rhodanienne</h3>
             <a class="tel" href="tel:+33474879300">04 74 87 93 00</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.514283,4.861475" rel="external noreferrer">
-            <span class="street-address">3 Quai Frédéric Mistral</span>
-            <span class="postal-code">38200</span>
-            <span class="locality">VIENNE</span>
+              <span class="street-address">3 Quai Frédéric Mistral</span>
+              <span class="postal-code">38200</span>
+              <span class="locality">VIENNE</span>
             </a>
             <div class="hours">Du lundi au vendredi de 08h15 à 12h30 et de 13h15 à 17h00</div>
           </div>
@@ -1946,9 +2053,9 @@
             <h3 class="fn org">Maison du Département - Matheysine</h3>
             <a class="tel" href="tel:+33457481111">04 57 48 11 11</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:44.913387,5.782967" rel="external noreferrer">
-            <span class="street-address">rue du Pont de la Maladière</span>
-            <span class="postal-code">38350</span>
-            <span class="locality">LA MURE</span>
+              <span class="street-address">rue du Pont de la Maladière</span>
+              <span class="postal-code">38350</span>
+              <span class="locality">LA MURE</span>
             </a>
             <div class="hours">Du lundi au vendredi de 08h30 à 12h30 et 13h30 à 17h30</div>
           </div>
@@ -1956,9 +2063,9 @@
             <h3 class="fn org">Maison du Département - Oisans</h3>
             <a class="tel" href="tel:+33476800348">04 76 80 03 48</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.059177,6.028624" rel="external noreferrer">
-            <span class="street-address">200 Avenue de la Gare</span>
-            <span class="postal-code">38520</span>
-            <span class="locality">LE BOURG-D'OISANS</span>
+              <span class="street-address">200 Avenue de la Gare</span>
+              <span class="postal-code">38520</span>
+              <span class="locality">LE BOURG-D'OISANS</span>
             </a>
             <div class="hours">Du lundi au vendredi de 08h00 à 12h00 et de 13h30 à 17h30</div>
           </div>
@@ -1966,9 +2073,9 @@
             <h3 class="fn org">Maison du Département - Porte des Alpes</h3>
             <a class="tel" href="tel:+33426730500">04 26 73 05 00</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.593035,5.274703" rel="external noreferrer">
-            <span class="street-address">18 Avenue Frédéric Dard</span>
-            <span class="postal-code">38300</span>
-            <span class="locality">BOURGOIN-JALLIEU</span>
+              <span class="street-address">18 Avenue Frédéric Dard</span>
+              <span class="postal-code">38300</span>
+              <span class="locality">BOURGOIN-JALLIEU</span>
             </a>
             <div class="hours">Du lundi au vendredi de 08h30 à 12h30 et 13h30 à 17h30</div>
           </div>
@@ -1976,9 +2083,9 @@
             <h3 class="fn org">Maison du Département - Sud-Grésivaudan</h3>
             <a class="tel" href="tel:+33476363838">04 76 36 38 38</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.149265,5.323964" rel="external noreferrer">
-            <span class="street-address">avenue Jules David</span>
-            <span class="postal-code">38160</span>
-            <span class="locality">SAINT-MARCELLIN</span>
+              <span class="street-address">avenue Jules David</span>
+              <span class="postal-code">38160</span>
+              <span class="locality">SAINT-MARCELLIN</span>
             </a>
             <div class="hours">Du lundi au vendredi de 08h30 à 12h30 et 13h30 à 17h30</div>
           </div>
@@ -1986,9 +2093,9 @@
             <h3 class="fn org">Maison du Département - Trièves</h3>
             <a class="tel" href="tel:+33480348500">04 80 34 85 00</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:44.813100,5.749807" rel="external noreferrer">
-            <span class="street-address">435 rue du Docteur Senebier</span>
-            <span class="postal-code">38710</span>
-            <span class="locality">MENS</span>
+              <span class="street-address">435 rue du Docteur Senebier</span>
+              <span class="postal-code">38710</span>
+              <span class="locality">MENS</span>
             </a>
             <div class="hours">Du lundi au vendredi de 08h00 à 12h30 et 13h30 à 17h00</div>
           </div>
@@ -1996,9 +2103,9 @@
             <h3 class="fn org">Maison du Département - Vals du Dauphiné</h3>
             <a class="tel" href="tel:+33474979698">04 74 97 96 98</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.567269,5.443271" rel="external noreferrer">
-            <span class="street-address">2 rue de l'Oiselet, CS70066</span>
-            <span class="postal-code">38110</span>
-            <span class="locality">LA TOUR-DU-PIN</span>
+              <span class="street-address">2 rue de l'Oiselet, CS70066</span>
+              <span class="postal-code">38110</span>
+              <span class="locality">LA TOUR-DU-PIN</span>
             </a>
             <div class="hours">Du lundi au vendredi de 08h15 à 12h15 et 13h00 à 17h00</div>
           </div>
@@ -2006,9 +2113,9 @@
             <h3 class="fn org">Maison du Département - Vercors</h3>
             <a class="tel" href="tel:+33457384900">04 57 38 49 00</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.074621,5.555652" rel="external noreferrer">
-            <span class="street-address">150 impasse de Meillarot</span>
-            <span class="postal-code">38250</span>
-            <span class="locality">VILLARD-DE-LANS</span>
+              <span class="street-address">150 impasse de Meillarot</span>
+              <span class="postal-code">38250</span>
+              <span class="locality">VILLARD-DE-LANS</span>
             </a>
             <div class="hours">Du lundi au vendredi de 08h00 à 12h00 et 13h30 à 17h30</div>
           </div>
@@ -2016,9 +2123,9 @@
             <h3 class="fn org">Maison du Département - Voironnais-Chartreuse</h3>
             <a class="tel" href="tel:+33457561130">04 57 56 11 30</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.363568,5.593684" rel="external noreferrer">
-            <span class="street-address">33 avenue Francois Mitterrand</span>
-            <span class="postal-code">38500</span>
-            <span class="locality">VOIRON</span>
+              <span class="street-address">33 avenue Francois Mitterrand</span>
+              <span class="postal-code">38500</span>
+              <span class="locality">VOIRON</span>
             </a>
             <div class="hours">Du lundi au vendredi de 8h30 à 12h30 et de 13h30 à 17h30</div>
           </div>
@@ -2036,9 +2143,9 @@
           <div class="card vcard">
             <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es Abbaye (Secteur 5)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.179510,5.744936" rel="external noreferrer">
-            <span class="street-address">1 place de la Commune de 1871</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">1 place de la Commune de 1871</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.179510,5.744936" rel="external noreferrer">
             <span class="C5">C5</span> <span class="busstop">Saint-Augustin</span><br>
@@ -2069,9 +2176,9 @@
           <div class="card vcard">
             <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es Anatole France (Secteur 3)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.172520,5.707279" rel="external noreferrer">
-            <span class="street-address">68 bis rue Anatole France</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">68 bis rue Anatole France</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.172520,5.707279" rel="external noreferrer">
             <span class="C5">C5</span>
@@ -2104,9 +2211,9 @@
           <div class="card vcard">
             <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es Capuche (Secteur 4)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.177276,5.726022" rel="external noreferrer">
-            <span class="street-address">58 rue de Stalingrad</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">58 rue de Stalingrad</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.177276,5.726022" rel="external noreferrer">
             <span class="C3">C3</span>
@@ -2128,9 +2235,9 @@
           <div class="card vcard">
             <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es Centre Ville (Secteur 2)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.193678,5.733745" rel="external noreferrer">
-            <span class="street-address">2 rue du Vieux Temple</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">2 rue du Vieux Temple</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.193678,5.733745" rel="external noreferrer">
             <span class="TB">B</span>
@@ -2159,9 +2266,9 @@
           <div class="card vcard">
             <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es Chorier Berriat (Secteur 1)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.186386,5.711338" rel="external noreferrer">
-            <span class="street-address">10 rue Henry Le Chatelier</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">10 rue Henry Le Chatelier</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.186386,5.711338" rel="external noreferrer">
             <span class="TA">A</span>
@@ -2206,9 +2313,9 @@
           <div class="card vcard">
             <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es du Bois d'Artas (Secteur 2)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.183309,5.721195" rel="external noreferrer">
-            <span class="street-address">3 rue Augereau</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">3 rue Augereau</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.183309,5.721195" rel="external noreferrer">
             <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
@@ -2231,9 +2338,9 @@
           <div class="card vcard">
             <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es Le Patio (Secteur 6)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.163934,5.732640" rel="external noreferrer">
-            <span class="street-address">97 galerie de l'Arlequin</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">97 galerie de l'Arlequin</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.163934,5.732640" rel="external noreferrer"> <span class="TA">A</span> <span class="busstop">Arlequin</span></a>
             <a class="tel" href="tel:+33476229210">04 76 22 92 10</a>
@@ -2244,15 +2351,14 @@
               <ul>
                 <li>Du lundi au vendredi : de 8h15 à 18h</li>
                 <li>Samedi : de 10h à 13h</li>
-              </ul>
-              <!--
-                <p>
-                  <b>Horaires d'ouverture au public de l'accueil de la Maison des Habitant<span aria-hidden="true">&middot;</span>es Le Patio :</b>
-                </p>
-                <ul>
-                  <li>Lundi, mardi, mercredi et vendredi : 8h30 à 12h15 et de 13h30 à 17h30</li>
-                  <li>Jeudi : de 8h30 à 12h15</li>
-                </ul>-->
+              </ul><!--
+              <p>
+                <b>Horaires d'ouverture au public de l'accueil de la Maison des Habitant<span aria-hidden="true">&middot;</span>es Le Patio :</b>
+              </p>
+              <ul>
+                <li>Lundi, mardi, mercredi et vendredi : 8h30 à 12h15 et de 13h30 à 17h30</li>
+                <li>Jeudi : de 8h30 à 12h15</li>
+              </ul>-->
               <p>Pour toute démarche administrative, merci de vous présenter au moins 15 minutes avant la fermeture.</p>
             </div>
             <div class="acc">Personnel formé, rez-de-chaussée, ascenseur, signalétique, WC</div>
@@ -2267,9 +2373,9 @@
           <div class="card vcard">
             <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es les Baladins (Secteur 6)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.162071,5.738440" rel="external noreferrer">
-            <span class="street-address">31 place des Géants</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">31 place des Géants</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.162071,5.738440" rel="external noreferrer">
             <span class="P12">12</span> <span class="busstop">Les Géants</span><br>
@@ -2296,9 +2402,9 @@
           <div class="card vcard">
             <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es Prémol (Secteur 6)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.163653,5.727776" rel="external noreferrer">
-            <span class="street-address">7 rue Henry Duhamel</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">7 rue Henry Duhamel</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.163653,5.727776" rel="external noreferrer"> <span class="C3">C3</span> <span class="busstop">Village Olympique</span></a>
             <a class="tel" href="tel:+33476090028">04 76 09 00 28</a>
@@ -2324,9 +2430,9 @@
           <div class="card vcard">
             <h3 class="fn org">Maison des Habitant<span aria-hidden="true">&middot;</span>es Teisseire - Malherbe (Secteur 5)</h3>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.171285,5.738913" rel="external noreferrer">
-            <span class="street-address">110 avenue Jean Perrot</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">110 avenue Jean Perrot</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.171285,5.738913" rel="external noreferrer">
             <span class="C4">C4</span>
@@ -2371,8 +2477,8 @@
           <a class="youtube" href="https://www.youtube.com/channel/UCFDZRUhM6x_uTsTGLJKDDMA" rel="external noreferrer"> Maison pour l'égalité femmes-hommes</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.156871,5.718811" rel="external noreferrer">
           <span class="street-address">12 avenue des États Généraux</span>
-          <span class="postal-code">38130</span>
-          <span class="locality">ÉCHIROLLES</span>
+            <span class="postal-code">38130</span>
+            <span class="locality">ÉCHIROLLES</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.156871,5.718811" rel="external noreferrer">
           <span class="TA">A</span>
@@ -2380,6 +2486,7 @@
           </a>
         </article>
         <article class="vcard" data-keyword="work,fami" data-vcard="mampreneurs">
+          
           <header>
             <h2 class="fn org">Mampreneurs Isère</h2>
             <p>Construire son propre modèle d'épanouissement entrepreneurial tout en étant mère.</p>
@@ -2387,10 +2494,10 @@
           <a class="facebook" href="https://www.facebook.com/reseaumampreneures/" rel="external noreferrer">@reseaumampreneures</a>
           <a class="instagram" href="https://www.instagram.com/reseaumampreneures/" rel="external noreferrer">@reseaumampreneures</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.184639,5.72478" rel="external noreferrer">
-          <span class="extended-address">Maison des associations de Grenoble</span>
+            <span class="extended-address">Maison des associations de Grenoble</span>
           <span class="street-address">6 rue Berthe de Boissieux</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
         </article>
         <article class="vcard" data-keyword="" data-vcard="mission_egalite_academie_grenoble">
@@ -2398,20 +2505,20 @@
             <h2 class="fn org">Mission égalité de l'Académie de Grenoble</h2>
             <p>
               Référente égalité académique : Myrtille GARDET<br>
-              Chargée de mission : Clémentine MASSON
+			  Chargée de mission : Clémentine MASSON
             </p>
           </header>
-          <a class="url" href="https://www1.ac-grenoble.fr/article/egalite-entre-les-filles-et-les-garcons-121882" rel="external noreferrer">www1.ac-grenoble.fr/article/egalite-entre-les-filles-et-les-garcons-121882</a>
-          <a class="email" href="mailto:mission.egalite@ac-grenoble.fr">mission.egalite@ac-grenoble.fr</a>
+		  <a class="url" href="https://www1.ac-grenoble.fr/article/egalite-entre-les-filles-et-les-garcons-121882" rel="external noreferrer">www1.ac-grenoble.fr/article/egalite-entre-les-filles-et-les-garcons-121882</a>
+		  <a class="email" href="mailto:mission.egalite@ac-grenoble.fr">mission.egalite@ac-grenoble.fr</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.188595,5.736734" rel="external noreferrer">
           <span class="street-address">7 place Bir Hakeim</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.193587,5.76931" rel="external noreferrer">
           <span class="street-address">110 avenue de la Chimie</span>
-          <span class="postal-code">38400</span>
-          <span class="locality">SAINT-MARTIN-D'HÈRES</span>
+            <span class="postal-code">38400</span>
+            <span class="locality">SAINT-MARTIN-D'HÈRES</span>
           </a>
         </article>
         <article class="vcard" data-keyword="femi,asso,acti" data-vcard="nous_toutes_38">
@@ -2423,6 +2530,7 @@
           <a class="facebook" href="https://www.facebook.com/NousToutes38" rel="external noreferrer">@NousToutes38</a>
         </article>
         <article class="vcard" data-keyword="" data-vcard="observatoire_iserois_parite">
+          
           <header>
             <h2 class="fn org">
               <abbr title="Observatoire Isérois de la Parité">OIP</abbr>
@@ -2433,9 +2541,9 @@
           <a class="email" href="mailto:parite-38@parite-38.org">parite-38@parite-38.org</a>
           <a class="url" href="https://www.parite-38.org/" rel="external noreferrer">www.parite-38.org</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.184583,5.724417" rel="external noreferrer">
-          <span class="extended-address">Maison des associations</span><span class="street-address">6 rue Berthe de Boissieux</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="extended-address">Maison des associations</span><span class="street-address">6 rue Berthe de Boissieux</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184583,5.724417" rel="external noreferrer">
           <span class="P16">16</span> <span class="busstop">Caserne de Bonne</span><br>
@@ -2466,14 +2574,15 @@
           <a class="url" href="https://www.helloasso.com/associations/oiseau-bleu" rel="external noreferrer">www.helloasso.com/associations/oiseau-bleu</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.180134,5.790045" rel="external noreferrer">
           <span class="street-address">5 place de l’Église</span>
-          <span class="postal-code">38610</span>
-          <span class="locality">GIÈRES</span>
+            <span class="postal-code">38610</span>
+            <span class="locality">GIÈRES</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.180134,5.790045">
           <span class="F59">59</span> <span class="busstop">Pont de Venon</span><br>
           <span class="F59">59</span> <span class="busstop">Edelweiss</span>
-          Bus 14 et 23 
-          TER Gieres gare
+		  
+		  Bus 14 et 23 
+		  TER Gieres gare
           </a>
         </article>
         <article class="vcard" data-keyword="work" data-vcard="olympe_reseau">
@@ -2484,10 +2593,10 @@
           <a class="email" href="mailto:olympeg38@gmail.com">olympeg38@gmail.com</a>
           <a class="url" href="https://www.olympedeg38.fr/" rel="external noreferrer">www.olympedeg38.fr</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.184583,5.724417" rel="external noreferrer">
-          <span class="extended-address">Maison des associations</span>
+            <span class="extended-address">Maison des associations</span>
           <span class="street-address">6 rue Berthe de Boissieux</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184583,5.724417" rel="external noreferrer">
           <span class="P16">16</span> <span class="busstop">Caserne de Bonne</span><br>
@@ -2496,7 +2605,7 @@
           </a>
           <div class="hours">
             Rendez-vous les 2<sup>èmes</sup> vendredis du mois de 12h15 à 13h45 pour une rencontre informelle le temps d’un déjeuner ou d’un café au Mel's Café (2 place Gustave Rivet, <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>, espace mezzanine réservé).
+              <span class="locality">GRENOBLE</span>, espace mezzanine réservé).
           </div>
         </article>
         <article class="vcard" data-keyword="educ,femi" data-vcard="orageuses">
@@ -2509,8 +2618,8 @@
           <a class="url" href="https://scoplorage.org" rel="external noreferrer">scoplorage.org</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.187608,5.712493" rel="external noreferrer">
           <span class="street-address">20 place Saint Bruno</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.187608,5.712493" rel="external noreferrer">
           <span class="TA">A</span>
@@ -2528,9 +2637,9 @@
           <a class="facebook" href="https://www.facebook.com/osezlefeminisme38" rel="external noreferrer">@osezlefeminisme38</a>
           <a class="instagram" href="https://www.instagram.com/osezlefeminisme38" rel="external noreferrer">@osezlefeminisme38</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.184583,5.724417" rel="external noreferrer">
-          <span class="extended-address">Maison des associations</span><span class="street-address">6 rue Berthe de Boissieux</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="extended-address">Maison des associations</span><span class="street-address">6 rue Berthe de Boissieux</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184583,5.724417" rel="external noreferrer">
           <span class="P16">16</span> <span class="busstop">Caserne de Bonne</span><br>
@@ -2552,8 +2661,8 @@
           <a class="instagram" href="https://www.instagram.com/patriarchiemagazine" rel="external noreferrer">@patriarchiemagazine</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.188998,5.718643" rel="external noreferrer">
           <span class="street-address">7 bis rue Gabriel Péri</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.188998,5.718643" rel="external noreferrer">
           <span class="TA">A</span>
@@ -2587,9 +2696,9 @@
             <a class="tel" href="tel:+33476879461">04 76 87 94 61</a>
             <a class="email" href="mailto:cpef.grenoble.gambetta@leplanningfamilial38.org">cpef.grenoble.gambetta@leplanningfamilial38.org</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.186340,5.724349" rel="external noreferrer">
-            <span class="street-address">30 boulevard Gambetta</span>
-            <span class="postal-code">38000</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="street-address">30 boulevard Gambetta</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.186340,5.724349" rel="external noreferrer">
             <span class="P12">12</span> <span class="busstop">Championnet</span><br>
@@ -2611,14 +2720,14 @@
             <a class="tel" href="tel:+33476431376">04 76 43 13 76</a>
             <a class="email" href="mailto:cpef.interquartier@leplanningfamilial38.org">cpef.interquartier@leplanningfamilial38.org</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.178577,5.745256" rel="external noreferrer">
-            <span class="extended-address">Maison des Habitants de l'Abbaye</span>
-            <span class="street-address">1 place de la commune de 1871</span>
-            <span class="postal-code">38100</span>
-            <span class="locality">GRENOBLE</span>
+              <span class="extended-address">Maison des Habitants de l'Abbaye</span>
+              <span class="street-address">1 place de la commune de 1871</span>
+              <span class="postal-code">38100</span>
+              <span class="locality">GRENOBLE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.178577,5.745256" rel="external noreferrer">
-            <span class="C5">C5</span> <span class="busstop">Saint-Augustin</span><br>
-            <span class="P13">13</span> <span class="busstop">Suzanne Noël - Les Bains</span>
+              <span class="C5">C5</span> <span class="busstop">Saint-Augustin</span><br>
+			  <span class="P13">13</span> <span class="busstop">Suzanne Noël - Les Bains</span>
             </a>
             <div class="hours">
               Uniquement sur rendez-vous. Vous pouvez nous appeler tous les jours, du lundi au jeudi de 9h-17h et le vendredi de 9h-16h.
@@ -2629,9 +2738,9 @@
             <a class="tel" href="tel:+33476593769">04 76 59 37 69</a>
             <a class="email" href="mailto:cpef.echirolles.eybens@leplanningfamilial38.org">cpef.echirolles.eybens@leplanningfamilial38.org</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.156872,5.718803" rel="external noreferrer">
-            <span class="street-address">14 avenue des États Généraux</span>
-            <span class="postal-code">38130</span>
-            <span class="locality">ÉCHIROLLES</span>
+              <span class="street-address">14 avenue des États Généraux</span>
+              <span class="postal-code">38130</span>
+              <span class="locality">ÉCHIROLLES</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.156872,5.718803" rel="external noreferrer">
             <span class="C6">C6</span> <span class="busstop">Essarts - La Butte</span>
@@ -2650,16 +2759,16 @@
             <a class="tel" href="tel:+33476133951">04 76 13 39 51</a>
             <a class="email" href="mailto:cpef.legresivaudan@leplanningfamilial38.org">cpef.legresivaudan@leplanningfamilial38.org </a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.238199,5.888170" rel="external noreferrer">
-            <span class="street-address">21 Boulevard Jules Ferry</span>
-            <span class="postal-code">38190</span>
-            <span class="locality">VILLARD-BONNOT</span>
+              <span class="street-address">21 Boulevard Jules Ferry</span>
+              <span class="postal-code">38190</span>
+              <span class="locality">VILLARD-BONNOT</span>
             </a>
-            <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.ter.sncf.com/auvergne-rhone-alpes/se-deplacer/gares/lancey-87417501" rel="external noreferrer">
-            <span class="TER">TER</span> <span class="busstop">gare Lancey</span>
-            </a>
+			<a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.ter.sncf.com/auvergne-rhone-alpes/se-deplacer/gares/lancey-87417501" rel="external noreferrer">
+			  <span class="TER">TER</span> <span class="busstop">gare Lancey</span>
+			</a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.238199,5.888170" rel="external noreferrer">
-            <span class="L407">407</span> <span class="busstop"> </span>(Villard-Bonnot) La Mairie<br>
-            <span class="NVA">NVA</span> <span class="busstop">Lancey Gare</span>
+              <span class="L407">407</span> <span class="busstop"> </span>(Villard-Bonnot) La Mairie<br>
+              <span class="NVA">NVA</span> <span class="busstop">Lancey Gare</span>
             </a>
             <div class="hours">
               Horaires des consultations médicales et entretiens :
@@ -2677,15 +2786,15 @@
             <a class="tel" href="tel:+33476753304">04 76 75 33 04</a>
             <a class="email" href="mailto:cpef.saint-egreve@leplanningfamilial38.org">cpef.saint-egreve@leplanningfamilial38.org</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.224051,5.688727" rel="external noreferrer">
-            <span class="extended-address">Immeuble Le Fié</span>
-            <span class="street-address">2 rue du 19 mars 1962</span>
-            <span class="postal-code">38120</span>
-            <span class="locality">SAINT-ÉGRÈVE</span>
+                <span class="extended-address">Immeuble Le Fié</span>
+                <span class="street-address">2 rue du 19 mars 1962</span>
+                <span class="postal-code">38120</span>
+                <span class="locality">SAINT-ÉGRÈVE</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.224051,5.688727" rel="external noreferrer">
             <span class="TE">E</span> <span class="busstop">Fiancey </span>– Prédieu<br>
-            <span class="F60">60</span> <span class="busstop">Muret</span><br>
-            <span class="F56">56</span> <span class="busstop">Collège Chartreuse</span>
+			<span class="F60">60</span> <span class="busstop">Muret</span><br>
+			<span class="F56">56</span> <span class="busstop">Collège Chartreuse</span>
             </a>
             <div class="hours">
               <ul>
@@ -2701,12 +2810,12 @@
             <a class="tel" href="tel:+33474283022">04 74 28 30 22</a>
             <a class="email" href="mailto:cpef.bourgoin-jallieu@leplanningfamilial38.org">cpef.bourgoin-jallieu@leplanningfamilial38.org</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.589984,5.276861" rel="external noreferrer">
-            <span class="street-address">14 place Albert Schweitzer</span>
-            <span class="postal-code">38300</span>
-            <span class="locality">BOURGOIN-JALLIEU</span>
+              <span class="street-address">14 place Albert Schweitzer</span>
+              <span class="postal-code">38300</span>
+              <span class="locality">BOURGOIN-JALLIEU</span>
             </a>
             <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.ter.sncf.com/auvergne-rhone-alpes/se-deplacer/gares/bourgoin-jallieu-87723429" rel="external noreferrer">
-            <span class="TER">TER</span> <span class="busstop">Bourgoin-Jallieu</span>
+              <span class="TER">TER</span> <span class="busstop">Bourgoin-Jallieu</span>
             </a>
             <div class="hours">
               <ul>
@@ -2723,9 +2832,9 @@
             <a class="tel" href="tel:+33474967899">04 74 96 78 99</a>
             <a class="email" href="mailto:cpef.villefontaine@leplanningfamilial38.org">cpef.villefontaine@leplanningfamilial38.org</a>
             <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.610257,5.158658" rel="external noreferrer">
-            <span class="street-address">46 rue Émile Zola</span>
-            <span class="postal-code">38090</span>
-            <span class="locality">VILLEFONTAINE</span>
+              <span class="street-address">46 rue Émile Zola</span>
+              <span class="postal-code">38090</span>
+              <span class="locality">VILLEFONTAINE</span>
             </a>
             <div class="hours">
               <ul>
@@ -2755,8 +2864,8 @@
           <a class="url" href="https://plusegales.blogspot.com/" rel="external noreferrer">plusegales.fr</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.183131,5.706782" rel="external noreferrer">
           <span class="street-address">74 rue du Drac</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
         </article>
         <article data-keyword="heal" data-vcard="point_precarite_sante">
@@ -2766,23 +2875,23 @@
           </header>
           <div class="one-line"><a class="tel" href="tel:+33476893142">04 76 89 31 42</a> <span>(du lundi au vendredi)</span></div>
           <a class="email" href="mailto:pops@pops38.fr">pops@pops38.fr</a>
-          <a class="url" href="https://pops38.fr/" rel="external noreferrer">pops38.fr</a>  
-          <div class="card vcard">
-            <h3 class="fn org">POPS Sud Isère</h3>
-            <div class="adr">
+		  <a class="url" href="https://pops38.fr/" rel="external noreferrer">pops38.fr</a>  
+		  <div class="card vcard">
+		    <h3 class="fn org">POPS Sud Isère</h3>
+		    <div class="adr">
               <span class="street-address">1 allée du Gâtinais</span>
               <span class="postal-code">38130</span>
               <span class="locality">ÉCHIROLLES</span>
             </div>
-          </div>
-          <div class="card vcard">
-            <h3 class="fn org">POPS Nord Isère</h3>
-            <div class="adr">
+		  </div>
+		  <div class="card vcard">
+		    <h3 class="fn org">POPS Nord Isère</h3>
+		    <div class="adr">
               <span class="street-address">8 rue Jospeh Cugnot</span>
               <span class="postal-code">38300</span>
               <span class="locality">BOURGOIN-JALLIEU</span>                    
             </div>
-          </div>
+		  </div>
         </article>
         <article class="vcard" data-keyword="sprt,lgbt" data-vcard="queers_on_wheels">
           <header>
@@ -2803,8 +2912,8 @@
           <a class="facebook" href="https://www.facebook.com/randosrhonealpes" rel="external noreferrer">@randosrhonealpes</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
           <span class="street-address">8 rue sergent Bobillot</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.589984,5.276861" rel="external noreferrer">
           <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
@@ -2827,8 +2936,8 @@
           <a class="twitter" href="https://www.twitter.com/LeRefugeIsere" rel="external noreferrer">@LeRefugeIsere</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.18210,5.73115" rel="external noreferrer">
           <span class="street-address">22 avenue Albert 1<sup>er</sup> de Belgique</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.18210,5.73115" rel="external noreferrer">
           <span class="TA">A</span> <span class="busstop">Albert 1er de Belgique</span><br>
@@ -2844,6 +2953,9 @@
               <li>Mardi : 14h – 17h</li>
               <li>Samedi : 14h – 17h</li>
             </ul>
+            <!-- Pas l'info
+              <br> Chaque 1<sup>er</sup> lundi du mois de 14h30 à 17h au Centre Social Charles Béraudier à Voiron
+              -->
           </div>
         </article>
         <article class="vcard" data-keyword="work" data-vcard="entreprendre_isere_feminin">
@@ -2855,9 +2967,9 @@
           <a class="email" href="mailto:mariageforce38@yahoo.fr">mariageforce38@yahoo.fr</a>
           <a class="url" href="http://www.mariageforce.fr" rel="external noreferrer">www.mariageforce.fr</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.186340,5.724349" rel="external noreferrer">
-          <span class="extended-address">Planning familial de l'Isère</span><span class="street-address">30 Boulevard Gambetta</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="extended-address">Planning familial de l'Isère</span><span class="street-address">30 Boulevard Gambetta</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.186340,5.724349" rel="external noreferrer">
           <span class="C3">C3</span>
@@ -2875,6 +2987,7 @@
           </div>
         </article>
         <article class="vcard" data-keyword="asso,lgbt,heal" data-vcard="rita">
+          
           <header>
             <h2 class="fn org">
               <abbr title="Ressort Intersexe et Trans en Action">RITA</abbr>
@@ -2887,9 +3000,9 @@
           <a class="facebook" href="https://www.facebook.com/rita.grenoble" rel="external noreferrer">@rita.grenoble</a>
           <a class="instagram" href="https://www.instagram.com/rita_asso" rel="external noreferrer">@rita_asso</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
-          <span class="street-address">8 rue Sergent Bobillot</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+              <span class="street-address">8 rue Sergent Bobillot</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
           <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
@@ -2917,8 +3030,8 @@
           <a class="facebook" href="https://www.facebook.com/rivhajvienne/" rel="external noreferrer">@rivhajvienne</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.517881,4.869527" rel="external noreferrer">
           <span class="street-address">30 Cours de Verdun</span>
-          <span class="postal-code">38200</span>
-          <span class="locality">VIENNE</span>
+            <span class="postal-code">38200</span>
+            <span class="locality">VIENNE</span>
           </a>
         </article>
         <article class="vcard" data-keyword="cult" data-vcard="ruelles">
@@ -2934,24 +3047,24 @@
           <a class="url" href="https://lebazarts.fr/compagnie-ruelles/" rel="external noreferrer">lebazarts.fr/compagnie-ruelles</a>
           <a class="facebook" href="https://www.facebook.com/ruellescie" rel="external noreferrer">@ruellescie</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.168628,5.755912" rel="external noreferrer">
-          <span class="extended-address">c/o Le Baz’Arts</span>
+            <span class="extended-address">c/o Le Baz’Arts</span>
           <span class="street-address">63 avenue du 8 mai 1945</span>
-          <span class="postal-code">38400</span>
-          <span class="locality">SAINT-MARTIN-D'HÈRES</span>
+            <span class="postal-code">38400</span>
+            <span class="locality">SAINT-MARTIN-D'HÈRES</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.168628,5.755912" rel="external noreferrer">
           <span class="C6">C6</span> <span class="busstop">Zella Mehlis</span>
           </a>
         </article>
-        <article class="vcard" data-keyword="cult" data-vcard="samovar_collectif">
+		<article class="vcard" data-keyword="cult" data-vcard="samovar_collectif">
           <header>
             <h2 class="fn org">Collectif Samovar</h2>
             <p>Collectif LGBTQIA+ féministe favorisant l’expression artistique dans la bienveillance.</p>
           </header>
           <a class="instagram" href="https://www.instagram.com/collectif.samovar" rel="external noreferrer">@collectif.samovar</a>
-          <div class="adr">
-            <span class="locality">GRENOBLE</span>
-          </div>
+		  <div class="adr">
+		    <span class="locality">GRENOBLE</span>
+		  </div>
         </article>
         <article class="vcard" data-keyword="cont" data-vcard="sans_gametes">
           <header>
@@ -2960,15 +3073,16 @@
           </header>
           <a class="email" href="mailto:lessansgametes@gresille.org">lessansgametes@gresille.org</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.178571,5.745259" rel="external noreferrer">
-          <span class="extended-address">MJC/centre social Abbaye</span><span class="street-address">1 place de la Commune de 1871</span>
-          <span class="postal-code">38100</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="extended-address">MJC/centre social Abbaye</span><span class="street-address">1 place de la Commune de 1871</span>
+            <span class="postal-code">38100</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.178571,5.745259" rel="external noreferrer">
           <span class="C5">C5</span> <span class="busstop">Saint-Augustin</span><br>
           <span class="P13">13</span> <span class="busstop">Suzanne Noël - Les Bains</span>
           </a>
         </article>
+		
         <article class="vcard" data-keyword="aggr" data-vcard="sereines">
           <header>
             <h2 class="fn org">Serein<span aria-hidden="true">&middot;</span>e<span aria-hidden="true">&middot;</span>s</h2>
@@ -2979,9 +3093,9 @@
           <a class="facebook" href="https://www.facebook.com/AssociationSerein.e.s" rel="external noreferrer">@AssociationSerein.e.s</a>
           <a class="instagram" href="https://www.instagram.com/serein.e.s" rel="external noreferrer">@serein.e.s</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.188790,5.708336" rel="external noreferrer">
-          <span class="street-address">146 cours Berriat</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="street-address">146 cours Berriat</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.188790,5.708336" rel="external noreferrer">
           <span class="TA">A</span>
@@ -2999,8 +3113,8 @@
           <a class="tel" href="tel:+33648469921">06 48 46 99 21</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.062690,5.340998" rel="external noreferrer">
           <span class="street-address">3 place du 19 mars 1962</span>
-          <span class="postal-code">38680</span>
-          <span class="locality">PONT-EN-ROYANS</span>
+            <span class="postal-code">38680</span>
+            <span class="locality">PONT-EN-ROYANS</span>
           </a>
         </article>
         <article class="vcard" data-keyword="cult" data-vcard="siefegp">
@@ -3011,8 +3125,8 @@
           <a class="email" href="mailto:encyclopediesiefegp@pandesmuses.fr">encyclopediesiefegp@pandesmuses.fr</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.164187,5.721029" rel="external noreferrer">
           <span class="street-address">24 Rue Lucien Andrieux</span>
-          <span class="postal-code">38100</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38100</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.164187,5.721029" rel="external noreferrer">
           <span class="P16">16</span> <span class="busstop">Beauvert</span><br>
@@ -3036,8 +3150,8 @@
           <a class="url" href="https://sfm.fondation-boissel.fr/" rel="external noreferrer">sfm.fondation-boissel.fr</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.167951,5.729532" rel="external noreferrer">
           <span class="street-address">12 rue des Bergeronnettes</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.167951,5.729532" rel="external noreferrer">
           <span class="TA">A</span>
@@ -3063,8 +3177,8 @@
           <a class="facebook" href="https://www.facebook.com/SOShDauphineAlpesNord" rel="external noreferrer">@SOShDauphineAlpesNord</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
           <span class="street-address">8 rue sergent Bobillot</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+            <span class="postal-code">38000</span>
+            <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
           <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
@@ -3087,10 +3201,10 @@
           <a class="email" href="mailto:contact@sos-inceste-grenoble.org">contact@sos-inceste-grenoble.org</a>
           <a class="url" href="https://sos-inceste-grenoble.org/" rel="external noreferrer">sos-inceste-grenoble.org</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.184601,5.724440" rel="external noreferrer">
-          <span class="extended-address">Maison des Associations</span>
-          <span class="street-address">6 rue Berthe de Boissieux</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+               <span class="extended-address">Maison des Associations</span>
+               <span class="street-address">6 rue Berthe de Boissieux</span>
+               <span class="postal-code">38000</span>
+               <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.184601,5.724440" rel="external noreferrer">
           <span class="P16">16</span> <span class="busstop">Caserne de Bonne</span><br>
@@ -3108,8 +3222,8 @@
           <a class="email" href="mailto:lessolenoides@riseup.net">lessolenoides@riseup.net</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.187988,5.682138" rel="external noreferrer">
           <span class="street-address">8 rue Guy Moquet</span>
-          <span class="postal-code">38600</span>
-          <span class="locality">FONTAINE</span>
+            <span class="postal-code">38600</span>
+            <span class="locality">FONTAINE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.187988,5.682138" rel="external noreferrer">
           <span class="P20">20</span> <span class="busstop">Jean Prévost</span><br>
@@ -3129,9 +3243,9 @@
           <a class="email" href="mailto:pf.38@stopauxviolencessexuelles.com">pf.38@stopauxviolencessexuelles.com</a>
           <a class="url" href="https://svs-isere-37.checkout.webself.net/accueil" rel="external noreferrer">svs-isere-37.checkout.webself.net</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.188165,5.717769" rel="external noreferrer">
-          <span class="street-address">52 cours Berriat</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+              <span class="street-address">52 cours Berriat</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
           </a>
         </article>
         <article class="vcard" data-vcard="syndicat_femmes_musulmanes">
@@ -3159,13 +3273,13 @@
           <a class="email" href="mailto:astempo@wanadoo.fr">astempo@wanadoo.fr</a>
           <a class="url" href="https://www.astempo.fr/" rel="external noreferrer">www.astempo.fr</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.178072,5.732525" rel="external noreferrer">
-          <span class="street-address">13 rue Gay Lussac</span>
-          <span class="postal-code">38100</span>
-          <span class="locality">GRENOBLE</span>
+              <span class="street-address">13 rue Gay Lussac</span>
+              <span class="postal-code">38100</span>
+              <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.178072,5.732525" rel="external noreferrer">
-          <span class="TA">A</span> <span class="busstop">Mounier</span>
-          </a>
+		    <span class="TA">A</span> <span class="busstop">Mounier</span>
+		  </a>
           <div class="hours">
             <ul>
               <li>Mardi : de 14h00 à 19h00</li>
@@ -3189,6 +3303,9 @@
             <p>Des tests rapides, gratuits et anonymes sont possibles : TROD pour le VIH, hépatite B et hépatite C.</p>
           </div>
         </article>
+		
+		
+		
         <article class="vcard" data-keyword="asso,aggr,heal" data-vcard="uniesverselles">
           <header>
             <h2 class="fn org">Uni(e-s)VersElles</h2>
@@ -3198,18 +3315,18 @@
           <a class="url" href="https://www.uniesverselles-grenoble.fr/" rel="external noreferrer">www.uniesverselles-grenoble.fr</a>
           <a class="twitter" href="https://twitter.com/UniesVersElles" rel="external noreferrer">@UniesVersElles</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.202560,5.741547" rel="external noreferrer">
-          <span class="extended-address">Hôpital Couple Enfants<br>Bureau Pr Hoffmann</span>
-          <span class="street-address">Quai Yermoloff</span>
-          <span class="postal-code">38700</span>
-          <span class="locality">LA TRONCHE</span>
+              <span class="extended-address">Hôpital Couple Enfants<br>Bureau Pr Hoffmann</span>
+              <span class="street-address">Quai Yermoloff</span>
+              <span class="postal-code">38700</span>
+              <span class="locality">LA TRONCHE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.202666,5.741533" rel="external noreferrer">
           <span class="P13">13</span>
           <span class="TB">B</span> <span class="busstop">La Tronche Hôpital</span>
           </a>
         </article>
-        <!-- A FUSIONNER -->
-        <article class="vcard" data-keyword="heal,aggr,gyne" data-vcard="maison_des_femmes">
+<!-- A FUSIONNER -->
+		<article class="vcard" data-keyword="heal,aggr,gyne" data-vcard="maison_des_femmes">
           <header>
             <h2 class="fn org">Maison des Femmes</h2>
             <p>Accompagnement des femmes vivant ou ayant vécu des violences, suivi gynécologique, prise en soins des mutilations sexuelles.</p>
@@ -3218,15 +3335,20 @@
           <a class="email" href="mailto:maisondesfemmes@chu-grenoble.fr">maisondesfemmes@chu-grenoble.fr</a>
           <a class="url" href="https://www.uniesverselles-grenoble.fr/maison-des-femmes/" rel="external noreferrer">www.uniesverselles-grenoble.fr/maison-des-femmes</a>
         </article>
+		
+		
+		
+		
+		
         <article class="vcard" data-keyword="" data-vcard="velorution_feministe_grenoble">
           <header>
             <h2 class="fn org">Vélorution féministe Grenoble</h2>
             <p>Soutenir et favoriser le queer à Grenoble et en montagne (randonnées, drag, bingos, shows, soirées...).</p>
           </header>
           <a class="instagram" href="https://www.instagram.com/versantsqueer" rel="external noreferrer">@versantsqueer</a>
-          <div class="adr">
-            <span class="locality">GRENOBLE</span>
-          </div>
+		  <div class="adr">
+		     <span class="locality">GRENOBLE</span>
+		  </div>
         </article>
         <article class="vcard" data-keyword="asso,lgbt,lesb" data-vcard="voies_d_elles">
           <header>
@@ -3237,14 +3359,14 @@
           <a class="email" href="mailto:voiesdelles@riseup.net">voiesdelles@riseup.net</a>
           <a class="facebook" href="https://www.facebook.com/lesvoiesdelles" rel="external noreferrer">@lesvoiesdelles</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.182338,5.720978" rel="external noreferrer">
-          <span class="extended-address">Centre LGBTI de Grenoble</span><span class="street-address">8 rue sergent Bobillot</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+              <span class="extended-address">Centre LGBTI de Grenoble</span><span class="street-address">8 rue sergent Bobillot</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.182338,5.720978" rel="external noreferrer">
-          <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
-          <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
-          <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
+            <span class="TC">C</span> <span class="busstop">Foch Férié</span><br>
+            <span class="C3">C3</span> <span class="busstop">Marceau - Jardin des Vallons</span><br>
+            <span class="P25">25</span> <span class="busstop">Colonel Dumont</span>
           </a>
           <div class="hours">
             <ul>
@@ -3267,9 +3389,9 @@
           <a class="email" href="mailto:virus36@no-log.org">virus36@no-log.org</a>
           <a class="url" href="https://virus36.org/" rel="external noreferrer">virus36.org</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.186946,5.705395" rel="external noreferrer">
-          <span class="street-address">5 rue Georges Jacquet</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+              <span class="street-address">5 rue Georges Jacquet</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
           </a>
         </article>
         <article class="vcard" data-keyword="" data-vcard="vues_d_en_face">
@@ -3285,15 +3407,15 @@
           <a class="twitter" href="https://www.twitter.com/vuesdenface" rel="external noreferrer">@vuesdenface</a>
           <a class="youtube" href="https://www.youtube.com/user/vuesdenface" rel="external noreferrer">Vues d'en face Festival du Film G&L de Grenoble</a>
           <a class="adr" title="Voir l'adresse sur une carte" href="geo:45.193158,5.727449" rel="external noreferrer">
-          <span class="street-address">4 rue Hector Berlioz</span>
-          <span class="postal-code">38000</span>
-          <span class="locality">GRENOBLE</span>
+              <span class="street-address">4 rue Hector Berlioz</span>
+              <span class="postal-code">38000</span>
+              <span class="locality">GRENOBLE</span>
           </a>
           <a class="bus" title="Calculer un trajet jusqu'à ce lieu"  href="https://www.mobilites-m.fr/iti.html?lonlatArr=45.193158,5.727449" rel="external noreferrer">
-          <span class="F40">40</span> <span class="busstop">Quai Stéphane Jay</span><br>
-          <span class="P16">16</span> <span class="busstop">Notre-Dame - Musée</span>
+            <span class="F40">40</span> <span class="busstop">Quai Stéphane Jay</span><br>
+            <span class="P16">16</span> <span class="busstop">Notre-Dame - Musée</span>
           </a>
-          <p><b>Boite Postale</b></p>
+		  <p><b>Boite Postale</b></p>
           <div class="adr">
             <span class="extended-address">FIFGLG</span>
             <span class="post-office-box">BP 408</span>
@@ -3304,15 +3426,15 @@
       </main>
       <aside id="modale">
         <button aria-label="Ajouter à mon carnet d'adresse" id="btn-savecontact" title="Ajouter à mon carnet d'adresse"><i class="fa fa-vcard"></i></button>
-        <button aria-label="Afficher QR-Code du contact" id="btn-qrcode" title="Voir QR-Code"><i class="fa fa-qrcode"></i></button>
+		<button aria-label="Afficher QR-Code du contact" id="btn-qrcode" title="Voir QR-Code"><i class="fa fa-qrcode"></i></button>
         <button aria-label="Sélectionner tout" id="btn-selectall" title="Sélectionner tout"><i class="fa fa-select"></i></button>
         <button aria-label="Copier" id="btn-copy" title="Copier"><i class="fa fa-copy"></i></button>
         <button aria-label="Imprimer cette fiche" id="btn-print" title="Imprimer cette fiche"><i class="fa fa-print"></i></button>
-        <section id="qr-code"></section>
+		<section id="qr-code"></section>	
       </aside>
-      <a href="#top" id="link--to-top" title="Faire défiler la page jusqu'en haut">&#x2191; Retour en haut</a>
+      <button href="#top" id="btn--to-top" title="Faire défiler la page jusqu'en haut">▲</button>
     </div>
-    <script src="js/qrcode.js"></script>
+	<script src="js/qrcode.js"></script>
     <script src="js/macy.js"></script>
     <script src="js/mtpgi38.js"></script>
   </body>
