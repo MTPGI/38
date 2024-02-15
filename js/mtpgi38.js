@@ -563,7 +563,7 @@ function handleAfterPrint() {
 window.addEventListener("DOMContentLoaded", () => {
 	$id("select--categories").selectedIndex = $id("select--ville").selectedIndex = $id("select--AZ").selectedIndex = 0;
 	$id("text--resultats").innerHTML = $q("article").length + "&nbsp;r&eacute;sultats";
-	$id("input--search").value = "";
+	//$id("input--search").value = "";
 	//populateDatalist();
 	setLocalities();
 	setSelectableLetters();
@@ -596,6 +596,6 @@ document.addEventListener("mouseover", handleTouchOrHover);
 document.addEventListener("click", handleClick);
 document.addEventListener("change", handleChange);
 $id("container").addEventListener("scroll", handleScroll);
-$id("input--search").addEventListener("focus", function() {this.select()});
+//$id("input--search").addEventListener("focus", function() {this.select()});
 
 
