@@ -22,9 +22,7 @@ const
 	},
 	encodeLinks = () => {
 		function encodeAllCharacters(str) {
-			return Array.from(str).map(char => {
-				return "%" + char.charCodeAt(0).toString(16).toUpperCase();
-			}).join("");
+			return Array.from(str).map(char => "%" + char.charCodeAt(0).toString(16).toUpperCase()).join("");
 		}
 		const emailLinks = document.querySelectorAll("a.email");
 		const telLinks = document.querySelectorAll("a.tel");
@@ -52,7 +50,7 @@ const villes = {
 	"AMPUIS":"007",
     "BARRAUX":"027",
     "BEAUREPAIRE":"034",
-    "LE BOURG-D'OISANS":"052",
+    "LE BOURG-D’OISANS":"052",
     "BOURGOIN-JALLIEU":"053",
     "CHASSE-SUR-RHÔNE":"087",
     "LA CÔTE-SAINT-ANDRÉ":"130",
@@ -64,7 +62,7 @@ const villes = {
     "FONTANIL-CORNILLON":"170",
     "GIÈRES":"179",
     "GRENOBLE":"185",
-    "L'ISLE-D'ABEAU":"193",
+    "L’ISLE-D’ABEAU":"193",
     "MENS":"226",
     "MEYLAN":"229",
     "MONESTIER DE CLERMONT":"242",
@@ -79,7 +77,7 @@ const villes = {
     "SAINT-ISMIER":"397",
     "SAINT-LAURENT-DU-PONT":"412",
     "SAINT-MARCELLIN":"416",
-    "SAINT-MARTIN-D'HÈRES":"421",
+    "SAINT-MARTIN-D’HÈRES":"421",
     "SEYSSINS":"486",
     "LA TOUR-DU-PIN":"509",
     "LA TRONCHE":"516",
@@ -107,8 +105,6 @@ classNames = {
 	youtube: 'Chaîne Youtube'
 };
 
-
-
 function filtrerArticles() {
 	const cityVal = $id("select--ville").value;
 	const keywVal = $id("select--categories").value;
@@ -124,7 +120,34 @@ function filtrerArticles() {
 	$id("text--resultats").innerHTML = (0 == articlesShow.length ? "aucun" : articlesShow.length) + "&nbsp;r&eacute;sultat" + (1 < articlesShow.length ? "s" : "");
 	masonry && masonry.recalculate(!0, !0);
 }
-	
+function goSearch() {
+	const input = $id('input--search');
+	const selectedOption = document.querySelector(`#searchlist option[value="${input.value}"]`);
+	if (selectedOption) {
+	  const dataType = selectedOption.dataset.type;
+	  const value = selectedOption.value;
+	  switch(dataType) {
+		  case "category": {
+			  $q(`article:not([data-keyword*="${value}"])`).forEach(hide);
+			  $q(`article[data-keyword*="${value}"]`).forEach(show);
+			  masonry && masonry.recalculate(!0, !0);
+		  };break;
+		  case "city": {
+			$q(`article:not([data-city*="${value}"]),.card:not([data-city*="${value}"])`).forEach(hide);
+			$q(`article[data-city*="${value}"],.card[data-city*="${value}"]`).forEach(show);
+			masonry && masonry.recalculate(!0, !0);
+		  };break;
+		  case "title": {
+			scrollTo(document.querySelector(`article[data-vcard="${value}"]`))
+		  };break;
+	  }
+	} else {
+	  console.log("No option selected");
+	}
+	input.value= '';
+	input.blur();
+}
+
 function selectAllText(artOrCard) {
 	if (window.getSelection) {
 		const selection = document.getSelection();
@@ -136,9 +159,9 @@ function selectAllText(artOrCard) {
 	}
 }
 
-function scrollTo(event) {
-	let elem = $q(event.target.href);
-	elem.style.classList.remove("hide");
+function scrollTo(elem) {
+	elem.classList.remove("hide");
+	elem.classList.add("highlight");
 	elem.scrollIntoView({behavior: "smooth"});
 }
 
@@ -203,7 +226,8 @@ function showQRCode(artOrCard, isCard) {
 	const qr = qrcode(0, "L");
 	qr.addData(data, "Byte");
 	qr.make();
-	$id("qr-code").innerHTML = qr.createImgTag(5, 0);
+	const imgTag = qr.createImgTag(5, 0);
+	$id("qr-code").appendChild(imgTag);
 	$id("qr-code").classList.add("show");
 }
 
@@ -266,7 +290,7 @@ function generateVCARDtext (artOrCard, isCard) {
 		const note = name.querySelector("p");
 		note && (vcard_text += "NOTE:" + escapeChar(note.innerText) + "\n")
 		content.filter(el => el.classList.contains("tel")).forEach(function(n) {
-			const telTypes = ["HOME", "WORK", "PREF", "VOICE", "FAX", "MSG", "CELL", "VIDEO", "TEXTPHONE", "TEXT"];
+			//const telTypes = ["HOME", "WORK", "PREF", "VOICE", "FAX", "MSG", "CELL", "VIDEO", "TEXTPHONE", "TEXT"];
 			const telType = (n.href.startsWith("tel:+336") || n.href.startsWith("tel:06")) ? "CELL" : "VOICE";
 			const pref = n.classList.contains("pref") ? ";PREF=1" : "";
 			vcard_text += "TEL;TYPE=" + telType + pref + ":" + n.href.split(":")[1] + "\n";
@@ -288,11 +312,7 @@ function generateVCARDtext (artOrCard, isCard) {
 				streetAddress = n.querySelector(".street-address"),
 				locality = n.querySelector(".locality"),
 				postalCode = n.querySelector(".postal-code"),
-				getContent = c => {
-				  return c ? c.innerText.replace(/([\\,;:])/g, "\\$1")
-					.replace(/[\n\r]+/, "\\n") :
-					"";
-				},
+				getContent = c => c ? c.innerText.replace(/([\\,;:])/g, "\\$1").replace(/[\n\r]+/, "\\n") :	"",
 				adr = "ADR:" 
 					  + getContent(postOfficeBox) + ";"
 					  + getContent(extendedAddress) + ";"
@@ -329,7 +349,7 @@ function generateVCARDtext (artOrCard, isCard) {
 	} else {
 		if (firstCard) {
 			feed = [];
-			parentArticle.querySelectorAll(".card").forEach(function(card) {
+			parentArticle.querySelectorAll(".card").forEach(card => {
 				const cardContent = card.$q("h3, .adr, .url, .tel, .email, .facebook, .twitter, .instagram");
 				feed.push([...extractBeforeFirstCard(), ...cardContent]);
 			});
@@ -346,16 +366,6 @@ function generateVCARDtext (artOrCard, isCard) {
 }
 
 // INIT FUNCTIONS, REUSED LATER
-
-const isLocalStorageAvailable = () => {
-	try {
-		localStorage.setItem('test', 'test');
-		localStorage.removeItem('test');
-		return true;
-	} catch(e) {
-		return false;
-	}
-};
 
 function correctHeight() {
 	const ch = window.innerHeight * 0.01;
@@ -378,20 +388,22 @@ function setSelectableLetters() {
 }
 
 function populateDatalist() {
-	function createItem(val) {
+	function createItem(text,val,type) {
 		let item = document.createElement("option");
 		item.value = val;
+		item.textContent = text;
+		item.setAttribute("data-type",type)
 		$id("searchlist").appendChild(item);
 	}
 	$id("select--categories").$q("option").forEach((opt, i) => {
 		if (i === 0) return
-		createItem(opt.innerText)
+		createItem(opt.innerText,opt.value,"category")
 	});
 	$id("select--ville").$q("option").forEach((opt, i) => {
 		if (i === 0) return
-		createItem(opt.innerText)
+		createItem(opt.innerText,opt.value,"city")
 	});
-	$q("article").forEach(article => createItem($q("h2").innerText));
+	$q("article").forEach(article => createItem(article.querySelector("h2").innerText,article.dataset.vcard,"title"));
 }
 
 function setLocalities() {
@@ -414,7 +426,12 @@ function setLocalities() {
 		  console.error(cityText+ " has no match in the array")
 		}
 	});
-	citiesArray.sort((a, b) => a.text.localeCompare(b.text));
+	citiesArray.sort((a, b) => {
+		const removePronoun = (text) => text.replace(/^L([AE] |')/, '');
+		const normalizedA = removePronoun(a.text);
+		const normalizedB = removePronoun(b.text);
+		return normalizedA.localeCompare(normalizedB);
+	});
 	citiesArray.forEach(city => {
 		const option = document.createElement("option");
 		option.value = city.nb;
@@ -423,54 +440,34 @@ function setLocalities() {
 	});
 }
 
-// HANDLE EVENTS FUNCTIONS
+// THEME FUNCTIONS
 
 function setTheme(theme) {
 	if (theme === "dark") {
 		document.documentElement.classList.add("theme-dark");
-		$id('chk--theme-switch').setAttribute("checked","true")
+		$id('chk--theme-switch').setAttribute("checked","true");
+		$id('chk--theme-switch').setAttribute("aria-label","Passer au thème clair");
 	} else {
 		document.documentElement.classList.remove("theme-dark");
-		$id('chk--theme-switch').removeAttribute("checked","true")
+		$id('chk--theme-switch').removeAttribute("checked","true");
+		$id('chk--theme-switch').setAttribute("aria-label","Passer au thème sombre");
 	}
 	if (isLocalStorageAvailable) localStorage.setItem("theme", theme);
 }
 
-
 function themeChecking() {
-	function checkMatchMedia() {
-		if (window.matchMedia) {
-			console.log('window.matchMedia is valid in this browser')
-			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-				const newColorScheme = event.matches ? "dark" : "light";
-				console.log('Prefered color scheme has been changed to '+newColorScheme +' in browser preferences.')
-				setTheme(newColorScheme)
-			});
-			if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-				console.log('Browser is set actually set to Dark Mode')
-				setTheme("dark")
-			} else {
-				console.log('Browser is set actually set to Light Mode')
-				setTheme("light");
-			}
-		} else {
-			console.log('window.matchMedia is not valid in this browser')
-			setTheme("light");
-		}
+	if (window.matchMedia) {
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+			const pref = event.matches ? "dark" : "light";
+			setTheme(pref);
+		});
 	}
-	if(isLocalStorageAvailable){
-		console.log('localStorage is available');
-		if (localStorage.getItem("theme") === "dark") {
-			console.log('Dark theme was found as preference in localStorage')
-			setTheme("dark");
-		} else {
-			console.log('Dark theme not set as preference in localStorage')
-			checkMatchMedia()
-		}
-	} else {
-		checkMatchMedia()
+	if (document.documentElement.classList.contains("theme-dark")) {
+		setTheme("dark")
 	}
 }
+
+// HANDLE EVENTS FUNCTIONS
 
 var hoveredCardOrArticle;
 function handleTouchOrHover(event) {
@@ -515,7 +512,6 @@ function handleClick(event) {
 		  c = t.closest(".card");
 	"chk--theme-switch" == t.id			&& setTheme($id('chk--theme-switch').checked ? "dark" : "light");
 	"btn--to-top" == t.id	 			&& (event.preventDefault(), $id("nav-bar").scrollIntoView({behavior: "smooth"}));
-	"goto" == t.className 				&& (event.preventDefault(), scrollTo(event));
 	t.closest(".adr") 					&& (toMap(event, t.closest(".adr")));
 	t.closest("#btn-selectall")			&& selectAllText(c || a);
 	t.closest("#btn-copy") 				&& toClipboard(c || a);
@@ -556,20 +552,20 @@ function handleBeforePrint(event) {
 }
 
 function handleAfterPrint() {
-	//window.addEventListener("beforeprint", handleBeforePrint);
+	window.addEventListener("beforeprint", handleBeforePrint);
 }
 
-
 window.addEventListener("DOMContentLoaded", () => {
-	$id("select--categories").selectedIndex = $id("select--ville").selectedIndex = $id("select--AZ").selectedIndex = 0;
+	//$id("select--categories").selectedIndex = $id("select--ville").selectedIndex = $id("select--AZ").selectedIndex = 0;
 	$id("text--resultats").innerHTML = $q("article").length + "&nbsp;r&eacute;sultats";
 	//$id("input--search").value = "";
-	//populateDatalist();
 	setLocalities();
+	//populateDatalist();
 	setSelectableLetters();
 	getVCARDUrlParamAndDownload();
 	themeChecking();
 });
+
 window.addEventListener("load", () => {
 	if (window.innerWidth > 900) {
 		$id("main").classList.remove("flex");
@@ -578,11 +574,7 @@ window.addEventListener("load", () => {
 			mobileFirst: true,
 			columns: 3,
 			margin: {y: 50,x: 30},
-			breakAt: {
-				1500: 4,
-				940: 2,
-				630: 1
-			}
+			breakAt: {1500: 4, 940: 2, 630: 1 }
 		});
 	}
 	correctHeight();
@@ -598,4 +590,36 @@ document.addEventListener("change", handleChange);
 $id("container").addEventListener("scroll", handleScroll);
 //$id("input--search").addEventListener("focus", function() {this.select()});
 
+function getAway() {
+	function removeCookies(){
+		var nowDate = new Date();
+		nowDate.setDate(nowDate.getDate() - 7)
+		var res = document.cookie;
+		var multiple = res.split(";");
+		for (var i = 0; i < multiple.length; i++) {
+			var key = multiple[i].split("=");
+			document.cookie = key[0] + " =; expires =" + nowDate;
+		}
+	}
+	removeCookies();
+  document.body.innerHTML = "Cette page est inaccessible."
+  document.title="Erreur : Page inaccessible"
+  window.open("https://meteofrance.com/", "_newtab");
+  //sessionStorage.setItem("quick-exit-fired", 1);
+  window.localStorage.removeItem("theme"); 
+  //window.clipboardData.setData("text", '')
+  navigator.clipboard.writeText(" ");
+  setTimeout(function () {
+	 window.location.replace('https://www.google.com/search?q=météo'); 
+  }, 100);
+  
+  //history.replaceState({}, '', 'https://www.google.com/search?q=météo');
+  
+}
 
+/*document.addEventListener('keydown', (e) => {
+	if (e.keyCode === 27 || e.key === "Escape") getAway();
+	if ((e.keyCode === 13 || e.key === "Enter") && e.target.id == "input--search") {
+		goSearch();
+	}
+});*/

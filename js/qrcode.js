@@ -579,26 +579,12 @@ var qrcode = function() {
       cellSize = cellSize || 2;
       margin = (typeof margin == 'undefined')? cellSize * 4 : margin;
 
-      var size = _this.getModuleCount() * cellSize + margin * 2;
-
-      var img = '';
-      img += '<img';
-      img += '\u0020src="';
-      img += _this.createDataURL(cellSize, margin);
-      img += '"';
-      img += '\u0020width="';
-      img += size;
-      img += '"';
-      img += '\u0020height="';
-      img += size;
-      img += '"';
-      if (alt) {
-        img += '\u0020alt="';
-        img += escapeXml(alt);
-        img += '"';
-      }
-      img += '/>';
-
+      const size = _this.getModuleCount() * cellSize + margin * 2;
+      const img = document.createElement("img");
+	  img.src = _this.createDataURL(cellSize, margin);
+	  img.width = size;
+	  img.height = size;
+      if (alt) img.alt = escapeXml(alt);
       return img;
     };
 
