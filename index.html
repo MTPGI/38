@@ -29,14 +29,10 @@
 			}
 			try {
 				const theme = localStorage.getItem("theme");
-				if (theme && theme === "dark") {
-					setDarkTheme();
-				}
+				if (theme && theme === "dark") setDarkTheme();
 			} catch(e) {
 				isLocalStorageAvailable = false;
-				if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-					setDarkTheme();
-				}
+				if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) setDarkTheme();
 			}
 		})();
 	</script>
@@ -55,7 +51,8 @@
             <input type="search" list="searchlist" id="input--search" placeholder="Planning familial, Grenoble, sport...">
             <datalist id="searchlist"></datalist>
         </div>-->
-		
+
+
         <div>
           <i class="fa fa-cate"></i>
           <label for="select--categories" class="sr-only">Choix d’une catégories pour restreindre les résultats</label>
@@ -2960,7 +2957,7 @@ Secrétaire Cyrine Collu - secretariatcorevih@chu-grenoble.fr
 
 			<div class="card vcard">
 				<h3 class="fn org">POPS Grenoble</h3>
-				<a class="tel" href="+33476229210">04 76 22 92 10</a>
+				<a class="tel" href="tel:+33476229210">04 76 22 92 10</a>
 				<a class="adr" title="Voir l’adresse sur une carte" href="geo:45.163934,5.732640" rel="external noreferrer">
 				  <span class="extended-address">Maison des Habitants le Patio</span>
 				  <span class="street-address">97 galerie de l’Arlequin</span>
@@ -2975,7 +2972,7 @@ Secrétaire Cyrine Collu - secretariatcorevih@chu-grenoble.fr
 
 			<div class="card vcard">
 				<h3 class="fn org">POPS Saint-Égrève</h3>
-				<a class="tel" href="+33476565347">04 76 56 53 47</a>
+				<a class="tel" href="tel:+33476565347">04 76 56 53 47</a>
 				<a class="adr" title="Voir l’adresse sur une carte" href="geo:45.233255,5.681038" rel="external noreferrer">
 				  <span class="extended-address">CCAS Hôtel de ville</span>
 				  <span class="street-address">36 avenue du général de Gaulle</span>
@@ -2992,7 +2989,7 @@ Secrétaire Cyrine Collu - secretariatcorevih@chu-grenoble.fr
 			<div class="card vcard">
 				<h3 class="org">POPS Bourgoin-Jallieu, quartier Champs-fleuri</h3>
 				<p class="fn">Juliette MIEGE (infirmière)</p>
-				<a class="tel" href="+33630833812">06 30 83 38 12</a>
+				<a class="tel" href="tel:+33630833812">06 30 83 38 12</a>
 				<a class="adr" title="Voir l’adresse sur une carte" href="geo:45.608332,5.268947" rel="external noreferrer">
 					<span class="extended-address">Maison des habitants Champs-fleuri</span>
 					<span class="street-address">rue Buffon</span>
@@ -3005,7 +3002,7 @@ Secrétaire Cyrine Collu - secretariatcorevih@chu-grenoble.fr
 			<div class="card vcard">
 				<h3 class="org">POPS Bourgoin-Jallieu, quartier Champaret</h3>
 				<p class="fn">Roxanne POLITINO (infirmière)</p>
-				<a class="tel" href="+33684571793">06 84 57 17 93</a>
+				<a class="tel" href="tel:+33684571793">06 84 57 17 93</a>
 				<a class="adr" title="Voir l’adresse sur une carte" href="geo:45.584844,5.294315" rel="external noreferrer">
 					<span class="extended-address">Maison des Habitants Champaret</span>
 					<span class="street-address">16 avenue du Dauphiné</span>
@@ -3017,7 +3014,7 @@ Secrétaire Cyrine Collu - secretariatcorevih@chu-grenoble.fr
 
 			<div class="card vcard">
 				<h3 class="fn org">POPS L’Isle d’Abeau, quartier Saint-Hubert</h3>
-				<a class="tel" href="+33765185745">07 65 18 57 45</a>
+				<a class="tel" href="tel:+33765185745">07 65 18 57 45</a>
 				<a class="adr" title="Voir l’adresse sur une carte" href="geo:45.621822,5.221807" rel="external noreferrer">
 					<span class="extended-address">Espace des solidarités Olympe de Gouges</span>
 					<span class="street-address">rue du Triforium</span>
@@ -3030,7 +3027,7 @@ Secrétaire Cyrine Collu - secretariatcorevih@chu-grenoble.fr
 			<div class="card vcard">
 				<h3 class="org">POPS Villefontaine, quartiers Servanoble et Saint-Bonnet</h3>
 				<p class="fn">Juliette MIEGE (infirmière)</p>
-				<a class="tel" href="+33630833812">06 30 83 38 12</a>
+				<a class="tel" href="tel:+33630833812">06 30 83 38 12</a>
 				<a class="adr" title="Voir l’adresse sur une carte" href="geo:45.606852,5.147587" rel="external noreferrer">
 					<span class="extended-address">Maison pour tous Denise Tronchet</span>
 					<span class="street-address">3 rue Pasteur</span>
@@ -3043,7 +3040,7 @@ Secrétaire Cyrine Collu - secretariatcorevih@chu-grenoble.fr
 			<div class="card vcard">
 				<h3 class="org">POPS Villefontaine, quartier Les Roches</h3>
 				<p class="fn">LORIDON Laëtitia (infirmière)</p>
-				<a class="tel" href="+33765185745">07 65 18 57 45</a>
+				<a class="tel" href="tel:+33765185745">07 65 18 57 45</a>
 				<a class="adr" title="Voir l’adresse sur une carte" href="geo:45.618007,5.150806" rel="external noreferrer">
 					<span class="extended-address">Centre social Maison pour tous des Roches</span>
 					<span class="street-address">20 place Nelson Mandela</span>
@@ -3056,7 +3053,7 @@ Secrétaire Cyrine Collu - secretariatcorevih@chu-grenoble.fr
 			<div class="card vcard">
 				<h3 class="org">POPS Chavanoz, quartier Belmont Moulin Villette</h3>
 				<p class="fn">Juliette MIEGE (infirmière)</p>
-				<a class="tel" href="+33630833812">06 30 83 38 12</a>
+				<a class="tel" href="tel:+33630833812">06 30 83 38 12</a>
 				<a class="adr" title="Voir l’adresse sur une carte" href="geo:45.771191,5.177520" rel="external noreferrer">
 					<span class="extended-address">Centre Culturel du Petit Théâtre</span>
 					<span class="street-address">16 rue du 11 novembre 1918</span>
