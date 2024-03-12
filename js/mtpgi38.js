@@ -10,8 +10,10 @@ const
 		let r = (this instanceof Element ? this : document).querySelectorAll(q);
 		return /*r.length === 1 ? r[0] :*/ r.length ? Array.from(r) : null;
 	},
-	show = el => el.classList.remove('hide'),
-    hide = el => el.classList.add('hide'),
+	show = (el) => el.classList.remove('hide'),
+	hide = (el) => el.classList.add('hide'),
+	/*show = el => el.classList.remove('hide'),
+    hide = el => el.classList.add('hide'),*/
 	debounce = (fn, time) => {
 		time = time || 100;
 		let timer;
@@ -53,6 +55,7 @@ const villes = {
     "LE BOURG-D’OISANS":"052",
     "BOURGOIN-JALLIEU":"053",
     "CHASSE-SUR-RHÔNE":"087",
+	"CHAVANOZ":"097",
     "LA CÔTE-SAINT-ANDRÉ":"130",
     "CRÉMIEU":"138",
     "CROLLES":"140",
@@ -122,7 +125,7 @@ function filtrerArticles() {
 }
 function goSearch() {
 	const input = $id('input--search');
-	const selectedOption = document.querySelector(`#searchlist option[value="${input.value}"]`);
+	const selectedOption = $q(`#searchlist option[value="${input.value}"]`);
 	if (selectedOption) {
 	  const dataType = selectedOption.dataset.type;
 	  const value = selectedOption.value;
@@ -138,7 +141,7 @@ function goSearch() {
 			masonry && masonry.recalculate(!0, !0);
 		  };break;
 		  case "title": {
-			scrollTo(document.querySelector(`article[data-vcard="${value}"]`))
+			scrollTo($q(`article[data-vcard="${value}"]`))
 		  };break;
 	  }
 	} else {
@@ -160,7 +163,7 @@ function selectAllText(artOrCard) {
 }
 
 function scrollTo(elem) {
-	elem.classList.remove("hide");
+	show(elem);
 	elem.classList.add("highlight");
 	elem.scrollIntoView({behavior: "smooth"});
 }
@@ -201,7 +204,7 @@ function printArticle(article) {
 	document.body.appendChild(fr);
 	const 
 		frameDoc = fr.contentWindow ? fr.contentWindow : fr.contentDocument.document ? fr.contentDocument.document : fr.contentDocument,
-		title = article.querySelector("h2").innerText,
+		title = article.$q("h2").innerText,
 		content = article.outerHTML;
 	frameDoc.document.open();
 	frameDoc.document.write(`<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><title>${title}</title><link rel="stylesheet" href="style.css" type="text/css"></head><body>${content}</body></html>`);
@@ -216,11 +219,11 @@ function printArticle(article) {
 // VCARD RELATED FUNCTIONS
 
 function showQRCode(artOrCard, isCard) {
-	if ($id("qr-code").classList.contains("show")) {
+	if (!$id("qr-code").classList.contains("hide")) {
 		hideQRCode();
 		return
 	}
-	const img = $id("qr-code").querySelector("img");
+	const img = $q("#qr-code img");
 	img && img.remove();
 	const data = generateVCARDtext(artOrCard, isCard);
 	const qr = qrcode(0, "L");
@@ -228,13 +231,13 @@ function showQRCode(artOrCard, isCard) {
 	qr.make();
 	const imgTag = qr.createImgTag(5, 0);
 	$id("qr-code").appendChild(imgTag);
-	$id("qr-code").classList.add("show");
+	show($id("qr-code"));
 }
 
 function hideQRCode() {
-	let img = $id("qr-code").querySelector("img");
-	img && img.remove();
-	$id("qr-code").classList.remove("show");
+	let img = $q("#qr-code img");
+	img && img[0].remove();
+	hide($id("qr-code"));
 }
 
 function getVCARDUrlParamAndDownload() {
@@ -473,35 +476,35 @@ var hoveredCardOrArticle;
 function handleTouchOrHover(event) {
 	const  article = event.target.closest("article"),
 		   card = event.target.closest(".card");
-	if (event.type == "mouseover" && $id("qr-code").classList.contains("show")) {
+	if (event.type == "mouseover" && !$id("qr-code").classList.contains("hide")) {
 		return
 	}
 	if (!article) {
 		hoveredCardOrArticle = false;
-		$id("modale").classList.remove("show");
+		hide($id("modale"));
 		hideQRCode();
 		return
 	}
 	if (card) {
-		$id("btn-qrcode").classList.remove("hide");
+		show($id("btn-qrcode"));
 		if (card !== hoveredCardOrArticle) {
 			hideQRCode();
 			hoveredCardOrArticle = card;
 			card.appendChild($id("modale"));
-			$id("modale").classList.add("show");
+			show($id("modale"));
 		}
 	} else {
 		let hasCard = article.querySelector(".card");
 		if (hasCard) {
-			$id("btn-qrcode").classList.add("hide");
+			hide($id("btn-qrcode"));
 		} else {
-			$id("btn-qrcode").classList.remove("hide");
+			show($id("btn-qrcode"));
 		}
 		if (article !== hoveredCardOrArticle) {
 			hideQRCode();
 			hoveredCardOrArticle = article;
 			article.appendChild($id("modale"));
-			$id("modale").classList.add("show");
+			show($id("modale"));
 		}
 	}
 }
@@ -522,11 +525,10 @@ function handleClick(event) {
 	!t.closest("#qr-code, #btn-qrcode") && hideQRCode();
 }
 function handleScroll(event) {
-	const toTopClassList = $id("btn--to-top").classList;
 	if ($id("container").scrollTop > window.innerHeight) {
-		toTopClassList.add("show");
+		show($id("btn--to-top"));
 	} else {
-		toTopClassList.remove("show");
+		hide($id("btn--to-top"));
 	}
 }
 function handleChange(event) {
